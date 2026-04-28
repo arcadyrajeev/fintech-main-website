@@ -1,0 +1,71 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: "Poppins-regular";
+  src: url("/fonts/Poppins-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "NunitoSans";
+  src: url("/fonts/NunitoSans-VariableFont.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "WorkSans";
+  src: url("/fonts/WorkSans-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Outfit";
+  src: url("/fonts/Outfit-VariableFont.ttf") format("truetype");
+}
+
+.heading {
+  font-family: "Outfit", sans-serif;
+}
+
+.body-font {
+  font-family: "WorkSans", sans-serif;
+}
+
+body {
+  background-color: #f5f5f5;
+}
+
+@theme {
+  --color-primary-bg: var(--primary-bg);
+  --color-secondary-bg: var(--secondary-bg);
+  --color-primary-text: var(--primary-text);
+  --color-secondary-text: var(--secondary-text);
+  --color-accent: var(--accent);
+  --color-accent-dark: var(--accent-dark);
+}
+
+:root {
+  --primary-bg: #f5f5f5;
+  --secondary-bg: #131c1f;
+  --primary-text: #283035;
+  --secondary-text: #616b77;
+  --accent: #3f6492;
+  --accent-dark: #131e22;
+}
+
+/* Width */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f0f0f0;
+}
+
+/* Thumb */
+::-webkit-scrollbar-thumb {
+  background: #929eac;
+  border-radius: 10px;
+}
+
+* {
+  box-sizing: border-box;
+}
