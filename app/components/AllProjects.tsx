@@ -23,16 +23,17 @@ const AllProjects = () => {
           "
         >
           <ProjectCard
-            title="Pitch Design & Investor Narrative | RupeeFlow"
-            description="Investor-facing pitch deck and narrative design focused on clarity, assumptions, and market framing."
-            imageUrl="/images/rupeeflow-pitch.png"
-            caseStudyLink="/case-studies/pitch1"
+            title="Product & narrative Partner | Rupeeflow"
+            description="Aligning product logic, user flows, and business narrative for a high-friction cross-border payments platform."
+            imageUrl="/images/rupeeflow-product.png"
+            caseStudyLink="/case-studies/rupeeflow"
             points={[
-              "Assumption-driven market framing",
-              "Clear financial logic",
-              "Reduced investor ambiguity",
+              "User-friendly interface",
+              "Real-time analytics",
+              "Secure transactions",
             ]}
           />
+
           <ProjectCard
             title="Brand & narrative flow design | CloseXpay"
             description="Aligning product logic, user flows, and business narrative for a high-friction cross-border payments platform."
@@ -70,14 +71,14 @@ const AllProjects = () => {
           />
 
           <ProjectCard
-            title="Product & narrative Partner | Rupeeflow"
-            description="Aligning product logic, user flows, and business narrative for a high-friction cross-border payments platform."
-            imageUrl="/images/rupeeflow-product.png"
-            caseStudyLink="/case-studies/rupeeflow"
+            title="Pitch Design & Investor Narrative | RupeeFlow"
+            description="Investor-facing pitch deck and narrative design focused on clarity, assumptions, and market framing."
+            imageUrl="/images/rupeeflow-pitch.png"
+            caseStudyLink="/case-studies/pitch1"
             points={[
-              "User-friendly interface",
-              "Real-time analytics",
-              "Secure transactions",
+              "Assumption-driven market framing",
+              "Clear financial logic",
+              "Reduced investor ambiguity",
             ]}
           />
         </div>
