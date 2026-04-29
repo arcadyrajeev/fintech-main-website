@@ -12,7 +12,7 @@ const BridgeAccent = () => {
       >
         <p
           className="
-             text-2xl  md:text-3xl lg:text-6xl
+             text-5xl  md:text-4xl lg:text-6xl
             heading
             font-medium md:font-normal
             tracking-tight
@@ -22,8 +22,8 @@ const BridgeAccent = () => {
           "
         >
           We help <span className="text-accent italic">fintech</span> founders
-          align brand, product, and narrative so the business is evaluated
-          clearly by users and investors
+          align product, brand, and narrative so the business is clearly
+          understood by users and investors.
         </p>
       </div>
     </section>
