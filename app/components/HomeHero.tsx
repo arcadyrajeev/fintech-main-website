@@ -13,11 +13,11 @@ const HomeHero = () => {
         systems
       </p>
 
-      <h1 className="heading text-5xl md:text-6xl lg:text-8xl text-primary-text  px-3  w-full portrait:lg:w-[70%] portrait:w-[80%] landscape:w-[80%]">
+      <h1 className="heading text-5xl md:text-6xl lg:text-[7vw] text-primary-text  px-3  w-full portrait:lg:w-[70%] portrait:w-[80%] landscape:w-[80%]">
         Make your business legible to{" "}
         <span className="text-accent italic">Capital</span>
       </h1>
-      <div className="relative w-screen left-1/2 right-1/2 lg:-mt-20 xl:-mt-30 -ml-[50.5vw]">
+      <div className="relative w-screen left-1/2 right-1/2 lg:-mt-20 xl:-mt-[6vw] portrait:md:-mt-[4vw]  -ml-[50.5vw]">
         <Image
           className="w-full h-auto"
           src={"/hero-line12.svg"}
@@ -41,7 +41,7 @@ const HomeHero = () => {
       </div>
 
       <div className="w-full flex justify-end">
-        <h1 className="p-4 text-2xl landscape:xl:-mt-30 lg:text-4xl text-right heading text-primary-text/90 font-light lg:leading-[1.2] tracking-tight ">
+        <h1 className="p-4 text-2xl portrait:md:-mt-[6vw] landscape:xl:-mt-[7vw] lg:text-4xl text-right heading text-primary-text/90 font-light lg:leading-[1.2] tracking-tight ">
           Metrics improve, <br />
           But capital doesn’t follow?
         </h1>

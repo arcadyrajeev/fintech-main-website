@@ -16,16 +16,20 @@ const HeroGraphic = () => {
         {cards.map((card, idx) => (
           <div
             key={idx}
-            className="group hover:scale-[1.03] transition duration-300 cursor-pointer p-4 flex flex-col rounded-xl 
-            bg-gradient-to-tl from-[#172962] to-slate-950 
-            border border-white/20 hover:border-white/70"
+            className="group relative overflow-hidden hover:scale-[1.03] transition duration-300 cursor-pointer p-4 flex flex-col rounded-xl 
+  bg-gradient-to-tl from-[#262B60] to-slate-900 
+  border border-white/20 hover:border-white/90"
           >
+            {/* Glow Effect */}
+            {/* Glow Effect */}
+            <div className="absolute -bottom-16 -right-16 w-40 h-40 bg-gray-500/30 rounded-full blur-[60px] pointer-events-none z-0"></div>
+
             {/* subtle top indicator */}
-            <div className="w-[30%] rounded-full bg-white/20 h-1.5 mb-4"></div>
+            <div className="w-[30%] rounded-full bg-white/20 h-2 mb-4"></div>
 
             {/* title + arrow */}
             <div className="w-full flex justify-between items-center">
-              <h2 className="text-lg md:text-xl lg:text-3xl heading text-white mb-2">
+              <h2 className="text-lg md:text-2xl lg:text-4xl heading text-white mb-2">
                 {card.title}
               </h2>
 
@@ -51,7 +55,7 @@ const HeroGraphic = () => {
       </div>
 
       {/* bottom system block */}
-      <div className="w-full hidden landscape:flex bg-[#232C55] h-[30vh] rounded-t-2xl mt-6 p-8">
+      <div className="w-full relative  hidden landscape:flex bg-[#232C55] h-[30vh] rounded-t-2xl mt-6 p-8">
         <div className="w-[60%] h-[80%] rounded-full bg-white/10"></div>
       </div>
     </div>
