@@ -66,7 +66,7 @@ const Navbar = () => {
                   transition-colors duration-200
                   ${
                     active
-                      ? "bg-secondary-text text-white"
+                      ? "bg-slate-800 text-white"
                       : "text-secondary-text hover:bg-accent hover:text-white"
                   }
                 `}

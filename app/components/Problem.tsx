@@ -1,144 +1,107 @@
-// components/FintechClarityPatternSection.tsx
+"use client";
 
 import React from "react";
+import Image from "next/image";
 
-const FintechClarityPatternSection = () => {
+const problems = [
+  {
+    title: "Metrics look fine",
+    description: "But teams are confused about what to do",
+    image: "/images/problem-metrics.png",
+  },
+  {
+    title: "Users complete onboarding",
+    description: "But hesitate before committing money",
+    image: "/images/problem-onboarding.png",
+  },
+  {
+    title: "Product is powerful",
+    description: "But every demo requires explanation",
+    image: "/images/problem-demo.png",
+  },
+  {
+    title: "Everyone agrees in meetings",
+    description: "But nothing actually moves after",
+    image: "/images/problem-meetings.png",
+  },
+];
+
+const Problem = () => {
   return (
     <section className="w-full bg-neutral-50">
       <div
         className="
-          max-w-5xl mx-auto
+          max-w-6xl mx-auto
           px-6 sm:px-18 md:px-18 lg:px-24
-          py-[10vw] sm:py-16 md:py-18 lg:py-16
-          text-left
+          py-[12vw] sm:pt-20 lg:pt-24 sm:pb-10 lg:pb-12
         "
       >
         {/* Eyebrow */}
-        <p className="text-xs   tracking-wide text-neutral-500 mb-2 sm:mb-4">
+        <p className="text-xs tracking-wide text-neutral-500 mb-3">
           A recurring pattern in fintech
         </p>
 
-        {/* Primary Statement */}
+        {/* Heading */}
         <h2
           className="
-            text-xl sm:text-2xl md:text-3xl lg:text-5xl
-            heading
-            font-medium md:font-normal
-            tracking-tight
-            text-primary-text
-            
-            mx-auto lg:mx-0
-            leading-tight
-          "
+    text-xl sm:text-2xl md:text-3xl lg:text-5xl
+    heading
+    font-medium md:font-normal
+    tracking-tight
+    text-primary-text
+    mx-auto lg:mx-0
+    leading-tight
+  "
         >
-          Metrics look fine.
-          <br />
-          Yet something still leaks.
+          Where fintech products break?
         </h2>
 
-        {/* Intentional Pause */}
-        <div className="h-10 sm:h-20 lg:h-24" />
-
-        {/* Secondary Thought */}
-        <p
-          className="
-          
-          
-            mx-auto lg:mx-0
-            text-base
-            text-neutral-700
-            leading-relaxed
-          "
-        >
-          In many fintech products, nothing is technically broken.
-          Infrastructure works. Dashboards are full. Numbers move.
-        </p>
-
-        <p
-          className="
-            mt-4
-            
-            mx-auto lg:mx-0
-            text-base 
-            text-neutral-700
-            leading-relaxed
-          "
-        >
-          Progress stalls through small, distributed frictions that never
-          register as outright failures.
-        </p>
-
-        {/* Concept Blocks */}
+        {/* Grid */}
         <div
           className="
-            mt-16 sm:mt-20 lg:mt-24
-            space-y-16 sm:space-y-20 portrait:lg:space-y-18 landscape:space-y-22
-            max-w-3xl
-            mx-auto lg:mx-0
+            mt-12 
+            grid grid-cols-1 sm:grid-cols-2
+            gap-6 sm:gap-8
           "
         >
-          {/* Block 1 */}
-          <div>
-            <h3 className="text-sm font-semibold text-neutral-900 mb-3">
-              Invisible onboarding friction
-            </h3>
-            <p className="text-neutral-700 leading-relaxed">
-              Drop-offs happen, but dashboards don’t explain why users hesitate
-              or where confidence breaks.
-            </p>
-          </div>
+          {problems.map((item, index) => (
+            <div
+              key={index}
+              className="
+                bg-white
+                rounded-xl
+                shadow-[0_4px_6px_rgba(0,0,0,0.30)]
+                overflow-hidden
+                transition-all duration-300
+                hover:shadow-[0_10px_20px_rgba(0,0,0,0.20)]
+                p-2
+              "
+            >
+              {/* Image */}
+              <div className="relative overflow-hidden rounded-lg w-full h-[160px] sm:h-[180px] bg-[#8FA1AF]">
+                <Image
+                  src={item.image}
+                  alt={item.title}
+                  fill
+                  className="object-cover opacity-95"
+                />
+              </div>
 
-          {/* Block 2 */}
-          <div>
-            <h3 className="text-sm font-semibold text-neutral-900 mb-3">
-              Pricing & fee ambiguity
-            </h3>
-            <p className="text-neutral-700 leading-relaxed">
-              Users interact with money flows they don’t fully understand,
-              creating hesitation rather than conversion.
-            </p>
-          </div>
-
-          {/* Block 3 */}
-          <div>
-            <h3 className="text-sm font-semibold text-neutral-900 mb-3">
-              Metrics without alignment on decisions
-            </h3>
-            <p className="text-neutral-700 leading-relaxed">
-              Teams look at the same numbers but walk away with different
-              conclusions about what’s actually wrong.
-            </p>
-          </div>
-
-          {/* Block 4 */}
-          <div>
-            <h3 className="text-sm font-semibold text-neutral-900 mb-3">
-              Trust breaks across touchpoints
-            </h3>
-            <p className="text-neutral-700 leading-relaxed">
-              Product, website, pitch, and real usage tell slightly different
-              stories, enough to slow conviction.
-            </p>
-          </div>
+              {/* Content */}
+              <div className="p-5 sm:p-6">
+                <h3 className="heading text-xl font-medium text-neutral-900">
+                  {item.title}
+                </h3>
+                <p className="mt-1 body-font text-sm text-neutral-600">
+                  {item.description}
+                </p>
+              </div>
+            </div>
+          ))}
         </div>
-
-        {/* Closing Reflection */}
-        <p
-          className="
-            mt-12 sm:mt-18 lg:mt-24
-             border-l-2 border-neutral-300
-             pl-4
-            mx-auto lg:mx-0
-            text-neutral-600
-            italic
-          "
-        >
-          When clarity breaks and friction is distributed, progress slows , even
-          if nothing is technically wrong.
-        </p>
       </div>
     </section>
   );
 };
 
-export default FintechClarityPatternSection;
+export default Problem;

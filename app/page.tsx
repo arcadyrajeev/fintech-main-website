@@ -7,14 +7,17 @@ import SkillsSection from "./components/SkillsSection";
 import HowIWorkFocusSection from "./components/Solution";
 import Bridge from "./components/Bridge";
 import MiddleCta from "./components/MiddleCta";
+import Problem from "./components/Problem";
+import BridgeAccent from "./components/BridgeAccent";
 
 export default function Home() {
   return (
     <>
       <HomeHero />
-
+      <BridgeAccent />
       <ProjectSection />
-      <FintechClarityProblemSection />
+      <Problem />
+      <Bridge text="Individually they are small. But together, they block capital." />
       <FintechNarrativeSection />
       <Bridge
         text="When this goes unresolved, growth slows, conviction weakens, and

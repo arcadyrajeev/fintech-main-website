@@ -55,19 +55,39 @@ const ProjectCard = ({
           href={caseStudyLink}
           className="
             mt-8
+            relative
             portrait:w-[80%] landscape:w-[50%]
-            inline-flex items-center justify-center gap-3
+            flex
             w-full sm:w-auto
+            group
             px-4 md:px-8 py-3
             text-sm sm:text-base
             bg-primary-text text-white
             rounded-full
-            hover:bg-accent
-            transition
+            overflow-hidden
           "
         >
-          View Case Study
-          <ArrowUpRight size={18} />
+          <div
+            className="
+    absolute -bottom-[2vh] left-0
+    w-3 h-2 
+    origin-bottom
+    rounded-full
+    origin-center
+    duration-1200
+    group-hover:scale-[110]
+    transition-all ease-in-out 
+    bg-accent 
+    z-0
+  "
+          ></div>
+          <span className="z-10 flex items-center justify-center gap-3">
+            View Case Study
+            <ArrowUpRight
+              size={22}
+              className="duration-300 ease-in-out group-hover:translate-x-1 group-hover:-translate-y-1"
+            />
+          </span>
         </Link>
       </div>
 

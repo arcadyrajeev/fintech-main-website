@@ -1,50 +1,58 @@
 import React from "react";
-import { ArrowUpRight } from "lucide-react";
-import { ArrowDownLeft } from "lucide-react";
+import { ArrowUpRight, ArrowDownLeft } from "lucide-react";
 
 const HeroGraphic = () => {
   const cards = [
     { title: "Leaks", desc: "Revenue loss" },
-    { title: "Trust", desc: "Invester confidence" },
+    { title: "Trust", desc: "Investor confidence" },
     { title: "Friction", desc: "Decision drag" },
     { title: "Traction", desc: "Market proof" },
   ];
+
   return (
-    <div className="flex flex-col overflow-hidden w-full  landscape:h-[46vh] bg-secondary-bg rounded-2xl px-3 lg:px-8 ">
-      <div className="grid grid-cols-2 gap-4 md:grid-cols-4 w-full justify-between py-3 lg:py-8 ">
+    <div className="flex flex-col overflow-hidden w-full landscape:h-[46vh] bg-[#0B1220] rounded-2xl px-3 lg:px-8">
+      {/* Cards */}
+      <div className="grid grid-cols-2 gap-4 md:grid-cols-4 w-full py-3 lg:py-8">
         {cards.map((card, idx) => (
           <div
             key={idx}
-            className="flex group hover:scale-105 transition-scale duration-300 cursor-pointer p-4 flex-col rounded-xl  bg-neutral-300 justify-center border-r bg-gradient-to-tl from-gray-700 to-gray-900 border border-white/30"
+            className="group hover:scale-[1.03] transition duration-300 cursor-pointer p-4 flex flex-col rounded-xl 
+            bg-gradient-to-tl from-[#172962] to-slate-950 
+            border border-white/20 hover:border-white/70"
           >
-            <div className="w-[30%] rounded-full bg-gray-500 h-2 mb-4"></div>
+            {/* subtle top indicator */}
+            <div className="w-[30%] rounded-full bg-white/20 h-1.5 mb-4"></div>
+
+            {/* title + arrow */}
             <div className="w-full flex justify-between items-center">
-              <h2 className="text-xl md:text-xl lg:text-4xl  heading text-white mb-2">
+              <h2 className="text-lg md:text-xl lg:text-3xl heading text-white mb-2">
                 {card.title}
-              </h2>{" "}
+              </h2>
+
               {idx % 2 === 0 ? (
                 <ArrowDownLeft
-                  size={36}
-                  className="text-gray-300 duration-300  group-hover:-translate-x-2 group-hover:translate-y-2"
+                  size={40}
+                  className="text-slate-400 group-hover:text-white transition duration-300 group-hover:-translate-x-1 group-hover:translate-y-1"
                 />
               ) : (
                 <ArrowUpRight
-                  size={36}
-                  className="text-gray-300 duration-300  group-hover:translate-x-2 group-hover:-translate-y-2"
+                  size={40}
+                  className="text-slate-400 group-hover:text-white transition duration-300 group-hover:translate-x-1 group-hover:-translate-y-1"
                 />
               )}
             </div>
-            <div className="flex-col w-full relative mt-3 ">
-              <p className="text-gray-300 text-xs font-medium  group-hover:scale-[1.05] transition-transform duration-300">
-                {card.desc}
-              </p>
-            </div>
+
+            {/* description */}
+            <p className="text-white/50 text-xs font-medium mt-2">
+              {card.desc}
+            </p>
           </div>
         ))}
       </div>
-      <div className="w-full hidden landscape:flex bg-gray-700 h-[30vh] rounded-t-2xl mt-6 p-8">
-        {" "}
-        <div className="w-[60%] h-[80%] rounded-full bg-gray-500"> </div>
+
+      {/* bottom system block */}
+      <div className="w-full hidden landscape:flex bg-[#232C55] h-[30vh] rounded-t-2xl mt-6 p-8">
+        <div className="w-[60%] h-[80%] rounded-full bg-white/10"></div>
       </div>
     </div>
   );

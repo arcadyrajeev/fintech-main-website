@@ -6,7 +6,7 @@ const HowIWorkFocusSection = () => {
   return (
     <section className="w-full box-border bg-neutral-50">
       <div
-        className="max-w-5xl mx-auto
+        className="max-w-6xl mx-auto
           px-6 sm:px-18 md:px-18 lg:px-24
           py-8 sm:py-20 lg:py-16
           text-left"

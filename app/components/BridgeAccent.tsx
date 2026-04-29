@@ -1,11 +1,7 @@
 import { section } from "framer-motion/client";
 import React from "react";
 
-interface BridgeProps {
-  text: string;
-}
-
-const Bridge = ({ text }: BridgeProps) => {
+const BridgeAccent = () => {
   return (
     <section className="w-full bg-neutral-50">
       <div
@@ -25,11 +21,13 @@ const Bridge = ({ text }: BridgeProps) => {
             leading-[1.2]
           "
         >
-          {text}
+          We help <span className="text-accent italic">fintech</span> founders
+          align brand, product, and narrative so the business is evaluated
+          clearly by users and investors
         </p>
       </div>
     </section>
   );
 };
 
-export default Bridge;
+export default BridgeAccent;

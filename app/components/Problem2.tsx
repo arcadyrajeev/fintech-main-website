@@ -7,7 +7,7 @@ const FintechNarrativeSection = () => {
     <section className="w-full bg-neutral-50">
       <div
         className="
-          max-w-5xl mx-auto
+          max-w-6xl mx-auto
           px-6 sm:px-18 md:px-18 lg:px-24
           py-[10vw] sm:py-16 md:py-18 lg:py-16
           text-left
