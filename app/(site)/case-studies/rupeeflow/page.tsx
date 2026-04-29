@@ -6,302 +6,280 @@ import { ArrowLeft } from "lucide-react";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Product & narrative architecture | Rupeeflow",
+  title: "RupeeFlow Case Study | Fintech Onboarding, UX & Product Direction",
+
   description:
-    "Designing a fintech system that could be correctly understood by users, investors, and the market.",
+    "How RupeeFlow improved onboarding clarity, reduced hesitation, and built trust in a regulated fintech environment through product structure, UX direction, and narrative alignment.",
+
+  keywords: [
+    "fintech onboarding UX",
+    "KYC onboarding design",
+    "fintech product strategy case study",
+    "startup onboarding friction",
+    "product narrative fintech",
+    "trust building fintech UX",
+    "fintech case study India",
+  ],
+
+  openGraph: {
+    title: "RupeeFlow Case Study | Onboarding, Trust & Product Clarity",
+    description:
+      "A fintech case study on reducing onboarding friction and building trust through structured UX and product direction.",
+    url: "https://arcadydesign.com/case-studies/rupeeflow",
+    siteName: "Rajeev",
+    images: [
+      {
+        url: "/cases/rf-product-cover.png",
+        width: 1200,
+        height: 630,
+        alt: "RupeeFlow onboarding and product system",
+      },
+    ],
+    type: "article",
+  },
+
+  twitter: {
+    card: "summary_large_image",
+    title: "Fintech UX Case Study | RupeeFlow",
+    description:
+      "Improving onboarding clarity and trust in a fintech product through structured UX and product direction.",
+    images: ["/cases/rf-product-cover.png"],
+  },
+
+  alternates: {
+    canonical: "https://arcadydesign.com/case-studies/rupeeflow",
+  },
 };
 
 export default function RupeeFlowCaseStudy() {
   return (
     <main className="bg-neutral-50 text-neutral-900">
-      {/* Hero Section */}
+      {/* HERO */}
       <section className="max-w-6xl mx-auto px-6 md:px-12 lg:px-[7.5rem] pt-24 lg:pt-32 pb-20">
         <Link
           href="/case-studies"
-          className="flex items-center py-2 px-4 body-font font-bold gap-2 text-md border border-neutral-300 w-fit rounded-full hover:bg-neutral-100 cursor-pointer mb-6"
+          className="flex items-center py-2 px-4 font-bold gap-2 text-md border border-neutral-300 w-fit rounded-full hover:bg-neutral-100 mb-6"
         >
           <ArrowLeft /> Go back
         </Link>
+
         <header className="max-w-3xl">
-          <h1 className="text-4xl md:text-5xl heading text-primary-text font-medium tracking-tight">
-            Product & narrative architecture | Rupeeflow
+          <h1 className="text-4xl md:text-5xl heading font-medium tracking-[.9]">
+            RupeeFlow - Website UX, Product Direction, and KYC Onboarding
           </h1>
-          <p className="mt-6 text-lg md:text-xl leading-snug text-neutral-800">
-            Designing a fintech system that could be correctly understood -
-            without explanation.
+
+          <p className="mt-6 text-lg md:text-xl text-neutral-800">
+            Improving onboarding clarity, reducing hesitation, and building
+            trust in a regulated fintech environment.
           </p>
-          <p className="mt-4 text-base md:text-md text-neutral-600 max-w-2xl">
-            Built from zero with product structure, brand, and narrative treated
-            as a single system, not separate deliverables.
+
+          <p className="mt-4 text-base text-neutral-600">
+            Focused on how users interpret the product before committing
+            financial data.
           </p>
 
           <dl className="mt-10 grid grid-cols-1 sm:grid-cols-3 gap-6 text-sm">
             <div>
               <dt className="text-neutral-500">Industry</dt>
-              <dd className="mt-1 font-medium">Fintech - Payments</dd>
+              <dd className="mt-1 font-medium">Fintech</dd>
             </div>
             <div>
               <dt className="text-neutral-500">Scope</dt>
               <dd className="mt-1 font-medium">
-                Product Structure, Narrative & Branding
+                UX, Product Direction, Onboarding
               </dd>
             </div>
             <div>
-              <dt className="text-neutral-500">Role</dt>
-              <dd className="mt-1 font-medium">Product & Narrative Partner</dd>
+              <dt className="text-neutral-500">Focus</dt>
+              <dd className="mt-1 font-medium">Trust, Clarity, Conversion</dd>
             </div>
           </dl>
         </header>
 
-        {/* COVER IMAGE */}
-        <div className="mt-16 px-4 md:px-10 lg:px-30 relative aspect-[16/9] w-full overflow-hidden rounded-lg border border-neutral-200 bg-white">
+        <div className="mt-16 relative aspect-[16/9] w-full overflow-hidden rounded-lg border border-neutral-200 bg-white">
           <Image
             src="/cases/rf-product-cover.png"
-            alt="RupeeFlow system overview"
+            alt="RupeeFlow product"
             fill
-            priority
             className="object-contain"
           />
         </div>
       </section>
 
-      {/* Risk Context */}
-      <section className="max-w-6xl mx-auto px-6 md:px-12 lg:px-[7.5rem] py-20 border-t border-neutral-200">
-        <h2 className="text-2xl heading text-primary-text font-medium tracking-tight">
-          Risk context
-        </h2>
-        <div className="mt-6 max-w-3xl space-y-4 text-neutral-700 leading-relaxed">
+      {/* CONTEXT */}
+      <section className="max-w-6xl mx-auto px-6 md:px-12 lg:px-[7.5rem] py-20 border-gray-300 border-t">
+        <h2 className="text-2xl font-medium">Context</h2>
+
+        <div className="mt-6 max-w-3xl space-y-4 text-neutral-700">
           <p>
-            RupeeFlow operates in a domain where ambiguity is not neutral. In
-            fintech, unclear structure doesn’t slow progress, it erodes trust.
+            RupeeFlow operates in a space where users are required to submit
+            sensitive financial and business information early in the journey.
           </p>
+
           <p>
-            At this stage, the primary risk was not technical feasibility. The
-            risk was misinterpretation - by users assessing safety, investors
-            assessing viability, and partners assessing seriousness.
+            At this stage, the product itself was functional. The challenge was
+            not capability, but interpretation.
           </p>
+
           <p>
-            Early legibility matters disproportionately in regulated or
-            trust-sensitive systems. Ambiguity compounds faster than progress.
+            Users hesitated before committing. That hesitation directly impacts
+            onboarding completion and downstream growth.
           </p>
         </div>
       </section>
 
-      {/* Legibility Problem */}
-      <section className="max-w-6xl mx-auto px-6 md:px-12 lg:px-[7.5rem] py-20 border-t border-neutral-200">
-        <h2 className="text-2xl heading text-primary-text font-medium tracking-tight">
-          The legibility problem
-        </h2>
-        <div className="mt-6 max-w-3xl text-neutral-700 leading-relaxed">
+      {/* PROBLEM */}
+      <section className="max-w-6xl mx-auto px-6 md:px-12 lg:px-[7.5rem] py-20 border-gray-300  border-t">
+        <h2 className="text-2xl font-medium">The core problem</h2>
+
+        <div className="mt-6 max-w-3xl text-neutral-700">
           <p>
-            Early-stage fintechs are judged less on polish and more on whether
-            the business can be clearly understood and responsibly trusted.
-            Execution was not the bottleneck.
+            The product worked. But users did not move forward with confidence.
           </p>
+
           <p className="mt-4">
-            The challenge was making the business legible from day one.
+            In fintech onboarding, hesitation is not a UX issue. It is a trust
+            issue.
           </p>
+
           <ul className="mt-6 space-y-3 list-disc list-inside">
-            <li>
-              <span className="font-medium text-neutral-900">
-                Trust signaling:
-              </span>{" "}
-              Establishing financial credibility without over-assertion.
-            </li>
-            <li>
-              <span className="font-medium text-neutral-900">
-                Market clarity:
-              </span>{" "}
-              Making it immediately clear what kind of fintech this is, and what
-              it is not.
-            </li>
-            <li>
-              <span className="font-medium text-neutral-900">
-                Investor interpretation:
-              </span>{" "}
-              Making assumptions visible and structurally defensible.
-            </li>
-            <li>
-              <span className="font-medium text-neutral-900">
-                Product logic:
-              </span>{" "}
-              Showing how money moves, why it moves, and what outcomes result.
-            </li>
+            <li>KYC steps appeared before users understood the system</li>
+            <li>No clear sense of progress during onboarding</li>
+            <li>Each step felt isolated instead of cumulative</li>
+            <li>Lack of context around why information was required</li>
           </ul>
         </div>
       </section>
 
-      {/* Structural Decisions */}
-      <section className="max-w-6xl mx-auto px-6 md:px-12 lg:px-[7.5rem] py-20 border-t border-neutral-200">
-        <h2 className="text-2xl heading text-primary-text font-medium tracking-tight">
-          Structural decisions
-        </h2>
+      {/* WHAT MATTERED */}
+      <section className="max-w-6xl mx-auto px-6 md:px-12 lg:px-[7.5rem] py-20 border-gray-300  border-t">
+        <h2 className="text-2xl font-medium">What actually mattered</h2>
 
-        {/* Positioning */}
-        <div className="mt-10 max-w-3xl">
-          <h3 className="text-lg heading text-primary-text font-medium">
-            Positioning & trust framing
-          </h3>
-          <p className="mt-4 text-neutral-700 leading-relaxed">
-            The brand was anchored in operational credibility rather than
-            aspirational language. The positioning focused on what the system
-            enables today and how reliably it does so.
+        <div className="mt-6 max-w-3xl space-y-4 text-neutral-700">
+          <p>
+            The goal was not to make onboarding shorter. It was to make it feel
+            safer.
           </p>
-          <p className="mt-3 text-neutral-700 leading-relaxed">
-            Every visual and verbal decision was filtered through one question:
-            does this increase perceived legitimacy in a regulated context?
+
+          <p>In fintech, users optimize for certainty, not speed.</p>
+
+          <ul className="mt-6 space-y-3 list-disc list-inside">
+            <li>Clarity over persuasion</li>
+            <li>Progress over completeness</li>
+            <li>Trust over speed</li>
+            <li>Structure over feature exposure</li>
+          </ul>
+        </div>
+      </section>
+
+      {/* UX DECISIONS */}
+      <section className="max-w-6xl mx-auto px-6 md:px-12 lg:px-[7.5rem] py-20 border-gray-300  border-t">
+        <h2 className="text-2xl font-medium">Product UX direction</h2>
+
+        <div className="mt-6 max-w-3xl space-y-4 text-neutral-700">
+          <p>
+            The onboarding flow was redesigned as a progressive system instead
+            of a linear form sequence.
           </p>
+
+          <ul className="mt-6 space-y-3 list-disc list-inside">
+            <li>Step-based onboarding with visible progress</li>
+            <li>Context before input to explain requirements</li>
+            <li>Logical grouping of related data</li>
+            <li>Reduced cognitive load per step</li>
+          </ul>
         </div>
 
-        {/* External Narrative */}
-        <div className="mt-12 max-w-3xl">
-          <h3 className="text-lg heading text-primary-text font-medium">
-            External narrative control
-          </h3>
-          <p className="mt-4 text-neutral-700 leading-relaxed">
-            The website was treated as a clarity interface, not a marketing
-            surface. Its role was to reduce explanation overhead in investor,
-            partner, and user conversations.
-          </p>
-          <p className="mt-3 text-neutral-700 leading-relaxed">
-            Structure, messaging, and flow were aligned so external
-            interpretation matched internal intent across audiences.
-          </p>
-        </div>
-
-        {/* Product Legibility */}
-        <div className="mt-12 max-w-3xl">
-          <h3 className="text-lg heading text-primary-text font-medium">
-            Product legibility
-          </h3>
-          <p className="mt-4 text-neutral-700 leading-relaxed">
-            The product was structured around financial decisions rather than
-            feature discovery. Interfaces prioritized flows, causality, and
-            outcomes over secondary controls.
-          </p>
-          <p className="mt-3 text-neutral-700 leading-relaxed">
-            The goal was to make state and consequence understandable without
-            active interpretation.
-          </p>
-        </div>
-
-        {/* Product Images */}
-        <div className="mt-16 grid grid-cols-1 sm:grid-cols-2 gap-6">
-          <div className="relative rounded-lg overflow-hidden aspect-[16/9]">
-            <Image
-              alt="RupeeFlow product structure"
-              src="/cases/rf-product1.png"
-              fill
-              priority
-              className="object-contain"
-            />
-          </div>
-          <div className="relative rounded-lg overflow-hidden aspect-[16/9]">
-            <Image
-              alt="RupeeFlow financial flows"
-              src="/cases/rf-product2.png"
-              fill
-              priority
-              className="object-contain"
-            />
-          </div>
-        </div>
-
-        {/* Onboarding Flow Clarity */}
-        <div className="mt-16 max-w-3xl">
-          <h3 className="text-lg heading text-primary-text font-medium">
-            Onboarding flow clarity
-          </h3>
-          <p className="mt-4 text-neutral-700 leading-relaxed">
-            In regulated fintech, onboarding is not a form-filling exercise. It
-            is the first moment where trust is either established or quietly
-            lost.
-          </p>
-          <p className="mt-3 text-neutral-700 leading-relaxed">
-            The onboarding flow was designed as a progressive trust-building
-            system - revealing intent, structure, and seriousness before asking
-            for full commitment.
-          </p>
-          <p className="mt-3 text-neutral-700 leading-relaxed">
-            Information was collected in deliberate stages that mirror how
-            regulators, banks, and investors evaluate risk, not how consumer
-            signups optimize for speed.
-          </p>
-        </div>
-
-        {/* Onboarding Images */}
-        <div className="mt-12 grid grid-cols-1 sm:grid-cols-3  gap-6 md:gap-2">
-          <div className="relative rounded-lg overflow-hidden aspect-[16/9]">
+        <div className="mt-12 grid grid-cols-1 sm:grid-cols-3 gap-6">
+          <div className="relative aspect-[16/9] rounded-lg overflow-hidden">
             <Image
               src="/cases/rf-onboard1.png"
-              alt="RupeeFlow KYC onboarding step"
+              alt=""
               fill
-              priority
               className="object-contain"
             />
           </div>
-          <div className="relative rounded-lg overflow-hidden aspect-[16/9]">
+          <div className="relative aspect-[16/9] rounded-lg overflow-hidden">
             <Image
               src="/cases/rf-onboard2.png"
-              alt="RupeeFlow business structure onboarding"
+              alt=""
               fill
-              priority
               className="object-contain"
             />
           </div>
-          <div className="relative rounded-lg overflow-hidden aspect-[16/9]">
+          <div className="relative aspect-[16/9] rounded-lg overflow-hidden">
             <Image
               src="/cases/rf-onboard3.png"
-              alt="RupeeFlow KYB verification step"
+              alt=""
               fill
-              priority
               className="object-contain"
             />
           </div>
         </div>
       </section>
 
-      {/* Outcome */}
-      <section className="max-w-6xl mx-auto px-6 md:px-12 lg:px-[7.5rem] py-20 border-t border-neutral-200">
-        <h2 className="text-2xl heading text-primary-text font-medium tracking-tight">
-          Outcome
-        </h2>
+      {/* WEBSITE */}
+      <section className="max-w-6xl mx-auto px-6 md:px-12 lg:px-[7.5rem] py-20 border-gray-300  border-t">
+        <h2 className="text-2xl font-medium">Website UX direction</h2>
+
+        <div className="mt-6 max-w-3xl space-y-4 text-neutral-700">
+          <p>
+            The website was treated as a clarity layer, not a marketing layer.
+          </p>
+
+          <ul className="mt-6 space-y-3 list-disc list-inside">
+            <li>Clear articulation of what the product does</li>
+            <li>Reduced ambiguity in positioning</li>
+            <li>Aligned messaging with product behavior</li>
+            <li>Focused on trust signals over visual noise</li>
+          </ul>
+        </div>
+
+        <div className="mt-12 relative aspect-[16/9] rounded-lg overflow-hidden">
+          <Image
+            src="/cases/rf-product1.png"
+            alt=""
+            fill
+            className="object-contain"
+          />
+        </div>
+      </section>
+
+      {/* OUTCOME */}
+      <section className="max-w-6xl mx-auto px-6 md:px-12 lg:px-[7.5rem] py-20 border-gray-300  border-t">
+        <h2 className="text-2xl font-medium">Outcome</h2>
+
         <ul className="mt-6 max-w-3xl space-y-3 list-disc list-inside text-neutral-700">
-          <li>Brand, product, and narrative aligned from day one</li>
-          <li>Reduced explanation during demos and strategic conversations</li>
-          <li>Stronger trust signals in a regulated fintech context</li>
-          <li>Business perceived as intentional rather than experimental</li>
-          <li>Product could be correctly understood without persuasion</li>
+          <li>Improved onboarding clarity and flow</li>
+          <li>Reduced hesitation during KYC stages</li>
+          <li>Stronger perceived trust in the product</li>
+          <li>Better alignment between product and user expectations</li>
+          <li>Reduced need for explanation during demos</li>
         </ul>
       </section>
 
-      {/* Insight */}
-      <section className="max-w-6xl mx-auto px-6 md:px-12 lg:px-[7.5rem] py-20 border-t border-neutral-200">
-        <h2 className="text-2xl heading text-primary-text font-medium tracking-tight">
-          Insight
-        </h2>
-        <blockquote className="mt-8 max-w-4xl text-3xl md:text-4xl heading font-medium tracking-tight">
-          “In fintech, the first version sets the trust ceiling.”
+      {/* INSIGHT */}
+      <section className="max-w-6xl mx-auto px-6 md:px-12 lg:px-[7.5rem] py-20 border-gray-300  border-t">
+        <h2 className="text-2xl font-medium">Insight</h2>
+
+        <blockquote className="mt-8 text-3xl md:text-5xl heading leading-[1.2]">
+          “In fintech, onboarding is where trust is either built or lost.”
         </blockquote>
-        <p className="mt-6 max-w-3xl text-neutral-700 leading-relaxed">
-          Early alignment between product structure and narrative compounds over
-          time. Clarity reduces friction, accelerates decision-making, and
-          becomes a durable financial advantage.
+
+        <p className="mt-6 max-w-3xl text-neutral-700">
+          Improving structure and clarity at this stage directly impacts
+          conversion, perception, and long-term growth.
         </p>
       </section>
 
-      {/* Footer CTA */}
-      <footer className="max-w-6xl mx-auto px-6 md:px-12 lg:px-[7.5rem] py-16 border-t border-neutral-200">
-        <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
-          <p className="text-neutral-800">
-            If interpretation risk is slowing decisions, a conversation usually
-            helps.
-          </p>
+      {/* CTA */}
+      <footer className="max-w-6xl mx-auto px-6 md:px-12 lg:px-[7.5rem] py-16 border-gray-300 border-t">
+        <div className="flex justify-between items-center">
+          <p>If onboarding friction is slowing growth, a conversation helps.</p>
           <a
-            href="https://wa.me/919523638369?text=Hi!%20I%20came%20across%20your%20work%20and%20wanted%20to%20have%20a%20quick%20conversation."
+            href="https://wa.me/919523638369"
             target="_blank"
-            rel="noopener noreferrer"
-            className="text-sm font-medium text-neutral-900 underline underline-offset-4 hover:text-neutral-700"
+            className="underline"
           >
             Start a conversation
           </a>

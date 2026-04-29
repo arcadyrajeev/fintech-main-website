@@ -6,9 +6,51 @@ import { ArrowLeft } from "lucide-react";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Clarity & Data hierarchy | Crypto trade risk analysis",
+  title:
+    "Crypto Trading UX Case Study | Making Execution Risk Visible Before Trade",
+
   description:
-    "Designing a crypto trading system where execution risk is visible, differentiated, and legible before action.",
+    "A fintech case study on restructuring a crypto trading platform to surface execution risk before action. Reduced false confidence, clarified decision signals, and improved trade safety under pressure.",
+
+  keywords: [
+    "crypto trading UX",
+    "fintech case study",
+    "trading platform design",
+    "execution risk",
+    "crypto product strategy",
+    "fintech UX case study",
+    "risk visibility trading",
+    "data hierarchy fintech",
+  ],
+
+  openGraph: {
+    title: "Execution Risk Visibility in Crypto Trading",
+    description:
+      "When risk is invisible, performance metrics mislead. This case study shows how structuring risk signals changes decisions before trades happen.",
+    url: "https://arcadydesign.com/case-studies/crypto-risk-platform",
+    siteName: "Rajeev",
+    images: [
+      {
+        url: "/cases/bq-product1.png",
+        width: 1200,
+        height: 630,
+        alt: "Crypto trading risk interface",
+      },
+    ],
+    type: "article",
+  },
+
+  twitter: {
+    card: "summary_large_image",
+    title: "Crypto Trading Case Study | Execution Risk Visibility",
+    description:
+      "A system redesign that made hidden risk visible before trade execution, reducing false confidence.",
+    images: ["/cases/bq-product1.png"],
+  },
+
+  alternates: {
+    canonical: "https://arcadydesign.com/case-studies/crypto-risk-platform",
+  },
 };
 
 export default function CryptoRiskCaseStudy() {

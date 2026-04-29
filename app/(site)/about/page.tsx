@@ -4,6 +4,54 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
 import Link from "next/link";
 
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "About Rajeev | Fintech Product & Narrative Strategy",
+
+  description:
+    "Rajeev works with fintech founders to align product, narrative, and trust so businesses are understood clearly by users, investors, and the market. Focused on clarity, decision-making, and capital readiness.",
+
+  keywords: [
+    "rajeev fintech",
+    "fintech consultant india",
+    "product strategy fintech",
+    "startup narrative strategy",
+    "fintech UX strategy",
+    "investor readiness fintech",
+    "product positioning fintech",
+  ],
+
+  openGraph: {
+    title: "About Rajeev | Fintech Strategy",
+    description:
+      "Product, narrative, and trust alignment for fintech systems where clarity determines growth and capital.",
+    url: "https://arcadydesign.com/about",
+    siteName: "Rajeev",
+    images: [
+      {
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Rajeev - Fintech Strategy",
+      },
+    ],
+    type: "profile",
+  },
+
+  twitter: {
+    card: "summary_large_image",
+    title: "About Rajeev | Fintech Strategy",
+    description:
+      "Helping fintech teams resolve clarity gaps that slow decisions and block capital.",
+    images: ["/og-image.png"],
+  },
+
+  alternates: {
+    canonical: "https://arcadydesign.com/about",
+  },
+};
+
 const useParallax = (scrollYProgress: any, distance: number) => {
   return useTransform(scrollYProgress, [0, 1], [0, distance]);
 };

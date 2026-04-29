@@ -6,11 +6,53 @@ import { ArrowLeft } from "lucide-react";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Brand & Product Strategy | Payments platform",
-  description:
-    "Reframing brand, pricing, and product narrative to make a payments platform legible to users, partners, and capital.",
-};
+  title:
+    "Fintech Case Study | Fixing Pricing, Narrative & Trust in a Payments Platform",
 
+  description:
+    "A fintech case study on aligning brand, pricing, and product narrative so a payments platform becomes easy to understand. Reduced decision friction, improved trust signals, and removed reliance on explanation.",
+
+  keywords: [
+    "fintech case study",
+    "pricing strategy fintech",
+    "product narrative fintech",
+    "payments platform UX",
+    "startup positioning case study",
+    "fintech conversion problems",
+    "pricing clarity SaaS fintech",
+    "product strategy payments",
+  ],
+
+  openGraph: {
+    title: "Pricing, Narrative & Trust Alignment | Payments Case Study",
+    description:
+      "When pricing and product don’t align, users hesitate. This case study shows how clarity reduces friction and improves decision-making.",
+    url: "https://arcadydesign.com/case-studies/closexpay-brand-product-strategy",
+    siteName: "Rajeev",
+    images: [
+      {
+        url: "/cases/closex-cover.png",
+        width: 1200,
+        height: 630,
+        alt: "Payments platform pricing and product clarity",
+      },
+    ],
+    type: "article",
+  },
+
+  twitter: {
+    card: "summary_large_image",
+    title: "Fintech Case Study | Pricing & Product Clarity",
+    description:
+      "How aligning pricing, brand, and product narrative reduces hesitation and builds trust in fintech systems.",
+    images: ["/cases/closex-cover.png"],
+  },
+
+  alternates: {
+    canonical:
+      "https://arcadydesign.com/case-studies/closexpay-brand-product-strategy",
+  },
+};
 export default function CloseXPayCaseStudy() {
   return (
     <main className="bg-neutral-50 text-neutral-900">
