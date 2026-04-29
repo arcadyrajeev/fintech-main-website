@@ -11,6 +11,7 @@ import Problem from "./components/Problem";
 import BridgeAccent from "./components/BridgeAccent";
 
 import type { Metadata } from "next";
+import Services from "./components/Services";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://arcadydesign.com"),
@@ -78,14 +79,22 @@ export default function Home() {
       <BridgeAccent />
       <ProjectSection />
       <Problem />
-      <Bridge text="Individually they are small. But together, they block capital." />
+      <Bridge
+        size="med"
+        text="Individually they are small. But together, they block capital."
+      />
+      <Services />
       <FintechNarrativeSection />
       <Bridge
+        size="big"
         text="When this goes unresolved, growth slows, conviction weakens, and
                 capital conversations stretch longer than they should."
       />
       <HowIWorkFocusSection />
-      <Bridge text="This usually shows up before a raise or after early traction." />
+      <Bridge
+        size="big"
+        text="This usually shows up before a raise or after early traction."
+      />
       <FinalCTASection
         text1="If the problem feels familiar,"
         text2="a conversation usually helps."

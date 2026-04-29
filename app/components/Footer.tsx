@@ -4,7 +4,7 @@ import { FaBehance, FaLinkedinIn, FaXTwitter } from "react-icons/fa6";
 
 const Footer = () => {
   return (
-    <footer className="w-full bg-cover bg-[url(/images/footer2.png)] bg-secondary-bg text-neutral-100">
+    <footer className="w-full bg-cover bg-[url(/images/footer3.png)] bg-secondary-bg text-neutral-100">
       <div
         className="
           max-w-7xl mx-auto

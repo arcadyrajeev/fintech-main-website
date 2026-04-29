@@ -16,6 +16,11 @@
 }
 
 @font-face {
+  font-family: "WorkSans Var";
+  src: url("/fonts/WorkSans-VariableFont.ttf") format("truetype");
+}
+
+@font-face {
   font-family: "Outfit";
   src: url("/fonts/Outfit-VariableFont.ttf") format("truetype");
 }
@@ -26,6 +31,10 @@
 
 .body-font {
   font-family: "WorkSans", sans-serif;
+}
+
+.body-font2 {
+  font-family: "WorkSans Var", sans-serif;
 }
 
 body {
