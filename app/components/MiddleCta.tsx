@@ -14,7 +14,7 @@ const MiddleCta = () => {
                 group
                 overflow-hidden
                 font-medium
-                border border-neutral-700
+                border-2 border-neutral-700
                  px-8 py-4 rounded-full
                 text-neutral-900
                 

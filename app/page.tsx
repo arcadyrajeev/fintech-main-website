@@ -41,7 +41,7 @@ export const metadata: Metadata = {
     description:
       "Metrics improve, but capital doesn’t follow. Fix the gaps in product, narrative, and trust that block conviction.",
     url: "https://arcadydesign.com",
-    siteName: "Your Brand Name",
+    siteName: "YArcady Design Fintech",
     images: [
       {
         url: "/og-image.png", // create this later
@@ -58,7 +58,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Make Your Fintech Legible to Capital",
     description:
-      "Fix the hidden frictions in fintech products that slow growth and block investment.",
+      "Fintech product strategy to fix onboarding friction, trust gaps, and positioning so users commit, investors understand, and growth compounds.",
     images: ["/og-image.png"],
   },
 

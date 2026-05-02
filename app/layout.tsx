@@ -9,23 +9,12 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://arcadydesign.com"),
 
   title: {
-    default: "Fintech Brand & Product Strategy | Fix What Blocks Capital",
-    template: "%s | Fintech Strategy",
+    default: "Fintech Product & Narrative Strategy | Arcady",
+    template: "%s | Arcady",
   },
 
   description:
-    "Rajeev helps fintech and SaaS founders align product, narrative, and trust so users, investors, and the market understand the business clearly. Fix conversion leaks, hesitation, and positioning gaps that block capital.",
-
-  keywords: [
-    "fintech strategy",
-    "fintech product strategy",
-    "fintech branding",
-    "startup positioning",
-    "product narrative",
-    "conversion optimization fintech",
-    "investor readiness fintech",
-    "saas product strategy",
-  ],
+    "Fintech product strategy to fix onboarding friction, trust gaps, and positioning so users commit, investors understand, and growth compounds.",
 
   authors: [{ name: "Rajeev" }],
   creator: "Rajeev",
@@ -33,15 +22,15 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Make Your Fintech Legible to Capital",
     description:
-      "Metrics improve, but capital doesn’t follow. Fix gaps in product, narrative, and trust.",
+      "Fix onboarding friction, trust gaps, and positioning issues that block conviction and capital.",
     url: "https://arcadydesign.com",
-    siteName: "Rajeev",
+    siteName: "Arcady Design Fintech",
     images: [
       {
         url: "/og-image.png",
         width: 1200,
         height: 630,
-        alt: "Fintech strategy and product clarity",
+        alt: "Fintech product and narrative strategy",
       },
     ],
     locale: "en_US",
@@ -50,7 +39,7 @@ export const metadata: Metadata = {
 
   twitter: {
     card: "summary_large_image",
-    title: "Make Your Fintech Legible to Capital",
+    title: "Fintech Strategy | Arcady",
     description:
       "Fix the hidden frictions in fintech products that slow growth and block investment.",
     images: ["/og-image.png"],
@@ -72,18 +61,34 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>) {
+}) {
   return (
     <html lang="en">
-      <SmoothScrollProvider>
-        <body>
+      <body>
+        {/* Structured Data */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "ProfessionalService",
+              name: "Arcady - Fintech Product & Narrative Strategy",
+              url: "https://arcadydesign.com",
+              description:
+                "Fintech product strategy focused on onboarding, trust, and narrative clarity.",
+              areaServed: "Global",
+            }),
+          }}
+        />
+
+        <SmoothScrollProvider>
           <Navbar />
           <main>{children}</main>
           <Footer />
-        </body>
-      </SmoothScrollProvider>
+        </SmoothScrollProvider>
+      </body>
     </html>
   );
 }
