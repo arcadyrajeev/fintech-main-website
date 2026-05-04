@@ -57,22 +57,22 @@ export default function Services() {
                 </div>
 
                 {/* Right */}
-                <div className="md:w-1/2 flex flex-col gap-6 md:ml-30">
-                  <p className="bodyfont text-white/70 text-sm md:text-base leading-relaxed max-w-md">
+                <div className="md:w-1/2 flex flex-col gap-6 md:px-20 ">
+                  <p className="bodyfont text-white/80 text-sm md:text-base leading-relaxed max-w-md">
                     {service.desc}
                   </p>
 
                   <Link
                     href="/case-studies"
-                    className="flex items-center gap-2 w-fit text-white bodyfont text-sm md:text-base group"
+                    className="flex items-center gap-2 ml-auto w-fit text-white bodyfont mt-auto text-lg md:text-3xl group"
                   >
                     <span className="relative">
                       View Projects
-                      <span className="absolute left-0 -bottom-1 w-full h-[2px] bg-gradient-to-r from-blue-400 to-indigo-500 scale-x-0 group-hover:scale-x-100 transition-transform origin-left" />
+                      <span className="absolute left-0 -bottom-4 w-full h-[6px] bg-gradient-to-r from-blue-400 to-indigo-500 scale-x-100 group-hover:scale-x-0 transition-transform origin-right" />
                     </span>
                     <ArrowUpRight
-                      size={18}
-                      className="group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform"
+                      size={30}
+                      className="group-hover:translate-x-2 group-hover:-translate-y-2 delay-150 transition-transform"
                     />
                   </Link>
                 </div>
