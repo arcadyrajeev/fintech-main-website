@@ -23,9 +23,9 @@ export default function Services() {
     <section className="w-full   px-4 py-20">
       <div className="w-full mx-auto px-2 py-20">
         {/* Heading */}
-        <div className="px-[15vw]">
+        <div className="px-4 lg:px-[15vw]">
           <h2 className="heading text-3xl md:text-7xl text-primary-text tracking-tight">
-            What we can do for you?
+            What can we do for you?
           </h2>
 
           <p className="mt-4 text-neutral-600 text-lg md:text-xl">
@@ -34,7 +34,7 @@ export default function Services() {
         </div>
 
         {/* Container */}
-        <div className="relative mt-12 rounded-3xl overflow-hidden bg-[#151E35] p-6 md:p-10">
+        <div className="relative mt-12 rounded-3xl overflow-hidden bg-[#151E35] p-3 md:p-10">
           {/* Top Right Glow */}
           <div className="pointer-events-none absolute top-0 right-0 w-[300px] h-[300px] bg-blue-400/20 blur-[120px] rounded-full" />
 
@@ -46,10 +46,10 @@ export default function Services() {
             {services.map((service, index) => (
               <div
                 key={index}
-                className="flex flex-col md:flex-row md:items-center justify-between gap-6  py-16"
+                className="flex flex-col md:flex-row md:items-center justify-between gap-6 px-4 py-12 lg:py-16"
               >
                 {/* Left */}
-                <div className="flex items-center gap-10 md:w-1/2 px-10">
+                <div className="flex items-center gap-4 lg:gap-10 lg:w-1/2 lg:px-10">
                   <div className="w-4 h-3 mt-3 rounded-full bg-white/70" />
                   <h3 className="body-font2 font-light text-2xl md:text-5xl text-white leading-[1]">
                     {service.title}

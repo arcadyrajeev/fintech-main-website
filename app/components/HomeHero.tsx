@@ -6,9 +6,9 @@ import Image from "next/image";
 const HomeHero = () => {
   return (
     <div className="   w-full p-4 portrait:lg:py-16 landscape:lg:py-24 lg:px-24">
-      <p className="text-sm md:text-md lg:text-lg  body-font px-4 mt-22 lg:mt-16 font-medium text-slate-600 mb-3">
-        <span className="text-orange-800 font-bold">PRODUCT</span>,{" "}
-        <span className="text-orange-800 font-bold">NARRATIVE</span> , and{" "}
+      <p className="text-xs md:text-base  body-font px-4 mt-22 lg:mt-16 font-medium text-slate-600 mb-3 ">
+        <span className="text-orange-800 font-bold">PRODUCT CLARITY</span>,{" "}
+        <span className="text-orange-800 font-bold">NARRATIVE</span>, and{" "}
         <span className="text-orange-800 font-bold">TRUST</span> in fintech
         systems
       </p>
@@ -16,6 +16,10 @@ const HomeHero = () => {
       <h1 className="heading text-5xl md:text-6xl lg:text-[7vw] text-primary-text  px-3  w-full portrait:lg:w-[70%] portrait:w-[80%] landscape:w-[80%]">
         Make your business legible to{" "}
         <span className="text-accent italic">Capital</span>
+      </h1>
+      <h1 className="heading text-md mt-6 lg:mt-12 lg:text-2xl text-slate-600  px-3  portrait:lg:w-[50%] portrait:w-[80%] portrait:md:w-[65%] landscape:w-[60%]">
+        We help fintech companies improve onboarding, trust, and conversion
+        through product strategy, UX systems, and narrative clarity.
       </h1>
       <div className="relative w-screen left-1/2 right-1/2 lg:-mt-20 xl:-mt-[6vw] portrait:md:-mt-[4vw]  -ml-[50.5vw]">
         <Image
@@ -28,12 +32,12 @@ const HomeHero = () => {
 
         {/* Pulsing Node */}
         <div className="absolute -top-2 right-10 md:-top-4 md:right-30  xl:-top-4 xl:right-50">
-          <span className="relative flex h-[10vw] md:h-[6vw] w-[10vw] md:w-[6vw]">
+          <span className="relative flex h-[8vw] md:h-[6vw] w-[8vw] md:w-[6vw]">
             {/* Pulse */}
             <span className="absolute inline-flex h-full w-full rounded-full bg-red-500 opacity-75 animate-ping"></span>
 
             {/* Solid dot */}
-            <span className="relative inline-flex rounded-full body-font text-white font-bold  text-4xl md:text-5xl xl:text-6xl items-center justify-center h-[10vw] md:h-[6vw] w-[10vw] md:w-[6vw] bg-blue-600">
+            <span className="relative inline-flex rounded-full body-font text-white font-bold  text-2xl md:text-5xl xl:text-6xl items-center justify-center h-[8vw] md:h-[6vw] w-[8vw] md:w-[6vw] bg-blue-600">
               $
             </span>
           </span>
