@@ -12,7 +12,7 @@ const BridgeAccent = () => {
       >
         <p
           className="
-             text-5xl  md:text-4xl lg:text-6xl
+             text-3xl  md:text-4xl lg:text-6xl
             heading
             font-medium md:font-normal
             tracking-tight

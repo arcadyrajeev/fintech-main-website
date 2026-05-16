@@ -13,6 +13,7 @@ import ScrollTraceBackground from "./components/ScrollTraceBackground";
 
 import type { Metadata } from "next";
 import Services from "./components/Services";
+import FAQSection from "./components/FAQSection";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://arcadydesign.com"),
@@ -94,7 +95,7 @@ export default function Home() {
         <FintechNarrativeSection />
 
         <Bridge
-          size="big"
+          size="med"
           text="When this goes unresolved, growth slows, conviction weakens, and
           capital conversations stretch longer than they should."
         />
@@ -102,7 +103,7 @@ export default function Home() {
         <HowIWorkFocusSection />
 
         <Bridge
-          size="big"
+          size="med"
           text="This usually shows up before a raise or after early traction."
         />
 
@@ -110,6 +111,7 @@ export default function Home() {
           text1="If the problem feels familiar,"
           text2="a conversation usually helps."
         />
+        <FAQSection />
       </div>
     </div>
   );

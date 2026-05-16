@@ -10,7 +10,7 @@ const ProjectSection = () => {
         className="
           max-w-7xl mx-auto
           px-6 sm:px-10 lg:px-24
-          py-[2vw] sm:py-10 md:py-12 portrait:lg:py-4 landscape:lg:py-26
+          py-10 md:py-12 portrait:lg:py-12 landscape:lg:py-26
           flex flex-col
         "
       >
@@ -29,7 +29,8 @@ const ProjectSection = () => {
         <h1
           className="
             heading
-            text-lg 
+            text-sm
+            font-medium 
             text-center
             text-primary-text/60
             mb-6 sm:mb-9

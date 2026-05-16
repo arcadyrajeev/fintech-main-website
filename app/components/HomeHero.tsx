@@ -5,7 +5,7 @@ import Image from "next/image";
 
 const HomeHero = () => {
   return (
-    <div className="   w-full p-4 portrait:lg:py-16 landscape:lg:py-24 lg:px-24">
+    <div className="   w-full px-4 py-6 portrait:lg:py-16 landscape:lg:py-24 lg:px-24">
       <p className="text-xs md:text-base  body-font px-4 mt-22 lg:mt-16 font-medium text-slate-600 mb-3 ">
         <span className="text-orange-800 font-bold">PRODUCT CLARITY</span>,{" "}
         <span className="text-orange-800 font-bold">NARRATIVE</span>, and{" "}

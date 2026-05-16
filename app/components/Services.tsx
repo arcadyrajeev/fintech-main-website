@@ -3,82 +3,166 @@
 import { ArrowUpRight } from "lucide-react";
 import Link from "next/link";
 
-export default function Services() {
-  const services = [
-    {
-      title: "Product & Narrative Alignment",
-      desc: "Teams, users, and investors understand the product differently. We align product logic, positioning, and messaging into one coherent system.",
-    },
-    {
-      title: "Onboarding & Conversion Clarity",
-      desc: "Users complete flows but hesitate before committing money. We restructure onboarding, KYC, and key decision flows to reduce hesitation and build trust.",
-    },
-    {
-      title: "Pricing & Trust Architecture",
-      desc: "Pricing exists, but doesn’t build trust or drive decisions. We clarify pricing logic, value progression, and financial signals across product and website.",
-    },
-  ];
+const topServices = [
+  {
+    title: "Onboarding & Conversion Clarity",
+    desc: "Reduce friction across onboarding, KYC, and activation flows.",
+    bullets: [
+      "KYC UX optimization",
+      "Activation flows",
+      "Trust-building interactions",
+    ],
+    image: "/images/services/onboarding-conversion.png",
+  },
+  {
+    title: "Trust & Decision Systems",
+    desc: "Design financial interfaces that improve confidence and reduce hesitation.",
+    bullets: ["Dashboard hierarchy", "Trust signaling", "Risk perception"],
+    image: "/images/services/trust-decision.png",
+  },
+];
 
+const bottomServices = [
+  {
+    title: "Product Narrative",
+    desc: "Align product behavior with investor understanding.",
+    image: "/images/services/product-narrative.png",
+  },
+  {
+    title: "Financial UX Systems",
+    desc: "Structure complex financial workflows into intuitive experiences.",
+    image: "/images/services/financial-ux.png",
+  },
+  {
+    title: "Information Architecture",
+    desc: "Clarify data-heavy products through hierarchy and interaction design.",
+    image: "/images/services/information-architecture.png",
+  },
+];
+
+export default function Services() {
   return (
-    <section className="w-full   px-4 py-20">
-      <div className="w-full mx-auto px-2 py-20">
+    <section className="w-full px-4 py-16 md:py-[12vw]">
+      <div className="max-w-[1600px] mx-auto">
         {/* Heading */}
-        <div className="px-4 lg:px-[15vw]">
-          <h2 className="heading text-3xl md:text-7xl text-primary-text tracking-tight">
+        <div className="px-2 lg:px-[10vw]">
+          <h2 className="heading text-4xl md:text-7xl text-primary-text tracking-tight">
             What can we do for you?
           </h2>
 
-          <p className="mt-4 text-neutral-600 text-lg md:text-xl">
+          <p className="mt-4 text-neutral-600 text-lg md:text-xl max-w-2xl">
             Where clarity breaks, decisions slow. This is where we step in.
           </p>
         </div>
 
-        {/* Container */}
-        <div className="relative mt-12 rounded-3xl overflow-hidden bg-[#151E35] p-3 md:p-10">
-          {/* Top Right Glow */}
-          <div className="pointer-events-none absolute top-0 right-0 w-[300px] h-[300px] bg-blue-400/20 blur-[120px] rounded-full" />
+        {/* Bento Grid */}
+        <div className="mt-16 grid grid-cols-1 lg:grid-cols-12 gap-4">
+          {/* Top Large Cards */}
+          {topServices.map((service, index) => (
+            <div
+              key={index}
+              className="group relative overflow-hidden rounded-2xl border border-white/10 bg-[#151E35] lg:col-span-6 min-h-[620px] p-4 md:p-10"
+            >
+              {/* Glow */}
+              <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(59,130,246,0.18),transparent_45%)]" />
 
-          {/* Bottom Left Glow */}
-          <div className="pointer-events-none absolute bottom-0 left-0 w-[300px] h-[300px] bg-indigo-400/20 blur-[120px] rounded-full" />
+              {/* Content */}
+              <div className="relative z-10 flex h-full flex-col">
+                {/* Top */}
+                <div className="flex items-start justify-between gap-6">
+                  <div>
+                    <h3 className="bodyfont text-white text-3xl md:text-5xl  leading-[1.05] max-w-md">
+                      {service.title}
+                    </h3>
 
-          {/* Services */}
-          <div className="flex flex-col divide-y divide-white/60">
-            {services.map((service, index) => (
-              <div
-                key={index}
-                className="flex flex-col md:flex-row md:items-center justify-between gap-6 px-4 py-12 lg:py-16"
-              >
-                {/* Left */}
-                <div className="flex items-center gap-4 lg:gap-10 lg:w-1/2 lg:px-10">
-                  <div className="w-4 h-3 mt-3 rounded-full bg-white/70" />
-                  <h3 className="body-font2 font-light text-2xl md:text-5xl text-white leading-[1]">
-                    {service.title}
-                  </h3>
-                </div>
-
-                {/* Right */}
-                <div className="md:w-1/2 flex flex-col gap-6 md:px-20 ">
-                  <p className="bodyfont text-white/80 text-sm md:text-base leading-relaxed max-w-md">
-                    {service.desc}
-                  </p>
+                    <p className="mt-5 text-white/70 text-sm md:text-base leading-relaxed max-w-lg">
+                      {service.desc}
+                    </p>
+                  </div>
 
                   <Link
                     href="/case-studies"
-                    className="flex items-center gap-2 ml-auto w-fit text-white bodyfont mt-auto text-lg md:text-3xl group"
+                    className="shrink-0 flex items-center justify-center w-12 h-12 rounded-2xl border border-white/10 bg-white/5 hover:bg-white/10 transition-colors"
                   >
-                    <span className="relative">
-                      View Projects
-                      <span className="absolute left-0 -bottom-4 w-full h-[6px] bg-gradient-to-r from-blue-400 to-indigo-500 scale-x-100 group-hover:scale-x-0 transition-transform origin-right" />
-                    </span>
                     <ArrowUpRight
-                      size={30}
-                      className="group-hover:translate-x-2 group-hover:-translate-y-2 delay-150 transition-transform"
+                      size={22}
+                      className="text-white group-hover:-translate-y-1 group-hover:translate-x-1 transition-transform"
                     />
                   </Link>
                 </div>
+
+                {/* Bullets */}
+                <div className="mt-8 flex flex-wrap gap-3">
+                  {service.bullets.map((bullet, bulletIndex) => (
+                    <div
+                      key={bulletIndex}
+                      className="px-4 py-2 rounded-full bg-white/5 border border-white/50 text-white/70 text-sm"
+                    >
+                      {bullet}
+                    </div>
+                  ))}
+                </div>
+
+                {/* Image */}
+                <div className="relative mt-auto pt-10">
+                  <div className="overflow-hidden rounded-xl border border-white/10 bg-white/5">
+                    <img
+                      src={service.image}
+                      alt={service.title}
+                      className="w-full h-[320px] object-cover object-top"
+                    />
+                  </div>
+                </div>
               </div>
-            ))}
-          </div>
+            </div>
+          ))}
+
+          {/* Bottom Small Cards */}
+          {bottomServices.map((service, index) => (
+            <div
+              key={index}
+              className="group relative overflow-hidden rounded-xl border border-white/10 bg-[#151E35] lg:col-span-4 min-h-[500px] pl-6 md:pl-8  pt-6 md:pt-8"
+            >
+              {/* Glow */}
+              <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(99,102,241,0.14),transparent_50%)]" />
+
+              {/* Content */}
+              <div className="relative z-10 flex h-full flex-col">
+                {/* Top */}
+                <div className="flex items-start justify-between gap-4">
+                  <h3 className="bodyfont text-white text-2xl md:text-3xl leading-[1.1] ">
+                    {service.title}
+                  </h3>
+
+                  <Link
+                    href="/case-studies"
+                    className="shrink-0 flex mr-6 items-center justify-center w-11 h-11 rounded-md border border-white/10 bg-white/5 hover:bg-white/10 transition-colors"
+                  >
+                    <ArrowUpRight
+                      size={20}
+                      className="text-white group-hover:-translate-y-1 group-hover:translate-x-1 transition-transform"
+                    />
+                  </Link>
+                </div>
+
+                {/* Desc */}
+                <p className="mt-2 text-white/65 text-sm md:text-base leading-relaxed max-w-sm">
+                  {service.desc}
+                </p>
+
+                {/* Image */}
+                <div className="relative mt-auto ">
+                  <div className="overflow-hidden rounded-lg border border-white/10 bg-white/5">
+                    <img
+                      src={service.image}
+                      alt={service.title}
+                      className="w-full h-[300px] object-cover"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          ))}
         </div>
       </div>
     </section>
