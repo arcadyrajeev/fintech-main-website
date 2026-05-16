@@ -223,7 +223,7 @@ export default function CloseXPayCaseStudy() {
             </div>
 
             <div className="grid grid-rows-2 gap-6">
-              <div className="relative rounded-2xl overflow-hidden border border-neutral-200 bg-black">
+              <div className="relative rounded-2xl aspect-[16/10] overflow-hidden border border-neutral-200 bg-black">
                 <Image
                   src="/cases/cp-brand2.png"
                   alt="Brand colors"
@@ -232,7 +232,7 @@ export default function CloseXPayCaseStudy() {
                 />
               </div>
 
-              <div className="relative rounded-2xl overflow-hidden border border-neutral-200 bg-black">
+              <div className="relative rounded-2xl aspect-[16/10] overflow-hidden border border-neutral-200 bg-black">
                 <Image
                   src="/cases/cp-brand3.png"
                   alt="Typography system"
@@ -269,7 +269,7 @@ export default function CloseXPayCaseStudy() {
             </div>
 
             <div className="grid grid-rows-2 gap-6">
-              <div className="relative rounded-2xl overflow-hidden border border-neutral-200 bg-black">
+              <div className="relative rounded-2xl aspect-[16/8] overflow-hidden border border-neutral-200 bg-black">
                 <Image
                   src="/cases/cp-loan.png"
                   alt=""
@@ -278,7 +278,7 @@ export default function CloseXPayCaseStudy() {
                 />
               </div>
 
-              <div className="relative rounded-2xl overflow-hidden border border-neutral-200 bg-black">
+              <div className="relative rounded-2xl aspect-[16/8] overflow-hidden border border-neutral-200 bg-black">
                 <Image
                   src="/cases/closexpay-cover.png"
                   alt=""
@@ -338,7 +338,7 @@ export default function CloseXPayCaseStudy() {
           </ul>
 
           <div className="mt-14 grid grid-cols-1 lg:grid-cols-[1.4fr_.8fr] gap-6">
-            <div className="relative aspect-[16/11] rounded-2xl overflow-hidden border border-neutral-200 bg-[#f5f5f5]">
+            <div className="relative aspect-[16/12] rounded-2xl overflow-hidden border border-neutral-200 bg-[#f5f5f5]">
               <Image
                 src="/cases/cp-home.png"
                 alt="Website"
@@ -348,7 +348,7 @@ export default function CloseXPayCaseStudy() {
             </div>
 
             <div className="grid grid-rows-2 gap-6">
-              <div className="relative rounded-2xl overflow-hidden border border-neutral-200 bg-[#f5f5f5]">
+              <div className="relative rounded-2xl aspect-[16/10] overflow-hidden border border-neutral-200 bg-[#f5f5f5]">
                 <Image
                   src="/cases/closexpay-cover.png"
                   alt=""
@@ -357,7 +357,7 @@ export default function CloseXPayCaseStudy() {
                 />
               </div>
 
-              <div className="relative rounded-2xl overflow-hidden border border-neutral-200 bg-[#f5f5f5]">
+              <div className="relative rounded-2xl aspect-[16/10] overflow-hidden border border-neutral-200 bg-[#f5f5f5]">
                 <Image
                   src="/cases/cp-pricing.png"
                   alt=""
