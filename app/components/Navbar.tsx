@@ -90,8 +90,8 @@ const Navbar = () => {
         className="
           flex gap-2 md:gap-4 lg:gap-4
           backdrop-blur-lg
-          border border-neutral-200
-          bg-white/60
+          border border-white
+          bg-white/40
           rounded-full
           p-[1vw] lg:p-1
         "
