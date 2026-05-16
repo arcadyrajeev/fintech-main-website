@@ -1,9 +1,7 @@
 import FinalCTASection from "./components/FinalCTASection";
 import HomeHero from "./components/HomeHero";
 
-import FintechClarityProblemSection from "./components/Problem";
 import ProjectSection from "./components/ProjectSection";
-import SkillsSection from "./components/SkillsSection";
 
 import Bridge from "./components/Bridge";
 import MiddleCta from "./components/MiddleCta";

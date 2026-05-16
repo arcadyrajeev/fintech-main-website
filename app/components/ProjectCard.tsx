@@ -166,7 +166,7 @@ const ProjectCard = ({
       <div
         className="
           relative
-          w-full landscape:lg:w-1/2
+          w-full landscape:lg:w-1/2 portrait:h-[400px] landscape:lg:h-auto
           bg-[#ECECEC]
           flex items-center justify-center
           px-4 py-6 lg:py-16

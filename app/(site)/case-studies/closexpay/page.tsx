@@ -1,295 +1,436 @@
-// app/case-studies/closexpay-brand-product-strategy/page.tsx
+// app/case-studies/closexpay/page.tsx
 
 import type { Metadata } from "next";
 import Image from "next/image";
-import { ArrowLeft } from "lucide-react";
 import Link from "next/link";
+import { ArrowLeft } from "lucide-react";
+import FinalCTASection from "@/app/components/FinalCTASection";
 
 export const metadata: Metadata = {
-  title:
-    "Fintech Case Study | Fixing Pricing, Narrative & Trust in a Payments Platform",
+  title: "CloseXPay Case Study | Brand Strategy, Product UX & Utility Payments",
 
   description:
-    "A fintech case study on aligning brand, pricing, and product narrative so a payments platform becomes easy to understand. Reduced decision friction, improved trust signals, and removed reliance on explanation.",
-
-  keywords: [
-    "fintech case study",
-    "pricing strategy fintech",
-    "product narrative fintech",
-    "payments platform UX",
-    "startup positioning case study",
-    "fintech conversion problems",
-    "pricing clarity SaaS fintech",
-    "product strategy payments",
-  ],
+    "How CloseXPay improved product clarity, operational trust, and fintech positioning through structured brand systems, dashboard UX, and utility payment workflows.",
 
   openGraph: {
-    title: "Pricing, Narrative & Trust Alignment | Payments Case Study",
+    title: "CloseXPay Case Study | Brand & Product Strategy",
     description:
-      "When pricing and product don’t align, users hesitate. This case study shows how clarity reduces friction and improves decision-making.",
-    url: "https://arcadydesign.com/case-studies/closexpay-brand-product-strategy",
-    siteName: "Rajeev",
+      "A fintech utility payments platform redesigned around operational clarity, trust, and structured product communication.",
+    url: "https://arcadydesign.com/case-studies/closexpay",
+    siteName: "Arcady Design",
     images: [
       {
-        url: "/cases/closex-cover.png",
+        url: "/cases/cp-cover.png",
         width: 1200,
         height: 630,
-        alt: "Payments platform pricing and product clarity",
+        alt: "CloseXPay product and brand system",
       },
     ],
     type: "article",
   },
 
-  twitter: {
-    card: "summary_large_image",
-    title: "Fintech Case Study | Pricing & Product Clarity",
-    description:
-      "How aligning pricing, brand, and product narrative reduces hesitation and builds trust in fintech systems.",
-    images: ["/cases/closex-cover.png"],
-  },
-
   alternates: {
-    canonical:
-      "https://arcadydesign.com/case-studies/closexpay-brand-product-strategy",
+    canonical: "https://arcadydesign.com/case-studies/closexpay",
   },
 };
+
 export default function CloseXPayCaseStudy() {
   return (
-    <main className="  text-neutral-900">
-      {/* Hero Section */}
-      <section className="max-w-6xl mx-auto px-6 md:px-12 lg:px-[7.5rem] pt-24 lg:pt-32 pb-20">
-        <Link
-          href="/case-studies"
-          className="flex items-center py-2 px-4 body-font font-bold gap-2 text-md border border-neutral-300 w-fit rounded-full hover:bg-neutral-100 cursor-pointer mb-6"
-        >
-          <ArrowLeft /> Go back
-        </Link>
-
-        <header className="max-w-3xl">
-          <h1 className="text-4xl md:text-5xl heading text-primary-text font-medium tracking-tight">
-            Brand & product strategy | Payments platform
-          </h1>
-
-          <p className="mt-6 text-lg md:text-xl leading-snug text-neutral-800">
-            Designing clarity across brand, pricing, and product experience.
-          </p>
-
-          <p className="mt-4 text-base md:text-md text-neutral-600 max-w-2xl">
-            A payments platform restructured to clearly communicate value,
-            trust, and control, across homepage narrative, pricing logic, and
-            product framing.
-          </p>
-
-          <dl className="mt-10 grid grid-cols-1 sm:grid-cols-3 gap-6 text-sm">
-            <div>
-              <dt className="text-neutral-500">Industry</dt>
-              <dd className="mt-1 font-medium">Fintech / Payments</dd>
-            </div>
-            <div>
-              <dt className="text-neutral-500">Scope</dt>
-              <dd className="mt-1 font-medium">
-                Brand Strategy, Product Narrative, Pricing Structure
-              </dd>
-            </div>
-            <div>
-              <dt className="text-neutral-500">Role</dt>
-              <dd className="mt-1 font-medium">
-                Brand & Product Strategy Partner
-              </dd>
-            </div>
-          </dl>
-        </header>
-
-        {/* COVER IMAGE */}
-        <div className="mt-16 px-4 md:px-10 lg:px-30 relative aspect-[16/9] w-full overflow-hidden rounded-lg border border-neutral-200 bg-neutral-200">
-          <Image
-            src="/cases/closex-cover.png"
-            alt="Payments platform homepage and product framing"
-            fill
-            priority
-            className="object-cover"
-          />
-        </div>
-      </section>
-
-      {/* Context */}
-      <section className="max-w-6xl mx-auto px-6 md:px-12 lg:px-[7.5rem] py-20 border-t border-neutral-200">
-        <h2 className="text-2xl heading text-primary-text font-medium tracking-tight">
-          Context
-        </h2>
-
-        <div className="mt-6 max-w-3xl space-y-4 text-neutral-700 leading-relaxed">
-          <p>
-            In payments and consumer fintech, trust is rarely built through
-            feature lists. It is formed through clarity, how quickly users
-            understand what the product does, how it makes money, and what
-            control they retain.
-          </p>
-
-          <p>
-            The challenge here was not functionality. The system worked. The
-            issue was interpretation, across the homepage, pricing, and product
-            presentation.
-          </p>
-        </div>
-      </section>
-
-      {/* Core Challenge */}
-      <section className="max-w-6xl mx-auto px-6 md:px-12 lg:px-[7.5rem] py-20 border-t border-neutral-200">
-        <h2 className="text-2xl heading text-primary-text font-medium tracking-tight">
-          The core challenge
-        </h2>
-
-        <div className="mt-6 max-w-3xl text-neutral-700 leading-relaxed">
-          <p>
-            Users encountered multiple decision points, onboarding, pricing,
-            feature comparison, without a single, stable mental model of the
-            product.
-          </p>
-
-          <p className="mt-4">
-            As a result, value was present, but confidence took longer than it
-            should.
-          </p>
-
-          <ul className="mt-6 space-y-3 list-disc list-inside">
-            <li>
-              <span className="font-medium text-neutral-900">
-                Value fragmentation:
-              </span>{" "}
-              Benefits were visible but not clearly prioritized.
-            </li>
-            <li>
-              <span className="font-medium text-neutral-900">
-                Pricing ambiguity:
-              </span>{" "}
-              Tiers existed, but the logic behind them wasn&apos;t self-evident.
-            </li>
-            <li>
-              <span className="font-medium text-neutral-900">
-                Narrative inconsistency:
-              </span>{" "}
-              Homepage, features, and pricing told slightly different stories.
-            </li>
-          </ul>
-        </div>
-      </section>
-
-      {/* Strategic Decisions */}
-      <section className="max-w-6xl mx-auto px-6 md:px-12 lg:px-[7.5rem] py-20 border-t border-neutral-200">
-        <h2 className="text-2xl heading text-primary-text font-medium tracking-tight">
-          Strategic decisions
-        </h2>
-
-        {/* Brand framing */}
-        <div className="mt-10 max-w-3xl">
-          <h3 className="text-lg heading text-primary-text font-medium">
-            Brand as explanation
-          </h3>
-          <p className="mt-4 text-neutral-700 leading-relaxed">
-            The brand was positioned to reduce explanation, not add aspiration.
-            Language, hierarchy, and layout were aligned around clarity and
-            control rather than persuasion.
-          </p>
-        </div>
-
-        {/* Pricing logic */}
-        <div className="mt-12 max-w-3xl">
-          <h3 className="text-lg heading text-primary-text font-medium">
-            Pricing as a trust signal
-          </h3>
-          <p className="mt-4 text-neutral-700 leading-relaxed">
-            The three-tier pricing structure was reframed to communicate intent
-            , who each tier is for, what changes as you move up, and why.
-          </p>
-          <p className="mt-3 text-neutral-700 leading-relaxed">
-            Pricing became a decision aid, not a comparison exercise.
-          </p>
-        </div>
-
-        {/* Product narrative */}
-        <div className="mt-12 max-w-3xl">
-          <h3 className="text-lg heading text-primary-text font-medium">
-            Product narrative over feature accumulation
-          </h3>
-          <p className="mt-4 text-neutral-700 leading-relaxed">
-            Instead of listing everything the product can do, the structure
-            focused on how users move from first interaction to ongoing use.
-          </p>
-        </div>
-
-        {/* Images */}
-        <div className="mt-16 grid grid-cols-1 gap-6 w-full">
-          <div className="relative flex w-full rounded-lg overflow-hidden ">
-            <Image
-              alt="Homepage narrative and value framing"
-              src="/cases/closexpay1.png"
-              width={1600}
-              height={900}
-              priority
-              className="object-contain"
-            />
-          </div>
-          <div className="relative flex w-full rounded-lg overflow-hidden ">
-            <Image
-              alt="Three tier pricing as clarity mechanism"
-              src="/cases/closexpay2.png"
-              width={1600}
-              height={900}
-              priority
-              className="object-contain"
-            />
-          </div>
-        </div>
-      </section>
-
-      {/* Outcome */}
-      <section className="max-w-6xl mx-auto px-6 md:px-12 lg:px-[7.5rem] py-20 border-t border-neutral-200">
-        <h2 className="text-2xl heading text-primary-text font-medium tracking-tight">
-          Outcome
-        </h2>
-
-        <ul className="mt-6 max-w-3xl space-y-3 list-disc list-inside text-neutral-700">
-          <li>Clearer value perception across homepage and pricing</li>
-          <li>Reduced explanation during demos and conversations</li>
-          <li>Pricing understood as progression, not upsell</li>
-          <li>Brand and product reinforcing the same story</li>
-          <li>Platform perceived as intentional rather than promotional</li>
-        </ul>
-      </section>
-
-      {/* Insight */}
-      <section className="max-w-6xl mx-auto px-6 md:px-12 lg:px-[7.5rem] py-20 border-t border-neutral-200">
-        <h2 className="text-2xl heading text-primary-text font-medium tracking-tight">
-          Insight
-        </h2>
-
-        <blockquote className="mt-8 max-w-4xl text-3xl md:text-4xl heading font-medium tracking-tight">
-          “Pricing and brand are not marketing layers. They are product logic.”
-        </blockquote>
-
-        <p className="mt-6 max-w-3xl text-neutral-700 leading-relaxed">
-          When product and narrative reinforce each other, trust forms without
-          explanation.
-        </p>
-      </section>
-
-      {/* Footer CTA */}
-      <footer className="max-w-6xl mx-auto px-6 md:px-12 lg:px-[7.5rem] py-16 border-t border-neutral-200">
-        <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
-          <p className="text-neutral-800">
-            If pricing or product clarity is slowing decisions, this work helps.
-          </p>
-          <a
-            href="https://wa.me/919523638369?text=Hi!%20I%20came%20across%20your%20work%20and%20wanted%20to%20have%20a%20quick%20conversation."
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-sm font-medium text-neutral-900 underline underline-offset-4 hover:text-neutral-700"
+    <main className="w-full overflow-hidden">
+      {/* HERO */}
+      <section className="w-full">
+        <div className="max-w-7xl mx-auto px-6 sm:px-10 lg:px-24 pt-28 md:pt-36">
+          <Link
+            href="/case-studies"
+            className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-neutral-300 text-sm hover:bg-neutral-100 transition-colors"
           >
-            Start a conversation
-          </a>
+            <ArrowLeft size={16} />
+            Go back
+          </Link>
+
+          <div className="mt-10 max-w-5xl">
+            <p className="text-xs tracking-[0.25em] bodyfont font-semibold uppercase text-[#7c3aed]">
+              Payments • Brand Systems • Product Strategy
+            </p>
+
+            <h1 className="mt-4 heading text-4xl sm:text-5xl md:text-6xl leading-[0.95] text-primary-text">
+              Brand & Product Strategy
+              <br />
+              for Utility Payments.
+            </h1>
+
+            <p className="mt-8 max-w-3xl text-lg text-secondary-text leading-relaxed">
+              Building legitimacy, clarity, and product trust for a modern
+              utility payments platform.
+            </p>
+
+            <p className="mt-5 max-w-3xl text-secondary-text leading-relaxed">
+              CloseXPay was positioned as a utility-focused fintech system
+              designed to simplify recurring payments, merchant operations, and
+              transaction management through a clearer product and brand
+              experience.
+            </p>
+
+            <div className="mt-12 grid grid-cols-1 sm:grid-cols-3 gap-8">
+              <div>
+                <p className="text-xs uppercase tracking-[0.2em] text-neutral-400">
+                  Industry
+                </p>
+
+                <p className="mt-2 text-sm text-primary-text font-medium">
+                  Fintech / Payments
+                </p>
+              </div>
+
+              <div>
+                <p className="text-xs uppercase tracking-[0.2em] text-neutral-400">
+                  Scope
+                </p>
+
+                <p className="mt-2 text-sm text-primary-text font-medium">
+                  Brand Strategy, Product UX, Dashboard UX
+                </p>
+              </div>
+
+              <div>
+                <p className="text-xs uppercase tracking-[0.2em] text-neutral-400">
+                  Role
+                </p>
+
+                <p className="mt-2 text-sm text-primary-text font-medium">
+                  Brand & Product Strategy Partner
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div className="mt-16 rounded-2xl overflow-hidden border border-neutral-200 bg-[#111]">
+            <div className="relative aspect-[16/9] w-full">
+              <Image
+                src="/cases/cp-cover.png"
+                alt="CloseXPay Hero"
+                fill
+                className="object-cover object-top"
+              />
+            </div>
+          </div>
         </div>
-      </footer>
+      </section>
+
+      {/* CONTEXT */}
+      <section className="w-full py-24">
+        <div className="max-w-7xl mx-auto px-6 sm:px-10 lg:px-24">
+          <div className="rounded-[2rem] border border-[#7c3aed]/20 bg-[#faf7ff] p-8 md:p-10 grid lg:grid-cols-2 gap-14">
+            <div>
+              <p className="text-xs tracking-[0.25em] bodyfont font-semibold uppercase text-[#7c3aed]">
+                Context
+              </p>
+
+              <h2 className="mt-4 heading text-3xl md:text-4xl border-b-8 border-[#7c3aed] pb-10">
+                Utility payments are operational.
+                <br />
+                But trust still drives adoption.
+              </h2>
+            </div>
+
+            <div className="space-y-6 text-secondary-text leading-relaxed">
+              <p>
+                Users rarely emotionally engage with payment systems. They judge
+                them through clarity, reliability, and perceived legitimacy.
+              </p>
+
+              <p>
+                The existing product lacked structure, visual consistency, and a
+                strong operational identity.
+              </p>
+
+              <p>
+                The platform needed clearer positioning, stronger hierarchy, and
+                a more coherent relationship between product and brand.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* FRICTION */}
+      <section className="w-full pb-24">
+        <div className="max-w-7xl mx-auto px-6 sm:px-10 lg:px-24">
+          <p className="text-xs tracking-[0.25em] bodyfont font-semibold uppercase text-[#7c3aed]">
+            Friction Signals
+          </p>
+
+          <h2 className="mt-5 max-w-3xl heading text-4xl leading-[1.05]">
+            The platform solved payments.
+            <br />
+            But the experience lacked product gravity.
+          </h2>
+
+          <div className="mt-12 grid grid-cols-1 md:grid-cols-2 gap-5">
+            {[
+              "Weak differentiation from generic payment platforms",
+              "Product value hidden behind visual clutter",
+              "Inconsistent hierarchy between product and marketing",
+              "Brand lacked operational credibility and trust signals",
+            ].map((item, index) => (
+              <div
+                key={index}
+                className="rounded-xl border border-neutral-200 bg-white p-6"
+              >
+                <p className="text-secondary-text leading-relaxed">{item}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* BRAND SYSTEM */}
+      <section className="w-full pb-24">
+        <div className="max-w-7xl mx-auto px-6 sm:px-10 lg:px-24">
+          <p className="text-xs tracking-[0.25em] bodyfont font-semibold uppercase text-[#7c3aed]">
+            Brand System
+          </p>
+
+          <h2 className="mt-5 heading text-4xl leading-[1]">
+            The brand system was designed
+            <br />
+            to feel operational, not decorative.
+          </h2>
+
+          <ul className="mt-8 space-y-4 max-w-3xl">
+            {[
+              "Utility-first visual language",
+              "Strong contrast and transaction visibility",
+              "Consistent fintech color hierarchy",
+              "Typography optimized for readability and scale",
+              "Product visuals aligned with transaction behavior",
+            ].map((item, index) => (
+              <li key={index} className="flex gap-3 text-secondary-text">
+                <span className="mt-2 h-2 w-2 rounded-full bg-[#7c3aed]" />
+                {item}
+              </li>
+            ))}
+          </ul>
+
+          <div className="mt-14 grid grid-cols-1 lg:grid-cols-[1.4fr_.8fr] gap-6">
+            <div className="relative aspect-[16/12] rounded-2xl overflow-hidden border border-neutral-200 bg-black">
+              <Image
+                src="/cases/cp-brand1.png"
+                alt="CloseXPay Brand"
+                fill
+                className="object-cover object-top"
+              />
+            </div>
+
+            <div className="grid grid-rows-2 gap-6">
+              <div className="relative rounded-2xl overflow-hidden border border-neutral-200 bg-black">
+                <Image
+                  src="/cases/cp-brand2.png"
+                  alt="Brand colors"
+                  fill
+                  className="object-cover object-top"
+                />
+              </div>
+
+              <div className="relative rounded-2xl overflow-hidden border border-neutral-200 bg-black">
+                <Image
+                  src="/cases/cp-brand3.png"
+                  alt="Typography system"
+                  fill
+                  className="object-cover object-top"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* DASHBOARD */}
+      <section className="w-full pb-24">
+        <div className="max-w-7xl mx-auto px-6 sm:px-10 lg:px-24">
+          <p className="text-xs tracking-[0.25em] bodyfont font-semibold uppercase text-[#7c3aed]">
+            Dashboard UX
+          </p>
+
+          <h2 className="mt-5 heading text-4xl leading-[1]">
+            The dashboard focused on
+            <br />
+            transaction clarity and control.
+          </h2>
+
+          <div className="mt-14 grid grid-cols-1 lg:grid-cols-[1.4fr_.8fr] gap-6">
+            <div className="relative aspect-[16/10] rounded-2xl overflow-hidden border border-neutral-200 bg-black">
+              <Image
+                src="/cases/cp-dashboard.png"
+                alt="Dashboard"
+                fill
+                className="object-cover object-top"
+              />
+            </div>
+
+            <div className="grid grid-rows-2 gap-6">
+              <div className="relative rounded-2xl overflow-hidden border border-neutral-200 bg-black">
+                <Image
+                  src="/cases/cp-loan.png"
+                  alt=""
+                  fill
+                  className="object-cover object-top"
+                />
+              </div>
+
+              <div className="relative rounded-2xl overflow-hidden border border-neutral-200 bg-black">
+                <Image
+                  src="/cases/closexpay-cover.png"
+                  alt=""
+                  fill
+                  className="object-cover object-top"
+                />
+              </div>
+            </div>
+          </div>
+
+          <div className="mt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+            {[
+              "Faster transaction scanning and visibility",
+              "Clearer operational action states",
+              "Reduced cognitive overload",
+              "Hierarchy optimized for repeated workflows",
+              "Better separation between actions and analytics",
+              "Designed for operational daily usage",
+            ].map((item, index) => (
+              <div
+                key={index}
+                className="rounded-xl border border-neutral-200 bg-white p-5"
+              >
+                <p className="text-secondary-text leading-relaxed">{item}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* WEBSITE */}
+      <section className="w-full pb-24">
+        <div className="max-w-7xl mx-auto px-6 sm:px-10 lg:px-24">
+          <p className="text-xs tracking-[0.25em] bodyfont font-semibold uppercase text-[#7c3aed]">
+            Website Structure
+          </p>
+
+          <h2 className="mt-5 heading text-4xl leading-[1]">
+            The website became a
+            <br />
+            structured trust layer.
+          </h2>
+
+          <ul className="mt-8 space-y-4 max-w-3xl">
+            {[
+              "Hero clarified the product category immediately",
+              "Benefits reframed around operational simplicity",
+              "Pricing reduced decision friction",
+              "Messaging aligned with actual product behavior",
+              "Feature hierarchy focused on merchant outcomes",
+            ].map((item, index) => (
+              <li key={index} className="flex gap-3 text-secondary-text">
+                <span className="mt-2 h-2 w-2 rounded-full bg-[#7c3aed]" />
+                {item}
+              </li>
+            ))}
+          </ul>
+
+          <div className="mt-14 grid grid-cols-1 lg:grid-cols-[1.4fr_.8fr] gap-6">
+            <div className="relative aspect-[16/11] rounded-2xl overflow-hidden border border-neutral-200 bg-[#f5f5f5]">
+              <Image
+                src="/cases/cp-home.png"
+                alt="Website"
+                fill
+                className="object-cover object-top"
+              />
+            </div>
+
+            <div className="grid grid-rows-2 gap-6">
+              <div className="relative rounded-2xl overflow-hidden border border-neutral-200 bg-[#f5f5f5]">
+                <Image
+                  src="/cases/closexpay-cover.png"
+                  alt=""
+                  fill
+                  className="object-cover object-top"
+                />
+              </div>
+
+              <div className="relative rounded-2xl overflow-hidden border border-neutral-200 bg-[#f5f5f5]">
+                <Image
+                  src="/cases/cp-pricing.png"
+                  alt=""
+                  fill
+                  className="object-cover object-top"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* OUTCOME */}
+      <section className="w-full pb-24">
+        <div className="max-w-7xl mx-auto px-6 sm:px-10 lg:px-24">
+          <p className="text-xs tracking-[0.25em] bodyfont font-semibold uppercase text-[#7c3aed]">
+            Outcome
+          </p>
+
+          <h2 className="mt-5 heading text-4xl leading-[1]">
+            Stronger fintech positioning.
+            <br />
+            Clearer operational trust.
+          </h2>
+
+          <div className="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+            {[
+              "Improved visual consistency across product surfaces",
+              "Clearer utility payments positioning",
+              "Reduced ambiguity around product value",
+              "Stronger operational credibility",
+              "More coherent onboarding and product narrative",
+              "Better perceived legitimacy and trust",
+            ].map((item, index) => (
+              <div
+                key={index}
+                className="rounded-xl border border-neutral-200 bg-white p-5"
+              >
+                <p className="text-secondary-text leading-relaxed">{item}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* INSIGHT */}
+      <section className="w-full pb-24">
+        <div className="max-w-7xl mx-auto px-6 sm:px-10 lg:px-24">
+          <div className="rounded-2xl border border-neutral-200 bg-[#fafafa] p-10 lg:p-14">
+            <p className="text-xs tracking-[0.25em] bodyfont font-semibold uppercase text-[#7c3aed]">
+              Insight
+            </p>
+
+            <blockquote className="mt-6 heading text-3xl leading-[1]">
+              “Fintech brands fail when product and perception operate
+              separately.”
+            </blockquote>
+
+            <p className="mt-6 max-w-3xl text-secondary-text leading-relaxed">
+              In operational products, clarity becomes part of the trust
+              infrastructure itself.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* CTA */}
+      <section className="w-full pt-10 pb-28">
+        <FinalCTASection
+          text1="If the product feels operational"
+          text2="but not trustworthy, clarity is usually missing."
+        />
+      </section>
     </main>
   );
 }

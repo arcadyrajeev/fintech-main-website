@@ -1,288 +1,479 @@
-// app/case-studies/crypto-risk-platform/page.tsx
+// app/case-studies/brokerquant/page.tsx
 
 import type { Metadata } from "next";
 import Image from "next/image";
-import { ArrowLeft } from "lucide-react";
 import Link from "next/link";
+import { ArrowLeft, ArrowUpRight } from "lucide-react";
+import FinalCTASection from "@/app/components/FinalCTASection";
 
 export const metadata: Metadata = {
   title:
-    "Crypto Trading UX Case Study | Making Execution Risk Visible Before Trade",
+    "BrokerQuant Case Study | Data Hierarchy, Risk Visibility & Trading UX",
 
   description:
-    "A fintech case study on restructuring a crypto trading platform to surface execution risk before action. Reduced false confidence, clarified decision signals, and improved trade safety under pressure.",
+    "How BrokerQuant restructured trading data hierarchy, execution visibility, and risk signaling to reduce false confidence and improve decision clarity in crypto trading.",
 
   keywords: [
     "crypto trading UX",
-    "fintech case study",
-    "trading platform design",
-    "execution risk",
-    "crypto product strategy",
-    "fintech UX case study",
-    "risk visibility trading",
+    "risk visibility dashboard",
+    "financial dashboard UX",
+    "execution oriented UX",
     "data hierarchy fintech",
+    "crypto trading interface",
+    "brokerquant case study",
   ],
 
   openGraph: {
-    title: "Execution Risk Visibility in Crypto Trading",
+    title: "BrokerQuant Case Study | Risk Visibility & Execution-Oriented UX",
     description:
-      "When risk is invisible, performance metrics mislead. This case study shows how structuring risk signals changes decisions before trades happen.",
-    url: "https://arcadydesign.com/case-studies/crypto-risk-platform",
-    siteName: "Rajeev",
+      "A crypto trading platform restructured around risk visibility, execution feasibility, and decision clarity.",
+    url: "https://arcadydesign.com/case-studies/brokerquant",
+    siteName: "Arcady Design",
     images: [
       {
         url: "/cases/bq-product1.png",
         width: 1200,
         height: 630,
-        alt: "Crypto trading risk interface",
+        alt: "BrokerQuant dashboard redesign",
       },
     ],
     type: "article",
   },
 
-  twitter: {
-    card: "summary_large_image",
-    title: "Crypto Trading Case Study | Execution Risk Visibility",
-    description:
-      "A system redesign that made hidden risk visible before trade execution, reducing false confidence.",
-    images: ["/cases/bq-product1.png"],
-  },
-
   alternates: {
-    canonical: "https://arcadydesign.com/case-studies/crypto-risk-platform",
+    canonical: "https://arcadydesign.com/case-studies/brokerquant",
   },
 };
 
-export default function CryptoRiskCaseStudy() {
+export default function BrokerQuantCaseStudy() {
   return (
-    <main className="  text-neutral-900">
-      {/* Hero Section */}
-      <section className="max-w-6xl mx-auto px-6 md:px-12 lg:px-[7.5rem] pt-24 lg:pt-32 pb-20">
-        <Link
-          href="/case-studies"
-          className="flex items-center py-2 px-4 body-font font-bold gap-2 text-md border border-neutral-300 w-fit rounded-full hover:bg-neutral-100 cursor-pointer mb-6"
-        >
-          <ArrowLeft /> Go back
-        </Link>
-        <header className="max-w-3xl">
-          <h1 className="text-4xl md:text-5xl heading text-primary-text font-medium tracking-tight">
-            Clarity & Data hierarchy | Crypto trade risk analysis
-          </h1>
-          <p className="mt-6 text-lg md:text-xl leading-snug text-neutral-800">
-            Making execution risk visible before a trade is placed.
-          </p>
-          <p className="mt-4 text-base md:text-md text-neutral-600 max-w-2xl">
-            A crypto trading intelligence platform restructured to surface
-            hidden fees, liquidity risk, and market integrity signals without
-            overwhelming traders with noise.
-          </p>
+    <main className="w-full overflow-hidden">
+      {/* HERO */}
+      <section className="w-full">
+        <div className="max-w-7xl mx-auto px-6 sm:px-10 lg:px-24 pt-28 md:pt-36">
+          <Link
+            href="/case-studies"
+            className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-neutral-300 text-sm hover:bg-neutral-100 transition-colors"
+          >
+            <ArrowLeft size={16} />
+            Go back
+          </Link>
 
-          <dl className="mt-10 grid grid-cols-1 sm:grid-cols-3 gap-6 text-sm">
-            <div>
-              <dt className="text-neutral-500">Industry</dt>
-              <dd className="mt-1 font-medium">Crypto / Trading</dd>
+          <div className="mt-10 max-w-5xl">
+            <p className="text-xs tracking-[0.25em] bodyfont font-semibold uppercase text-[#f97316]">
+              Crypto • Risk Analytics • Financial UX
+            </p>
+
+            <h1 className="mt-4 heading text-4xl sm:text-5xl md:text-6xl leading-[0.95] text-primary-text">
+              Clarity & Data hierarchy for execution-oriented trading.
+            </h1>
+
+            <p className="mt-8 max-w-3xl text-lg text-secondary-text leading-relaxed">
+              Making execution risk visible before traders commit capital.
+            </p>
+
+            <p className="mt-5 max-w-3xl text-secondary-text leading-relaxed">
+              A crypto trading intelligence platform restructured to surface
+              hidden fees, shallow liquidity, and execution risk before action
+              is taken.
+            </p>
+
+            <div className="mt-12 grid grid-cols-1 sm:grid-cols-3 gap-8">
+              <div>
+                <p className="text-xs uppercase tracking-[0.2em] text-neutral-400">
+                  Industry
+                </p>
+
+                <p className="mt-2 text-sm text-primary-text font-medium">
+                  Crypto / Trading
+                </p>
+              </div>
+
+              <div>
+                <p className="text-xs uppercase tracking-[0.2em] text-neutral-400">
+                  Scope
+                </p>
+
+                <p className="mt-2 text-sm text-primary-text font-medium">
+                  Risk Narrative &s Data Hierarchy
+                </p>
+              </div>
+
+              <div>
+                <p className="text-xs uppercase tracking-[0.2em] text-neutral-400">
+                  Role
+                </p>
+
+                <p className="mt-2 text-sm text-primary-text font-medium">
+                  Product & Narrative Partner
+                </p>
+              </div>
             </div>
-            <div>
-              <dt className="text-neutral-500">Scope</dt>
-              <dd className="mt-1 font-medium">
-                Product Structure, Risk Narrative, Data Hierarchy
-              </dd>
+          </div>
+
+          {/* HERO IMAGE */}
+          <div className="mt-16 rounded-[2rem] overflow-hidden border border-neutral-200 bg-[#f7f7f7]">
+            <div className="relative aspect-[16/9] w-full">
+              <Image
+                src="/cases/bq-product1.png"
+                alt="BrokerQuant Dashboard"
+                fill
+                className="object-contain object-top"
+              />
             </div>
-            <div>
-              <dt className="text-neutral-500">Role</dt>
-              <dd className="mt-1 font-medium">Product & Narrative Partner</dd>
-            </div>
-          </dl>
-        </header>
-
-        {/* COVER IMAGE */}
-        <div className="mt-16 px-4 md:px-10 lg:px-30 relative aspect-[16/9] w-full overflow-hidden rounded-lg border border-neutral-200 bg-neutral-200">
-          <Image
-            src="/cases/bq-product1.png"
-            alt="Crypto trade risk analysis overview"
-            fill
-            priority
-            className="object-contain"
-          />
-        </div>
-      </section>
-
-      {/* Risk Context */}
-      <section className="max-w-6xl mx-auto px-6 md:px-12 lg:px-[7.5rem] py-10 lg:py-20 border-t border-neutral-200">
-        <h2 className="text-2xl heading text-primary-text font-medium tracking-tight">
-          Risk context
-        </h2>
-        <div className="mt-6 max-w-3xl space-y-4 text-neutral-700 leading-relaxed">
-          <p>
-            In crypto markets, data abundance creates an illusion of control.
-            Traders are rarely under-informed, they are misled by fragmented
-            risk signals.
-          </p>
-          <p>
-            The real danger is not volatility, but false confidence caused by
-            hidden fees, shallow liquidity, and manipulation signals that only
-            appear after execution.
-          </p>
-          <p>
-            The platform&apos;s challenge was not access to information, but
-            making risk legible under time pressure.
-          </p>
-        </div>
-      </section>
-
-      {/* Legibility Problem */}
-      <section className="relative  max-w-6xl mx-auto px-6 md:px-12 lg:px-[7.5rem] py-10 lg:py-20 border-t border-neutral-200">
-        <h2 className="text-2xl heading text-primary-text font-medium tracking-tight">
-          The legibility problem
-        </h2>
-        <div className="mt-6 max-w-3xl text-neutral-700 leading-relaxed">
-          <p>
-            The platform already surfaced spreads, liquidity, volatility, and
-            fees. But at the moment of execution, risk signals competed instead
-            of guiding.
-          </p>
-          <p className="mt-4">
-            The challenge was not reducing data, but ordering it so the most
-            dangerous signals could not be ignored.
-          </p>
-          <ul className="mt-6 space-y-3 list-disc list-inside">
-            <li>
-              <span className="font-medium text-neutral-900">
-                Risk dilution:
-              </span>{" "}
-              Critical alerts looked similar to informational updates.
-            </li>
-            <li>
-              <span className="font-medium text-neutral-900">
-                Cost abstraction:
-              </span>{" "}
-              Execution impact was visible, but not felt.
-            </li>
-            <li>
-              <span className="font-medium text-neutral-900">
-                Color overload:
-              </span>{" "}
-              Visual emphasis did not reflect urgency or severity.
-            </li>
-            <li>
-              <span className="font-medium text-neutral-900">
-                False opportunity:
-              </span>{" "}
-              Apparent arbitrage ignored execution reality.
-            </li>
-          </ul>
-        </div>
-      </section>
-
-      {/* Structural Decisions */}
-      <section className="max-w-6xl mx-auto px-6 md:px-12 lg:px-[7.5rem] py-10 lg:py-20 border-t border-neutral-200">
-        <h2 className="text-2xl heading text-primary-text font-medium tracking-tight">
-          Structural decisions
-        </h2>
-
-        {/* Risk Visibility */}
-        <div className="mt-10 max-w-3xl">
-          <h3 className="text-lg heading text-primary-text font-medium">
-            Risk visibility as a first-class signal
-          </h3>
-          <p className="mt-4 text-neutral-700 leading-relaxed">
-            Risk was elevated from background context to an explicit decision
-            layer. Integrity alerts, volatility warnings, and fee changes were
-            separated from performance metrics.
-          </p>
-          <p className="mt-3 text-neutral-700 leading-relaxed">
-            Severity, recency, and impact were made instantly scannable.
-          </p>
-        </div>
-
-        {/* Data Hierarchy */}
-        <div className="mt-12 max-w-3xl">
-          <h3 className="text-lg heading text-primary-text font-medium">
-            Data hierarchy over data volume
-          </h3>
-          <p className="mt-4 text-neutral-700 leading-relaxed">
-            Instead of compressing information, the system was restructured to
-            lead with consequence.
-          </p>
-          <p className="mt-3 text-neutral-700 leading-relaxed">
-            Execution cost, depth impact, and volatility context now frame
-            opportunity, not the other way around.
-          </p>
-        </div>
-
-        {/* Color Discipline */}
-        <div className="mt-12 max-w-3xl">
-          <h3 className="text-lg heading text-primary-text font-medium">
-            Color as meaning, not decoration
-          </h3>
-          <p className="mt-4 text-neutral-700 leading-relaxed">
-            Color usage was deliberately reduced and reassigned to signal risk
-            severity rather than fluctuation.
-          </p>
-          <p className="mt-3 text-neutral-700 leading-relaxed">
-            This reduced cognitive load while increasing decisiveness under
-            pressure.
-          </p>
-        </div>
-
-        {/* Product Images */}
-        <div className="mt-16  flex relative grid grid-cols-1 sm:grid-cols-2 gap-6">
-          <div className="relative w-[90vw] md:w-[60vw] rounded-lg overflow-hidden aspect-[16/9]">
-            <Image
-              alt="Crypto arbitrage execution overview"
-              src="/cases/bq-product2.png"
-              fill
-              priority
-              className="object-cover"
-            />
           </div>
         </div>
       </section>
 
-      {/* Outcome */}
-      <section className="max-w-6xl mx-auto px-6 md:px-12 lg:px-[7.5rem] py-10 lg:py-20border-t border-neutral-200">
-        <h2 className="text-2xl heading text-primary-text font-medium tracking-tight">
-          Outcome
-        </h2>
-        <ul className="mt-6 max-w-3xl space-y-3 list-disc list-inside text-neutral-700">
-          <li>Risk surfaced before execution, not after loss</li>
-          <li>Clear differentiation between signal and noise</li>
-          <li>More defensible, slower-but-safer trade decisions</li>
-          <li>Reduced false confidence from misleading spreads</li>
-          <li>Platform perceived as execution-aware, not analytics-heavy</li>
-        </ul>
-      </section>
-
-      {/* Insight */}
-      <section className="max-w-6xl mx-auto px-6 md:px-12 lg:px-[7.5rem] py-20 border-t border-neutral-200">
-        <h2 className="text-2xl heading text-primary-text font-medium tracking-tight">
-          Insight
-        </h2>
-        <blockquote className="mt-8 max-w-4xl text-3xl md:text-4xl heading font-medium tracking-tight">
-          “In trading, clarity is a risk control mechanism.”
-        </blockquote>
-        <p className="mt-6 max-w-3xl text-neutral-700 leading-relaxed">
-          When risk is structured and visible, traders don&apos;t need
-          persuasion. They self-regulate.
-        </p>
-      </section>
-
-      {/* Footer CTA */}
-      <footer className="max-w-6xl mx-auto px-6 md:px-12 lg:px-[7.5rem] py-10 lg:py-20 border-t border-neutral-200">
-        <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
-          <p className="text-neutral-800">
-            If execution risk is invisible, performance metrics are misleading.
-          </p>
-          <a
-            href="https://wa.me/919523638369?text=Hi!%20I%20came%20across%20your%20work%20and%20wanted%20to%20have%20a%20quick%20conversation."
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-sm font-medium text-neutral-900 underline underline-offset-4 hover:text-neutral-700"
+      {/* CONTEXT */}
+      <section className="w-full py-24">
+        <div className="max-w-7xl mx-auto px-6 sm:px-10 lg:px-24">
+          <div
+            className="
+              rounded-[2rem]
+              border border-[#f97316]
+              
+              bg-[#fdf9fb]
+              p-8 md:p-10
+              grid lg:grid-cols-2 gap-14
+            "
           >
-            Start a conversation
-          </a>
+            <div>
+              <p className="text-xs tracking-[0.25em] bodyfont font-semibold uppercase text-[#f97316]">
+                Context
+              </p>
+
+              <h2 className="mt-4 heading text-3xl md:text-5xl border-b-10 border-[#f97316] pb-10">
+                The product worked.
+                <br />
+                But Trust was missing.
+              </h2>
+            </div>
+
+            <div className="space-y-6 text-secondary-text leading-relaxed">
+              <p>
+                In crypto markets, traders rarely suffer from lack of
+                information. They suffer from fragmented risk visibility.
+              </p>
+
+              <p>
+                The original system surfaced spreads, volatility, and execution
+                data, but critical signals competed equally for attention.
+              </p>
+
+              <p>
+                This created false confidence during execution, especially under
+                speed and market pressure.
+              </p>
+            </div>
+          </div>
         </div>
-      </footer>
+      </section>
+
+      {/* PROBLEMS */}
+      <section className="w-full pb-24">
+        <div className="max-w-7xl mx-auto px-6 sm:px-10 lg:px-24">
+          <p className="text-xs tracking-[0.25em] bodyfont font-semibold uppercase text-[#f97316]">
+            Friction Signals
+          </p>
+
+          <h2 className="mt-5 max-w-3xl heading text-4xl leading-[1.05]">
+            Clarity problems rarely appear as obvious UX problems.
+          </h2>
+
+          <div className="mt-12 grid grid-cols-1 md:grid-cols-2 gap-5">
+            {[
+              "Too many metrics competing for attention",
+              "Execution feasibility blended into market noise",
+              "Risk indicators existed but lacked priority",
+              "Opportunity signals appeared stronger than danger signals",
+            ].map((item, index) => (
+              <div
+                key={index}
+                className="rounded-xl border border-neutral-200 bg-white p-6"
+              >
+                <p className="text-secondary-text leading-relaxed">{item}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* BEFORE AFTER */}
+      <section className="w-full pb-24">
+        <div className="max-w-7xl mx-auto px-6 sm:px-10 lg:px-24">
+          <p className="text-xs tracking-[0.25em] bodyfont font-semibold uppercase text-[#f97316]">
+            Before & After
+          </p>
+
+          <h2 className="mt-5 heading text-4xl leading-[1]">
+            From informational overload
+            <br />
+            to execution clarity.
+          </h2>
+
+          <div className="mt-14 grid lg:grid-cols-2 gap-10">
+            {/* BEFORE */}
+            <div className="rounded-2xl border border-red-200 bg-red-50/40 overflow-hidden">
+              <div className="p-8">
+                <div className="inline-flex rounded-full border border-red-200 bg-white px-4 py-2 text-xs uppercase tracking-[0.2em] text-red-500">
+                  Before
+                </div>
+
+                <ul className="mt-8 space-y-4">
+                  {[
+                    "Metrics competed equally for attention",
+                    "Execution risk appeared too late",
+                    "Opportunity signals dominated perception",
+                    "Visual hierarchy failed under pressure",
+                    "Traders reacted to movement instead of consequence",
+                  ].map((item, index) => (
+                    <li key={index} className="flex gap-3 text-secondary-text">
+                      <span className="mt-2 h-2 w-2 rounded-full bg-red-400" />
+                      {item}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
+              <div className="relative aspect-[16/10] w-full border-t border-red-100">
+                <Image
+                  src="/cases/bqbefore.webp"
+                  alt="Before redesign"
+                  fill
+                  className="object-contain object-top p-3"
+                />
+              </div>
+            </div>
+
+            {/* AFTER */}
+            <div className="rounded-2xl border border-[#17C085]/20 bg-[#a5f5a7]/5 overflow-hidden">
+              <div className="p-8">
+                <div className="inline-flex rounded-full border border-[#17C085]/60 bg-white px-4 py-2 text-xs uppercase tracking-[0.2em] text-[#0A9967] font-medium">
+                  After
+                </div>
+
+                <ul className="mt-8 space-y-4">
+                  {[
+                    "Risk surfaced before execution decisions",
+                    "Hierarchy prioritized consequence over volume",
+                    "Execution feasibility framed opportunity",
+                    "Critical signals became immediately visible",
+                    "The system supported slower but safer decisions",
+                  ].map((item, index) => (
+                    <li key={index} className="flex gap-3 text-secondary-text">
+                      <span className="mt-2 h-2 w-2 rounded-full bg-[#17C085]" />
+                      {item}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
+              <div className="relative rounded-xl aspect-[16/10] w-full ">
+                <Image
+                  src="/cases/bq-product2.png"
+                  alt="After redesign"
+                  fill
+                  className="object-contain object-top p-3"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* DECISION SYSTEM */}
+      <section className="w-full pb-24">
+        <div className="max-w-7xl mx-auto px-6 sm:px-10 lg:px-24">
+          <p className="text-xs tracking-[0.25em] bodyfont font-semibold uppercase text-[#f97316]">
+            Structural Decisions
+          </p>
+
+          <h2 className="mt-5 heading text-4xl leading-[1]">
+            The interface was rebuilt
+            <br />
+            around decision layers.
+          </h2>
+
+          <p className="mt-6 max-w-3xl text-secondary-text leading-relaxed">
+            Instead of compressing information, the system was restructured to
+            lead with consequence.
+          </p>
+
+          <div className="mt-14 grid grid-cols-1 md:grid-cols-3 gap-8">
+            {[
+              {
+                title: "Layer 1",
+                heading: "Action Summary",
+                desc: "Best arbitrage opportunity, market volatility, and execution cost surfaced first.",
+              },
+              {
+                title: "Layer 2",
+                heading: "Execution Feasibility",
+                desc: "Order book depth, spread behavior, and execution impact framed viability.",
+              },
+              {
+                title: "Layer 3",
+                heading: "Risk & Integrity Signals",
+                desc: "Integrity alerts and manipulation indicators became impossible to ignore.",
+              },
+            ].map((item, index) => (
+              <div
+                key={index}
+                className="rounded-xl border border-neutral-200 bg-white p-6"
+              >
+                <p className="text-[10px] tracking-[0.25em] uppercase text-[#f97316]">
+                  {item.title}
+                </p>
+
+                <h3 className="mt-4 heading text-2xl leading-[1]">
+                  {item.heading}
+                </h3>
+
+                <p className="mt-4 text-neutral-600 leading-relaxed">
+                  {item.desc}
+                </p>
+              </div>
+            ))}
+          </div>
+
+          {/* IMAGES */}
+          <div className="mt-14 grid grid-cols-1 lg:grid-cols-[1.4fr_.8fr] gap-6">
+            <div className="relative aspect-[16/9] rounded-xl overflow-hidden border border-neutral-200 bg-[#fafafa]">
+              <Image
+                src="/cases/bq-product2.png"
+                alt="BrokerQuant Dashboard"
+                fill
+                className="object-cover object-top "
+              />
+            </div>
+
+            <div className="grid grid-rows-2 gap-6">
+              <div className="relative rounded-xl overflow-hidden border border-neutral-200 bg-[#fafafa]">
+                <Image
+                  src="/cases/bq-product1.png"
+                  alt=""
+                  fill
+                  className="object-cover object-top "
+                />
+              </div>
+
+              <div className="relative rounded-xl overflow-hidden border border-neutral-200 bg-[#fafafa]">
+                <Image
+                  src="/cases/bq-product3.png"
+                  alt=""
+                  fill
+                  className="object-cover object-top"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* DASHBOARD */}
+      <section className="w-full pb-24">
+        <div className="max-w-7xl mx-auto px-6 sm:px-10 lg:px-24">
+          <div className="rounded-2xl overflow-hidden border border-[#f97316]/20 bg-gradient-to-br from-[#fff7f2] to-[#fff]">
+            <div className="grid lg:grid-cols-[.9fr_1.1fr] items-center">
+              <div className="p-10 lg:p-14">
+                <p className="text-xs tracking-[0.25em] bodyfont font-semibold uppercase text-[#f97316]">
+                  Risk Visibility
+                </p>
+
+                <h2 className="mt-5 heading text-4xl leading-[1]">
+                  Risk visibility became
+                  <br />a first-class decision layer.
+                </h2>
+
+                <ul className="mt-8 space-y-4">
+                  {[
+                    "Execution cost surfaced before opportunity framing",
+                    "Severity and urgency became instantly scannable",
+                    "Color usage reflected consequence instead of fluctuation",
+                    "Critical risk signals separated from informational metrics",
+                  ].map((item, index) => (
+                    <li key={index} className="flex gap-3 text-secondary-text">
+                      <span className="mt-2 h-2 w-2 rounded-full bg-[#f97316]" />
+                      {item}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
+              <div className="relative aspect-[16/11]">
+                <Image
+                  src="/cases/bq-product2.png"
+                  alt="Dashboard redesign"
+                  fill
+                  className="object-cover object-top pr-6"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* OUTCOME */}
+      <section className="w-full pb-24">
+        <div className="max-w-7xl mx-auto px-6 sm:px-10 lg:px-24">
+          <p className="text-xs tracking-[0.25em] bodyfont font-semibold uppercase text-[#f97316]">
+            Outcome
+          </p>
+
+          <h2 className="mt-5 heading text-4xl leading-[1]">
+            Reduced false confidence.
+            <br />
+            Increased execution clarity.
+          </h2>
+
+          <div className="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+            {[
+              "Risk surfaced before execution instead of after loss",
+              "Reduced false confidence during volatile conditions",
+              "Improved distinction between signal and noise",
+              "Lower cognitive overload during execution windows",
+              "Platform perceived as execution-aware instead of analytics-heavy",
+              "Decision quality improved under speed and pressure",
+            ].map((item, index) => (
+              <div
+                key={index}
+                className="rounded-xl border border-neutral-200 bg-white p-5"
+              >
+                <p className="text-secondary-text leading-relaxed">{item}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* INSIGHT */}
+      <section className="w-full pb-24">
+        <div className="max-w-7xl mx-auto px-6 sm:px-10 lg:px-24">
+          <div className="rounded-2xl border border-neutral-200 bg-[#fafafa] p-10 lg:p-14">
+            <p className="text-xs tracking-[0.25em] bodyfont font-semibold uppercase text-[#f97316]">
+              Insight
+            </p>
+
+            <blockquote className="mt-6 heading text-3xl  leading-[1] ">
+              “Trading UX is about time, risk, and consequence. Not aesthetics.”
+            </blockquote>
+
+            <p className="mt-6 max-w-3xl text-secondary-text leading-relaxed">
+              When systems expose consequence clearly, users make safer
+              decisions without requiring persuasion.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* CTA */}
+      <section className="w-full pt-10 pb-28">
+        <FinalCTASection
+          text1="If execution risk is invisible,"
+          text2="performance metrics become misleading."
+        />
+      </section>
     </main>
   );
 }
