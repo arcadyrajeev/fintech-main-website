@@ -10,6 +10,15 @@ const BridgeAccent = () => {
           py-8 sm:py-20 lg:py-16
           text-left"
       >
+        <p className="text-base md:text-lg bodyfont mb-10">
+          <span className="text-accent font-semibold md:text-2xl">
+            Arcady Design{" "}
+          </span>{" "}
+          is a fintech-focused product strategy and UX systems studio helping
+          fintech companies improve onboarding conversion, financial dashboard
+          clarity, KYC UX, trust systems, product positioning, and user
+          decision-making across regulated financial products.
+        </p>
         <p
           className="
              text-3xl  md:text-4xl lg:text-6xl
@@ -22,8 +31,8 @@ const BridgeAccent = () => {
           "
         >
           We help <span className="text-accent italic">fintech</span> founders
-          align product, brand, and narrative so the business is clearly
-          understood by users and investors.
+          align product, brand, and narrative so users, teams, and investors
+          understand the business instantly.
         </p>
       </div>
     </section>

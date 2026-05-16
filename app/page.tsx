@@ -1,10 +1,10 @@
 import FinalCTASection from "./components/FinalCTASection";
 import HomeHero from "./components/HomeHero";
-import FintechNarrativeSection from "./components/Problem2";
+
 import FintechClarityProblemSection from "./components/Problem";
 import ProjectSection from "./components/ProjectSection";
 import SkillsSection from "./components/SkillsSection";
-import HowIWorkFocusSection from "./components/Solution";
+
 import Bridge from "./components/Bridge";
 import MiddleCta from "./components/MiddleCta";
 import Problem from "./components/Problem";
@@ -91,16 +91,6 @@ export default function Home() {
         />
 
         <Services />
-
-        <FintechNarrativeSection />
-
-        <Bridge
-          size="med"
-          text="When this goes unresolved, growth slows, conviction weakens, and
-          capital conversations stretch longer than they should."
-        />
-
-        <HowIWorkFocusSection />
 
         <Bridge
           size="med"

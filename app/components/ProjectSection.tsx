@@ -10,7 +10,7 @@ const ProjectSection = () => {
         className="
           max-w-7xl mx-auto
           px-6 sm:px-10 lg:px-24
-          py-10 md:py-12 portrait:lg:py-12 landscape:lg:py-26
+          py-10 portrait:lg:py-12 landscape:lg:pt-[8vw]
           flex flex-col
         "
       >
@@ -48,26 +48,30 @@ const ProjectSection = () => {
           "
         >
           <ProjectCard
-            title="Product & narrative Partner | Rupeeflow"
-            description="Aligning product logic, user flows, and business narrative for a high-friction cross-border payments platform."
+            category="PAYMENTS • CROSS-BORDER • PRODUCT SYSTEMS"
+            title="Cross-border payments UX restructuring | Rupeeflow"
+            description="Aligning onboarding, transaction flows, and trust systems for a high-friction remittance platform."
             imageUrl="/images/rupeeflow-product.png"
             caseStudyLink="/case-studies/rupeeflow"
+            tags={["KYC UX", "Trust Systems", "Activation Flows"]}
             points={[
-              "User-friendly interface",
-              "Real-time analytics",
-              "Secure transactions",
+              "Improved onboarding comprehension",
+              "Reduced transaction hesitation",
+              "Clearer investor-facing product narrative",
             ]}
           />
 
           <ProjectCard
-            title="Clarity & Data hierarchy | BrokerQuant"
-            description="A crypto trade risk analysis platform restructured to make execution risk, fees, and market integrity signals immediately legible."
+            category="CRYPTO • RISK ANALYTICS • FINANCIAL UX"
+            title="Trading risk clarity system | BrokerQuant"
+            description="Restructuring execution risk, fee visibility, and market integrity signals for a crypto analytics platform."
             imageUrl="/cases/bq-product1.png"
             caseStudyLink="/case-studies/brokerquant"
+            tags={["Dashboard UX", "Data Hierarchy", "Behavioral Clarity"]}
             points={[
-              "Assumption-driven market framing",
-              "Clear financial logic",
-              "Reduced investor ambiguity",
+              "Improved financial signal hierarchy",
+              "Reduced dashboard complexity",
+              "Made risk perception immediately legible",
             ]}
           />
         </div>

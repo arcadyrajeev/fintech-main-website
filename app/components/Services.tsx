@@ -42,7 +42,7 @@ const bottomServices = [
 
 export default function Services() {
   return (
-    <section className="w-full px-4 py-16 md:py-[12vw]">
+    <section className="w-full px-4 py-16 md:py-[4vw]">
       <div className="max-w-[1600px] mx-auto">
         {/* Heading */}
         <div className="px-2 lg:px-[10vw]">
@@ -56,7 +56,7 @@ export default function Services() {
         </div>
 
         {/* Bento Grid */}
-        <div className="mt-16 grid grid-cols-1 lg:grid-cols-12 gap-4">
+        <div className="mt-[4vw] grid grid-cols-1 lg:grid-cols-12 gap-4">
           {/* Top Large Cards */}
           {topServices.map((service, index) => (
             <div
