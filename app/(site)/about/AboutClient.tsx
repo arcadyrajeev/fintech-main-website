@@ -271,10 +271,10 @@ export default function AboutPage() {
               </p>
 
               <a
-                href="mailto:rajeevdas@arcadydesign.com"
+                href="mailto:rajeev@arcadydesign.com"
                 className="inline-block mt-5 text-sm font-medium text-primary-text underline underline-offset-4"
               >
-                rajeevdas@arcadydesign.com
+                rajeev@arcadydesign.com
               </a>
             </div>
 

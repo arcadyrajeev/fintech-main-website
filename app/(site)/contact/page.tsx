@@ -108,10 +108,10 @@ export default function ContactPage() {
               Better if you want to share context or material in advance.
             </p>
             <a
-              href="mailto:rajeevdas@arcadydesign.com"
+              href="mailto:rajeev@arcadydesign.com"
               className="inline-block mt-3 text-sm font-medium text-neutral-900 underline underline-offset-4 hover:text-neutral-700"
             >
-              rajeevdas@arcadydesign.com
+              rajeev@arcadydesign.com
             </a>
           </div>
 
