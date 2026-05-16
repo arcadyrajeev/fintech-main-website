@@ -14,6 +14,7 @@ import ScrollTraceBackground from "./components/ScrollTraceBackground";
 import type { Metadata } from "next";
 import Services from "./components/Services";
 import FAQSection from "./components/FAQSection";
+import WorkflowSection from "./components/WorkFlowSection";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://arcadydesign.com"),
@@ -91,6 +92,8 @@ export default function Home() {
         />
 
         <Services />
+
+        <WorkflowSection />
 
         <Bridge
           size="med"

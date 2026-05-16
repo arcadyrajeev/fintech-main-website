@@ -2,7 +2,10 @@ import React from "react";
 
 const CSHero = () => {
   return (
-    <div className="flex flex-col md:flex-row items-center justify-between   w-full pt-24 p-4 portrait:lg:pt-16 landscape:lg:pt-32 lg:px-36">
+    <div
+      className="flex flex-col md:flex-row items-center justify-between  max-w-7xl mx-auto
+          px-6 sm:px-10 lg:px-24 pt-24 p-4 portrait:lg:pt-16 landscape:lg:pt-32 "
+    >
       <h1
         className="
            heading font-light text-3xl md:text-6xl lg:text-7xl text-primary-text px-3 md:px-0 w-full 

@@ -25,7 +25,7 @@ const AllProjects = () => {
           {/* RUPEEFLOW */}
           <ProjectCard
             category="PAYMENTS • CROSS-BORDER • PRODUCT SYSTEMS"
-            title="Cross-border payments UX restructuring | Rupeeflow"
+            title="Cross-border Fintech UX restructuring | Rupeeflow"
             description="Aligning onboarding, transaction flows, and trust systems for a high-friction remittance platform."
             imageUrl="/images/rupeeflow-product.png"
             caseStudyLink="/case-studies/rupeeflow"
@@ -35,6 +35,9 @@ const AllProjects = () => {
               "Reduced transaction hesitation",
               "Clearer investor-facing product narrative",
             ]}
+            outcome="Reduced Onboarding Friction"
+            focus="UX flow and Positioning"
+            accent="#0e899c"
           />
 
           {/* CLOSEXPAY */}
@@ -50,6 +53,9 @@ const AllProjects = () => {
               "Stronger onboarding clarity",
               "Reduced narrative ambiguity",
             ]}
+            outcome="Increased Brand Clarity and User Trust"
+            focus="Brand and Product Clarity"
+            accent="#9d24de"
           />
 
           {/* BROKERQUANT */}
@@ -65,6 +71,9 @@ const AllProjects = () => {
               "Reduced dashboard complexity",
               "Made risk perception immediately legible",
             ]}
+            outcome="Improved Risk Signal Clarity"
+            focus="UX Clarity and Information Architecture"
+            accent="#de4c24"
           />
 
           {/* GST PLATFORM */}
@@ -80,6 +89,9 @@ const AllProjects = () => {
               "Reduced operational confusion",
               "Improved compliance comprehension",
             ]}
+            outcome="Improved Product Clarity"
+            focus="Dashboard UI/UX"
+            accent="#0dac77"
           />
 
           {/* INVESTOR NARRATIVE */}
@@ -95,6 +107,9 @@ const AllProjects = () => {
               "Clearer business positioning",
               "Improved financial storytelling",
             ]}
+            outcome="Improved Investor Narrative Clarity"
+            focus="Positioning and Pitch Design"
+            accent="#0aa89d"
           />
         </div>
       </div>

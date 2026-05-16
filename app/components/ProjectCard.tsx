@@ -11,6 +11,12 @@ interface ProjectCardProps {
   caseStudyLink: string;
   points: string[];
   tags: string[];
+
+  outcome: string;
+  focus: string;
+
+  // NEW
+  accent: string;
 }
 
 const ProjectCard = ({
@@ -21,11 +27,15 @@ const ProjectCard = ({
   caseStudyLink,
   points,
   tags,
+  outcome,
+  focus,
+  accent,
 }: ProjectCardProps) => {
   return (
     <div
       className="
-        flex flex-col lg:flex-row
+        flex flex-col landscape:lg:flex-row
+        portrait:lg:flex-col
         w-full
         border border-neutral-300/80
         rounded-[24px]
@@ -36,7 +46,7 @@ const ProjectCard = ({
       {/* LEFT CONTENT */}
       <div
         className="
-          w-full lg:w-1/2
+          w-full landscape:lg:w-1/2
           px-6 py-10
           sm:px-10 sm:py-14
           lg:px-14 lg:py-16
@@ -45,7 +55,10 @@ const ProjectCard = ({
       >
         {/* CATEGORY */}
         <div className="flex flex-wrap gap-2 mb-5">
-          <span className="text-[11px] tracking-[0.18em] uppercase text-accent font-medium">
+          <span
+            className="text-[11px] tracking-[0.18em] uppercase font-medium"
+            style={{ color: accent }}
+          >
             {category}
           </span>
         </div>
@@ -70,11 +83,14 @@ const ProjectCard = ({
               className="
                 px-3 py-1.5
                 rounded-full
-                border border-neutral-300
+                border
                 bg-white/70
                 text-[11px] sm:text-xs
                 text-primary-text/70
               "
+              style={{
+                borderColor: `${accent}25`,
+              }}
             >
               {tag}
             </div>
@@ -88,7 +104,18 @@ const ProjectCard = ({
               key={index}
               className="flex items-center gap-3 text-sm text-primary-text/75"
             >
-              <div className="w-1.5 h-1.5 rounded-full bg-accent shrink-0" />
+              <div
+                className="
+                  w-2 h-2
+                  rounded-full
+                  border
+                  shrink-0
+                "
+                style={{
+                  borderColor: accent,
+                }}
+              />
+
               <span>{point}</span>
             </div>
           ))}
@@ -118,9 +145,11 @@ const ProjectCard = ({
               duration-1000
               group-hover:scale-[120]
               transition-all ease-in-out
-              bg-accent
               z-0
             "
+            style={{
+              backgroundColor: accent,
+            }}
           />
 
           <span className="z-10 flex items-center justify-center gap-3">
@@ -137,52 +166,84 @@ const ProjectCard = ({
       <div
         className="
           relative
-          w-full lg:w-1/2
+          w-full landscape:lg:w-1/2
           bg-[#ECECEC]
           flex items-center justify-center
           px-4 py-6 lg:py-16
           overflow-hidden
         "
       >
-        {/* subtle gradient */}
-        <div className="absolute inset-0 bg-gradient-to-br from-white/40 via-transparent to-blue-100/30" />
+        {/* GRID BACKGROUND */}
+        <div
+          className="
+            absolute inset-0 opacity-[0.45]
+          "
+          style={{
+            backgroundImage: `
+              linear-gradient(to right, rgba(255,255,255,0.5) 1px, transparent 1px),
+              linear-gradient(to bottom, rgba(255,255,255,0.5) 1px, transparent 1px)
+            `,
+            backgroundSize: "42px 42px",
+          }}
+        />
 
-        {/* floating overlays */}
+        {/* SUBTLE RADIAL GLOW */}
+        <div
+          className="
+            absolute inset-0
+          "
+          style={{
+            background: `radial-gradient(circle at 70% 30%, ${accent}18 0%, transparent 55%)`,
+          }}
+        />
+
+        {/* SOFT GRADIENT */}
+        <div className="absolute inset-0 bg-gradient-to-br from-white/50 via-transparent to-black/[0.03]" />
+
+        {/* OUTCOME BOX */}
         <div
           className="
             absolute top-6 left-6
             px-4 py-2
             rounded-xl
             bg-white/90
-            border border-neutral-200
+            border
             shadow-sm
             backdrop-blur
+            z-20
           "
+          style={{
+            borderColor: `${accent}25`,
+          }}
         >
           <p className="text-[10px] uppercase tracking-wider text-neutral-500">
             Outcome
           </p>
 
           <p className="text-sm text-primary-text font-medium mt-1">
-            Reduced onboarding friction
+            {outcome}
           </p>
         </div>
 
+        {/* FOCUS BOX */}
         <div
           className="
             absolute bottom-8 right-8
             px-4 py-2
             rounded-xl
-            bg-[#0F172E]
             text-white
             shadow-lg
+            z-20
           "
+          style={{
+            backgroundColor: accent,
+          }}
         >
           <p className="text-[10px] uppercase tracking-wider text-white/60">
             Focus
           </p>
 
-          <p className="text-sm mt-1">Trust + product clarity</p>
+          <p className="text-sm mt-1">{focus}</p>
         </div>
 
         {/* IMAGE */}

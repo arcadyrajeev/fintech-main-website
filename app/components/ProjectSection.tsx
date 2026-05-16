@@ -10,7 +10,7 @@ const ProjectSection = () => {
         className="
           max-w-7xl mx-auto
           px-6 sm:px-10 lg:px-24
-          py-10 portrait:lg:py-12 landscape:lg:pt-[8vw]
+          py-10 portrait:lg:py-12 landscape:lg:pt-[10vw]
           flex flex-col
         "
       >
@@ -49,7 +49,7 @@ const ProjectSection = () => {
         >
           <ProjectCard
             category="PAYMENTS • CROSS-BORDER • PRODUCT SYSTEMS"
-            title="Cross-border payments UX restructuring | Rupeeflow"
+            title="Cross-border Fintech UX restructuring | Rupeeflow"
             description="Aligning onboarding, transaction flows, and trust systems for a high-friction remittance platform."
             imageUrl="/images/rupeeflow-product.png"
             caseStudyLink="/case-studies/rupeeflow"
@@ -59,6 +59,9 @@ const ProjectSection = () => {
               "Reduced transaction hesitation",
               "Clearer investor-facing product narrative",
             ]}
+            outcome="Reduced Onboarding Friction"
+            focus="UX flow and Positioning"
+            accent="#134db3"
           />
 
           <ProjectCard
@@ -73,6 +76,9 @@ const ProjectSection = () => {
               "Reduced dashboard complexity",
               "Made risk perception immediately legible",
             ]}
+            outcome="Improved Risk Signal Clarity"
+            focus="UX Clarity and Information Architecture"
+            accent="#de4c24"
           />
         </div>
         <div className=" my-14 flex items-center justify-center">
