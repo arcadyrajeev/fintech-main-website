@@ -4,7 +4,7 @@ import React from "react";
 
 const HowIWorkFocusSection = () => {
   return (
-    <section className="w-full box-border bg-neutral-50">
+    <section className="w-full box-border  ">
       <div
         className="max-w-6xl mx-auto
           px-6 sm:px-18 md:px-18 lg:px-24

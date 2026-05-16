@@ -9,6 +9,7 @@ import Bridge from "./components/Bridge";
 import MiddleCta from "./components/MiddleCta";
 import Problem from "./components/Problem";
 import BridgeAccent from "./components/BridgeAccent";
+import ScrollTraceBackground from "./components/ScrollTraceBackground";
 
 import type { Metadata } from "next";
 import Services from "./components/Services";
@@ -74,31 +75,42 @@ export const metadata: Metadata = {
 
 export default function Home() {
   return (
-    <>
-      <HomeHero />
-      <BridgeAccent />
-      <ProjectSection />
-      <Problem />
-      <Bridge
-        size="med"
-        text="Individually they are small. But together, they block capital."
-      />
-      <Services />
-      <FintechNarrativeSection />
-      <Bridge
-        size="big"
-        text="When this goes unresolved, growth slows, conviction weakens, and
-                capital conversations stretch longer than they should."
-      />
-      <HowIWorkFocusSection />
-      <Bridge
-        size="big"
-        text="This usually shows up before a raise or after early traction."
-      />
-      <FinalCTASection
-        text1="If the problem feels familiar,"
-        text2="a conversation usually helps."
-      />
-    </>
+    <div className="relative overflow-hidden  ">
+      <ScrollTraceBackground />
+
+      <div className="relative z-10">
+        <HomeHero />
+        <BridgeAccent />
+        <ProjectSection />
+        <Problem />
+
+        <Bridge
+          size="med"
+          text="Individually they are small. But together, they block capital."
+        />
+
+        <Services />
+
+        <FintechNarrativeSection />
+
+        <Bridge
+          size="big"
+          text="When this goes unresolved, growth slows, conviction weakens, and
+          capital conversations stretch longer than they should."
+        />
+
+        <HowIWorkFocusSection />
+
+        <Bridge
+          size="big"
+          text="This usually shows up before a raise or after early traction."
+        />
+
+        <FinalCTASection
+          text1="If the problem feels familiar,"
+          text2="a conversation usually helps."
+        />
+      </div>
+    </div>
   );
 }

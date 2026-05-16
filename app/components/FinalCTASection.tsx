@@ -9,7 +9,7 @@ interface FinalCTASectionProps {
 
 const FinalCTASection = ({ text1, text2 }: FinalCTASectionProps) => {
   return (
-    <section className="w-full bg-neutral-50">
+    <section className="w-full  ">
       <div className="max-w-6xl mx-auto px-6 sm:px-10 lg:px-24 py-8 lg:py-24">
         <div
           className="

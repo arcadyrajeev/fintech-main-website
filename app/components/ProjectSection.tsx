@@ -5,7 +5,7 @@ import { ArrowUpRight } from "lucide-react";
 
 const ProjectSection = () => {
   return (
-    <section className="bg-neutral-50 w-full">
+    <section className="  w-full">
       <div
         className="
           max-w-7xl mx-auto

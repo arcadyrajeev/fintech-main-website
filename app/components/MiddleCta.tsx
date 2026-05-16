@@ -2,7 +2,7 @@ import React from "react";
 
 const MiddleCta = () => {
   return (
-    <section className="w-full flex justify-center bg-neutral-50 py-8 md:py-0">
+    <section className="w-full flex justify-center   py-8 md:py-0">
       <div className="flex flex-col overflow-hidden justify-center items-center gap-2">
         <a
           href="https://wa.me/919523638369?text=Hi!%20I%20came%20across%20your%20work%20and%20wanted%20to%20have%20a%20quick%20conversation."

@@ -18,7 +18,7 @@ const secondaryProblems = [
 
 const Problem = () => {
   return (
-    <section className="w-full bg-neutral-50">
+    <section className="w-full  ">
       <div className="max-w-6xl mx-auto px-6 sm:px-10 lg:px-24 pt-14">
         {/* Eyebrow */}
         <p className="text-xs tracking-wide text-neutral-500 mb-3">

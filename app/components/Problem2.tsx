@@ -4,7 +4,7 @@ import React from "react";
 
 const FintechNarrativeSection = () => {
   return (
-    <section className="w-full bg-neutral-50">
+    <section className="w-full  ">
       <div
         className="
           max-w-6xl mx-auto

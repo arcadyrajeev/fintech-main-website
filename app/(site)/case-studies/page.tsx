@@ -55,7 +55,7 @@ export const metadata: Metadata = {
 
 const CaseStudies = () => {
   return (
-    <div className="bg-neutral-50 ">
+    <div className="  ">
       <CSHero />
       <AllProjects />
 

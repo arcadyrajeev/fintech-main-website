@@ -3,7 +3,7 @@ import React from "react";
 
 const BridgeAccent = () => {
   return (
-    <section className="w-full bg-neutral-50">
+    <section className="w-full  ">
       <div
         className=" max-w-6xl mx-auto
           px-6 sm:px-18 md:px-18 lg:px-24

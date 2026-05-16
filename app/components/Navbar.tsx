@@ -43,7 +43,7 @@ const Navbar = () => {
       <ul
         className="
           flex gap-2 md:gap-4 lg:gap-4
-          bg-neutral-50/50
+           /50
           backdrop-blur-lg
           border border-neutral-50
           rounded-full

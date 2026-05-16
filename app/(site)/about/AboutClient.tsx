@@ -72,7 +72,7 @@ export default function AboutPage() {
   return (
     <main
       ref={containerRef}
-      className="relative w-full bg-neutral-50 px-4 md:px-10 lg:px-24 text-neutral-900 overflow-hidden"
+      className="relative w-full   px-4 md:px-10 lg:px-24 text-neutral-900 overflow-hidden"
     >
       {/* Hero */}
       <section className="relative z-10 flex px-4 md:px-12 lg:px-[6vw] mx-auto pt-36 lg:pt-16">

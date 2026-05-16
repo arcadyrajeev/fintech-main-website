@@ -20,7 +20,7 @@ export default function Services() {
   ];
 
   return (
-    <section className="w-full bg-neutral-50 px-4 py-20">
+    <section className="w-full   px-4 py-20">
       <div className="w-full mx-auto px-2 py-20">
         {/* Heading */}
         <div className="px-[15vw]">

@@ -55,7 +55,7 @@ export const metadata: Metadata = {
 };
 export default function CloseXPayCaseStudy() {
   return (
-    <main className="bg-neutral-50 text-neutral-900">
+    <main className="  text-neutral-900">
       {/* Hero Section */}
       <section className="max-w-6xl mx-auto px-6 md:px-12 lg:px-[7.5rem] pt-24 lg:pt-32 pb-20">
         <Link
