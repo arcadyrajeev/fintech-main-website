@@ -25,8 +25,8 @@ const AllProjects = () => {
           {/* RUPEEFLOW */}
           <ProjectCard
             category="PAYMENTS • CROSS-BORDER • PRODUCT SYSTEMS"
-            title="Cross-border Fintech UX restructuring | Rupeeflow"
-            description="Aligning onboarding, transaction flows, and trust systems for a high-friction remittance platform."
+            title="Making cross-border transfers easier to trust | Rupeeflow"
+            description="Reducing onboarding hesitation, transaction uncertainty, and operational friction in a remittance platform built for high-volume money movement."
             imageUrl="/images/rupeeflow-product.png"
             caseStudyLink="/case-studies/rupeeflow"
             tags={["KYC UX", "Trust Systems", "Activation Flows"]}
@@ -43,8 +43,8 @@ const AllProjects = () => {
           {/* CLOSEXPAY */}
           <ProjectCard
             category="PAYMENTS • BRAND SYSTEMS • USER TRUST"
-            title="Brand and narrative redesign | CloseXpay"
-            description="Restructuring messaging, financial trust signals, and product communication for a modern payments experience."
+            title="Building stronger financial trust through product perception | CloseXpay"
+            description="Restructuring product communication, onboarding clarity, and trust signaling for a modern digital payments experience."
             imageUrl="/cases/closexpay-cover1.png"
             caseStudyLink="/case-studies/closexpay"
             tags={["Brand Systems", "Financial UX", "User Trust"]}
@@ -61,8 +61,8 @@ const AllProjects = () => {
           {/* BROKERQUANT */}
           <ProjectCard
             category="CRYPTO • RISK ANALYTICS • FINANCIAL UX"
-            title="Trading risk clarity system | BrokerQuant"
-            description="Restructuring execution risk, fee visibility, and market integrity signals for a crypto analytics platform."
+            title="Structuring trading risk for faster decisions | BrokerQuant"
+            description="Reorganizing execution risk, fee visibility, and market signals into a clearer operational system for crypto traders and analysts."
             imageUrl="/cases/bq-product1.png"
             caseStudyLink="/case-studies/brokerquant"
             tags={["Dashboard UX", "Data Hierarchy", "Behavioral Clarity"]}
@@ -79,8 +79,8 @@ const AllProjects = () => {
           {/* GST PLATFORM */}
           <ProjectCard
             category="COMPLIANCE • GST • FINANCIAL OPERATIONS"
-            title="GST and compliance visibility redesign"
-            description="Restructuring tax compliance workflows and invoice management systems to improve clarity across filing status and operational risk."
+            title="Making compliance workflows easier to navigate"
+            description="Restructuring filing systems, invoice workflows, and operational visibility for teams managing complex tax and compliance processes."
             imageUrl="/cases/clarity.png"
             caseStudyLink="/case-studies/clarity1"
             tags={["Compliance UX", "Invoice Systems", "Financial Operations"]}
@@ -97,8 +97,8 @@ const AllProjects = () => {
           {/* INVESTOR NARRATIVE */}
           <ProjectCard
             category="INVESTOR UX • FINTECH NARRATIVE • POSITIONING"
-            title="Investor narrative system | Rupeeflow"
-            description="Designing investor-facing narrative systems focused on market framing, product clarity, and financial communication."
+            title="Making operational complexity easier for investors to understand | Rupeeflow"
+            description="Designing investor-facing narrative systems focused on product clarity, market framing, and operational trust."
             imageUrl="/images/rupeeflow-pitch.png"
             caseStudyLink="/case-studies/pitch1"
             tags={["Pitch Design", "Market Framing", "Investor Narrative"]}

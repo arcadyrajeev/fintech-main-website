@@ -49,8 +49,8 @@ const ProjectSection = () => {
         >
           <ProjectCard
             category="PAYMENTS • CROSS-BORDER • PRODUCT SYSTEMS"
-            title="Cross-border Fintech UX restructuring | Rupeeflow"
-            description="Aligning onboarding, transaction flows, and trust systems for a high-friction remittance platform."
+            title="Making cross-border transfers easier to trust | Rupeeflow"
+            description="Reducing onboarding hesitation, transaction uncertainty, and operational friction in a remittance platform built for high-volume money movement."
             imageUrl="/images/rupeeflow-product.png"
             caseStudyLink="/case-studies/rupeeflow"
             tags={["KYC UX", "Trust Systems", "Activation Flows"]}
@@ -61,13 +61,13 @@ const ProjectSection = () => {
             ]}
             outcome="Reduced Onboarding Friction"
             focus="UX flow and Positioning"
-            accent="#134db3"
+            accent="#0e5e90"
           />
 
           <ProjectCard
             category="CRYPTO • RISK ANALYTICS • FINANCIAL UX"
-            title="Trading risk clarity system | BrokerQuant"
-            description="Restructuring execution risk, fee visibility, and market integrity signals for a crypto analytics platform."
+            title="Structuring trading risk for faster decisions | BrokerQuant"
+            description="Reorganizing execution risk, fee visibility, and market signals into a clearer operational system for crypto traders and analysts."
             imageUrl="/cases/bq-product1.png"
             caseStudyLink="/case-studies/brokerquant"
             tags={["Dashboard UX", "Data Hierarchy", "Behavioral Clarity"]}

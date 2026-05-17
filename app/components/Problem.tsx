@@ -21,7 +21,7 @@ const Problem = () => {
     <section className="w-full  ">
       <div className="max-w-6xl mx-auto px-6 sm:px-10 lg:px-24 pt-8">
         {/* Eyebrow */}
-        <p className="text-xs tracking-wide text-neutral-500 mb-3">
+        <p className="text-xs bodyfont font-semibold   text-neutral-500 mb-3">
           Recurring operational patterns
         </p>
 

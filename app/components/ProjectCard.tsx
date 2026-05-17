@@ -64,7 +64,7 @@ const ProjectCard = ({
         </div>
 
         {/* TITLE */}
-        <h2 className="heading text-primary-text/95 text-2xl sm:text-3xl lg:text-[2.6rem] leading-[1.05] max-w-xl">
+        <h2 className="heading text-primary-text/95 text-2xl sm:text-3xl lg:text-[2.2rem] leading-[1.05] max-w-xl">
           {title}
         </h2>
 

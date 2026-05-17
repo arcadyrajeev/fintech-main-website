@@ -8,7 +8,7 @@ interface BridgeProps {
 const Bridge = ({ text, size }: BridgeProps) => {
   // 1. Create a mapping object for your sizes
   const sizeClasses = {
-    big: "text-5xl md:text-4xl lg:text-6xl",
+    big: "text-4xl lg:text-6xl",
     med: "text-4xl", // Changed 1xl to xl (1xl isn't a standard TW class)
     tiny: "text-lg md:text-xl lg:text-3xl",
   };
