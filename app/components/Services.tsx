@@ -153,7 +153,7 @@ export default function Services() {
 
                     <Link
                       href="/case-studies"
-                      className="shrink-0 flex mr-6 items-center justify-center w-11 h-11 rounded-md border border-white/10 bg-white/5 hover:bg-white/10 transition-colors"
+                      className="shrink-0 flex items-center justify-center w-11 h-11 rounded-md border border-white/10 bg-white/5 hover:bg-white/10 transition-colors"
                     >
                       <ArrowUpRight
                         size={20}
