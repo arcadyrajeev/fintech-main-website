@@ -6,100 +6,39 @@ import { ArrowUpRight } from "lucide-react";
 interface CTAButtonProps {
   text: string;
   href: string;
+  subtext?: string;
 }
 
-export default function CTAButton({ text, href }: CTAButtonProps) {
+export default function CTAButton({ text, href, subtext }: CTAButtonProps) {
   return (
-    <div className="w-full flex items-center justify-center">
+    <div className="w-full flex flex-col items-center justify-center">
+      {" "}
       <Link
         href={href}
         className="
-          group
-          relative
-          inline-flex
-          items-center
-          gap-4
-          overflow-hidden
-          rounded-full
-          border border-white/10
-          bg-blue-900
-          px-7 sm:px-8
-          py-4
-          transition-all duration-500
-          hover:-translate-y-[2px]
-          hover:border-white/20
-          hover:shadow-[0_20px_80px_rgba(11,35,80,0.35)]
-        "
+                  relative
+                  group
+                  overflow-hidden
+                  rounded-full
+                  border-2 border-blue-900/50
+                  bg-white
+                  px-8 sm:px-9
+                  py-6
+                  transition-all duration-500
+                  hover:-translate-y-[2px]
+                  hover:shadow-[0_20px_60px_rgba(0,0,0,0.08)]
+                "
       >
-        {/* Glow */}
-        <div
-          className="
-            absolute inset-0
-            opacity-0
-            transition-opacity duration-500
-            group-hover:opacity-100
-          "
-        >
-          <div
-            className="
-              absolute inset-0
-              bg-[radial-gradient(circle_at_top_right,rgba(59,130,246,0.22),transparent_45%)]
-            "
-          />
-
-          <div
-            className="
-              absolute inset-0
-              bg-[radial-gradient(circle_at_bottom_left,rgba(34,211,238,0.18),transparent_40%)]
-            "
-          />
-        </div>
-
-        {/* Text */}
-        <span
-          className="
-            relative z-10
-            heading
-            text-sm sm:text-base
-            tracking-[-0.02em]
-            text-white
-          "
-        >
+        {" "}
+        <div className=" absolute -bottom-[2vh] left-1/2 w-3 h-2 origin-bottom rounded-full origin-center duration-1200 group-hover:scale-[110] transition-all ease-in-out bg-accent z-0 "></div>{" "}
+        {/* The Text */}{" "}
+        <span className="relative flex items-center gap-2 text-xl heading font-medium z-10 transition-colors duration-1200 group-hover:text-white">
+          {" "}
           {text}
-        </span>
-
-        {/* Icon */}
-        <div
-          className="
-            relative z-10
-            flex
-            h-10 w-10
-            items-center
-            justify-center
-            rounded-full
-            border border-white/10
-            bg-white/[0.05]
-            transition-transform duration-500
-            group-hover:rotate-45
-          "
-        >
-          <ArrowUpRight size={18} className="text-white/90" />
-        </div>
-
-        {/* Shine */}
-        <div
-          className="
-            absolute inset-0
-            -translate-x-[120%]
-            bg-gradient-to-r
-            from-transparent
-            via-white/10
-            to-transparent
-            transition-transform duration-1000
-            group-hover:translate-x-[120%]
-          "
-        />
-      </Link>
+          <ArrowUpRight size={24} className="ml-2" />{" "}
+        </span>{" "}
+      </Link>{" "}
+      <p className="text-sm text-neutral-500 mt-4">{subtext}</p>
     </div>
   );
 }

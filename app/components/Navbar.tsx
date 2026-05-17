@@ -37,7 +37,7 @@ const Navbar = () => {
 
     {
       name: "Website Positioning",
-      path: "/services/positioning",
+      path: "/services/website",
     },
 
     {

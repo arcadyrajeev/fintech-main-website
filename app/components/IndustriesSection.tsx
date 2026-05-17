@@ -56,7 +56,8 @@ export default function IndustriesSection() {
             className="
               heading
               text-white
-              text-4xl md:text-5xl 
+              font-light
+              text-3xl md:text-5xl 
               leading-[1.05]
               tracking-tight
             "
@@ -70,12 +71,12 @@ export default function IndustriesSection() {
         <div
           className="
             mt-20
-            grid grid-cols-1 md:grid-cols-2
-            gap-14 md:gap-24
+            grid grid-cols-2
+            gap-10 md:gap-24
           "
         >
           {/* Left */}
-          <div className="relative pl-8">
+          <div className="relative pl-4 md:pl-8">
             <div className="absolute left-0 top-0 h-full w-px bg-gradient-to-b from-blue-400/80 to-transparent" />
 
             <div className="flex flex-col gap-6">
@@ -95,7 +96,7 @@ export default function IndustriesSection() {
           </div>
 
           {/* Right */}
-          <div className="relative pl-8">
+          <div className="relative pl-4 md:pl-8">
             <div className="absolute left-0 top-0 h-full w-px bg-gradient-to-b from-cyan-400/80 to-transparent" />
 
             <div className="flex flex-col gap-6">

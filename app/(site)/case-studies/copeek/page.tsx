@@ -236,7 +236,7 @@ export default function CopeekCaseStudy() {
             <div className="grid grid-rows-2 gap-6">
               <div className="relative rounded-2xl aspect-[16/8] overflow-hidden border border-neutral-200 ">
                 <Image
-                  src="/cases/copeek-brand2.png"
+                  src="/cases/copeek-brand3.png"
                   alt="Copeek Business Card"
                   fill
                   className="object-cover object-top"

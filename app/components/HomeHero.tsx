@@ -2,6 +2,7 @@ import React from "react";
 import HeroGraphic from "./HeroGraphic";
 import MiddleCta from "./MiddleCta";
 import Image from "next/image";
+import CTAButton from "./CTAButton";
 
 const HomeHero = () => {
   return (
@@ -53,7 +54,11 @@ const HomeHero = () => {
       <div className="w-full px-2 lg:px-10 py-6 md:py-8 lg:py-10 xl:py-20 flex ">
         <HeroGraphic />
       </div>
-      <MiddleCta />
+      <CTAButton
+        text="Start a Conversation"
+        href="https://wa.me/919523638369?text=Hi!%20I%20came%20across%20your%20work%20and%20wanted%20to%20have%20a%20quick%20conversation."
+        subtext="Let's explore how we can help."
+      />
     </div>
   );
 };

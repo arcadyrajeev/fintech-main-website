@@ -225,7 +225,7 @@ export default function CloseXPayCaseStudy() {
             <div className="grid grid-rows-2 gap-6">
               <div className="relative rounded-2xl aspect-[16/10] overflow-hidden border border-neutral-200 bg-black">
                 <Image
-                  src="/cases/cp-brand2.png"
+                  src="/cases/cp-brand4.png"
                   alt="Brand colors"
                   fill
                   className="object-cover object-top"
@@ -240,6 +240,30 @@ export default function CloseXPayCaseStudy() {
                   className="object-cover object-top"
                 />
               </div>
+            </div>
+          </div>
+          <div
+            className="
+                                  relative rounded-2xl
+                                  overflow-hidden
+                                  border border-neutral-200
+                                 mt-6
+                                  lg:col-span-12
+                                "
+          >
+            <div
+              className="
+                                    absolute inset-0 opacity-[0.03]
+                                  "
+            />
+
+            <div className="relative aspect-[16/10]">
+              <Image
+                src="/cases/cp-brand2.png"
+                alt=""
+                fill
+                className="object-cover object-top"
+              />
             </div>
           </div>
         </div>

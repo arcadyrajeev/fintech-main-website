@@ -49,7 +49,7 @@ const ScrollTraceBackground = () => {
   return (
     <div className="hidden lg:block absolute inset-0 pointer-events-none z-[1] overflow-hidden">
       <svg
-        className="absolute top-[2100px] left-[70px] w-full opacity-90"
+        className="absolute top-[2160px] left-[70px] w-full opacity-90"
         viewBox="0 0 1783 3692"
         fill="none"
       >

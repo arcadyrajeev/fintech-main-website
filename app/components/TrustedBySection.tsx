@@ -18,7 +18,7 @@ const logos = [
 
 export default function TrustedBySection() {
   return (
-    <section className="relative w-full overflow-hidden bg-[#f5f5f5] py-14 md:py-20">
+    <section className="relative w-full overflow-hidden bg-[#f5f5f5] py-24 ">
       {/* Top Border */}
       <div className="absolute top-0 left-0 w-full h-px bg-black/5" />
 

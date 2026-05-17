@@ -32,7 +32,7 @@ export default function POVSection() {
           <div className="pointer-events-none absolute bottom-0 left-0 w-[350px] h-[350px] bg-indigo-500/10 blur-[120px] rounded-full" />
 
           {/* Content */}
-          <div className="relative z-10 p-8 md:p-10 lg:p-16">
+          <div className="relative z-10 p-6 md:p-10 lg:p-16">
             {/* Label */}
             <p className="text-xs bodyfont font-semibold tracking-[0.25em] uppercase text-blue-400">
               POINT OF VIEW

@@ -99,7 +99,7 @@ const ProjectSection = () => {
             />
           </div>
         </div>
-        <div className="pt-16">
+        <div className="pt-10">
           <CTAButton href="/case-studies" text="View All Case Studies" />
         </div>
       </div>
