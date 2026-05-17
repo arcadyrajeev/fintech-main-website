@@ -95,7 +95,7 @@ const Navbar = () => {
           flex gap-2 md:gap-4 lg:gap-4
           backdrop-blur-lg
           border border-white
-          bg-white/40
+          bg-white/20
           rounded-full
           p-[1vw] lg:p-1
         "
@@ -115,7 +115,7 @@ const Navbar = () => {
                   font-medium transition-colors duration-200
                   ${
                     active
-                      ? "bg-slate-800 text-white"
+                      ? "bg-accent-dark text-white"
                       : "text-secondary-text hover:bg-accent hover:text-white"
                   }
                 `}
@@ -145,7 +145,7 @@ const Navbar = () => {
               transition-colors duration-200
               ${
                 pathname.startsWith("/services")
-                  ? "bg-slate-800 text-white"
+                  ? "bg-accent-dark text-white"
                   : "text-secondary-text hover:bg-accent hover:text-white"
               }
             `}
@@ -189,7 +189,7 @@ const Navbar = () => {
                     text-sm
                     bodyfont font-medium
                     text-secondary-text
-                    hover:bg-slate-800
+                    hover:bg-accent-dark
                     hover:text-white
                     transition-colors
                   "
@@ -216,7 +216,7 @@ const Navbar = () => {
                   font-medium transition-colors duration-200
                   ${
                     active
-                      ? "bg-slate-800 text-white"
+                      ? "bg-accent-dark text-white"
                       : "text-secondary-text hover:bg-accent hover:text-white"
                   }
                 `}

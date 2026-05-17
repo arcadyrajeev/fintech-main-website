@@ -132,7 +132,7 @@ const ProjectCard = ({
             group
             px-5 md:px-8 py-3
             text-sm sm:text-base
-            bg-primary-text text-white
+            bg-accent-dark text-white
             rounded-full
             overflow-hidden
           "
