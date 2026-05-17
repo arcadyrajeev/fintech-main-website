@@ -12,10 +12,10 @@ const ScrollTraceBackground = () => {
   */
 
   // TOP TRACE
-  const topTrace = useTransform(scrollYProgress, [0.08, 0.35], [0, 1]);
+  const topTrace = useTransform(scrollYProgress, [0.08, 0.18], [0, 1]);
 
   // BOTTOM TRACE
-  const bottomTrace = useTransform(scrollYProgress, [0.35, 0.5], [0, 1]);
+  const bottomTrace = useTransform(scrollYProgress, [0.18, 0.28], [0, 1]);
 
   /*
     =========================
@@ -23,7 +23,7 @@ const ScrollTraceBackground = () => {
     =========================
   */
 
-  const bottomOpacity = useTransform(scrollYProgress, [0.35, 0.351], [0, 1]);
+  const bottomOpacity = useTransform(scrollYProgress, [0.18, 0.181], [0, 1]);
 
   /*
     =========================
@@ -49,7 +49,7 @@ const ScrollTraceBackground = () => {
   return (
     <div className="hidden lg:block absolute inset-0 pointer-events-none z-[1] overflow-hidden">
       <svg
-        className="absolute top-[1800px] left-[70px] w-full opacity-90"
+        className="absolute top-[2140px] left-[70px] w-full opacity-90"
         viewBox="0 0 1783 3692"
         fill="none"
       >

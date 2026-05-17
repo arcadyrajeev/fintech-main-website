@@ -113,7 +113,7 @@ export default function FAQSection() {
                   {/* QUESTION */}
                   <button
                     onClick={() => toggleFAQ(index)}
-                    className="w-full py-6 md:py-4 flex items-center justify-between gap-6 text-left"
+                    className="w-full py-6 md:py-4 flex items-center cursor-pointer justify-between gap-6 text-left"
                   >
                     <div className="flex items-start gap-4">
                       {/* Q */}

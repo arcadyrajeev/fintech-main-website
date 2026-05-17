@@ -17,6 +17,8 @@ import ICPSection from "./components/ICPSection";
 import Timeline from "./components/Timeline";
 import TransformationSection from "./components/TransformationSection";
 import POVSection from "./components/POVSection";
+import IndustriesSection from "./components/IndustriesSection";
+import TrustedBySection from "./components/TrustedBySection";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://arcadydesign.com"),
@@ -99,6 +101,7 @@ export default function Home() {
       <div className="relative z-10">
         <HomeHero />
         <BridgeAccent />
+        <TrustedBySection />
         <ProjectSection />
         <Problem />
 
@@ -110,10 +113,7 @@ export default function Home() {
         <Services />
 
         <ICPSection />
-        <Bridge
-          size="big"
-          text="Complex products fail when onboarding, workflows, trust, and narrative evolve separately."
-        />
+        <IndustriesSection />
 
         <Timeline />
 

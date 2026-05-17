@@ -40,6 +40,28 @@ const AllProjects = () => {
             accent="#0e5e90"
           />
 
+          {/* COPEEK */}
+          <ProjectCard
+            category="AI VISIBILITY • BRAND SYSTEMS • OPERATIONAL DASHBOARDS"
+            title="Designing AI visibility infrastructure | Copeek"
+            description="Creating an operational monitoring platform that helps brands track AI perception, competitive visibility, and narrative consistency across emerging AI systems."
+            imageUrl="/cases/copeek-cover.png"
+            caseStudyLink="/case-studies/copeek"
+            tags={[
+              "AI Visibility",
+              "Operational Dashboards",
+              "Brand Infrastructure",
+            ]}
+            points={[
+              "Structured AI visibility interpretation",
+              "Reduced perception monitoring complexity",
+              "Made brand visibility operationally measurable",
+            ]}
+            outcome="Improved AI Visibility Clarity"
+            focus="Dashboard Direction and Brand Systems"
+            accent="#1eabab"
+          />
+
           {/* CLOSEXPAY */}
           <ProjectCard
             category="PAYMENTS • BRAND SYSTEMS • USER TRUST"

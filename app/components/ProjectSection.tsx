@@ -65,6 +65,27 @@ const ProjectSection = () => {
           />
 
           <ProjectCard
+            category="AI VISIBILITY • BRAND SYSTEMS • OPERATIONAL DASHBOARDS"
+            title="Designing AI visibility infrastructure | Copeek"
+            description="Creating an operational monitoring platform that helps brands track AI perception, competitive visibility, and narrative consistency across emerging AI systems."
+            imageUrl="/cases/copeek-cover.png"
+            caseStudyLink="/case-studies/copeek"
+            tags={[
+              "AI Visibility",
+              "Operational Dashboards",
+              "Brand Infrastructure",
+            ]}
+            points={[
+              "Structured AI visibility interpretation",
+              "Reduced perception monitoring complexity",
+              "Made brand visibility operationally measurable",
+            ]}
+            outcome="Improved AI Visibility Clarity"
+            focus="Dashboard Direction and Brand Systems"
+            accent="#1eabab"
+          />
+
+          <ProjectCard
             category="CRYPTO • RISK ANALYTICS • FINANCIAL UX"
             title="Structuring trading risk for faster decisions | BrokerQuant"
             description="Reorganizing execution risk, fee visibility, and market signals into a clearer operational system for crypto traders and analysts."
