@@ -71,7 +71,7 @@ export default function Timeline() {
       <div className="max-w-7xl mx-auto px-6 sm:px-10 lg:px-24">
         {/* Heading */}
         <div className="max-w-3xl">
-          <p className="text-xs bodyfont font-semibold   text-neutral-500 ">
+          <p className="text-sm uppercase bodyfont font-semibold   text-neutral-500 ">
             SIGNALS
           </p>
 

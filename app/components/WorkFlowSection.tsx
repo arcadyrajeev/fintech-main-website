@@ -52,7 +52,7 @@ export default function WorkflowSection() {
       <div className="relative z-10 max-w-7xl mx-auto px-6 sm:px-10 lg:px-24 py-24 md:py-32">
         {/* Heading */}
         <div className="max-w-3xl">
-          <p className="text-xs tracking-[0.25em] uppercase text-neutral-500">
+          <p className="text-sm  tracking-[0.25em] uppercase text-neutral-500">
             Process
           </p>
 

@@ -5,83 +5,158 @@ import React from "react";
 interface FinalCTASectionProps {
   text1: string;
   text2: string;
+  accent?: string;
 }
 
-const FinalCTASection = ({ text1, text2 }: FinalCTASectionProps) => {
+const FinalCTASection = ({
+  text1,
+  text2,
+  accent = "#2563eb",
+}: FinalCTASectionProps) => {
   return (
-    <section className="w-full  ">
+    <section className="w-full overflow-hidden">
       <div className="max-w-7xl mx-auto px-6 sm:px-10 lg:px-24 py-8 lg:py-24">
         <div
           className="
+            relative
+            overflow-hidden
             w-full
-            border border-neutral-700/40
-            rounded-2xl
-            px-8 sm:px-12
-            py-16
+            rounded-[2rem]
+            border border-blue-800/30
+            bg-[#f7f8fa]
+            px-8 sm:px-12 lg:px-16
+            py-16 lg:py-20
           "
         >
+          {/* Grid */}
           <div
             className="
+              absolute inset-0 opacity-[0.04]
+              [background-image:linear-gradient(to_right,#000_1px,transparent_1px),linear-gradient(to_bottom,#000_1px,transparent_1px)]
+              [background-size:42px_42px]
+            "
+          />
+          {/* Top Glow */}
+          <div
+            className="absolute top-0 left-1/2 -translate-x-1/2 w-[500px] h-[220px] blur-[120px] opacity-30 rounded-full"
+            style={{
+              background: accent,
+            }}
+          />
+          {/* Bottom Glow */}
+          <div
+            className="absolute bottom-0 right-0 w-[300px] h-[300px] blur-[120px] opacity-20 rounded-full"
+            style={{
+              background: accent,
+            }}
+          />
+          {/* Faded Curved Lines */}
+          <svg
+            className="absolute inset-0 w-full h-full opacity-[0.08]"
+            viewBox="0 0 1600 700"
+            fill="none"
+            preserveAspectRatio="none"
+          >
+            <path
+              d="M-40 620C240 520 300 240 650 240C980 240 1050 580 1640 420"
+              stroke="black"
+              strokeWidth="1.2"
+            />
+
+            <path
+              d="M-120 500C220 420 340 140 710 140C1100 140 1220 520 1720 260"
+              stroke="black"
+              strokeWidth="1"
+            />
+
+            <path
+              d="M40 700C300 620 420 340 760 340C1120 340 1280 700 1680 520"
+              stroke="black"
+              strokeWidth="1"
+            />
+          </svg>
+          {/* Accent Orb */}
+          <div
+            className="
+              absolute
+              top-10 right-10
+              w-4 h-4
+              rounded-full
+              shadow-[0_0_40px]
+            "
+            style={{
+              background: accent,
+              boxShadow: `0 0 40px ${accent}`,
+            }}
+          />
+          {/* Content */}
+          <div
+            className="
+              relative z-10
               flex flex-col
-              gap-12
-              items-center text-center
-              lg:flex-row lg:items-center lg:justify-between
+              gap-14
+              items-center
+              text-center
+              lg:flex-row
+              lg:items-end
+              lg:justify-between
               lg:text-left
             "
           >
             {/* Heading */}
-            <h2 className="text-2xl sm:text-4xl heading tracking-tight text-neutral-900 max-w-xl">
-              {text1}
-              <br /> {text2}
-            </h2>
-          </div>
+            <div className="max-w-3xl">
+              <p className="text-sm bodyfont font-semibold uppercase tracking-[0.20em] text-neutral-500 mb-5">
+                START A CONVERSATION
+              </p>
 
-          {/* CTA */}
-          <div className="w-full justify-center lg:justify-end flex  mt-6">
-            <div className="flex flex-col overflow-hidden justify-center items-center gap-2">
+              <h2
+                className="
+                  heading
+                  text-4xl  lg:text-5xl
+                  leading-[0.95]
+                  tracking-[-0.05em]
+                  text-neutral-900
+                "
+              >
+                {text1}
+                <br />
+                {text2}
+              </h2>
+            </div>
+            {/* CTA */}
+            <div className="flex flex-col justify-center items-center lg:items-end gap-3">
+              {" "}
               <a
                 href="https://wa.me/919523638369?text=Hi!%20I%20came%20across%20your%20work%20and%20wanted%20to%20have%20a%20quick%20conversation."
                 target="_blank"
                 rel="noopener noreferrer"
                 className="
-                text-sm sm:text-xl
-                relative 
-                group
-                overflow-hidden
-                font-medium
-                border-2 border-neutral-700
-                 px-8 py-4 rounded-full
-                text-neutral-900
-                
-                hover:border-accent
-                hover:text-accent
-                transition-colors
-                duration-1200 ease-in-out
-              "
+                  relative
+                  group
+                  overflow-hidden
+                  rounded-full
+                  border border-neutral-300
+                  bg-white
+                  px-8 sm:px-9
+                  py-4
+                  transition-all duration-500
+                  hover:-translate-y-[2px]
+                  hover:shadow-[0_20px_60px_rgba(0,0,0,0.08)]
+                "
               >
-                <div
-                  className="
-    absolute -bottom-[2vh] left-1/2
-    w-3 h-2 
-    origin-bottom
-    rounded-full
-    origin-center
-    duration-1200
-    group-hover:scale-[110]
-    transition-all ease-in-out 
-    bg-accent 
-    z-0
-  "
-                ></div>
-
-                {/* The Text */}
+                {" "}
+                <div className=" absolute -bottom-[2vh] left-1/2 w-3 h-2 origin-bottom rounded-full origin-center duration-1200 group-hover:scale-[110] transition-all ease-in-out bg-accent z-0 "></div>{" "}
+                {/* The Text */}{" "}
                 <span className="relative z-10 transition-colors duration-1200 group-hover:text-white">
-                  Start a conversation
-                </span>
-              </a>
-              <h3 className="text-secondary-text text-md"> Chat on Whatsapp</h3>
-            </div>
-          </div>
+                  {" "}
+                  Start a conversation{" "}
+                </span>{" "}
+              </a>{" "}
+              <p className="text-sm text-neutral-500">
+                Usually replies within a few hours
+              </p>
+            </div>{" "}
+          </div>{" "}
         </div>
       </div>
     </section>

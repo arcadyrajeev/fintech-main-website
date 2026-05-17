@@ -55,6 +55,17 @@ export default function Services() {
       <div className="max-w-[1600px] mx-auto">
         {/* Heading */}
         <div className="px-2 lg:px-[10vw]">
+          <p
+            className="
+              text-sm bodyfont font-semibold
+              uppercase
+              text-primary-text/60
+             
+              mb-4
+            "
+          >
+            OUR SERVICES
+          </p>
           <h2 className="heading text-4xl md:text-7xl text-primary-text tracking-tight">
             What can we do for you?
           </h2>

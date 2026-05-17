@@ -54,7 +54,7 @@ export default function ICPSection() {
       <div className="max-w-7xl mx-auto px-6 sm:px-10 lg:px-24">
         {/* Heading */}
         <div className="max-w-3xl">
-          <p className="text-xs bodyfont font-semibold   text-neutral-500">
+          <p className="text-sm uppercase bodyfont font-semibold   text-neutral-500">
             Who We Work With
           </p>
 
@@ -90,7 +90,7 @@ export default function ICPSection() {
               return (
                 <div
                   key={index}
-                  className="grid grid-cols-1 lg:grid-cols-[1.1fr_.9fr] gap-10 lg:gap-20 p-8 md:p-12 lg:p-16"
+                  className="grid grid-cols-1 xl:grid-cols-[1.1fr_.9fr] gap-10 lg:gap-20 p-6 md:p-12 lg:p-16 mb-8"
                 >
                   {/* Left */}
                   <div className="flex gap-6 md:gap-10">
@@ -113,7 +113,7 @@ export default function ICPSection() {
 
                     {/* Title */}
                     <div>
-                      <h3 className="heading text-3xl md:text-5xl leading-[0.95] whitespace-pre-line text-white">
+                      <h3 className="heading font-thin text-3xl md:text-5xl leading-[0.95] whitespace-pre-line text-white">
                         {row.title}
                       </h3>
                     </div>
@@ -121,7 +121,7 @@ export default function ICPSection() {
 
                   {/* Right */}
                   <div className="flex flex-col justify-between">
-                    <p className="text-sm md:text-base leading-relaxed text-neutral-300 max-w-md">
+                    <p className="text-sm md:text-base leading-relaxed text-neutral-300 max-w-lg">
                       {row.description}
                     </p>
 

@@ -19,9 +19,9 @@ const secondaryProblems = [
 const Problem = () => {
   return (
     <section className="w-full  ">
-      <div className="max-w-6xl mx-auto px-6 sm:px-10 lg:px-24 pt-8">
+      <div className="max-w-6xl mx-auto px-6 sm:px-10 lg:px-24 ">
         {/* Eyebrow */}
-        <p className="text-xs bodyfont font-semibold   text-neutral-500 mb-3">
+        <p className="text-sm bodyfont font-semibold uppercase  text-neutral-500 mb-3">
           Recurring operational patterns
         </p>
 

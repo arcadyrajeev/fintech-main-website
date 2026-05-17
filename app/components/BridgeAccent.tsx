@@ -18,7 +18,7 @@ const BridgeAccent = () => {
             tracking-tight
             text-primary-text
             mx-auto lg:mx-0
-            leading-[1.2]
+            leading-[1]
           "
         >
           We help align product, brand, and narrative for{" "}

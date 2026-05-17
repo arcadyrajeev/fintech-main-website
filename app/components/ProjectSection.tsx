@@ -1,52 +1,68 @@
 import React from "react";
-import ProjectCard from "./ProjectCard";
 import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
+import ProjectCard from "./ProjectCard";
+import CompactCaseCard from "./CompactCaseCard";
+import CTAButton from "./CTAButton";
 
 const ProjectSection = () => {
   return (
-    <section className="  w-full">
+    <section className="w-full ">
       <div
         className="
           max-w-7xl mx-auto
           px-6 sm:px-10 lg:px-24
-          py-10 portrait:lg:py-12 landscape:lg:pt-[10vw]
-          flex flex-col
+          py-20 lg:py-28
         "
       >
-        {/* Section Heading */}
-        <h1
-          className="
-            heading
-            text-3xl sm:text-4xl md:text-5xl
-            text-center
-            text-primary-text/90
-            mb-1 sm:mb-2
-          "
-        >
-          Featured Case Studies
-        </h1>
-        <h1
-          className="
-            heading
-            text-sm
-            font-medium 
-            text-center
-            text-primary-text/60
-            mb-6 sm:mb-9
-          "
-        >
-          Examples of what breaks when clarity doesn’t scale
-        </h1>
+        {/* Heading */}
+        <div className="mb-14 sm:mb-20">
+          <p
+            className="
+              text-sm bodyfont font-semibold
+              uppercase
+              text-primary-text/60
+              text-center
+              mb-4
+            "
+          >
+            Selected Work
+          </p>
 
-        {/* Cards */}
-        <div
-          className="
-            flex flex-col
-            w-full
-            gap-16 sm:gap-20 lg:gap-24
-          "
-        >
+          <h2
+            className="
+              heading
+              text-4xl sm:text-5xl lg:text-6xl
+              leading-[0.95]
+              tracking-[-0.04em]
+              text-center
+              text-primary-text/90
+              max-w-3xl
+              mx-auto
+            "
+          >
+            Systems that became harder to trust at scale.
+          </h2>
+
+          <p
+            className="
+              mt-6
+              text-sm sm:text-base
+              leading-relaxed
+              text-primary-text/55
+              text-center
+              max-w-2xl
+              mx-auto
+            "
+          >
+            These projects focused on reducing hesitation, improving product
+            clarity, and restructuring trust across high-complexity platforms.
+          </p>
+        </div>
+
+        {/* Main Layout */}
+        <div className="flex flex-col gap-8">
+          {/* Expanded Featured */}
           <ProjectCard
             category="PAYMENTS • CROSS-BORDER • PRODUCT SYSTEMS"
             title="Making cross-border transfers easier to trust | Rupeeflow"
@@ -64,52 +80,27 @@ const ProjectSection = () => {
             accent="#0e5e90"
           />
 
-          <ProjectCard
-            category="AI VISIBILITY • BRAND SYSTEMS • OPERATIONAL DASHBOARDS"
-            title="Designing AI visibility infrastructure | Copeek"
-            description="Creating an operational monitoring platform that helps brands track AI perception, competitive visibility, and narrative consistency across emerging AI systems."
-            imageUrl="/cases/copeek-cover.png"
-            caseStudyLink="/case-studies/copeek"
-            tags={[
-              "AI Visibility",
-              "Operational Dashboards",
-              "Brand Infrastructure",
-            ]}
-            points={[
-              "Structured AI visibility interpretation",
-              "Reduced perception monitoring complexity",
-              "Made brand visibility operationally measurable",
-            ]}
-            outcome="Improved AI Visibility Clarity"
-            focus="Dashboard Direction and Brand Systems"
-            accent="#1eabab"
-          />
+          {/* Compact Cases */}
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            <CompactCaseCard
+              category="AI VISIBILITY • OPERATIONAL DASHBOARDS"
+              title="Designing AI visibility infrastructure"
+              imageUrl="/cases/copeek-cover.png"
+              caseStudyLink="/case-studies/copeek"
+              accent="#1eabab"
+            />
 
-          <ProjectCard
-            category="CRYPTO • RISK ANALYTICS • FINANCIAL UX"
-            title="Structuring trading risk for faster decisions | BrokerQuant"
-            description="Reorganizing execution risk, fee visibility, and market signals into a clearer operational system for crypto traders and analysts."
-            imageUrl="/cases/bq-product1.png"
-            caseStudyLink="/case-studies/brokerquant"
-            tags={["Dashboard UX", "Data Hierarchy", "Behavioral Clarity"]}
-            points={[
-              "Improved financial signal hierarchy",
-              "Reduced dashboard complexity",
-              "Made risk perception immediately legible",
-            ]}
-            outcome="Improved Risk Signal Clarity"
-            focus="UX Clarity and Information Architecture"
-            accent="#de4c24"
-          />
+            <CompactCaseCard
+              category="CRYPTO • RISK ANALYTICS • FINANCIAL UX"
+              title="Structuring trading risk for faster decisions"
+              imageUrl="/cases/bq-product1.png"
+              caseStudyLink="/case-studies/brokerquant"
+              accent="#de4c24"
+            />
+          </div>
         </div>
-        <div className=" my-14 flex items-center justify-center">
-          <Link
-            href={"/case-studies"}
-            className="heading text-primary-text  font-medium hover:text-accent hover:underline py-2 px-4 underline-offset-5 transition-colors"
-          >
-            View All Case Studies
-            <ArrowUpRight size={20} className="inline-block ml-2 mb-1" />
-          </Link>
+        <div className="pt-16">
+          <CTAButton href="/case-studies" text="View All Case Studies" />
         </div>
       </div>
     </section>
