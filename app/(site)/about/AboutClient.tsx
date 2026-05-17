@@ -36,12 +36,14 @@ export default function AboutPage() {
 
           <h1 className="mt-4 text-[6vw] portrait:md:text-5xl landscape:md:text-7xl portrait:max-w-2xl landscape:max-w-4xl text-primary-text heading tracking-tight">
             Product & Narrative Strategist for{" "}
-            <span className="text-accent">Fintech</span>.
+            <span className="text-accent">Fintech & Operational Platforms</span>
+            .
           </h1>
 
           <p className="mt-6 text-sm md:text-xl portrait:max-w-xl landscape:max-w-2xl font-medium text-secondary-text">
-            Product, narrative, onboarding, and trust clarity for complex
-            financial systems where decisions need to hold up under scrutiny.
+            Product systems, onboarding, trust, and operational UX for platforms
+            where clarity directly affects user decisions and product
+            confidence.
           </p>
         </motion.div>
       </section>
@@ -67,9 +69,10 @@ export default function AboutPage() {
       >
         <div className="relative mx-auto flex flex-col gap-8 backdrop-blur-md border border-neutral-300 rounded-2xl px-5 lg:px-16 py-10">
           <p className="text-neutral-700 leading-relaxed text-sm md:text-2xl">
-            I work with fintech teams when products become harder to interpret,
-            onboarding starts leaking conviction, and trust signals no longer
-            feel obvious to users, investors, or internal teams.
+            I work with fintech and operational platform teams when products
+            become harder to interpret, onboarding starts leaking confidence,
+            and trust signals no longer feel obvious to users, stakeholders, or
+            internal teams.
           </p>
 
           <p className="text-neutral-700 leading-relaxed text-sm md:text-xl">
@@ -80,8 +83,8 @@ export default function AboutPage() {
 
           <p className="text-neutral-700 leading-relaxed text-sm md:text-lg">
             This usually becomes important before fundraising, after early
-            traction, during product expansion, or when financial workflows grow
-            more operationally complex.
+            traction, during product expansion, or when operational systems
+            become harder to scale and explain clearly.
           </p>
         </div>
       </motion.section>
@@ -127,8 +130,8 @@ export default function AboutPage() {
           </p>
 
           <h2 className="text-2xl md:text-5xl heading tracking-tight text-primary-text max-w-3xl">
-            Systems where trust, product logic, and financial decisions
-            intersect.
+            Systems where trust, product clarity, and operational
+            decision-making intersect.
           </h2>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6">
@@ -138,8 +141,8 @@ export default function AboutPage() {
                 desc: "Reducing hesitation across verification, activation, and financial onboarding systems.",
               },
               {
-                title: "Financial Dashboard Clarity",
-                desc: "Making operational risk, transaction visibility, and financial state easier to interpret.",
+                title: "Product Design Systems",
+                desc: "Structuring dashboards, workflows, operational hierarchy, and decision-oriented interfaces into clearer product systems.",
               },
               {
                 title: "Product Narrative",
@@ -234,9 +237,9 @@ export default function AboutPage() {
           </h2>
 
           <p className="mt-6 text-sm md:text-lg text-neutral-600 max-w-2xl leading-relaxed">
-            Most conversations start around onboarding friction, trust gaps,
-            unclear positioning, financial UX complexity, or investor-facing
-            product clarity.
+            Most conversations start around onboarding friction, operational UX
+            complexity, unclear positioning, trust gaps, workflow confusion, or
+            product systems that become harder to interpret as they scale.
           </p>
 
           <div className="mt-10 grid grid-cols-1 md:grid-cols-3 gap-5">

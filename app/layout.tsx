@@ -9,39 +9,64 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://arcadydesign.com"),
 
   title: {
-    default: "Fintech Product & Narrative Strategy | Arcady",
+    default:
+      "Product Clarity Systems for Fintech & Operational Platforms | Arcady",
     template: "%s | Arcady",
   },
 
   description:
-    "Fintech product strategy to fix onboarding friction, trust gaps, and positioning so users commit, investors understand, and growth compounds.",
+    "We help fintech and operational platforms improve trust, onboarding, dashboard UX, and product clarity through operational UX systems and narrative strategy.",
+
+  keywords: [
+    "fintech UX",
+    "dashboard UX",
+    "product strategy",
+    "operational platform UX",
+    "product clarity systems",
+    "trust systems",
+    "fintech onboarding UX",
+    "operational SaaS UX",
+    "decision systems UX",
+    "infrastructure product UX",
+    "workflow UX",
+    "analytics dashboard design",
+    "product narrative strategy",
+  ],
 
   authors: [{ name: "Rajeev" }],
   creator: "Rajeev",
 
   openGraph: {
-    title: "Make Your Fintech Legible to Capital",
+    title: "Product Clarity Systems for Fintech & Operational Platforms",
+
     description:
-      "Fix onboarding friction, trust gaps, and positioning issues that block conviction and capital.",
+      "UX systems, onboarding clarity, dashboard UX, and trust-focused product strategy for fintech and operational software.",
+
     url: "https://arcadydesign.com",
-    siteName: "Arcady Design Fintech",
+
+    siteName: "Arcady Design",
+
     images: [
       {
         url: "/og-image.png",
         width: 1200,
         height: 630,
-        alt: "Fintech product and narrative strategy",
+        alt: "Product clarity systems for fintech and operational platforms",
       },
     ],
+
     locale: "en_US",
     type: "website",
   },
 
   twitter: {
     card: "summary_large_image",
-    title: "Fintech Strategy | Arcady",
+
+    title: "Product Clarity Systems for Fintech & Operational Platforms",
+
     description:
-      "Fix the hidden frictions in fintech products that slow growth and block investment.",
+      "Operational UX systems, onboarding clarity, dashboard UX, and trust-focused product strategy for fintech and complex software platforms.",
+
     images: ["/og-image.png"],
   },
 
@@ -73,12 +98,26 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
               "@context": "https://schema.org",
+
               "@type": "ProfessionalService",
-              name: "Arcady - Fintech Product & Narrative Strategy",
+
+              name: "Arcady - Product Clarity Systems for Fintech & Operational Platforms",
+
               url: "https://arcadydesign.com",
+
               description:
-                "Fintech product strategy focused on onboarding, trust, and narrative clarity.",
+                "Operational UX systems, onboarding clarity, dashboard UX, trust systems, and narrative strategy for fintech and operational platforms.",
+
               areaServed: "Global",
+
+              serviceType: [
+                "Fintech UX Strategy",
+                "Operational Platform UX",
+                "Dashboard UX",
+                "Onboarding UX",
+                "Product Narrative Strategy",
+                "Trust System Design",
+              ],
             }),
           }}
         />

@@ -5,23 +5,34 @@ import Link from "next/link";
 
 const workflowSteps = [
   {
-    title: "Discovery & Friction Mapping",
-    desc: "Understanding onboarding flows, trust gaps, financial workflows, and where clarity starts breaking down.",
+    title: "Discovery & Product Analysis",
+
+    desc: "Understanding onboarding flows, operational friction, trust gaps, positioning issues, and where product clarity starts breaking down.",
+
     date: "STEP 01",
   },
+
   {
-    title: "Product & Narrative Alignment",
-    desc: "Aligning product structure, positioning, user flows, and communication into one coherent system.",
+    title: "Friction Mapping",
+
+    desc: "Identifying hesitation points across onboarding, workflows, dashboards, hierarchy, and user decision-making systems.",
+
     date: "STEP 02",
   },
+
   {
     title: "System Restructuring",
-    desc: "Restructuring onboarding, dashboards, hierarchy, and financial UX to reduce hesitation and confusion.",
+
+    desc: "Restructuring interfaces, onboarding, product hierarchy, workflows, and communication systems to improve clarity and trust.",
+
     date: "STEP 03",
   },
+
   {
-    title: "Iteration & Refinement",
-    desc: "Refining clarity through usage patterns, stakeholder feedback, and operational constraints.",
+    title: "Refinement & Iteration",
+
+    desc: "Refining clarity through stakeholder feedback, usage patterns, operational constraints, and repeated decision flows.",
+
     date: "STEP 04",
   },
 ];
@@ -50,8 +61,8 @@ export default function WorkflowSection() {
           </h2>
 
           <p className="mt-6 text-neutral-400 text-sm md:text-lg leading-relaxed max-w-2xl">
-            Structured around clarity, trust systems, onboarding friction, and
-            financial decision-making.
+            Structured around onboarding clarity, operational UX, product
+            positioning, trust systems, and decision-oriented product design.
           </p>
         </div>
 

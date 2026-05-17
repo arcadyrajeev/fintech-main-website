@@ -5,8 +5,8 @@ const BridgeAccent = () => {
   return (
     <section className="w-full  ">
       <div
-        className=" max-w-7xl mx-auto
-          px-6 sm:px-18 md:px-18 lg:px-24
+        className=" max-w-6xl mx-auto
+          px-6 
           py-8 sm:py-20 lg:py-16
           text-left"
       >
@@ -21,10 +21,12 @@ const BridgeAccent = () => {
             leading-[1.2]
           "
         >
-          We help{" "}
-          <span className="text-accent italic font-medium">fintech</span>{" "}
-          founders align product, brand, and narrative so users, teams, and
-          investors understand the business instantly.
+          We help align product, brand, and narrative for{" "}
+          <span className="text-accent italic font-medium">
+            fintech and operational platforms
+          </span>{" "}
+          <br />
+          so users, teams, and investors understand the business instantly.
         </p>
       </div>
     </section>

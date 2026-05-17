@@ -22,12 +22,12 @@ const Problem = () => {
       <div className="max-w-6xl mx-auto px-6 sm:px-10 lg:px-24 pt-8">
         {/* Eyebrow */}
         <p className="text-xs tracking-wide text-neutral-500 mb-3">
-          A recurring pattern in fintech
+          Recurring operational patterns
         </p>
 
         {/* Heading */}
         <h2 className="text-4xl lg:text-5xl heading tracking-tight text-primary-text leading-tight">
-          Where fintech products break?
+          Where operational systems start breaking
         </h2>
 
         {/* FEATURED PROBLEM */}

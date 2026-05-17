@@ -18,48 +18,62 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://arcadydesign.com"),
 
   title: {
-    default: "Fintech Brand & Product Strategy | Fix What Blocks Capital",
-    template: "%s | Fintech Strategy",
+    default: "Product Clarity Systems for Fintech & Operational Platforms",
+    template: "%s | Arcady Design",
   },
 
   description:
-    "We help fintech founders align product, narrative, and trust so users, investors, and the market understand the business clearly. Fix conversion leaks, hesitation, and positioning gaps that block capital.",
+    "We help fintech and operational platforms improve trust, onboarding, product clarity, and decision-making through UX systems, narrative strategy, and operational design.",
 
   keywords: [
-    "fintech strategy",
-    "fintech product strategy",
-    "fintech branding",
     "fintech UX",
-    "startup positioning",
+    "fintech product strategy",
+    "operational platform UX",
+    "dashboard UX",
+    "financial UX",
+    "product clarity systems",
+    "trust systems",
+    "operational SaaS UX",
+    "UX strategy",
     "product narrative",
-    "conversion optimization fintech",
-    "investor readiness fintech",
-    "fintech growth problems",
+    "fintech onboarding UX",
+    "decision systems UX",
+    "analytics dashboard design",
+    "infrastructure product UX",
+    "complex workflow UX",
   ],
 
   openGraph: {
-    title: "Make Your Fintech Legible to Capital",
+    title: "Product Clarity Systems for Fintech & Operational Platforms",
+
     description:
-      "Metrics improve, but capital doesn’t follow. Fix the gaps in product, narrative, and trust that block conviction.",
+      "We design trust, onboarding, dashboard, and operational UX systems for fintech and high-complexity platforms.",
+
     url: "https://arcadydesign.com",
-    siteName: "YArcady Design Fintech",
+
+    siteName: "Arcady Design",
+
     images: [
       {
-        url: "/og-image.png", // create this later
+        url: "/og-image.png",
         width: 1200,
         height: 630,
-        alt: "Fintech strategy and product clarity",
+        alt: "Product clarity systems for fintech and operational platforms",
       },
     ],
+
     locale: "en_US",
     type: "website",
   },
 
   twitter: {
     card: "summary_large_image",
-    title: "Make Your Fintech Legible to Capital",
+
+    title: "Product Clarity Systems for Fintech & Operational Platforms",
+
     description:
-      "Fintech product strategy to fix onboarding friction, trust gaps, and positioning so users commit, investors understand, and growth compounds.",
+      "UX systems, onboarding clarity, trust architecture, and operational product strategy for fintech and complex software platforms.",
+
     images: ["/og-image.png"],
   },
 
@@ -92,11 +106,6 @@ export default function Home() {
         <Services />
 
         <WorkflowSection />
-
-        <Bridge
-          size="med"
-          text="This usually shows up before a raise or after early traction."
-        />
 
         <FinalCTASection
           text1="If the problem feels familiar,"

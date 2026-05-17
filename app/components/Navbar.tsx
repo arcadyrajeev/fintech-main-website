@@ -21,24 +21,28 @@ const Navbar = () => {
 
   const services = [
     {
-      name: "Onboarding Flow",
+      name: "Onboarding & KYC",
       path: "/services/onboarding",
     },
+
     {
-      name: "Trust Systems",
-      path: "/services/trust",
+      name: "Brand Perception & Trust",
+      path: "/services/brand",
     },
+
     {
-      name: "Financial UX",
-      path: "/services/financial",
+      name: "Product Design Systems",
+      path: "/services/product",
     },
+
+    {
+      name: "Website Positioning",
+      path: "/services/positioning",
+    },
+
     {
       name: "Product Narrative",
-      path: "/services/product-narrative",
-    },
-    {
-      name: "Dashboard UX",
-      path: "/services/dashboard-ux",
+      path: "/services/narrative",
     },
   ];
 

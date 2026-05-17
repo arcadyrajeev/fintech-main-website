@@ -24,7 +24,7 @@ const Footer = () => {
           {/* Left */}
           <div className="max-w-md">
             <p className="body-font uppercase tracking-[0.2em] text-xs text-neutral-400">
-              Fintech Product Systems
+              Product Clarity Systems
             </p>
 
             <h2 className="heading text-3xl sm:text-5xl text-neutral-100 mt-4 leading-[1]">
@@ -32,12 +32,10 @@ const Footer = () => {
             </h2>
 
             <p className="heading font-light mt-8 text-sm lg:text-base text-neutral-300 leading-relaxed max-w-xl">
-              We help fintech companies improve onboarding, trust, conversion,
-              financial UX, and product clarity through fintech-focused product
-              systems and narrative design.
+              We help fintech and operational platforms improve onboarding,
+              trust, product clarity, and decision-making through UX systems and
+              narrative strategy.
             </p>
-
-            {/* Expertise */}
           </div>
 
           {/* Right */}
@@ -90,59 +88,63 @@ const Footer = () => {
               </span>
 
               <Link
-                href="/services/onboarding-conversion"
+                href="/services/onboarding"
                 className="body-font text-neutral-200 hover:text-white transition"
               >
-                Onboarding UX
+                Onboarding & KYC
               </Link>
 
               <Link
-                href="/services/trust-systems"
+                href="/services/brand"
                 className="body-font text-neutral-200 hover:text-white transition"
               >
-                Trust Systems
+                Brand Perception & Trust
               </Link>
 
               <Link
-                href="/services/financial-ux"
+                href="/services/product"
                 className="body-font text-neutral-200 hover:text-white transition"
               >
-                Financial UX
+                Product Design Systems
               </Link>
 
               <Link
-                href="/services/product-narrative"
+                href="/services/positioning"
+                className="body-font text-neutral-200 hover:text-white transition"
+              >
+                Website Positioning
+              </Link>
+
+              <Link
+                href="/services/narrative"
                 className="body-font text-neutral-200 hover:text-white transition"
               >
                 Product Narrative
               </Link>
-
-              <Link
-                href="/services/dashboard-ux"
-                className="body-font text-neutral-200 hover:text-white transition"
-              >
-                Dashboard UX
-              </Link>
             </div>
 
-            {/* Fintech Focus */}
+            {/* Focus Areas */}
             <div className="flex flex-col gap-3">
               <span className="body-font text-neutral-400 uppercase tracking-wide text-xs">
-                Fintech Focus
-              </span>
-
-              <span className="body-font text-neutral-300">Payments</span>
-
-              <span className="body-font text-neutral-300">Lending</span>
-
-              <span className="body-font text-neutral-300">Wealthtech</span>
-
-              <span className="body-font text-neutral-300">
-                Cross-border UX
+                Focus Areas
               </span>
 
               <span className="body-font text-neutral-300">
-                Financial Systems
+                Operational Platforms
+              </span>
+
+              <span className="body-font text-neutral-300">
+                Dashboard Systems
+              </span>
+
+              <span className="body-font text-neutral-300">Onboarding UX</span>
+
+              <span className="body-font text-neutral-300">
+                Trust Architecture
+              </span>
+
+              <span className="body-font text-neutral-300">
+                Product Narrative
               </span>
             </div>
           </div>
@@ -152,14 +154,14 @@ const Footer = () => {
         <div className="max-w-6xl">
           <div className="flex flex-wrap gap-3 mt-6">
             {[
-              "Fintech UX",
-              "KYC Optimization",
-              "Financial Dashboards",
+              "Dashboard UX",
+              "Operational Platforms",
               "Trust Systems",
               "Onboarding UX",
               "Product Narrative",
-              "Wealthtech UX",
-              "Payments UX",
+              "Workflow UX",
+              "Decision Systems",
+              "Infrastructure UX",
             ].map((item, index) => (
               <div
                 key={index}
@@ -169,11 +171,12 @@ const Footer = () => {
               </div>
             ))}
           </div>
+
           <p className="text-neutral-500 text-sm leading-relaxed mt-6">
-            Arcady Design is a fintech-focused product strategy and UX systems
-            studio helping fintech companies improve onboarding conversion,
-            financial dashboard clarity, KYC UX, trust systems, product
-            positioning, and user decision-making across regulated financial
+            Arcady Design is a product strategy and UX systems studio helping
+            fintech and operational platforms improve onboarding clarity,
+            dashboard UX, trust systems, workflow readability, product
+            positioning, and user decision-making across high-complexity digital
             products.
           </p>
         </div>

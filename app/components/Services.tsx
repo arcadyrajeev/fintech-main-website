@@ -5,38 +5,47 @@ import Link from "next/link";
 
 const topServices = [
   {
-    title: "Onboarding & Conversion Clarity",
-    desc: "Reduce friction across onboarding, KYC, and activation flows.",
-    bullets: [
-      "KYC UX optimization",
-      "Activation flows",
-      "Trust-building interactions",
-    ],
-    image: "/images/services/onboarding-conversion.png",
+    title: "Onboarding & KYC",
+    desc: "Reduce hesitation across onboarding, activation, verification, and high-friction entry points.",
+
+    bullets: ["KYC UX systems", "Activation flows", "Conversion clarity"],
+
+    image: "/images/onboarding.webp",
   },
+
   {
-    title: "Trust & Decision Systems",
-    desc: "Design financial interfaces that improve confidence and reduce hesitation.",
-    bullets: ["Dashboard hierarchy", "Trust signaling", "Risk perception"],
-    image: "/images/services/trust-decision.png",
+    title: "Product Design Systems",
+    desc: "Structure operational products, dashboards, and workflows into clearer decision-oriented systems.",
+
+    bullets: ["Dashboard hierarchy", "Workflow UX", "Operational interfaces"],
+
+    image: "/images/product.webp",
   },
 ];
 
 const bottomServices = [
   {
+    title: "Brand Perception & Trust",
+
+    desc: "Improve legitimacy, trust signaling, and perceived product credibility across digital experiences.",
+
+    image: "/images/brand.webp",
+  },
+
+  {
+    title: "Website Positioning",
+
+    desc: "Clarify what the product does, who it serves, and why it matters before users hesitate.",
+
+    image: "/images/website.webp",
+  },
+
+  {
     title: "Product Narrative",
-    desc: "Align product behavior with investor understanding.",
-    image: "/images/services/product-narrative.png",
-  },
-  {
-    title: "Financial UX Systems",
-    desc: "Structure complex financial workflows into intuitive experiences.",
-    image: "/images/services/financial-ux.png",
-  },
-  {
-    title: "Information Architecture",
-    desc: "Clarify data-heavy products through hierarchy and interaction design.",
-    image: "/images/services/information-architecture.png",
+
+    desc: "Align product logic, business framing, and communication into one coherent narrative system.",
+
+    image: "/images/narrative.webp",
   },
 ];
 
@@ -61,55 +70,62 @@ export default function Services() {
           {topServices.map((service, index) => (
             <div
               key={index}
-              className="group relative overflow-hidden rounded-2xl border border-white/10 bg-[#151E35] lg:col-span-6 min-h-[620px] p-4 md:p-10"
+              className="group relative overflow-hidden rounded-2xl border border-white/10 bg-[#081125] lg:col-span-6 min-h-[620px] "
             >
               {/* Glow */}
-              <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(59,130,246,0.18),transparent_45%)]" />
+              <div className="pointer-events-none absolute z-20 inset-0 bg-[radial-gradient(circle_at_top_right,rgba(59,130,246,0.18),transparent_45%)]" />
 
               {/* Content */}
+
               <div className="relative z-10 flex h-full flex-col">
                 {/* Top */}
-                <div className="flex items-start justify-between gap-6">
-                  <div>
-                    <h3 className="bodyfont text-white text-3xl md:text-5xl  leading-[1.05] max-w-md">
-                      {service.title}
-                    </h3>
+                <div className="p-4 md:p-10">
+                  <div className="flex items-start justify-between gap-6">
+                    <div>
+                      <h3 className="bodyfont text-white text-3xl md:text-5xl leading-[1.05] max-w-md">
+                        {service.title}
+                      </h3>
 
-                    <p className="mt-5 text-white/70 text-sm md:text-base leading-relaxed max-w-lg">
-                      {service.desc}
-                    </p>
+                      <p className="mt-5 text-white/70 text-sm md:text-base leading-relaxed max-w-lg">
+                        {service.desc}
+                      </p>
+                    </div>
+
+                    <Link
+                      href="/case-studies"
+                      className="shrink-0 flex items-center justify-center w-12 h-12 rounded-2xl border border-white/10 bg-white/5 hover:bg-white/10 transition-colors"
+                    >
+                      <ArrowUpRight
+                        size={22}
+                        className="text-white group-hover:-translate-y-1 group-hover:translate-x-1 transition-transform"
+                      />
+                    </Link>
                   </div>
 
-                  <Link
-                    href="/case-studies"
-                    className="shrink-0 flex items-center justify-center w-12 h-12 rounded-2xl border border-white/10 bg-white/5 hover:bg-white/10 transition-colors"
-                  >
-                    <ArrowUpRight
-                      size={22}
-                      className="text-white group-hover:-translate-y-1 group-hover:translate-x-1 transition-transform"
-                    />
-                  </Link>
-                </div>
-
-                {/* Bullets */}
-                <div className="mt-8 flex flex-wrap gap-3">
-                  {service.bullets.map((bullet, bulletIndex) => (
-                    <div
-                      key={bulletIndex}
-                      className="px-4 py-2 rounded-full bg-white/5 border border-white/50 text-white/70 text-sm"
-                    >
-                      {bullet}
-                    </div>
-                  ))}
+                  {/* Bullets */}
+                  <div className="mt-8 flex flex-wrap gap-3">
+                    {service.bullets.map((bullet, bulletIndex) => (
+                      <div
+                        key={bulletIndex}
+                        className="px-4 py-2 rounded-full bg-white/5 border border-white/20 text-white/70 text-sm"
+                      >
+                        {bullet}
+                      </div>
+                    ))}
+                  </div>
                 </div>
 
                 {/* Image */}
-                <div className="relative mt-auto pt-10">
-                  <div className="overflow-hidden rounded-xl border border-white/10 bg-white/5">
+                <div className="relative mt-auto pt-6">
+                  <div className="overflow-hidden rounded-xl relative">
+                    {/* Grid Glow */}
+
+                    <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(59,130,246,0.18),transparent_60%)]" />
+
                     <img
                       src={service.image}
                       alt={service.title}
-                      className="w-full h-[320px] object-cover object-top"
+                      className="relative z-10 w-full aspect-[16/12] object-cover"
                     />
                   </div>
                 </div>
@@ -121,42 +137,44 @@ export default function Services() {
           {bottomServices.map((service, index) => (
             <div
               key={index}
-              className="group relative overflow-hidden rounded-xl border border-white/10 bg-[#151E35] lg:col-span-4 min-h-[500px] pl-6 md:pl-8  pt-6 md:pt-8"
+              className="group relative overflow-hidden rounded-xl border border-white/10 bg-[#081125] lg:col-span-4 "
             >
               {/* Glow */}
-              <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(99,102,241,0.14),transparent_50%)]" />
+              <div className="pointer-events-none absolute z-20 inset-0 bg-[radial-gradient(circle_at_top,rgba(99,102,241,0.14),transparent_50%)]" />
 
               {/* Content */}
               <div className="relative z-10 flex h-full flex-col">
-                {/* Top */}
-                <div className="flex items-start justify-between gap-4">
-                  <h3 className="bodyfont text-white text-2xl md:text-3xl leading-[1.1] ">
-                    {service.title}
-                  </h3>
+                <div className="p-4 md:p-6">
+                  {/* Top */}
+                  <div className="flex items-start justify-between gap-4">
+                    <h3 className="bodyfont text-white text-2xl md:text-3xl leading-[1.1] ">
+                      {service.title}
+                    </h3>
 
-                  <Link
-                    href="/case-studies"
-                    className="shrink-0 flex mr-6 items-center justify-center w-11 h-11 rounded-md border border-white/10 bg-white/5 hover:bg-white/10 transition-colors"
-                  >
-                    <ArrowUpRight
-                      size={20}
-                      className="text-white group-hover:-translate-y-1 group-hover:translate-x-1 transition-transform"
-                    />
-                  </Link>
+                    <Link
+                      href="/case-studies"
+                      className="shrink-0 flex mr-6 items-center justify-center w-11 h-11 rounded-md border border-white/10 bg-white/5 hover:bg-white/10 transition-colors"
+                    >
+                      <ArrowUpRight
+                        size={20}
+                        className="text-white group-hover:-translate-y-1 group-hover:translate-x-1 transition-transform"
+                      />
+                    </Link>
+                  </div>
+
+                  {/* Desc */}
+                  <p className="mt-3 text-white/65 text-sm md:text-base leading-relaxed max-w-sm pr-6">
+                    {service.desc}
+                  </p>
                 </div>
 
-                {/* Desc */}
-                <p className="mt-2 text-white/65 text-sm md:text-base leading-relaxed max-w-sm">
-                  {service.desc}
-                </p>
-
                 {/* Image */}
-                <div className="relative mt-auto ">
-                  <div className="overflow-hidden rounded-lg border border-white/10 bg-white/5">
+                <div className="relative mt-10 md:mt-6">
+                  <div className="overflow-hidden rounded-lg  relative">
                     <img
                       src={service.image}
                       alt={service.title}
-                      className="w-full h-[300px] object-cover"
+                      className="relative z-10 w-full aspect-[16/12] object-cover object-top"
                     />
                   </div>
                 </div>

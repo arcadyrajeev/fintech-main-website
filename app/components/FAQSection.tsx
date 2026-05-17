@@ -6,46 +6,52 @@ import { ChevronDown } from "lucide-react";
 
 const faqs = [
   {
+    question: "What kind of products do you usually work on?",
+    answer:
+      "We work on fintech platforms, operational software, dashboards, onboarding systems, analytics tools, infrastructure products, and trust-heavy digital experiences where clarity directly affects user decisions.",
+  },
+
+  {
+    question: "How do you improve onboarding and product clarity?",
+    answer:
+      "We identify where users hesitate, lose confidence, or misunderstand the system. Then we restructure onboarding flows, hierarchy, messaging, and interaction patterns to reduce friction and improve comprehension.",
+  },
+
+  {
+    question: "What problems are you usually solving?",
+    answer:
+      "Most engagements involve onboarding friction, weak trust perception, unclear product positioning, overloaded dashboards, confusing workflows, or operational systems that feel difficult to navigate under pressure.",
+  },
+
+  {
+    question: "Do you help with product positioning and narrative strategy?",
+    answer:
+      "Yes. We align product behavior, interface systems, messaging, and narrative structure so users, stakeholders, and investors understand the product consistently.",
+  },
+
+  {
+    question: "How long does a typical engagement take?",
+    answer:
+      "Smaller audits and clarity-focused UX engagements usually take 1 to 3 weeks. Larger restructuring projects involving onboarding systems, dashboards, or product narrative can extend across multiple phases.",
+  },
+
+  {
+    question: "What does your process usually look like?",
+    answer:
+      "Most projects begin with workflow analysis, onboarding review, hierarchy evaluation, trust diagnostics, and product interpretation mapping before moving into restructuring and interface direction.",
+  },
+
+  {
     question:
-      "How do you help fintech companies improve onboarding conversion?",
+      "Can you improve existing products without rebuilding everything?",
     answer:
-      "We identify friction across onboarding, KYC, activation, and trust signaling. The goal is to reduce hesitation and improve meaningful user activation.",
+      "Yes. Most operational products already have functional infrastructure. The problem is usually interpretation, hierarchy, onboarding friction, or trust communication rather than core functionality.",
   },
+
   {
-    question: "What kind of fintech products do you work on?",
+    question: "Do you work with early-stage or scaling teams?",
     answer:
-      "We work on payments, lending, wealthtech, internal financial systems, cross-border products, fintech dashboards, and regulated onboarding experiences.",
-  },
-  {
-    question: "How do you approach fintech UX and product clarity?",
-    answer:
-      "We analyze how users understand financial actions, risk, trust, and decision-making across the product experience. Then we restructure flows, hierarchy, and interaction systems for clarity.",
-  },
-  {
-    question: "Do you help with fintech product positioning and narrative?",
-    answer:
-      "Yes. We align product behavior, interface systems, and communication so users, teams, and investors understand the business consistently.",
-  },
-  {
-    question: "How long does a fintech product engagement usually take?",
-    answer:
-      "Smaller audits and onboarding optimization projects usually take 1 to 3 weeks. Larger product clarity and system restructuring engagements can extend across multiple phases.",
-  },
-  {
-    question: "What does your fintech product process look like?",
-    answer:
-      "Most projects begin with system analysis, onboarding review, trust and conversion diagnostics, and product narrative evaluation before moving into UX restructuring and interface design.",
-  },
-  {
-    question:
-      "Can you redesign existing fintech products without rebuilding everything?",
-    answer:
-      "Yes. Most fintech products already have functional infrastructure. The problem is usually clarity, hierarchy, onboarding friction, or trust communication.",
-  },
-  {
-    question: "Do you work with early-stage or scaling fintech companies?",
-    answer:
-      "Both. We work with fintech teams before traction, during growth, and during scale phases where onboarding, communication, and product understanding begin to break down.",
+      "Both. We work with products before traction, during growth, and during scale phases where onboarding, operational clarity, and system understanding begin to break down.",
   },
 ];
 
@@ -91,8 +97,8 @@ export default function FAQSection() {
             </h2>
 
             <p className="mt-6 text-neutral-500 text-sm md:text-base leading-relaxed max-w-xs">
-              Questions fintech teams usually ask around onboarding, trust
-              systems, product clarity, and financial UX.
+              Questions teams usually ask around onboarding, trust systems,
+              product clarity, dashboards, and operational UX.
             </p>
           </div>
 

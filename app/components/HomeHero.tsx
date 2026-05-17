@@ -9,8 +9,8 @@ const HomeHero = () => {
       <p className="text-xs md:text-base  body-font px-4 mt-22 lg:mt-16 font-medium text-slate-600 mb-3 ">
         <span className="text-orange-800 font-bold">PRODUCT CLARITY</span>,{" "}
         <span className="text-orange-800 font-bold">NARRATIVE</span>, and{" "}
-        <span className="text-orange-800 font-bold">TRUST</span> in fintech
-        systems
+        <span className="text-orange-800 font-bold">TRUST</span> for operational
+        platforms
       </p>
 
       <h1 className="heading text-5xl md:text-6xl lg:text-[7vw] text-primary-text  px-3  w-full portrait:lg:w-[70%] portrait:w-[80%] landscape:w-[80%]">
@@ -18,8 +18,8 @@ const HomeHero = () => {
         <span className="text-accent italic">Capital</span>
       </h1>
       <h1 className="heading text-md mt-6 lg:mt-12 lg:text-2xl text-slate-600  px-3  portrait:lg:w-[50%] portrait:w-[80%] portrait:md:w-[65%] landscape:w-[60%]">
-        We help fintech companies improve onboarding, trust, and conversion
-        through product strategy, UX systems, and narrative clarity.
+        We structure onboarding, workflows, interfaces, and product narrative so
+        operational systems become easier to trust, navigate, and scale.
       </h1>
       <div className="relative w-screen left-1/2 right-1/2 lg:-mt-20 xl:-mt-[6vw] portrait:md:-mt-[4vw]  -ml-[50.5vw]">
         <Image
