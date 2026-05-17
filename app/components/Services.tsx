@@ -11,6 +11,8 @@ const topServices = [
     bullets: ["KYC UX systems", "Activation flows", "Conversion clarity"],
 
     image: "/images/onboarding.webp",
+
+    href: "/services/onboarding-kyc",
   },
 
   {
@@ -20,6 +22,8 @@ const topServices = [
     bullets: ["Dashboard hierarchy", "Workflow UX", "Operational interfaces"],
 
     image: "/images/product.webp",
+
+    href: "/services/product-design-systems",
   },
 ];
 
@@ -30,6 +34,8 @@ const bottomServices = [
     desc: "Improve legitimacy, trust signaling, and perceived product credibility across digital experiences.",
 
     image: "/images/brand.webp",
+
+    href: "/services/brand-perception-trust",
   },
 
   {
@@ -38,6 +44,8 @@ const bottomServices = [
     desc: "Clarify what the product does, who it serves, and why it matters before users hesitate.",
 
     image: "/images/website.webp",
+
+    href: "/services/website-positioning",
   },
 
   {
@@ -46,6 +54,8 @@ const bottomServices = [
     desc: "Align product logic, business framing, and communication into one coherent narrative system.",
 
     image: "/images/narrative.webp",
+
+    href: "/services/product-narrative",
   },
 ];
 
@@ -81,7 +91,7 @@ export default function Services() {
           {topServices.map((service, index) => (
             <Link
               key={index}
-              href="/case-studies"
+              href={service.href}
               className="
       group relative overflow-hidden rounded-2xl
       border border-white/10 bg-[#081125]
@@ -162,7 +172,7 @@ export default function Services() {
           {bottomServices.map((service, index) => (
             <Link
               key={index}
-              href="/case-studies"
+              href={service.href}
               className="
       group relative overflow-hidden rounded-xl
       border border-white/10 bg-[#081125]
