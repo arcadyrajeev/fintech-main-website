@@ -70,7 +70,7 @@ export default function Services() {
           {topServices.map((service, index) => (
             <div
               key={index}
-              className="group relative overflow-hidden rounded-2xl border border-white/10 bg-[#081125] lg:col-span-6 min-h-[620px] "
+              className="group relative overflow-hidden rounded-2xl border border-white/10 bg-[#081125] lg:col-span-6 min-h-[620px] py-8 md:py-2"
             >
               {/* Glow */}
               <div className="pointer-events-none absolute z-20 inset-0 bg-[radial-gradient(circle_at_top_right,rgba(59,130,246,0.18),transparent_45%)]" />
@@ -137,7 +137,7 @@ export default function Services() {
           {bottomServices.map((service, index) => (
             <div
               key={index}
-              className="group relative overflow-hidden rounded-xl border border-white/10 bg-[#081125] lg:col-span-4 "
+              className="group relative overflow-hidden rounded-xl border border-white/10 bg-[#081125] lg:col-span-4 py-8 md:py-2"
             >
               {/* Glow */}
               <div className="pointer-events-none absolute z-20 inset-0 bg-[radial-gradient(circle_at_top,rgba(99,102,241,0.14),transparent_50%)]" />

@@ -39,7 +39,7 @@ const workflowSteps = [
 
 export default function WorkflowSection() {
   return (
-    <section className="relative w-full overflow-hidden bg-[#081120]">
+    <section className="relative w-full overflow-hidden bg-[#081125]">
       {/* Glow Top Right */}
       <div className="pointer-events-none absolute top-0 right-0 w-[500px] h-[500px] bg-blue-500/10 blur-[140px] rounded-full" />
 
