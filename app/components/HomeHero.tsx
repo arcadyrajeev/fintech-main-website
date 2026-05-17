@@ -7,10 +7,10 @@ const HomeHero = () => {
   return (
     <div className="   w-full px-4 py-6 portrait:lg:py-16 landscape:lg:py-24 lg:px-24">
       <p className="text-xs md:text-base  body-font px-4 mt-22 lg:mt-16 font-medium text-slate-600 mb-3 ">
-        <span className="text-orange-800 font-bold">PRODUCT CLARITY</span>,{" "}
-        <span className="text-orange-800 font-bold">NARRATIVE</span>, and{" "}
-        <span className="text-orange-800 font-bold">TRUST</span> for operational
-        platforms
+        <span className="text-orange-600 font-semibold">PRODUCT CLARITY</span>,{" "}
+        <span className="text-orange-600 font-semibold">NARRATIVE</span>, and{" "}
+        <span className="text-orange-600 font-semibold">TRUST</span> for
+        operational platforms
       </p>
 
       <h1 className="heading text-5xl md:text-6xl lg:text-[7vw] text-primary-text  px-3  w-full portrait:lg:w-[70%] portrait:w-[80%] landscape:w-[80%]">

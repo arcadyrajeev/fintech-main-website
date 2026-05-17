@@ -37,7 +37,7 @@ const AllProjects = () => {
             ]}
             outcome="Reduced Onboarding Friction"
             focus="UX flow and Positioning"
-            accent="#0e899c"
+            accent="#0e5e90"
           />
 
           {/* CLOSEXPAY */}

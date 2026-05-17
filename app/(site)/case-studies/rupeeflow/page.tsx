@@ -79,7 +79,7 @@ export default function RupeeFlowCaseStudy() {
           <div className="mt-12 flex flex-col justify-between gap-10">
             {/* Left */}
             <div className="max-w-4xl">
-              <p className="text-xs tracking-[0.25em] bodyfont font-semibold uppercase text-accent">
+              <p className="text-xs tracking-[0.25em] bodyfont font-semibold uppercase text-emerald-600">
                 Payments · Fintech · Product Systems
               </p>
 
@@ -173,11 +173,11 @@ export default function RupeeFlowCaseStudy() {
           >
             <div className="grid grid-cols-1 lg:grid-cols-8 gap-12">
               <div className="lg:col-span-4">
-                <p className="text-xs tracking-[0.25em] bodyfont font-semibold uppercase text-accent">
+                <p className="text-xs tracking-[0.25em] bodyfont font-semibold uppercase text-emerald-600">
                   Context
                 </p>
 
-                <h2 className="mt-4 heading text-3xl md:text-5xl border-b-10 border-blue-800 pb-10">
+                <h2 className="mt-4 heading text-3xl md:text-5xl border-b-10 border-emerald-500 pb-10">
                   The product worked.
                   <br />
                   But Trust was missing.
@@ -211,7 +211,7 @@ export default function RupeeFlowCaseStudy() {
       <section className="w-full py-10">
         <div className="max-w-7xl mx-auto px-6 sm:px-10 lg:px-24">
           <div className="max-w-4xl">
-            <p className="text-xs tracking-[0.25em] bodyfont font-semibold uppercase text-accent">
+            <p className="text-xs tracking-[0.25em] bodyfont font-semibold uppercase text-emerald-600">
               Friction Mapping
             </p>
 
@@ -236,7 +236,7 @@ export default function RupeeFlowCaseStudy() {
                   p-6 md:p-8
                 "
               >
-                <div className="w-2 h-2 rounded-full bg-accent mb-5" />
+                <div className="w-2 h-2 rounded-full bg-emerald-600 mb-5" />
 
                 <p className="text-md md:text-lg bodyfont leading-relaxed">
                   {item}
@@ -251,7 +251,7 @@ export default function RupeeFlowCaseStudy() {
       <section className="w-full py-24">
         <div className="max-w-7xl mx-auto px-6 sm:px-10 lg:px-24">
           <div className="max-w-4xl">
-            <p className="text-xs tracking-[0.25em] bodyfont font-semibold uppercase text-accent">
+            <p className="text-xs tracking-[0.25em] bodyfont font-semibold uppercase text-emerald-600">
               Product UX Direction
             </p>
 
@@ -331,7 +331,7 @@ export default function RupeeFlowCaseStudy() {
       <section className="w-full py-10">
         <div className="max-w-7xl mx-auto px-6 sm:px-10 lg:px-24">
           <div className="max-w-4xl">
-            <p className="text-xs tracking-[0.25em] bodyfont font-semibold uppercase text-accent">
+            <p className="text-xs tracking-[0.25em] bodyfont font-semibold uppercase text-emerald-600">
               Website UX Direction
             </p>
 
@@ -494,7 +494,7 @@ export default function RupeeFlowCaseStudy() {
       <section className="w-full py-10">
         <div className="max-w-7xl mx-auto px-6 sm:px-10 lg:px-24">
           <div className="max-w-4xl">
-            <p className="text-xs tracking-[0.25em] bodyfont font-semibold uppercase text-accent">
+            <p className="text-xs tracking-[0.25em] bodyfont font-semibold uppercase text-emerald-600">
               Outcome
             </p>
 
@@ -541,7 +541,7 @@ export default function RupeeFlowCaseStudy() {
               p-8 md:p-16
             "
           >
-            <p className="text-xs tracking-[0.25em] bodyfont font-semibold uppercase text-accent">
+            <p className="text-xs tracking-[0.25em] bodyfont font-semibold uppercase text-emerald-600">
               Insight
             </p>
 

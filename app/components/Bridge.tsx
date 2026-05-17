@@ -25,7 +25,7 @@ const Bridge = ({ text, size }: BridgeProps) => {
           text-left"
       >
         <p
-          className={`${selectedSize} heading font-medium md:font-normal tracking-tight text-primary-text mx-auto lg:mx-0 leading-[1.2]`}
+          className={`${selectedSize} heading font-normal tracking-tight text-primary-text mx-auto lg:mx-0 leading-[1.2]`}
         >
           {text}
         </p>
