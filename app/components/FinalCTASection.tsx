@@ -2,6 +2,8 @@
 
 import React from "react";
 
+import { MoveRightIcon } from "lucide-react";
+
 interface FinalCTASectionProps {
   text1: string;
   text2: string;
@@ -52,20 +54,20 @@ const FinalCTASection = ({
           />
           {/* Faded Curved Lines */}
           <svg
-            className="absolute inset-0 w-full h-full opacity-[0.08]"
+            className="absolute inset-0 w-full h-full opacity-[0.12]"
             viewBox="0 0 1600 700"
             fill="none"
             preserveAspectRatio="none"
           >
             <path
               d="M-40 620C240 520 300 240 650 240C980 240 1050 580 1640 420"
-              stroke="black"
+              stroke="blue"
               strokeWidth="1.2"
             />
 
             <path
               d="M-120 500C220 420 340 140 710 140C1100 140 1220 520 1720 260"
-              stroke="black"
+              stroke="blue"
               strokeWidth="1"
             />
 
@@ -124,7 +126,7 @@ const FinalCTASection = ({
               </h2>
             </div>
             {/* CTA */}
-            <div className="flex flex-col justify-center items-center lg:items-end gap-3">
+            <div className="flex flex-col justify-center items-center lg:items-base gap-3">
               {" "}
               <a
                 href="https://wa.me/919523638369?text=Hi!%20I%20came%20across%20your%20work%20and%20wanted%20to%20have%20a%20quick%20conversation."
@@ -135,10 +137,10 @@ const FinalCTASection = ({
                   group
                   overflow-hidden
                   rounded-full
-                  border border-neutral-300
+                  border-2 border-blue-900/50
                   bg-white
                   px-8 sm:px-9
-                  py-4
+                  py-6
                   transition-all duration-500
                   hover:-translate-y-[2px]
                   hover:shadow-[0_20px_60px_rgba(0,0,0,0.08)]
@@ -147,9 +149,10 @@ const FinalCTASection = ({
                 {" "}
                 <div className=" absolute -bottom-[2vh] left-1/2 w-3 h-2 origin-bottom rounded-full origin-center duration-1200 group-hover:scale-[110] transition-all ease-in-out bg-accent z-0 "></div>{" "}
                 {/* The Text */}{" "}
-                <span className="relative z-10 transition-colors duration-1200 group-hover:text-white">
+                <span className="relative flex items-center gap-2 text-xl heading font-medium z-10 transition-colors duration-1200 group-hover:text-white">
                   {" "}
                   Start a conversation{" "}
+                  <MoveRightIcon size={24} className="ml-2" />{" "}
                 </span>{" "}
               </a>{" "}
               <p className="text-sm text-neutral-500">
