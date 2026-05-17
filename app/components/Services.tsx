@@ -79,15 +79,23 @@ export default function Services() {
         <div className="mt-[4vw] grid grid-cols-1 lg:grid-cols-12 gap-4">
           {/* Top Large Cards */}
           {topServices.map((service, index) => (
-            <div
+            <Link
               key={index}
-              className="group relative overflow-hidden rounded-2xl border border-white/10 bg-[#081125] lg:col-span-6 min-h-[620px] py-8 md:py-2"
+              href="/case-studies"
+              className="
+      group relative overflow-hidden rounded-2xl
+      border border-white/10 bg-[#081125]
+      lg:col-span-6 min-h-[620px]
+      py-8 md:py-2 block cursor-pointer
+      transition-all duration-500
+      hover:-translate-y-[2px]
+      hover:border-white/20
+    "
             >
               {/* Glow */}
               <div className="pointer-events-none absolute z-20 inset-0 bg-[radial-gradient(circle_at_top_right,rgba(59,130,246,0.18),transparent_45%)]" />
 
               {/* Content */}
-
               <div className="relative z-10 flex h-full flex-col">
                 {/* Top */}
                 <div className="p-4 md:p-10">
@@ -102,15 +110,23 @@ export default function Services() {
                       </p>
                     </div>
 
-                    <Link
-                      href="/case-studies"
-                      className="shrink-0 flex items-center justify-center w-12 h-12 rounded-2xl border border-white/10 bg-white/5 hover:bg-white/10 transition-colors"
+                    <div
+                      className="
+              shrink-0 flex items-center justify-center
+              w-12 h-12 rounded-2xl
+              border border-white/10 bg-white/5
+            "
                     >
                       <ArrowUpRight
                         size={22}
-                        className="text-white group-hover:-translate-y-1 group-hover:translate-x-1 transition-transform"
+                        className="
+                text-white
+                transition-transform duration-500
+                group-hover:translate-x-1
+                group-hover:-translate-y-1
+              "
                       />
-                    </Link>
+                    </div>
                   </div>
 
                   {/* Bullets */}
@@ -129,8 +145,6 @@ export default function Services() {
                 {/* Image */}
                 <div className="relative mt-auto pt-6">
                   <div className="overflow-hidden rounded-xl relative">
-                    {/* Grid Glow */}
-
                     <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(59,130,246,0.18),transparent_60%)]" />
 
                     <img
@@ -141,14 +155,23 @@ export default function Services() {
                   </div>
                 </div>
               </div>
-            </div>
+            </Link>
           ))}
 
           {/* Bottom Small Cards */}
           {bottomServices.map((service, index) => (
-            <div
+            <Link
               key={index}
-              className="group relative overflow-hidden rounded-xl border border-white/10 bg-[#081125] lg:col-span-4 py-8 md:py-2"
+              href="/case-studies"
+              className="
+      group relative overflow-hidden rounded-xl
+      border border-white/10 bg-[#081125]
+      lg:col-span-4 py-8 md:py-2
+      block cursor-pointer
+      transition-all duration-500
+      hover:-translate-y-[2px]
+      hover:border-white/20
+    "
             >
               {/* Glow */}
               <div className="pointer-events-none absolute z-20 inset-0 bg-[radial-gradient(circle_at_top,rgba(99,102,241,0.14),transparent_50%)]" />
@@ -158,19 +181,27 @@ export default function Services() {
                 <div className="p-4 md:p-6">
                   {/* Top */}
                   <div className="flex items-start justify-between gap-4">
-                    <h3 className="bodyfont text-white text-2xl md:text-3xl leading-[1.1] ">
+                    <h3 className="bodyfont text-white text-2xl md:text-3xl leading-[1.1]">
                       {service.title}
                     </h3>
 
-                    <Link
-                      href="/case-studies"
-                      className="shrink-0 flex items-center justify-center w-11 h-11 rounded-md border border-white/10 bg-white/5 hover:bg-white/10 transition-colors"
+                    <div
+                      className="
+              shrink-0 flex items-center justify-center
+              w-11 h-11 rounded-md
+              border border-white/10 bg-white/5
+            "
                     >
                       <ArrowUpRight
                         size={20}
-                        className="text-white group-hover:-translate-y-1 group-hover:translate-x-1 transition-transform"
+                        className="
+                text-white
+                transition-transform duration-500
+                group-hover:translate-x-1
+                group-hover:-translate-y-1
+              "
                       />
-                    </Link>
+                    </div>
                   </div>
 
                   {/* Desc */}
@@ -181,7 +212,7 @@ export default function Services() {
 
                 {/* Image */}
                 <div className="relative mt-10 md:mt-6">
-                  <div className="overflow-hidden rounded-lg  relative">
+                  <div className="overflow-hidden rounded-lg relative">
                     <img
                       src={service.image}
                       alt={service.title}
@@ -190,7 +221,7 @@ export default function Services() {
                   </div>
                 </div>
               </div>
-            </div>
+            </Link>
           ))}
         </div>
       </div>

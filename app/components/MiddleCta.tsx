@@ -44,7 +44,10 @@ const MiddleCta = () => {
             Start a conversation
           </span>
         </a>
-        <h3 className="text-secondary-text text-md"> Chat on Whatsapp</h3>
+        <h3 className="text-secondary-text text-md">
+          {" "}
+          Discuss your product system
+        </h3>
       </div>
     </section>
   );
