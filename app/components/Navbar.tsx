@@ -162,37 +162,41 @@ const Navbar = () => {
           {/* Dropdown */}
           <div
             className={`
-              absolute top-[120%] left-1/2 -translate-x-1/2
-              w-auto min-w-[240px]
-              rounded-2xl
-              border border-neutral-200
-              bg-white
-              shadow-2xl
-              overflow-hidden
-              transition-all duration-300
-              ${
-                servicesOpen
-                  ? "opacity-100 visible translate-y-0"
-                  : "opacity-0 invisible -translate-y-2"
-              }
-            `}
+    absolute top-[120%] -left-5 
+    w-[82vw] p-2 sm:w-[320px] md:w-[280px]
+    rounded-2xl
+    border border-neutral-200
+    bg-white
+    shadow-2xl
+    overflow-hidden
+    transition-all duration-300
+    ${
+      servicesOpen
+        ? "opacity-100 visible translate-y-0"
+        : "opacity-0 invisible -translate-y-2"
+    }
+  `}
           >
-            <div className="flex flex-col p-2">
-              {services.map((service) => (
+            <div className="flex flex-col">
+              {services.map((service, index) => (
                 <Link
                   key={service.name}
                   href={service.path}
                   onClick={() => setServicesOpen(false)}
                   className="
-                    rounded-xl
-                    px-4 py-3 text-lg
-                    lg:text-sm
-                    bodyfont font-medium
-                    text-secondary-text
-                    hover:bg-accent-dark
-                    hover:text-white
-                    transition-colors
-                  "
+          px-5 md:px-4
+          py-4 md:py-3
+          text-[15px] md:text-sm
+          leading-relaxed
+          bodyfont font-medium
+          text-secondary-text
+          rounded-lg
+          hover:bg-accent-dark
+          hover:text-white
+          transition-colors
+          border-b lg:border-0 border-neutral-200
+          last:border-b-0
+        "
                 >
                   {service.name}
                 </Link>
