@@ -6,6 +6,8 @@ import OnboardingCaseStudySection from "./components/OnboardingCaseStudySection"
 import OnboardingWorkflowSection from "./components/OnboardingWorkflowSection";
 import FinalCTASection from "@/app/components/FinalCTASection";
 import FAQSection from "@/app/components/FAQSection";
+import OnboardingTargetingSection from "./components/OnboardingTargetingSection";
+import ResultsSection from "./components/ResultsSection";
 
 export default function page() {
   return (
@@ -28,6 +30,8 @@ export default function page() {
       <OnboardingProblemsSection />
       <OnboardingCapabilitiesSection />
       <OnboardingCaseStudySection />
+      <OnboardingTargetingSection />
+      <ResultsSection />
       <OnboardingWorkflowSection />
       <FinalCTASection
         text1="Ready to reduce hesitation"

@@ -123,7 +123,7 @@ export default function OnboardingProblemsSection() {
                   relative
                   overflow-hidden
                   rounded-2xl
-                  border border-slate-200
+                  border border-slate-300
                   bg-white/90
                   backdrop-blur-sm
                   p-6 sm:p-8 lg:p-10

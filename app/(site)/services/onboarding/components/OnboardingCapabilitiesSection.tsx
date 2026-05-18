@@ -116,14 +116,14 @@ export default function OnboardingCapabilitiesSection() {
                   relative
                   overflow-hidden
                   rounded-3xl
-                  border border-white/10
+                  border border-white/50
                   bg-white/[0.03]
                   backdrop-blur-xl
                   p-6
                   min-h-[260px]
 
                   transition-all duration-300
-                  hover:border-blue-400/20
+                  hover:border-blue-400/50
                   hover:bg-white/[0.045]
                 "
               >

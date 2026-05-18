@@ -87,7 +87,7 @@ export default function FAQSection() {
         <div className="flex flex-col md:flex-row gap-14 lg:gap-28  ">
           {/* LEFT */}
 
-          <div className="sticky top-28">
+          <div>
             <h2 className="heading font-medium text-4xl  leading-[0.95] tracking-tight text-primary-text">
               Frequently
               <br />

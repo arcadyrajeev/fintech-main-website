@@ -33,6 +33,8 @@ const bottomServices = [
 
     desc: "Improve legitimacy, trust signaling, and perceived product credibility across digital experiences.",
 
+    bullets: ["Brand Identity", "Trust signaling", "Perception systems"],
+
     image: "/images/brand.webp",
 
     href: "/services/brand",
@@ -43,6 +45,8 @@ const bottomServices = [
 
     desc: "Clarify what the product does, who it serves, and why it matters before users hesitate.",
 
+    bullets: ["Product clarity", "Messaging structure", "Positioning systems"],
+
     image: "/images/website.webp",
 
     href: "/services/website",
@@ -52,6 +56,8 @@ const bottomServices = [
     title: "Product Narrative",
 
     desc: "Align product logic, business framing, and communication into one coherent narrative system.",
+
+    bullets: ["Narrative alignment", "Product framing", "Decision clarity"],
 
     image: "/images/narrative.webp",
 
@@ -140,7 +146,7 @@ export default function Services() {
                   </div>
 
                   {/* Bullets */}
-                  <div className="mt-8 flex flex-wrap gap-3">
+                  <div className="mt-8  flex flex-wrap gap-3">
                     {service.bullets.map((bullet, bulletIndex) => (
                       <div
                         key={bulletIndex}
@@ -218,6 +224,23 @@ export default function Services() {
                   <p className="mt-3 text-white/65 text-sm md:text-base leading-relaxed max-w-sm pr-6">
                     {service.desc}
                   </p>
+                </div>
+
+                {/* Bullets */}
+                <div className="mt-5 ml-4 flex flex-wrap gap-2">
+                  {service.bullets.map((bullet, bulletIndex) => (
+                    <div
+                      key={bulletIndex}
+                      className="
+        px-3 py-1.5 rounded-full
+        bg-white/5 border border-white/10
+        text-[11px] md:text-xs
+        text-white/70
+      "
+                    >
+                      {bullet}
+                    </div>
+                  ))}
                 </div>
 
                 {/* Image */}

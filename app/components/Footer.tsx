@@ -42,7 +42,7 @@ const Footer = () => {
           <div
             className="
               grid grid-cols-2 sm:grid-cols-3
-              gap-10 sm:gap-16
+              gap-10 md:gap-2
               text-sm
             "
           >
@@ -82,7 +82,7 @@ const Footer = () => {
             </div>
 
             {/* Services */}
-            <div className="flex flex-col gap-3">
+            <div className="flex flex-col gap-3 ">
               <span className="body-font text-neutral-400 uppercase tracking-wide text-xs">
                 Services
               </span>
@@ -124,7 +124,7 @@ const Footer = () => {
             </div>
 
             {/* Focus Areas */}
-            <div className="flex flex-col gap-3">
+            <div className="flex flex-col gap-3 md:ml-10">
               <span className="body-font text-neutral-400 uppercase tracking-wide text-xs">
                 Focus Areas
               </span>
