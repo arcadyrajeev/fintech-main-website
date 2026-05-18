@@ -163,7 +163,7 @@ const Navbar = () => {
           <div
             className={`
               absolute top-[120%] left-1/2 -translate-x-1/2
-              w-[240px]
+              w-auto min-w-[240px]
               rounded-2xl
               border border-neutral-200
               bg-white
@@ -185,8 +185,8 @@ const Navbar = () => {
                   onClick={() => setServicesOpen(false)}
                   className="
                     rounded-xl
-                    px-4 py-3
-                    text-sm
+                    px-4 py-3 text-lg
+                    lg:text-sm
                     bodyfont font-medium
                     text-secondary-text
                     hover:bg-accent-dark
