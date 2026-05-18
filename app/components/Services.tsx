@@ -12,7 +12,7 @@ const topServices = [
 
     image: "/images/onboarding.webp",
 
-    href: "/services/onboarding-kyc",
+    href: "/services/onboarding",
   },
 
   {
@@ -23,7 +23,7 @@ const topServices = [
 
     image: "/images/product.webp",
 
-    href: "/services/product-design-systems",
+    href: "/services/product",
   },
 ];
 
@@ -35,7 +35,7 @@ const bottomServices = [
 
     image: "/images/brand.webp",
 
-    href: "/services/brand-perception-trust",
+    href: "/services/brand",
   },
 
   {
@@ -45,7 +45,7 @@ const bottomServices = [
 
     image: "/images/website.webp",
 
-    href: "/services/website-positioning",
+    href: "/services/website",
   },
 
   {
@@ -55,7 +55,7 @@ const bottomServices = [
 
     image: "/images/narrative.webp",
 
-    href: "/services/product-narrative",
+    href: "/services/narrative",
   },
 ];
 
