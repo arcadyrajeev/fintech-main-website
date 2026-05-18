@@ -162,8 +162,8 @@ const Navbar = () => {
           {/* Dropdown */}
           <div
             className={`
-    absolute top-[120%] -left-5 
-    w-[82vw] p-2 sm:w-[320px] md:w-[280px]
+    absolute top-[120%] -left-16 
+    w-[75vw] p-2 sm:w-[320px] md:w-[280px]
     rounded-2xl
     border border-neutral-200
     bg-white
@@ -186,7 +186,7 @@ const Navbar = () => {
                   className="
           px-5 md:px-4
           py-4 md:py-3
-          text-[15px] md:text-sm
+          text-lg md:text-sm
           leading-relaxed
           bodyfont font-medium
           text-secondary-text
