@@ -64,20 +64,20 @@ const ProjectSection = () => {
         <div className="flex flex-col gap-8">
           {/* Expanded Featured */}
           <ProjectCard
-            category="PAYMENTS • CROSS-BORDER • PRODUCT SYSTEMS"
-            title="Making cross-border transfers easier to trust | Rupeeflow"
-            description="Reducing onboarding hesitation, transaction uncertainty, and operational friction in a remittance platform built for high-volume money movement."
+            category="FINTECH • PAYMENTS • PRODUCT SYSTEMS"
+            title="Designing trust into a fintech onboarding system | RupeeFlow"
+            description="Building a cohesive fintech experience across brand identity, onboarding UX, authentication flows, and product systems to reduce hesitation and improve trust perception."
             imageUrl="/images/rupeeflow-product.png"
             caseStudyLink="/case-studies/rupeeflow"
-            tags={["KYC UX", "Trust Systems", "Activation Flows"]}
+            tags={["Brand Identity", "KYC UX", "Authentication Flows"]}
             points={[
-              "Improved onboarding comprehension",
-              "Reduced transaction hesitation",
-              "Clearer investor-facing product narrative",
+              "Reduced onboarding hesitation",
+              "Improved trust perception across touchpoints",
+              "Created clearer product and operational narrative",
             ]}
-            outcome="Reduced Onboarding Friction"
-            focus="UX flow and Positioning"
-            accent="#0e5e90"
+            outcome="Improved Trust & Onboarding Clarity"
+            focus="Brand Systems and Product UX"
+            accent="#118479"
           />
 
           {/* Compact Cases */}

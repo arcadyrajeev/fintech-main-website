@@ -29,7 +29,7 @@ export default function HeroSection({
           mx-auto
           px-5 sm:px-8 lg:px-12
           pt-28 sm:pt-32 lg:pt-40
-          pb-16 sm:pb-20 lg:pb-28
+          pb-12
         "
       >
         {/* Content */}
@@ -63,7 +63,8 @@ export default function HeroSection({
               max-w-6xl
             "
           >
-            {heading1} <span className="text-blue-900">{headingColor}</span>{" "}
+            {heading1}{" "}
+            <span className="text-blue-900 italic">{headingColor}</span>{" "}
             {heading2}
           </h1>
 

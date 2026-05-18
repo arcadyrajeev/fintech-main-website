@@ -2,15 +2,15 @@
 
 import type { Metadata } from "next";
 import Image from "next/image";
-import { ArrowLeft, ArrowUpRight } from "lucide-react";
+import { ArrowLeft } from "lucide-react";
 import Link from "next/link";
 import FinalCTASection from "@/app/components/FinalCTASection";
 
 export const metadata: Metadata = {
-  title: "RupeeFlow Case Study | Fintech Onboarding, UX & Product Direction",
+  title: "RupeeFlow Case Study | Fintech Product Systems",
 
   description:
-    "How RupeeFlow improved onboarding clarity, reduced hesitation, and built trust in a regulated fintech environment through product structure, UX direction, and narrative alignment.",
+    "How RupeeFlow improved onboarding clarity, reduced hesitation, and built trust through product systems, onboarding UX, authentication flows, and brand direction.",
 
   keywords: [
     "fintech onboarding UX",
@@ -23,9 +23,9 @@ export const metadata: Metadata = {
   ],
 
   openGraph: {
-    title: "RupeeFlow Case Study | Onboarding, Trust & Product Clarity",
+    title: "RupeeFlow Case Study | Trust, UX & Product Systems",
     description:
-      "A fintech case study on reducing onboarding friction and building trust through structured UX and product direction.",
+      "A fintech case study on building trust through onboarding systems, authentication UX, and product clarity.",
     url: "https://arcadydesign.com/case-studies/rupeeflow",
     siteName: "Arcady Design",
     images: [
@@ -43,7 +43,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Fintech UX Case Study | RupeeFlow",
     description:
-      "Improving onboarding clarity and trust in a fintech product through structured UX and product direction.",
+      "Improving onboarding clarity and trust in a fintech product through structured UX and product systems.",
     images: ["/cases/rf-product-cover.png"],
   },
 
@@ -75,37 +75,37 @@ export default function RupeeFlowCaseStudy() {
             Go back
           </Link>
 
-          {/* Top Meta */}
-          <div className="mt-12 flex flex-col justify-between gap-10">
-            {/* Left */}
-            <div className="max-w-4xl">
+          {/* Heading */}
+          <div className="mt-12 flex flex-col gap-10">
+            <div className="max-w-5xl">
               <p className="text-xs tracking-[0.25em] bodyfont font-semibold uppercase text-emerald-600">
                 Payments · Fintech · Product Systems
               </p>
 
-              <h1 className="mt-4 heading text-4xl md:text-6xl leading-[0.95] tracking-tight max-w-5xl">
-                RupeeFlow, Website UX, Product Direction, and KYC Onboarding
+              <h1 className="mt-4 heading text-4xl md:text-6xl leading-[0.95] tracking-tight">
+                Designing trust into a fintech onboarding system.
               </h1>
 
               <p className="mt-6 text-base md:text-xl text-secondary-text max-w-3xl leading-relaxed">
                 Improving onboarding clarity, reducing hesitation, and building
-                trust in a regulated fintech environment.
+                trust through structured UX systems, authentication flows, and
+                operational product direction.
               </p>
 
               <p className="mt-4 text-sm md:text-base text-neutral-500 max-w-2xl">
                 Focused on how users interpret the product before committing
-                financial data.
+                financial information.
               </p>
             </div>
 
-            {/* Right */}
-            <div className="grid grid-cols-3 gap-10 text-sm min-w-[320px]">
+            {/* Meta */}
+            <div className="grid grid-cols-2 md:grid-cols-3 gap-10 text-sm max-w-3xl">
               <div>
                 <p className="text-slate-400 uppercase font-bold tracking-[0.2em] text-[10px]">
                   Industry
                 </p>
 
-                <p className="mt-3 font-medium">Fintech - Payments, UPI</p>
+                <p className="mt-3 font-medium">Fintech · Payments · UPI</p>
               </div>
 
               <div>
@@ -114,7 +114,7 @@ export default function RupeeFlowCaseStudy() {
                 </p>
 
                 <p className="mt-3 font-medium leading-relaxed">
-                  UX, Product Direction, Onboarding
+                  Branding, UX, Product Direction
                 </p>
               </div>
 
@@ -134,18 +134,9 @@ export default function RupeeFlowCaseStudy() {
               relative mt-16
               rounded-[2rem]
               overflow-hidden
-              border border-slate-400
-             
+              border border-slate-200
             "
           >
-            {/* Grid */}
-            <div
-              className="
-                absolute inset-0 opacity-[0.03]
-              
-              "
-            />
-
             <div className="relative aspect-[16/9] w-full">
               <Image
                 src="/cases/rf-hero.png"
@@ -165,8 +156,7 @@ export default function RupeeFlowCaseStudy() {
           <div
             className="
               rounded-[2rem]
-              border border-blue-800/50
-              
+              border border-blue-800/10
               bg-[#f7f9ff]
               p-8 md:p-10
             "
@@ -177,29 +167,29 @@ export default function RupeeFlowCaseStudy() {
                   Context
                 </p>
 
-                <h2 className="mt-4 heading text-3xl md:text-5xl border-b-10 border-emerald-500 pb-10">
+                <h2 className="mt-4 heading text-3xl md:text-5xl leading-[1] border-b-10 border-emerald-600 pb-8">
                   The product worked.
                   <br />
-                  But Trust was missing.
+                  But trust was missing.
                 </h2>
               </div>
 
-              <div className="space-y-6 lg:col-span-4 p-4 text-neutral-700 bodyfont text-justify leading-relaxed">
+              <div className="space-y-6 lg:col-span-4 text-neutral-700 bodyfont leading-relaxed">
                 <p>
-                  RupeeFlow operates in a category where users are required to
-                  submit sensitive business and financial information early in
-                  the onboarding journey.
+                  RupeeFlow operates in a category where users submit sensitive
+                  business and financial information early in the onboarding
+                  process.
                 </p>
 
                 <p>
-                  The challenge was not capability. The challenge was
+                  The challenge was not functionality. The challenge was
                   interpretation.
                 </p>
 
                 <p>
-                  Users hesitated before committing. That hesitation slowed
-                  onboarding completion, weakened confidence, and increased
-                  downstream friction.
+                  Users hesitated before committing. That hesitation weakened
+                  onboarding confidence and increased friction throughout the
+                  product journey.
                 </p>
               </div>
             </div>
@@ -207,7 +197,120 @@ export default function RupeeFlowCaseStudy() {
         </div>
       </section>
 
-      {/* PROBLEMS */}
+      {/* BRAND SYSTEM */}
+      <section className="w-full py-24">
+        <div className="max-w-7xl mx-auto px-6 sm:px-10 lg:px-24">
+          <div className="max-w-4xl">
+            <p className="text-xs tracking-[0.25em] bodyfont font-semibold uppercase text-emerald-600">
+              Brand Identity System
+            </p>
+
+            <h2 className="mt-4 heading text-3xl md:text-6xl leading-[1]">
+              Trust perception was designed before onboarding even began.
+            </h2>
+
+            <p className="mt-8 text-neutral-700 text-lg leading-relaxed max-w-3xl">
+              The visual identity system was structured to feel operationally
+              modern, financially reliable, and frictionless across product
+              touchpoints.
+            </p>
+          </div>
+
+          <div className="mt-16 grid grid-cols-1 lg:grid-cols-12 gap-6">
+            {/* Main */}
+            <div className="lg:col-span-8 relative rounded-2xl overflow-hidden border border-neutral-200">
+              <div className="relative aspect-[16/10]">
+                <Image
+                  src="/cases/rf-brand1.png"
+                  alt="RupeeFlow branding"
+                  fill
+                  className="object-cover"
+                />
+              </div>
+            </div>
+
+            {/* Side */}
+            <div className="lg:col-span-4 flex flex-col gap-6">
+              {["/cases/rf-brand5.png", "/cases/rf-brand4.png"].map(
+                (image, index) => (
+                  <div
+                    key={index}
+                    className="relative rounded-2xl overflow-hidden border border-neutral-200"
+                  >
+                    <div className="relative aspect-[16/9]">
+                      <Image src={image} alt="" fill className="object-cover" />
+                    </div>
+                  </div>
+                ),
+              )}
+            </div>
+
+            {/* Bottom Wide */}
+            <div className="lg:col-span-12 relative rounded-2xl overflow-hidden border border-neutral-200">
+              <div className="relative aspect-[16/8]">
+                <Image
+                  src="/cases/rf-brand3.png"
+                  alt=""
+                  fill
+                  className="object-cover"
+                />
+              </div>
+            </div>
+          </div>
+
+          <div className="mt-10 max-w-3xl text-neutral-600 leading-relaxed">
+            <p>
+              The brand system established perception. The authentication layer
+              reinforced credibility. The onboarding system then carried users
+              through operational verification with greater clarity and reduced
+              hesitation.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* AUTH EXPERIENCE */}
+      <section className="w-full py-24">
+        <div className="max-w-7xl mx-auto px-6 sm:px-10 lg:px-24">
+          <div className="max-w-4xl">
+            <p className="text-xs tracking-[0.25em] bodyfont font-semibold uppercase text-emerald-600">
+              Authentication Experience
+            </p>
+
+            <h2 className="mt-4 heading text-3xl md:text-6xl leading-[1]">
+              The first interaction was designed to feel simple, safe, and
+              familiar.
+            </h2>
+
+            <p className="mt-8 text-neutral-700 text-lg leading-relaxed max-w-3xl">
+              Authentication flows were structured to reduce intimidation while
+              maintaining financial credibility and operational clarity.
+            </p>
+          </div>
+
+          <div className="mt-16 grid grid-cols-1 lg:grid-cols-2 gap-6">
+            {["/cases/rf-login.png", "/cases/rf-signup.png"].map(
+              (image, index) => (
+                <div
+                  key={index}
+                  className="
+                    relative rounded-2xl
+                    overflow-hidden
+                    border border-neutral-200
+                    bg-[#081120]
+                  "
+                >
+                  <div className="relative aspect-[16/10]">
+                    <Image src={image} alt="" fill className="object-cover" />
+                  </div>
+                </div>
+              ),
+            )}
+          </div>
+        </div>
+      </section>
+
+      {/* FRICTION */}
       <section className="w-full py-10">
         <div className="max-w-7xl mx-auto px-6 sm:px-10 lg:px-24">
           <div className="max-w-4xl">
@@ -215,7 +318,7 @@ export default function RupeeFlowCaseStudy() {
               Friction Mapping
             </p>
 
-            <h2 className="mt-4 heading   text-3xl md:text-6xl leading-[1]">
+            <h2 className="mt-4 heading text-3xl md:text-6xl leading-[1]">
               Clarity problems rarely appear as obvious UX problems.
             </h2>
           </div>
@@ -247,7 +350,7 @@ export default function RupeeFlowCaseStudy() {
         </div>
       </section>
 
-      {/* PRODUCT UX */}
+      {/* ONBOARDING */}
       <section className="w-full py-24">
         <div className="max-w-7xl mx-auto px-6 sm:px-10 lg:px-24">
           <div className="max-w-4xl">
@@ -261,30 +364,15 @@ export default function RupeeFlowCaseStudy() {
 
             <p className="mt-8 text-neutral-700 text-lg leading-relaxed">
               The onboarding flow was redesigned as a progressive system instead
-              of a linear form sequence.
+              of a disconnected form sequence.
             </p>
           </div>
 
           <div className="mt-16 grid grid-cols-1 lg:grid-cols-12 gap-6">
-            {/* Main Large Image */}
-            <div
-              className="
-          relative rounded-xl
-          overflow-hidden
-          border border-neutral-200
-          bg-gradient-to-br from-[#101828] to-[#0b1220]
-          lg:col-span-8
-        "
-            >
-              <div
-                className="
-            absolute inset-0 opacity-[0.05]
-          "
-              />
-
+            <div className="relative rounded-2xl overflow-hidden border border-neutral-200 lg:col-span-8">
               <div className="relative aspect-[16/10]">
                 <Image
-                  src="/cases/rf-onboard1.png"
+                  src="/cases/rf-onboarding01.png"
                   alt=""
                   fill
                   className="object-cover object-top"
@@ -292,25 +380,13 @@ export default function RupeeFlowCaseStudy() {
               </div>
             </div>
 
-            {/* Secondary Images */}
             <div className="lg:col-span-4 flex flex-col gap-6">
-              {["/cases/rf-onboard2.png", "/cases/rf-onboard3.png"].map(
+              {["/cases/rf-onboarding02.png", "/cases/rf-onboarding03.png"].map(
                 (image, index) => (
                   <div
                     key={index}
-                    className="
-                relative rounded-xl
-                overflow-hidden
-                border border-neutral-200
-                bg-gradient-to-br from-[#101828] to-[#0b1220]
-              "
+                    className="relative rounded-2xl overflow-hidden border border-neutral-200"
                   >
-                    <div
-                      className="
-                  absolute inset-0 opacity-[0.05]
-                "
-                    />
-
                     <div className="relative aspect-[16/10]">
                       <Image
                         src={image}
@@ -327,8 +403,8 @@ export default function RupeeFlowCaseStudy() {
         </div>
       </section>
 
-      {/* WEBSITE UX */}
-      <section className="w-full py-10">
+      {/* WEBSITE */}
+      <section className="w-full py-24">
         <div className="max-w-7xl mx-auto px-6 sm:px-10 lg:px-24">
           <div className="max-w-4xl">
             <p className="text-xs tracking-[0.25em] bodyfont font-semibold uppercase text-emerald-600">
@@ -340,30 +416,15 @@ export default function RupeeFlowCaseStudy() {
             </h2>
 
             <ul className="mt-10 space-y-4 text-neutral-700 text-lg">
-              <li>• Clear articulation of what the product does</li>
+              <li>• Clear articulation of product capability</li>
               <li>• Reduced ambiguity in positioning</li>
-              <li>• Aligned messaging with product behavior</li>
+              <li>• Messaging aligned with product behavior</li>
               <li>• Trust signals over visual noise</li>
             </ul>
           </div>
 
           <div className="mt-16 grid grid-cols-1 lg:grid-cols-12 gap-6">
-            {/* Main Large Image */}
-            <div
-              className="
-          relative rounded-2xl
-          overflow-hidden
-          border border-neutral-200
-          bg-gradient-to-br from-[#eef2ff] to-white
-          lg:col-span-8
-        "
-            >
-              <div
-                className="
-            absolute inset-0 opacity-[0.03]
-          "
-              />
-
+            <div className="relative rounded-2xl overflow-hidden border border-neutral-200 lg:col-span-8">
               <div className="relative aspect-[16/10]">
                 <Image
                   src="/cases/home.png"
@@ -374,25 +435,13 @@ export default function RupeeFlowCaseStudy() {
               </div>
             </div>
 
-            {/* Secondary Images */}
             <div className="lg:col-span-4 flex flex-col gap-6">
               {["/cases/pricing.png", "/cases/rupeeflow-1.png"].map(
                 (image, index) => (
                   <div
                     key={index}
-                    className="
-                relative rounded-2xl
-                overflow-hidden
-                border border-neutral-200
-                bg-gradient-to-br from-[#eef2ff] to-white
-              "
+                    className="relative rounded-2xl overflow-hidden border border-neutral-200"
                   >
-                    <div
-                      className="
-                  absolute inset-0 opacity-[0.03]
-                "
-                    />
-
                     <div className="relative aspect-[16/10]">
                       <Image
                         src={image}
@@ -406,23 +455,8 @@ export default function RupeeFlowCaseStudy() {
               )}
             </div>
 
-            {/* Bottom Wide Image */}
-            <div
-              className="
-          relative rounded-2xl
-          overflow-hidden
-          border border-neutral-200
-          bg-gradient-to-br from-[#eef2ff] to-white
-          lg:col-span-12
-        "
-            >
-              <div
-                className="
-            absolute inset-0 opacity-[0.03]
-          "
-              />
-
-              <div className="relative aspect-[16/14]">
+            <div className="relative rounded-2xl overflow-hidden border border-neutral-200 lg:col-span-12">
+              <div className="relative aspect-[16/8]">
                 <Image
                   src="/cases/pg.png"
                   alt=""
@@ -438,28 +472,8 @@ export default function RupeeFlowCaseStudy() {
       {/* DASHBOARD */}
       <section className="w-full py-24">
         <div className="max-w-7xl mx-auto px-6 sm:px-10 lg:px-24">
-          <div
-            className="
-              rounded-[2rem]
-              overflow-hidden
-              border border-neutral-200
-              bg-gradient-to-br from-[#081120] to-[#0d1729]
-              relative
-            "
-          >
-            {/* Glow */}
-            <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[30vw] h-[30vw] bg-emerald-400/10 blur-[120px]" />
-
-            {/* Grid */}
-            <div
-              className="
-                absolute inset-0 opacity-[0.06]
-                [background-image:linear-gradient(to_right,#fff_1px,transparent_1px),linear-gradient(to_bottom,#fff_1px,transparent_1px)]
-                [background-size:40px_40px]
-              "
-            />
-
-            <div className="relative grid grid-cols-1 lg:grid-cols-2 gap-10 p-8 md:p-14">
+          <div className="rounded-[2rem] overflow-hidden border border-neutral-200 bg-[#081120]">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 p-8 md:p-14">
               <div className="flex flex-col justify-center">
                 <p className="text-[10px] tracking-[0.25em] uppercase text-emerald-300">
                   Dashboard UX Direction
@@ -505,25 +519,20 @@ export default function RupeeFlowCaseStudy() {
             </h2>
           </div>
 
-          <div className="mt-16 grid grid-cols-1 md:grid-cols-2 gap-3 md:gap-6">
+          <div className="mt-16 grid grid-cols-1 md:grid-cols-2 gap-4">
             {[
-              "Improved onboarding clarity and flow",
+              "Improved onboarding clarity and progression",
               "Reduced hesitation during KYC stages",
               "Stronger perceived trust in the product",
               "Better alignment between product and user expectations",
               "Reduced need for explanation during demos",
-              "Improved narrative consistency across product touchpoints",
+              "Improved narrative consistency across touchpoints",
             ].map((item, index) => (
               <div
                 key={index}
-                className="
-                  rounded-xl
-                  border border-neutral-200
-                  bg-white
-                  p-4 md:p-6 
-                "
+                className="rounded-xl border border-neutral-200 bg-white p-5"
               >
-                <p className="text-sm bodyfont md:text-base">{item}</p>
+                <p className="bodyfont text-sm md:text-base">{item}</p>
               </div>
             ))}
           </div>
@@ -533,25 +542,18 @@ export default function RupeeFlowCaseStudy() {
       {/* INSIGHT */}
       <section className="w-full py-24">
         <div className="max-w-7xl mx-auto px-6 sm:px-10 lg:px-24">
-          <div
-            className="
-              rounded-[2rem]
-              border border-[#dfe5ff]
-              bg-[#f7f9ff]
-              p-8 md:p-16
-            "
-          >
+          <div className="rounded-[2rem] border border-[#dfe5ff] bg-[#f7f9ff] p-8 md:p-16">
             <p className="text-xs tracking-[0.25em] bodyfont font-semibold uppercase text-emerald-600">
               Insight
             </p>
 
-            <blockquote className="mt-6 heading text-4xl  leading-[1] max-w-5xl">
+            <blockquote className="mt-6 heading text-4xl leading-[1] max-w-5xl">
               “In fintech, onboarding is where trust is either built or lost.”
             </blockquote>
 
-            <p className="mt-5 bodyfont  text-slate-500 text-lg leading-relaxed">
+            <p className="mt-5 bodyfont text-slate-500 text-lg leading-relaxed">
               Improving structure and clarity at this stage directly impacts
-              conversion, perception, and long-term growth.
+              conversion, perception, and long-term product confidence.
             </p>
           </div>
         </div>
@@ -560,7 +562,7 @@ export default function RupeeFlowCaseStudy() {
       {/* CTA */}
       <section className="w-full pt-10 pb-28">
         <FinalCTASection
-          text1="If onboarding friction is slowing  "
+          text1="If onboarding friction is slowing"
           text2="growth, clarity usually helps."
         />
       </section>

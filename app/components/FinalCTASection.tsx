@@ -77,26 +77,12 @@ const FinalCTASection = ({
               strokeWidth="1"
             />
           </svg>
-          {/* Accent Orb */}
-          <div
-            className="
-              absolute
-              top-10 right-10
-              w-4 h-4
-              rounded-full
-              shadow-[0_0_40px]
-            "
-            style={{
-              background: accent,
-              boxShadow: `0 0 40px ${accent}`,
-            }}
-          />
           {/* Content */}
           <div
             className="
               relative z-10
               flex flex-col
-              gap-14
+              gap-14 lg:gap-2
               items-center
               text-center
               lg:flex-row
@@ -106,7 +92,7 @@ const FinalCTASection = ({
             "
           >
             {/* Heading */}
-            <div className="max-w-3xl">
+            <div className="max-w-[41rem]">
               <p className="text-sm bodyfont font-semibold uppercase tracking-[0.20em] text-neutral-500 mb-5">
                 START A CONVERSATION
               </p>
@@ -126,7 +112,7 @@ const FinalCTASection = ({
               </h2>
             </div>
             {/* CTA */}
-            <div className="flex flex-col justify-center items-center lg:items-base gap-3">
+            <div className="flex flex-col justify-center items-center lg:items-base ">
               {" "}
               <a
                 href="https://wa.me/919523638369?text=Hi!%20I%20came%20across%20your%20work%20and%20wanted%20to%20have%20a%20quick%20conversation."
@@ -139,7 +125,7 @@ const FinalCTASection = ({
                   rounded-full
                   border-2 border-blue-900/50
                   bg-white
-                  px-8 sm:px-9
+                  px-8 
                   py-6
                   transition-all duration-500
                   hover:-translate-y-[2px]
@@ -147,9 +133,9 @@ const FinalCTASection = ({
                 "
               >
                 {" "}
-                <div className=" absolute -bottom-[2vh] left-1/2 w-3 h-2 origin-bottom rounded-full origin-center duration-1200 group-hover:scale-[110] transition-all ease-in-out bg-accent z-0 "></div>{" "}
+                <div className=" absolute -bottom-[2vh] -left-10 w-3 h-2 origin-left rounded-full origin-center duration-1200 group-hover:scale-[110] transition-all ease-in-out bg-accent z-0 "></div>{" "}
                 {/* The Text */}{" "}
-                <span className="relative flex items-center gap-2 text-xl heading font-medium z-10 transition-colors duration-1200 group-hover:text-white">
+                <span className="relative flex items-center  text-xl heading font-medium z-10 transition-colors duration-1200 group-hover:text-white">
                   {" "}
                   Start a conversation{" "}
                   <MoveRightIcon size={24} className="ml-2" />{" "}

@@ -37,10 +37,10 @@ const ProjectCard = ({
         flex flex-col landscape:lg:flex-row
         portrait:lg:flex-col
         w-full
-        border border-neutral-300/80
+        border border-slate-300/80
         rounded-[24px]
         overflow-hidden
-        bg-[#F7F7F6]
+        bg-slate-50
       "
     >
       {/* LEFT CONTENT */}
@@ -167,7 +167,7 @@ const ProjectCard = ({
         className="
           relative
           w-full landscape:lg:w-1/2 portrait:h-[400px] landscape:lg:h-auto
-          bg-[#ECECEC]
+          bg-slate-200/70
           flex items-center justify-center
           px-4 py-6 lg:py-16
           overflow-hidden
