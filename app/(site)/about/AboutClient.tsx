@@ -1,5 +1,6 @@
 "use client";
 
+import CTAButton from "@/app/components/CTAButton";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
 
@@ -232,75 +233,21 @@ export default function AboutPage() {
             Start a Conversation
           </p>
 
-          <h2 className="mt-4 text-2xl md:text-5xl heading tracking-tight text-primary-text max-w-3xl">
+          <h2 className="mt-4 text-2xl md:text-5xl heading tracking-tight text-primary-text ">
             If the problem feels familiar, a conversation usually helps.
           </h2>
 
-          <p className="mt-6 text-sm md:text-lg text-neutral-600 max-w-2xl leading-relaxed">
+          <p className="mt-6 mb-8 text-sm md:text-lg text-neutral-600  leading-relaxed">
             Most conversations start around onboarding friction, operational UX
             complexity, unclear positioning, trust gaps, workflow confusion, or
             product systems that become harder to interpret as they scale.
           </p>
 
-          <div className="mt-10 grid grid-cols-1 md:grid-cols-3 gap-5">
-            {/* WhatsApp */}
-            <div className="rounded-lg border border-neutral-200 bg-white p-5">
-              <p className="text-xs uppercase tracking-[0.18em] text-neutral-400">
-                WhatsApp
-              </p>
-
-              <p className="mt-3 text-sm text-neutral-600 leading-relaxed">
-                Fastest way to start a discussion.
-              </p>
-
-              <a
-                href="https://wa.me/919523638369?text=Hi!%20I%20came%20across%20your%20work."
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-block mt-5 text-sm font-medium text-primary-text underline underline-offset-4"
-              >
-                +91 95236 38369
-              </a>
-            </div>
-
-            {/* Email */}
-            <div className="rounded-lg border border-neutral-200 bg-white p-5">
-              <p className="text-xs uppercase tracking-[0.18em] text-neutral-400">
-                Email
-              </p>
-
-              <p className="mt-3 text-sm text-neutral-600 leading-relaxed">
-                Better for detailed context and material.
-              </p>
-
-              <a
-                href="mailto:rajeev@arcadydesign.com"
-                className="inline-block mt-5 text-sm font-medium text-primary-text underline underline-offset-4"
-              >
-                rajeev@arcadydesign.com
-              </a>
-            </div>
-
-            {/* LinkedIn */}
-            <div className="rounded-lg border border-neutral-200 bg-white p-5">
-              <p className="text-xs uppercase tracking-[0.18em] text-neutral-400">
-                LinkedIn
-              </p>
-
-              <p className="mt-3 text-sm text-neutral-600 leading-relaxed">
-                Background, context, and async conversations.
-              </p>
-
-              <a
-                href="https://www.linkedin.com/in/arcadyrajeev/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-block mt-5 text-sm font-medium text-primary-text underline underline-offset-4"
-              >
-                linkedin.com/in/arcadyrajeev
-              </a>
-            </div>
-          </div>
+          <CTAButton
+            text="Start a Conversation"
+            href="https://wa.me/919523638369?text=Hi!%20I%20came%20across%20your%20work%20and%20wanted%20to%20have%20a%20quick%20conversation."
+            subtext="Let's explore how we can help."
+          />
         </div>
       </section>
     </main>

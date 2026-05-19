@@ -1,4 +1,5 @@
 @import "tailwindcss";
+@plugin "@tailwindcss/typography";
 
 @font-face {
   font-family: "Poppins-regular";
@@ -87,4 +88,219 @@ body {
 
 .animate-marquee {
   animation: marquee 32s linear infinite;
+}
+
+.prose {
+  max-width: none;
+  color: #4b5563;
+}
+
+/* Headings */
+
+.prose h1 {
+  font-size: clamp(3.5rem, 6vw, 5.5rem);
+  line-height: 0.9;
+  letter-spacing: -0.07em;
+  font-weight: 400;
+  color: #111827;
+
+  margin-top: 0;
+  margin-bottom: 2.5rem;
+
+  font-family: "Outfit", sans-serif;
+}
+
+.prose h2 {
+  font-size: clamp(2.3rem, 4vw, 3.6rem);
+  line-height: 0.95;
+  letter-spacing: -0.06em;
+  font-weight: 400;
+  color: #111827;
+
+  margin-top: 7rem;
+  margin-bottom: 2rem;
+
+  font-family: "Outfit", sans-serif;
+}
+
+.prose h3 {
+  font-size: clamp(1.6rem, 2.5vw, 2.2rem);
+  line-height: 1;
+  letter-spacing: -0.04em;
+  font-weight: 500;
+  color: #111827;
+
+  margin-top: 4rem;
+  margin-bottom: 1.4rem;
+
+  font-family: "Outfit", sans-serif;
+}
+
+/* Paragraphs */
+
+.prose p {
+  font-size: 1.28rem;
+  line-height: 1.5;
+  letter-spacing: -0.03em;
+
+  margin-top: 0;
+  margin-bottom: 2rem;
+
+  color: #4b5563;
+
+  font-family: "WorkSans Var", sans-serif;
+}
+
+/* Remove weird spacing after headings */
+
+.prose h1 + p,
+.prose h2 + p,
+.prose h3 + p {
+  margin-top: 0;
+}
+
+/* Strong */
+
+.prose strong {
+  color: #111827;
+  font-weight: 600;
+}
+
+/* Links */
+
+.prose a {
+  color: #118479;
+  text-decoration: none;
+  transition: opacity 0.2s ease;
+}
+
+.prose a:hover {
+  opacity: 0.7;
+}
+
+/* Quotes */
+
+.prose blockquote {
+  position: relative;
+  margin-block: 2rem;
+  padding: 0.5rem 0 0.5rem 2.5rem;
+
+  border-left: 4px solid #118479;
+
+  background: transparent;
+
+  font-style: italic;
+
+  color: #111827;
+}
+
+.prose blockquote p {
+  font-size: clamp(2rem, 2vw, 2.5rem);
+  line-height: 1.35;
+  letter-spacing: -0.05em;
+  font-weight: 400;
+
+  color: #243242;
+
+  margin: 0;
+
+  font-family: "Outfit", sans-serif;
+}
+
+/* Lists */
+
+.prose ul,
+.prose ol {
+  margin-top: 2.5rem;
+  margin-bottom: 2.5rem;
+
+  padding-left: 1.7rem;
+}
+
+.prose li {
+  font-size: 1.15rem;
+  line-height: 1.95;
+  letter-spacing: -0.02em;
+
+  margin-top: 0.8rem;
+  margin-bottom: 0.8rem;
+
+  color: #4b5563;
+
+  font-family: "WorkSans Var", sans-serif;
+}
+
+.prose ul li::marker,
+.prose ol li::marker {
+  color: #118479;
+}
+
+/* Horizontal Line */
+
+.prose hr {
+  margin-top: 7rem;
+  margin-bottom: 7rem;
+
+  border: none;
+  border-top: 1px solid #dbe4f0;
+}
+
+/* Images */
+
+.prose img {
+  width: 100%;
+
+  border-radius: 2rem;
+
+  margin-top: 4rem;
+  margin-bottom: 4rem;
+}
+
+/* Code */
+
+.prose code {
+  background: #eef4ff;
+
+  padding: 0.2rem 0.45rem;
+
+  border-radius: 0.45rem;
+
+  font-size: 0.95em;
+
+  color: #111827;
+}
+
+.prose code::before,
+.prose code::after {
+  content: "";
+}
+
+/* Mobile */
+
+@media (max-width: 768px) {
+  .prose p {
+    font-size: 1.08rem;
+    line-height: 1.9;
+  }
+
+  .prose blockquote {
+    padding-left: 1.5rem;
+
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+  }
+
+  .prose blockquote p {
+    font-size: 1.7rem;
+    line-height: 1.4;
+  }
+
+  .prose h2 {
+    margin-top: 5rem;
+  }
+
+  .prose hr {
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+  }
 }

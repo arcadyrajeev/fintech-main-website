@@ -19,6 +19,7 @@ import TransformationSection from "./components/TransformationSection";
 import POVSection from "./components/POVSection";
 import IndustriesSection from "./components/IndustriesSection";
 import TrustedBySection from "./components/TrustedBySection";
+import BlogSection from "./components/BlogSection";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://arcadydesign.com"),
@@ -126,6 +127,7 @@ export default function Home() {
           text1="If the problem feels familiar,"
           text2="a conversation usually helps."
         />
+        <BlogSection />
         <FAQSection />
       </div>
     </div>

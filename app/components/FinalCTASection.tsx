@@ -141,7 +141,7 @@ const FinalCTASection = ({
                   <MoveRightIcon size={24} className="ml-2" />{" "}
                 </span>{" "}
               </a>{" "}
-              <p className="text-sm text-neutral-500">
+              <p className="text-sm text-neutral-500 mt-3">
                 Usually replies within a few hours
               </p>
             </div>{" "}

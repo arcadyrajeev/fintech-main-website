@@ -11,12 +11,16 @@ const Navbar = () => {
 
   const [servicesOpen, setServicesOpen] = useState(false);
 
+  const [moreOpen, setMoreOpen] = useState(false);
+
   const dropdownRef = useRef<HTMLLIElement | null>(null);
+
+  const moreDropdownRef = useRef<HTMLLIElement | null>(null);
 
   const links = [
     { name: "Home", path: "/" },
+
     { name: "Case Studies", path: "/case-studies" },
-    { name: "About", path: "/about" },
   ];
 
   const services = [
@@ -46,6 +50,23 @@ const Navbar = () => {
     },
   ];
 
+  const moreLinks = [
+    {
+      name: "About",
+      path: "/about",
+    },
+
+    {
+      name: "Blog",
+      path: "/blog",
+    },
+
+    {
+      name: "Contact",
+      path: "/contact",
+    },
+  ];
+
   const isActive = (path: string) => {
     if (path === "/") {
       return pathname === "/";
@@ -54,7 +75,7 @@ const Navbar = () => {
     return pathname.startsWith(path);
   };
 
-  // Close dropdown on outside click
+  // Close dropdowns on outside click
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
       if (
@@ -62,6 +83,13 @@ const Navbar = () => {
         !dropdownRef.current.contains(event.target as Node)
       ) {
         setServicesOpen(false);
+      }
+
+      if (
+        moreDropdownRef.current &&
+        !moreDropdownRef.current.contains(event.target as Node)
+      ) {
+        setMoreOpen(false);
       }
     };
 
@@ -159,44 +187,44 @@ const Navbar = () => {
             />
           </button>
 
-          {/* Dropdown */}
+          {/* Services Dropdown */}
           <div
             className={`
-    absolute top-[120%] -left-16 
-    w-[75vw] p-2 sm:w-[320px] md:w-[280px]
-    rounded-2xl
-    border border-neutral-200
-    bg-white
-    shadow-2xl
-    overflow-hidden
-    transition-all duration-300
-    ${
-      servicesOpen
-        ? "opacity-100 visible translate-y-0"
-        : "opacity-0 invisible -translate-y-2"
-    }
-  `}
+              absolute top-[120%] -left-16
+              w-[75vw] p-2 sm:w-[320px] md:w-[280px]
+              rounded-2xl
+              border border-neutral-200
+              bg-white
+              shadow-2xl
+              overflow-hidden
+              transition-all duration-300
+              ${
+                servicesOpen
+                  ? "opacity-100 visible translate-y-0"
+                  : "opacity-0 invisible -translate-y-2"
+              }
+            `}
           >
             <div className="flex flex-col">
-              {services.map((service, index) => (
+              {services.map((service) => (
                 <Link
                   key={service.name}
                   href={service.path}
                   onClick={() => setServicesOpen(false)}
                   className="
-          px-5 md:px-4
-          py-4 md:py-3
-          text-lg md:text-sm
-          leading-relaxed
-          bodyfont font-medium
-          text-secondary-text
-          rounded-lg
-          hover:bg-accent-dark
-          hover:text-white
-          transition-colors
-          border-b lg:border-0 border-neutral-200
-          last:border-b-0
-        "
+                    px-5 md:px-4
+                    py-4 md:py-3
+                    text-lg md:text-sm
+                    leading-relaxed
+                    bodyfont font-medium
+                    text-secondary-text
+                    rounded-lg
+                    hover:bg-accent-dark
+                    hover:text-white
+                    transition-colors
+                    border-b lg:border-0 border-neutral-200
+                    last:border-b-0
+                  "
                 >
                   {service.name}
                 </Link>
@@ -205,7 +233,7 @@ const Navbar = () => {
           </div>
         </li>
 
-        {/* Remaining Links */}
+        {/* Case Studies */}
         {links.slice(1).map((link) => {
           const active = isActive(link.path);
 
@@ -230,6 +258,88 @@ const Navbar = () => {
             </li>
           );
         })}
+
+        {/* More Dropdown */}
+        <li
+          ref={moreDropdownRef}
+          className="relative"
+          onMouseEnter={() => setMoreOpen(true)}
+          onMouseLeave={() => setMoreOpen(false)}
+        >
+          <button
+            type="button"
+            onClick={() => setMoreOpen((prev) => !prev)}
+            className={`
+              flex items-center gap-1
+              rounded-full
+              px-[2.5vw] md:px-4 py-[1.4vw] md:py-2 lg:px-6
+              text-[3.5vw] sm:text-xs md:text-md lg:text-base
+              font-medium
+              transition-colors duration-200
+              ${
+                pathname === "/about" ||
+                pathname.startsWith("/blog") ||
+                pathname === "/contact"
+                  ? "bg-accent-dark text-white"
+                  : "text-secondary-text hover:bg-accent hover:text-white"
+              }
+            `}
+          >
+            More
+            <ChevronDown
+              size={16}
+              className={`transition-transform duration-300 ${
+                moreOpen ? "rotate-180" : ""
+              }`}
+            />
+          </button>
+
+          {/* More Dropdown */}
+          <div
+            className={`
+              absolute top-[120%] right-0
+              w-[220px]
+              p-2
+              rounded-2xl
+              border border-neutral-200
+              bg-white
+              shadow-2xl
+              overflow-hidden
+              transition-all duration-300
+              ${
+                moreOpen
+                  ? "opacity-100 visible translate-y-0"
+                  : "opacity-0 invisible -translate-y-2"
+              }
+            `}
+          >
+            <div className="flex flex-col">
+              {moreLinks.map((item) => (
+                <Link
+                  key={item.name}
+                  href={item.path}
+                  onClick={() => setMoreOpen(false)}
+                  className="
+                    px-5 md:px-4
+                    py-4 md:py-3
+                    text-lg md:text-sm
+                    leading-relaxed
+                    bodyfont font-medium
+                    text-secondary-text
+                    rounded-lg
+                    hover:bg-accent-dark
+                    hover:text-white
+                    transition-colors
+                    border-b border-neutral-200
+                    last:border-b-0
+                  "
+                >
+                  {item.name}
+                </Link>
+              ))}
+            </div>
+          </div>
+        </li>
       </ul>
     </nav>
   );
