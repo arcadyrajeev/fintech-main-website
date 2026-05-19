@@ -1,7 +1,8 @@
 "use client";
 
 import Link from "next/link";
-import { ArrowUpRight, Calendar } from "lucide-react";
+import Image from "next/image";
+import { ArrowUpRight, Calendar, Import } from "lucide-react";
 
 interface BlogCardProps {
   title: string;
@@ -29,9 +30,11 @@ export default function BlogCard({
       >
         <div className="absolute inset-0 bg-black/10 group-hover:bg-black/30 transition-all duration-500 z-10" />
 
-        <img
+        <Image
           src={image}
           alt={title}
+          height={400}
+          width={640}
           className="w-full aspect-[16/10] object-cover transition-transform duration-700 group-hover:scale-[1.03]"
         />
 

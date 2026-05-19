@@ -185,7 +185,7 @@ body {
   margin-block: 2rem;
   padding: 0.5rem 0 0.5rem 2.5rem;
 
-  border-left: 4px solid #118479;
+  border-left: 4px solid #0b65b5;
 
   background: transparent;
 
@@ -232,7 +232,7 @@ body {
 
 .prose ul li::marker,
 .prose ol li::marker {
-  color: #118479;
+  color: #0b65b5;
 }
 
 /* Horizontal Line */

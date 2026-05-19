@@ -3,6 +3,7 @@ title: "Why Most Fintech Onboarding Fails Before Users Even Start"
 excerpt: "Most onboarding failures are not usability problems. They are unresolved trust problems that begin before activation even starts."
 date: "2026-05-19"
 category: "ONBOARDING UX"
+thumbnail: "/blog/fintech-onboarding-failure-thumb.webp"
 coverImage: "/blog/fintech-onboarding-failure-cover.webp"
 featured: true
 ---

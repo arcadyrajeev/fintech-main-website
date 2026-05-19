@@ -13,6 +13,7 @@ export interface BlogPost {
   excerpt: string;
   date: string;
   category: string;
+  thumbnail: string;
   coverImage: string;
   contentHtml: string;
 }
@@ -51,6 +52,8 @@ export async function getPostBySlug(slug: string): Promise<BlogPost | null> {
       date: data.date || "",
 
       category: data.category || "",
+
+      thumbnail: data.thumbnail || "",
 
       coverImage: data.coverImage || "",
 

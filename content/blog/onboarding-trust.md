@@ -3,6 +3,7 @@ title: "Designing Trust Into Fintech Onboarding"
 excerpt: "Why onboarding friction is usually a trust perception problem disguised as UX."
 date: "2025-09-02"
 category: "Onboarding UX"
+thumbnail: "/blog/onboarding-trust-thumb.webp"
 coverImage: "/blog/onboarding-trust-cover.webp"
 featured: true
 ---
@@ -106,7 +107,7 @@ Not performative.
 
 ---
 
-> “The interface should feel calm under complexity, not performative.”
+> The interface should feel calm under complexity, not performative.
 
 ---
 

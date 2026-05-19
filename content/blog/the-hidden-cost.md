@@ -3,6 +3,7 @@ title: "The Hidden Cost of UX Confusion"
 excerpt: "Most products do not lose users because features are missing. They lose users because operational confusion quietly destroys confidence, trust, and decision momentum."
 date: "2026-05-19"
 category: "UX STRATEGY"
+thumbnail: "/blog/hidden-cost-ux-confusion-thumb.webp"
 coverImage: "/blog/hidden-cost-ux-confusion-cover.webp"
 featured: true
 ---

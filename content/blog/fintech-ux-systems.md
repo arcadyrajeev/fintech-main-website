@@ -3,6 +3,7 @@ title: "Fintech UX Systems: Why Financial Products Need Operational Clarity, Not
 excerpt: "Most fintech products fail at trust communication long before usability becomes the problem."
 date: "2026-05-19"
 category: "FINTECH UX"
+thumbnail: "/blog/fintech-ux-systems-thumb.webp"
 coverImage: "/blog/fintech-ux-systems-cover.webp"
 ---
 
@@ -58,11 +59,11 @@ This distinction matters because it changes how fintech UX should be approached.
 
 Instead of asking:
 
-> “How do we simplify the interface?”
+> How do we simplify the interface?
 
 Teams should often ask:
 
-> “How do we make the system feel more operationally legible?”
+> How do we make the system feel more operationally legible?
 
 Those are completely different design problems.
 
