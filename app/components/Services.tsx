@@ -197,7 +197,7 @@ export default function Services() {
                 <div className="p-4 md:p-6">
                   {/* Top */}
                   <div className="flex items-start justify-between gap-4">
-                    <h3 className="bodyfont text-white text-2xl md:text-3xl leading-[1.1]">
+                    <h3 className="bodyfont text-white text-3xl leading-[1.1]">
                       {service.title}
                     </h3>
 
