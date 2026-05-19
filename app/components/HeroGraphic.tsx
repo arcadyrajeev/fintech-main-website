@@ -17,7 +17,7 @@ const HeroGraphic = () => {
           <div
             key={idx}
             className="group relative overflow-hidden hover:scale-[1.03] transition duration-300 cursor-pointer p-4 flex flex-col rounded-xl 
-  bg-gradient-to-tl from-[#262B60] to-slate-900 
+  bg-gradient-to-tl from-[#263160] to-slate-900 
   border border-white/20 hover:border-white/90"
           >
             {/* Glow Effect */}
@@ -55,7 +55,7 @@ const HeroGraphic = () => {
       </div>
 
       {/* bottom system block */}
-      <div className="w-full relative  hidden landscape:flex bg-[#232C55] h-[30vh] rounded-t-2xl mt-6 p-8">
+      <div className="w-full relative  hidden landscape:flex bg-[#233155] h-[30vh] rounded-t-2xl mt-6 p-8">
         <div className="w-[60%] h-[80%] rounded-full bg-white/10"></div>
       </div>
     </div>
