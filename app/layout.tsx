@@ -67,7 +67,7 @@ export const metadata: Metadata = {
     description:
       "Operational UX systems, onboarding clarity, dashboard UX, and trust-focused product strategy for fintech and complex software platforms.",
 
-    images: ["/og-image.png"],
+    images: ["/og-image.jpg"],
   },
 
   robots: {
