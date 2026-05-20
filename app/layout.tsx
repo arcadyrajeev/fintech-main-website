@@ -5,8 +5,12 @@ import SmoothScrollProvider from "./utils/smoothScrollProvider";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 
+const siteUrl = "https://arcadydesign.com";
+
+const ogImage = `${siteUrl}/og-image.jpg`;
+
 export const metadata: Metadata = {
-  metadataBase: new URL("https://arcadydesign.com"),
+  metadataBase: new URL(siteUrl),
 
   title: {
     default:
@@ -42,13 +46,13 @@ export const metadata: Metadata = {
     description:
       "UX systems, onboarding clarity, dashboard UX, and trust-focused product strategy for fintech and operational software.",
 
-    url: "https://arcadydesign.com",
+    url: siteUrl,
 
     siteName: "Arcady Design",
 
     images: [
       {
-        url: "/og-image.png",
+        url: ogImage,
         width: 1200,
         height: 630,
         alt: "Product clarity systems for fintech and operational platforms",
@@ -67,7 +71,9 @@ export const metadata: Metadata = {
     description:
       "Operational UX systems, onboarding clarity, dashboard UX, and trust-focused product strategy for fintech and complex software platforms.",
 
-    images: ["/og-image.jpg"],
+    images: [ogImage],
+
+    creator: "@yourhandle",
   },
 
   robots: {
@@ -76,7 +82,7 @@ export const metadata: Metadata = {
   },
 
   alternates: {
-    canonical: "https://arcadydesign.com",
+    canonical: siteUrl,
   },
 
   icons: {
@@ -92,7 +98,6 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        {/* Structured Data */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -103,7 +108,7 @@ export default function RootLayout({
 
               name: "Arcady - Product Clarity Systems for Fintech & Operational Platforms",
 
-              url: "https://arcadydesign.com",
+              url: siteUrl,
 
               description:
                 "Operational UX systems, onboarding clarity, dashboard UX, trust systems, and narrative strategy for fintech and operational platforms.",
