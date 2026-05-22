@@ -1,38 +1,38 @@
 "use client";
 
 const scenariosLeft = [
-  "Operational fintech dashboards",
-  "Multi-role SaaS platforms",
-  "Internal admin systems",
-  "Workflow automation products",
-  "AI operational platforms",
-  "Financial reporting interfaces",
-  "Data-heavy enterprise tools",
-  "Infrastructure monitoring systems",
-  "Decision-support platforms",
-  "Cross-functional operational products",
+  "Marketplace and platform ecosystems",
+  "Multi-product SaaS environments",
+  "Complex onboarding journeys",
+  "AI products with abstract workflows",
+  "Operational B2B software",
+  "Enterprise workflow platforms",
+  "Products struggling with positioning drift",
+  "Feature-heavy digital products",
+  "High-trust transactional platforms",
+  "Scaling products with fragmented UX narratives",
 ];
 
 const scenariosRight = [
-  "Analytics and intelligence dashboards",
-  "CRM and sales operation systems",
-  "Compliance and verification platforms",
-  "Trading and investment interfaces",
-  "B2B workspace products",
-  "Complex onboarding environments",
-  "Operational workflow systems",
-  "Multi-step product ecosystems",
-  "Role-based enterprise products",
-  "High-complexity product architectures",
+  "Real estate and property platforms",
+  "Fintech and financial service products",
+  "Admin and governance systems",
+  "Verification and compliance workflows",
+  "Internal operational tools",
+  "Products with low feature discoverability",
+  "Cross-functional product ecosystems",
+  "Multi-role platform architectures",
+  "Data-heavy decision interfaces",
+  "Products requiring stronger trust perception",
 ];
 
-export default function ProductTargetingSection() {
+export default function NarrativeTargetingSection() {
   return (
     <section className="relative overflow-hidden w-full bg-[#020817]">
       {/* Glow */}
-      <div className="pointer-events-none absolute top-0 left-0 w-[40vw] h-[40vw] bg-blue-500/10 blur-[120px] rounded-full" />
+      <div className="pointer-events-none absolute top-0 left-0 w-[40vw] h-[40vw] bg-violet-500/10 blur-[120px] rounded-full" />
 
-      <div className="pointer-events-none absolute bottom-0 right-0 w-[35vw] h-[35vw] bg-emerald-400/10 blur-[100px] rounded-full" />
+      <div className="pointer-events-none absolute bottom-0 right-0 w-[35vw] h-[35vw] bg-fuchsia-400/10 blur-[100px] rounded-full" />
 
       {/* Grid */}
       <div
@@ -46,19 +46,19 @@ export default function ProductTargetingSection() {
       <div className="relative z-10 max-w-7xl mx-auto px-6 sm:px-10 lg:px-24 py-24 md:py-32">
         {/* Heading */}
         <div className="max-w-5xl">
-          <p className="text-xs tracking-[0.28em] uppercase text-blue-400 font-semibold">
-            Product systems
+          <p className="text-xs tracking-[0.28em] uppercase text-violet-400 font-semibold">
+            Product narratives
           </p>
 
           <h2 className="mt-6 heading text-white font-light text-4xl md:text-6xl leading-[0.95] tracking-[-0.05em]">
-            Structured product systems across operational workflows and
-            high-complexity platforms.
+            Narrative systems for products operating across complexity, trust,
+            and multi-layered workflows.
           </h2>
 
           <p className="mt-8 text-neutral-400 text-sm md:text-lg max-w-3xl leading-relaxed">
-            Designed for products where clarity, workflow structure, operational
-            confidence, and scalable UX systems directly affect user trust and
-            product adoption.
+            Built for platforms where positioning clarity, operational
+            understanding, workflow communication, and product perception
+            directly affect adoption, trust, and long-term scalability.
           </p>
         </div>
 
@@ -67,7 +67,7 @@ export default function ProductTargetingSection() {
           {/* Left */}
           <div className="relative pl-8">
             {/* Line */}
-            <div className="absolute left-0 top-0 h-full w-1 bg-gradient-to-b from-sky-300 via-sky-400/60 to-transparent" />
+            <div className="absolute left-0 top-0 h-full w-1 bg-gradient-to-b from-violet-300 via-violet-400/60 to-transparent" />
 
             <div className="space-y-8">
               {scenariosLeft.map((item, index) => (
@@ -83,7 +83,7 @@ export default function ProductTargetingSection() {
           {/* Right */}
           <div className="relative pl-8">
             {/* Line */}
-            <div className="absolute left-0 top-0 h-full w-1 bg-gradient-to-b from-sky-300 via-sky-400/60 to-transparent" />
+            <div className="absolute left-0 top-0 h-full w-1 bg-gradient-to-b from-violet-300 via-violet-400/60 to-transparent" />
 
             <div className="space-y-8">
               {scenariosRight.map((item, index) => (

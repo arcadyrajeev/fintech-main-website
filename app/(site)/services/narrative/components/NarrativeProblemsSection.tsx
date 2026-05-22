@@ -1,38 +1,43 @@
 "use client";
 
-import { Layers3, Workflow, ShieldAlert, ScanSearch } from "lucide-react";
+import {
+  MessageSquareWarning,
+  Waypoints,
+  EyeOff,
+  ScrollText,
+} from "lucide-react";
 
 const problems = [
   {
-    icon: Layers3,
-    title: "Products become harder to interpret as they scale",
+    icon: MessageSquareWarning,
+    title: "Products communicate features, not meaning",
     description:
-      "Interfaces often accumulate features, states, and workflows without a clear structural system connecting them.",
+      "Most platforms explain what users can do, but fail to explain why the product matters, how it works, or where value actually comes from.",
   },
 
   {
-    icon: Workflow,
-    title: "Operational flows feel fragmented",
+    icon: Waypoints,
+    title: "Narratives break across the product journey",
     description:
-      "Users lose confidence when dashboards, onboarding, workflows, and actions feel disconnected from each other.",
+      "Landing pages, onboarding, dashboards, workflows, and sales messaging often operate with different logic, language, and positioning.",
   },
 
   {
-    icon: ShieldAlert,
-    title: "Trust weakens under complexity",
+    icon: EyeOff,
+    title: "Strong capabilities stay invisible to users",
     description:
-      "In high-stakes platforms, unclear hierarchy and inconsistent interaction patterns create hesitation and decision fatigue.",
+      "When operational complexity is not translated into a clear narrative system, differentiation becomes difficult to perceive or trust.",
   },
 
   {
-    icon: ScanSearch,
-    title: "Users struggle to understand system behavior",
+    icon: ScrollText,
+    title: "Positioning becomes diluted as products evolve",
     description:
-      "Most operational products explain features individually but fail to clarify how the overall system works together.",
+      "As new features, use cases, and workflows are added, the original product story weakens and users struggle to understand the core value.",
   },
 ];
 
-export default function ProductProblemsSection() {
+export default function NarrativeProblemsSection() {
   return (
     <section className="relative w-full overflow-hidden py-20 sm:py-28 lg:py-36">
       {/* Background */}
@@ -53,7 +58,7 @@ export default function ProductProblemsSection() {
           absolute
           top-0 left-1/2
           w-[70vw] h-[70vw]
-          bg-blue-200/20
+          bg-violet-200/20
           blur-[140px]
           rounded-full
         "
@@ -69,10 +74,10 @@ export default function ProductProblemsSection() {
               font-semibold
               tracking-[0.22em]
               uppercase
-              text-blue-700
+              text-violet-700
             "
           >
-            Product Complexity
+            Product Narrative
           </p>
 
           <h2
@@ -89,8 +94,8 @@ export default function ProductProblemsSection() {
               max-w-4xl
             "
           >
-            Most product friction begins when UX becomes more complex than the
-            workflow itself.
+            Most products lose trust when users cannot clearly understand the
+            story behind the system.
           </h2>
 
           <p
@@ -102,9 +107,9 @@ export default function ProductProblemsSection() {
               text-slate-600
             "
           >
-            Product systems fail when users cannot clearly interpret structure,
-            hierarchy, workflow progression, permissions, or operational logic.
-            Clarity becomes critical as platforms scale in complexity.
+            Product narrative failures happen when positioning, workflows,
+            onboarding, feature communication, and user perception stop aligning
+            into a single coherent system.
           </p>
         </div>
 
@@ -131,8 +136,8 @@ export default function ProductProblemsSection() {
                   backdrop-blur-sm
                   p-6 sm:p-8 lg:p-10
                   transition-all duration-300
-                  hover:border-blue-200
-                  hover:shadow-[0_20px_80px_rgba(16,185,129,0.08)]
+                  hover:border-violet-200
+                  hover:shadow-[0_20px_80px_rgba(139,92,246,0.08)]
                 "
               >
                 {/* Glow */}
@@ -141,7 +146,7 @@ export default function ProductProblemsSection() {
                     absolute
                     top-0 right-0
                     w-40 h-40
-                    bg-blue-100/30
+                    bg-violet-100/30
                     blur-3xl
                     rounded-full
                   "
@@ -152,12 +157,16 @@ export default function ProductProblemsSection() {
                     className="
                       w-14 h-14
                       rounded-2xl
-                      border border-blue-100
-                      bg-blue-50
+                      border border-violet-100
+                      bg-violet-50
                       flex items-center justify-center
                     "
                   >
-                    <Icon className="text-blue-700" size={24} strokeWidth={2} />
+                    <Icon
+                      className="text-violet-700"
+                      size={24}
+                      strokeWidth={2}
+                    />
                   </div>
 
                   <h3

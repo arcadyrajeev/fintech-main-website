@@ -2,7 +2,7 @@
 
 import ProjectCard from "@/app/components/ProjectCard";
 
-export default function ProductCaseStudySection() {
+export default function NarrativeCaseStudySection() {
   return (
     <section className="relative w-full overflow-hidden py-24 sm:py-32 bg-[#f8fbff]">
       {/* Glow */}
@@ -12,7 +12,7 @@ export default function ProductCaseStudySection() {
           top-0 left-1/2
           -translate-x-1/2
           w-[60vw] h-[60vw]
-          bg-blue-200/20
+          bg-violet-200/20
           blur-[140px]
           rounded-full
         "
@@ -37,7 +37,7 @@ export default function ProductCaseStudySection() {
               font-semibold
               tracking-[0.22em]
               uppercase
-              text-blue-700
+              text-violet-700
             "
           >
             Example Case Study
@@ -55,7 +55,8 @@ export default function ProductCaseStudySection() {
               text-slate-800
             "
           >
-            Designing operational clarity into a fintech product system.
+            Structuring a clearer marketplace narrative for a real estate
+            platform.
           </h2>
 
           <p
@@ -67,30 +68,29 @@ export default function ProductCaseStudySection() {
               text-slate-600
             "
           >
-            RupeeFlow’s platform experience was redesigned across onboarding,
-            authentication, trust systems, and operational workflows to improve
-            clarity, reduce hesitation, and create a more cohesive product
-            experience.
+            Realestify’s platform narrative was redesigned across discovery,
+            verification, governance, and operational workflows to improve user
+            understanding, marketplace trust, and system clarity at scale.
           </p>
         </div>
 
         {/* Case Study */}
         <div className="mt-16">
           <ProjectCard
-            category="FINTECH • PAYMENTS • PRODUCT SYSTEMS"
-            title="Designing trust into a fintech onboarding system | RupeeFlow"
-            description="Building a cohesive fintech experience across brand identity, onboarding UX, authentication flows, and product systems to reduce hesitation and improve trust perception."
-            imageUrl="/images/rupeeflow-product.png"
-            caseStudyLink="/case-studies/rupeeflow"
-            tags={["Brand Identity", "KYC UX", "Authentication Flows"]}
+            category="REAL ESTATE • PLATFORM SYSTEMS • OPERATIONAL TRUST"
+            title="Designing a structured real estate platform with operational clarity | Realestify"
+            description="Building a scalable marketplace ecosystem focused on property discovery, verification workflows, admin governance, and platform trust."
+            imageUrl="/cases/realestify-cover.png"
+            caseStudyLink="/case-studies/realestify"
+            tags={["Marketplace UX", "Platform Systems", "Operational Trust"]}
             points={[
-              "Reduced onboarding hesitation",
-              "Improved trust perception across touchpoints",
-              "Created clearer product and operational narrative",
+              "Structured property discovery flows",
+              "Clearer governance and moderation systems",
+              "Reduced operational friction across workflows",
             ]}
-            outcome="Improved Trust & Onboarding Clarity"
-            focus="Brand Systems and Product UX"
-            accent="#0a9f7a"
+            outcome="Stronger Marketplace Trust and Workflow Clarity"
+            focus="Platform Architecture and Trust Systems"
+            accent="#345e8a"
           />
         </div>
       </div>

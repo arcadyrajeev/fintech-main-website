@@ -5,49 +5,49 @@ import Link from "next/link";
 
 const workflowSteps = [
   {
-    title: "Product Structure Analysis",
+    title: "Narrative & Positioning Audit",
 
-    desc: "Understanding where operational complexity, unclear hierarchy, workflow inconsistency, and user confusion begin affecting product comprehension.",
+    desc: "Identifying where product messaging, workflows, onboarding, feature communication, and user perception begin creating confusion or positioning drift.",
 
     date: "STEP 01",
   },
 
   {
-    title: "Workflow & System Mapping",
+    title: "Product Narrative Mapping",
 
-    desc: "Mapping dashboards, navigation systems, operational flows, permissions, decision paths, and interaction architecture across the platform.",
+    desc: "Mapping how users interpret value across landing pages, onboarding systems, dashboards, workflows, operational states, and product touchpoints.",
 
     date: "STEP 02",
   },
 
   {
-    title: "Product System Restructuring",
+    title: "Narrative System Structuring",
 
-    desc: "Restructuring workflows, hierarchy systems, interaction logic, and interface consistency into a more scalable operational UX system.",
+    desc: "Aligning positioning, workflow communication, hierarchy systems, interaction logic, and feature explanation into a more cohesive narrative architecture.",
 
     date: "STEP 03",
   },
 
   {
-    title: "Validation & Refinement",
+    title: "Clarity Validation & Refinement",
 
-    desc: "Refining clarity through usage reviews, operational edge cases, stakeholder feedback, workflow testing, and product behavior analysis.",
+    desc: "Refining narrative consistency through product reviews, onboarding analysis, stakeholder feedback, workflow testing, and user interpretation patterns.",
 
     date: "STEP 04",
   },
 ];
 
-export default function ProductWorkflowSection() {
+export default function NarrativeWorkflowSection() {
   return (
     <section className="relative w-full overflow-hidden bg-[#081125]">
       {/* Glow Top Right */}
-      <div className="pointer-events-none absolute top-0 right-0 w-[500px] h-[500px] bg-cyan-500/10 blur-[120px] rounded-full" />
+      <div className="pointer-events-none absolute top-0 right-0 w-[500px] h-[500px] bg-violet-500/10 blur-[120px] rounded-full" />
 
       {/* Glow Bottom Left */}
-      <div className="pointer-events-none absolute bottom-0 left-0 w-[400px] h-[400px] bg-emerald-500/10 blur-[100px] rounded-full" />
+      <div className="pointer-events-none absolute bottom-0 left-0 w-[400px] h-[400px] bg-fuchsia-500/10 blur-[100px] rounded-full" />
 
       {/* Soft Center Glow */}
-      <div className="pointer-events-none absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[300px] bg-cyan-400/5 blur-[140px] rounded-full" />
+      <div className="pointer-events-none absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[300px] bg-violet-400/5 blur-[140px] rounded-full" />
 
       {/* Grid */}
       <div
@@ -70,9 +70,9 @@ export default function ProductWorkflowSection() {
           </h2>
 
           <p className="mt-6 text-neutral-400 text-sm md:text-lg leading-relaxed max-w-2xl">
-            Structured around operational clarity, workflow consistency,
-            scalable UX systems, and decision-oriented product architecture
-            across high-complexity platforms.
+            Structured around positioning clarity, workflow communication,
+            product understanding, and scalable narrative systems across
+            high-complexity digital platforms.
           </p>
         </div>
 
@@ -98,7 +98,7 @@ export default function ProductWorkflowSection() {
                     <div
                       className={`
                         w-2 h-2 rounded-full
-                        ${index === 0 ? "bg-cyan-400" : "bg-neutral-600"}
+                        ${index === 0 ? "bg-violet-400" : "bg-neutral-600"}
                       `}
                     />
                   </div>
@@ -130,7 +130,7 @@ export default function ProductWorkflowSection() {
             className="group inline-flex items-center gap-3 text-neutral-300 hover:text-white transition-colors"
           >
             <span className="text-lg md:text-xl heading">
-              Review your product system
+              Review your product narrative
             </span>
 
             <ArrowUpRight
