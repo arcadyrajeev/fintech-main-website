@@ -58,22 +58,25 @@ export default function RupeeFlowCaseStudy() {
       {/* HERO */}
       <section className="relative w-full pt-24 md:pt-32">
         <div className="max-w-7xl mx-auto px-6 sm:px-10 lg:px-24">
-          {/* Back */}
-          <Link
-            href="/case-studies"
-            className="
-              inline-flex items-center gap-2
-              px-4 py-2
-              rounded-full
-              border border-neutral-300
-              text-sm font-medium
-              hover:bg-neutral-100
-              transition-colors
-            "
-          >
-            <ArrowLeft size={16} />
-            Go back
-          </Link>
+          {/* HERO ACTIONS */}
+          <div className="mt-10 flex flex-wrap items-center gap-4">
+            <Link
+              href="/case-studies"
+              className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-neutral-300 text-sm hover:bg-neutral-100 transition-colors"
+            >
+              <ArrowLeft size={16} />
+              Go back
+            </Link>
+
+            <Link
+              href="https://rupeeflow.co/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 px-5 py-2 rounded-full bg-emerald-700 text-white text-sm hover:opacity-90 transition-opacity"
+            >
+              Visit Live Site
+            </Link>
+          </div>
 
           {/* Heading */}
           <div className="mt-12 flex flex-col gap-10">

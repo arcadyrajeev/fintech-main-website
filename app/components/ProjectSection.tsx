@@ -91,11 +91,11 @@ const ProjectSection = () => {
             />
 
             <CompactCaseCard
-              category="CRYPTO • RISK ANALYTICS • FINANCIAL UX"
-              title="Structuring trading risk for faster decisions"
-              imageUrl="/cases/bq-product1.png"
-              caseStudyLink="/case-studies/brokerquant"
-              accent="#de4c24"
+              category="REAL ESTATE • PLATFORM SYSTEMS • OPERATIONAL TRUST"
+              title="Building operational trust in a real estate platform"
+              imageUrl="/cases/realestify-cover.png"
+              caseStudyLink="/case-studies/realestify"
+              accent="#e1481e"
             />
           </div>
         </div>

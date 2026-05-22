@@ -40,6 +40,23 @@ const AllProjects = () => {
             accent="#0a9f7a"
           />
 
+          <ProjectCard
+            category="REAL ESTATE • PLATFORM SYSTEMS • OPERATIONAL TRUST"
+            title="Designing a structured real estate platform with operational clarity | Realestify"
+            description="Building a scalable marketplace ecosystem focused on property discovery, verification workflows, admin governance, and platform trust."
+            imageUrl="/cases/realestify-cover.png"
+            caseStudyLink="/case-studies/realestify"
+            tags={["Marketplace UX", "Platform Systems", "Operational Trust"]}
+            points={[
+              "Structured property discovery flows",
+              "Clearer governance and moderation systems",
+              "Reduced operational friction across workflows",
+            ]}
+            outcome="Stronger Marketplace Trust and Workflow Clarity"
+            focus="Platform Architecture and Trust Systems"
+            accent="#345e8a"
+          />
+
           {/* COPEEK */}
           <ProjectCard
             category="AI VISIBILITY • BRAND SYSTEMS • OPERATIONAL DASHBOARDS"

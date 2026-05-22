@@ -40,13 +40,25 @@ export default function CloseXPayCaseStudy() {
       {/* HERO */}
       <section className="w-full">
         <div className="max-w-7xl mx-auto px-6 sm:px-10 lg:px-24 pt-28 md:pt-36">
-          <Link
-            href="/case-studies"
-            className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-neutral-300 text-sm hover:bg-neutral-100 transition-colors"
-          >
-            <ArrowLeft size={16} />
-            Go back
-          </Link>
+          {/* HERO ACTIONS */}
+          <div className="mt-10 flex flex-wrap items-center gap-4">
+            <Link
+              href="/case-studies"
+              className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-neutral-300 text-sm hover:bg-neutral-100 transition-colors"
+            >
+              <ArrowLeft size={16} />
+              Go back
+            </Link>
+
+            <Link
+              href="https://closexpay.in"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 px-5 py-2 rounded-full bg-[#7c3aed] text-white text-sm hover:opacity-90 transition-opacity"
+            >
+              Visit Live Site
+            </Link>
+          </div>
 
           <div className="mt-10 max-w-5xl">
             <p className="text-xs tracking-[0.25em] bodyfont font-semibold uppercase text-[#7c3aed]">
@@ -389,6 +401,147 @@ export default function CloseXPayCaseStudy() {
                   className="object-cover object-top"
                 />
               </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* WEBSITE SYSTEM BREAKDOWN */}
+      <section className="w-full pb-24">
+        <div className="max-w-7xl mx-auto px-6 sm:px-10 lg:px-24">
+          <p className="text-xs tracking-[0.25em] bodyfont font-semibold uppercase text-[#7c3aed]">
+            Website System Breakdown
+          </p>
+
+          <h2 className="mt-5 heading text-4xl leading-[1]">
+            Positioning, trust communication,
+            <br />
+            and conversion clarity across key pages.
+          </h2>
+
+          <p className="mt-8 max-w-3xl text-secondary-text leading-relaxed">
+            The website was structured to improve product understanding,
+            strengthen operational trust, reduce ambiguity, and guide users
+            through clearer decision-making paths across critical touchpoints.
+          </p>
+
+          {/* HOME */}
+          <div className="mt-20">
+            <div className="mb-10 flex flex-wrap items-end justify-between gap-6">
+              <div>
+                <p className="text-xs tracking-[0.25em] uppercase text-neutral-400">
+                  Homepage Structure
+                </p>
+
+                <h3 className="mt-3 heading text-3xl">
+                  Immediate product comprehension.
+                </h3>
+              </div>
+
+              <div className="max-w-md">
+                <ul className="space-y-3">
+                  {[
+                    "Clear product category communication",
+                    "Structured trust messaging across sections",
+                    "Reduced hesitation before conversion",
+                  ].map((item, index) => (
+                    <li key={index} className="flex gap-3 text-secondary-text">
+                      <span className="mt-2 h-2 w-2 rounded-full bg-[#7c3aed]" />
+                      {item}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+
+            <div className="w-full rounded-[2rem] overflow-hidden border border-neutral-200 bg-[#111]">
+              <Image
+                src="/cases/home-breakdown.webp"
+                alt="CloseXPay Homepage Breakdown"
+                width={2000}
+                height={4000}
+                className="w-full h-auto"
+              />
+            </div>
+          </div>
+
+          {/* BILLERS */}
+          <div className="mt-24">
+            <div className="mb-10 flex flex-wrap items-end justify-between gap-6">
+              <div>
+                <p className="text-xs tracking-[0.25em] uppercase text-neutral-400">
+                  Billers Experience
+                </p>
+
+                <h3 className="mt-3 heading text-3xl">
+                  Product adoption through operational trust.
+                </h3>
+              </div>
+
+              <div className="max-w-md">
+                <ul className="space-y-3">
+                  {[
+                    "Showcased perceived platform scale",
+                    "Improved legitimacy through recognizable brands",
+                    "Reduced friction around utility payment adoption",
+                  ].map((item, index) => (
+                    <li key={index} className="flex gap-3 text-secondary-text">
+                      <span className="mt-2 h-2 w-2 rounded-full bg-[#7c3aed]" />
+                      {item}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+
+            <div className="w-full rounded-[2rem] overflow-hidden border border-neutral-200 bg-[#111]">
+              <Image
+                src="/cases/billers-breakdown.webp"
+                alt="CloseXPay Billers Breakdown"
+                width={2000}
+                height={4000}
+                className="w-full h-auto"
+              />
+            </div>
+          </div>
+
+          {/* PRICING */}
+          <div className="mt-24">
+            <div className="mb-10 flex flex-wrap items-end justify-between gap-6">
+              <div>
+                <p className="text-xs tracking-[0.25em] uppercase text-neutral-400">
+                  Pricing Structure
+                </p>
+
+                <h3 className="mt-3 heading text-3xl">
+                  Reduced pricing ambiguity and clearer tier differentiation.
+                </h3>
+              </div>
+
+              <div className="max-w-md">
+                <ul className="space-y-3">
+                  {[
+                    "Clear segmentation between user types",
+                    "Reduced decision fatigue during evaluation",
+                    "Conversion-oriented pricing hierarchy",
+                  ].map((item, index) => (
+                    <li key={index} className="flex gap-3 text-secondary-text">
+                      <span className="mt-2 h-2 w-2 rounded-full bg-[#7c3aed]" />
+                      {item}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+
+            <div className="w-full rounded-[2rem] overflow-hidden border border-neutral-200 bg-[#111]">
+              <Image
+                src="/cases/pricing-breakdown.webp"
+                alt="CloseXPay Pricing Breakdown"
+                width={2000}
+                height={4000}
+                className="w-full h-auto"
+              />
             </div>
           </div>
         </div>
