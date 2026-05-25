@@ -139,7 +139,7 @@ const AllProjects = () => {
             title="Making operational complexity easier for investors to understand | Rupeeflow"
             description="Designing investor-facing narrative systems focused on product clarity, market framing, and operational trust."
             imageUrl="/images/rupeeflow-pitch.png"
-            caseStudyLink="/case-studies/pitch1"
+            caseStudyLink="/case-studies/rupeeflow-pitch-design"
             tags={["Pitch Design", "Market Framing", "Investor Narrative"]}
             points={[
               "Reduced investor ambiguity",

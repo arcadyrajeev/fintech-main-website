@@ -1,4 +1,4 @@
-// app/case-studies/pitch1/page.tsx
+// app/case-studies/rupeeflow-pitch-design/page.tsx
 
 import type { Metadata } from "next";
 import Image from "next/image";
@@ -17,7 +17,7 @@ export const metadata: Metadata = {
     title: "RupeeFlow Pitch Strategy | Investor Narrative & Positioning",
     description:
       "A fintech pitch strategy case study focused on market clarity, investor communication, and structured financial narratives.",
-    url: "https://arcadydesign.com/case-studies/pitch1",
+    url: "https://arcadydesign.com/case-studies/rupeeflow-pitch-design",
     siteName: "Arcady Design",
     images: [
       {
@@ -31,7 +31,7 @@ export const metadata: Metadata = {
   },
 
   alternates: {
-    canonical: "https://arcadydesign.com/case-studies/pitch1",
+    canonical: "https://arcadydesign.com/case-studies/rupeeflow-pitch-design",
   },
 };
 
@@ -249,7 +249,7 @@ export default function PitchCaseStudy() {
           <div className="mt-14 grid grid-cols-1 lg:grid-cols-[1.5fr_.8fr] gap-6">
             <div className="relative aspect-[16/10] rounded-2xl overflow-hidden border border-neutral-200 bg-[#f7f7f7]">
               <Image
-                src="/cases/rf-pitch1.png"
+                src="/cases/rf-rupeeflow-pitch-design.png"
                 alt=""
                 fill
                 className="object-cover object-top"
