@@ -5,6 +5,9 @@ date: "2025-09-02"
 category: "Onboarding UX"
 thumbnail: "/blog/onboarding-trust-thumb.webp"
 coverImage: "/blog/onboarding-trust-cover.webp"
+case1: "/case-studies/rupeeflow"
+case2: "/case-studies/closexpay"
+service: "/services/onboarding"
 featured: true
 ---
 

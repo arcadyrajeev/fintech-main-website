@@ -9,12 +9,27 @@ const postsDirectory = path.join(process.cwd(), "content/blog");
 
 export interface BlogPost {
   slug: string;
+
   title: string;
+
   excerpt: string;
+
   date: string;
+
   category: string;
+
   thumbnail: string;
+
   coverImage: string;
+
+  featured?: boolean;
+
+  case1?: string;
+
+  case2?: string;
+
+  service?: string;
+
   contentHtml: string;
 }
 
@@ -23,7 +38,7 @@ export async function getPostBySlug(slug: string): Promise<BlogPost | null> {
     // Remove accidental .md if passed
     const realSlug = slug.replace(/\.md$/, "");
 
-    // Create proper path
+    // Proper file path
     const fullPath = path.join(postsDirectory, `${realSlug}.md`);
 
     // Prevent crash if file missing
@@ -31,13 +46,13 @@ export async function getPostBySlug(slug: string): Promise<BlogPost | null> {
       return null;
     }
 
-    // Read file
+    // Read markdown file
     const fileContents = fs.readFileSync(fullPath, "utf8");
 
     // Parse frontmatter
     const { data, content } = matter(fileContents);
 
-    // Convert markdown to HTML
+    // Convert markdown -> HTML
     const processedContent = await remark().use(html).process(content);
 
     const contentHtml = processedContent.toString();
@@ -56,6 +71,14 @@ export async function getPostBySlug(slug: string): Promise<BlogPost | null> {
       thumbnail: data.thumbnail || "",
 
       coverImage: data.coverImage || "",
+
+      featured: data.featured || false,
+
+      case1: data.case1 || "",
+
+      case2: data.case2 || "",
+
+      service: data.service || "",
 
       contentHtml,
     };
@@ -85,7 +108,7 @@ export async function getAllPosts(): Promise<BlogPost[]> {
     }),
   );
 
-  // Remove nulls safely
+  // Remove null values safely
   const validPosts = posts.filter((post): post is BlogPost => post !== null);
 
   // Sort newest first

@@ -5,6 +5,9 @@ date: "2026-05-19"
 category: "PRODUCT POSITIONING"
 thumbnail: "/blog/generic-saas-products-thumb.webp"
 coverImage: "/blog/generic-saas-products-cover.webp"
+case1: "/case-studies/closexpay"
+case2: "/case-studies/copeek"
+service: "/services/brand"
 featured: true
 ---
 

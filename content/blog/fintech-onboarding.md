@@ -5,6 +5,9 @@ date: "2026-05-19"
 category: "ONBOARDING UX"
 thumbnail: "/blog/fintech-onboarding-failure-thumb.webp"
 coverImage: "/blog/fintech-onboarding-failure-cover.webp"
+case1: "/case-studies/rupeeflow"
+case2: "/case-studies/closexpay"
+service: "/services/onboarding"
 featured: true
 ---
 

@@ -1,13 +1,18 @@
 import Link from "next/link";
 import { ArrowLeft, Calendar, Clock3 } from "lucide-react";
+import Image from "next/image";
+import { Metadata } from "next";
 
-import { getPostBySlug, getAllPostSlugs } from "@/lib/blog";
+import { getPostBySlug, getAllPostSlugs, getAllPosts } from "@/lib/blog";
+import FinalCTASection from "@/app/components/FinalCTASection";
 
 interface BlogPostPageProps {
   params: Promise<{
     slug: string;
   }>;
 }
+
+const SITE_URL = "https://yourdomain.com";
 
 export async function generateStaticParams() {
   const posts = getAllPostSlugs();
@@ -17,10 +22,114 @@ export async function generateStaticParams() {
   }));
 }
 
+/* -------------------------------- */
+/* SEO METADATA */
+/* -------------------------------- */
+
+export async function generateMetadata({
+  params,
+}: BlogPostPageProps): Promise<Metadata> {
+  const { slug } = await params;
+
+  const post = await getPostBySlug(slug);
+
+  if (!post) {
+    return {
+      title: "Post Not Found",
+    };
+  }
+
+  const url = `${SITE_URL}/blog/${slug}`;
+
+  const keywords = [
+    post.category,
+    "fintech onboarding UX",
+    "product trust",
+    "financial product design",
+    "UX strategy",
+    "fintech activation",
+    "user onboarding psychology",
+    "operational trust systems",
+    "conversion optimization",
+    "product positioning",
+    "trust architecture",
+    "fintech UX",
+    "behavioral UX",
+    "user retention",
+    "financial onboarding",
+  ];
+
+  return {
+    title: `${post.title} | Arcady`,
+    description: post.excerpt,
+
+    keywords,
+
+    authors: [
+      {
+        name: "Arcady",
+      },
+    ],
+
+    creator: "Arcady",
+    publisher: "Arcady",
+
+    metadataBase: new URL(SITE_URL),
+
+    alternates: {
+      canonical: url,
+    },
+
+    openGraph: {
+      title: post.title,
+      description: post.excerpt,
+      url,
+      siteName: "Arcady",
+      locale: "en_US",
+      type: "article",
+
+      publishedTime: post.date,
+
+      images: [
+        {
+          url: post.coverImage,
+          width: 1200,
+          height: 630,
+          alt: post.title,
+        },
+      ],
+    },
+
+    twitter: {
+      card: "summary_large_image",
+      title: post.title,
+      description: post.excerpt,
+      creator: "@yourhandle",
+      images: [post.coverImage],
+    },
+
+    robots: {
+      index: true,
+      follow: true,
+      googleBot: {
+        index: true,
+        follow: true,
+        "max-video-preview": -1,
+        "max-image-preview": "large",
+        "max-snippet": -1,
+      },
+    },
+
+    category: post.category,
+  };
+}
+
 export default async function BlogPostPage({ params }: BlogPostPageProps) {
   const { slug } = await params;
 
   const post = await getPostBySlug(slug);
+
+  const allPosts = await getAllPosts();
 
   if (!post) {
     return (
@@ -40,132 +149,324 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
     );
   }
 
+  /* -------------------------------- */
+  /* ARTICLE SCHEMA */
+  /* -------------------------------- */
+
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    headline: post.title,
+    description: post.excerpt,
+    image: `${SITE_URL}${post.coverImage}`,
+    datePublished: post.date,
+    author: {
+      "@type": "Organization",
+      name: "Arcady",
+    },
+    publisher: {
+      "@type": "Organization",
+      name: "Arcady",
+      logo: {
+        "@type": "ImageObject",
+        url: `${SITE_URL}/logo.png`,
+      },
+    },
+    mainEntityOfPage: {
+      "@type": "WebPage",
+      "@id": `${SITE_URL}/blog/${slug}`,
+    },
+  };
+
   return (
-    <section className="relative overflow-hidden bg-[#f8fbff]">
-      {/* Grid */}
-      <div
-        className="
-          absolute inset-0 opacity-[0.35]
-          [background-image:linear-gradient(to_right,#dbe4f015_1px,transparent_1px),linear-gradient(to_bottom,#dbe4f015_1px,transparent_1px)]
-          [background-size:42px_42px]
-        "
+    <>
+      {/* JSON LD */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(jsonLd),
+        }}
       />
 
-      {/* Glow */}
-      <div className="pointer-events-none absolute top-0 right-0 w-[40vw] h-[40vw] bg-blue-200/20 blur-[140px] rounded-full" />
+      <section className="relative overflow-hidden bg-[#f8fbff]">
+        {/* Grid */}
+        <div
+          className="
+            absolute inset-0 opacity-[0.35]
+            [background-image:linear-gradient(to_right,#dbe4f015_1px,transparent_1px),linear-gradient(to_bottom,#dbe4f015_1px,transparent_1px)]
+            [background-size:42px_42px]
+          "
+        />
 
-      <div className="relative z-10">
-        {/* Hero */}
-        <div className="max-w-6xl mx-auto px-6 sm:px-10 pt-24 md:pt-32">
-          {/* Category */}
-          <p className="text-[11px] tracking-[0.3em] uppercase text-blue-700 font-semibold">
-            {post.category}
-          </p>
+        {/* Glow */}
+        <div className="pointer-events-none absolute top-0 right-0 w-[40vw] h-[40vw] bg-blue-200/20 blur-[140px] rounded-full" />
 
-          {/* Title */}
-          <h1
-            className="
-              mt-8
-              heading
-              font-light
-              text-[#111827]
-              text-5xl
-              md:text-7xl
-              leading-[0.92]
-              tracking-[-0.06em]
-              max-w-5xl
-            "
-          >
-            {post.title}
-          </h1>
+        <div className="relative z-10">
+          {/* Hero */}
+          <div className="max-w-6xl mx-auto px-6 sm:px-10 pt-24 md:pt-32">
+            <p className="text-[11px] tracking-[0.3em] uppercase text-blue-700 font-semibold">
+              {post.category}
+            </p>
 
-          {/* Excerpt */}
-          <p
-            className="
-              mt-10
-              text-xl
-              md:text-2xl
-              leading-relaxed
-              text-neutral-600
-              max-w-3xl
-            "
-          >
-            {post.excerpt}
-          </p>
+            <h1
+              className="
+                mt-8
+                heading
+                font-light
+                text-[#111827]
+                text-5xl
+                md:text-7xl
+                leading-[0.92]
+                tracking-[-0.06em]
+                max-w-5xl
+              "
+            >
+              {post.title}
+            </h1>
 
-          {/* Meta */}
-          <div className="mt-10 flex flex-wrap items-center gap-6 text-neutral-500">
-            <div className="flex items-center gap-2">
-              <Calendar className="w-5 h-5" />
+            <p
+              className="
+                mt-10
+                text-xl
+                md:text-2xl
+                leading-relaxed
+                text-neutral-600
+                max-w-3xl
+              "
+            >
+              {post.excerpt}
+            </p>
 
-              <span className="text-sm">
-                {new Date(post.date).toLocaleDateString("en-GB", {
-                  day: "2-digit",
-                  month: "long",
-                  year: "numeric",
-                })}
-              </span>
+            <div className="mt-10 flex flex-wrap items-center gap-6 text-neutral-500">
+              <div className="flex items-center gap-2">
+                <Calendar className="w-5 h-5" />
+
+                <span className="text-sm">
+                  {new Date(post.date).toLocaleDateString("en-GB", {
+                    day: "2-digit",
+                    month: "long",
+                    year: "numeric",
+                  })}
+                </span>
+              </div>
+
+              <div className="flex items-center gap-2">
+                <Clock3 className="w-5 h-5" />
+
+                <span className="text-sm">8 min read</span>
+              </div>
             </div>
 
-            <div className="flex items-center gap-2">
-              <Clock3 className="w-5 h-5" />
-
-              <span className="text-sm">8 min read</span>
+            <div className="relative mt-16 h-[500px] overflow-hidden rounded-[2rem] border border-[#dbe4f0] bg-white shadow-[0_20px_80px_rgba(15,23,42,0.06)]">
+              <Image
+                src={post.coverImage}
+                alt={post.title}
+                fill
+                priority
+                className="object-cover"
+              />
             </div>
           </div>
 
-          {/* Cover */}
-          <div className="mt-16 overflow-hidden rounded-[2rem] border border-[#dbe4f0] bg-white shadow-[0_20px_80px_rgba(15,23,42,0.06)]">
-            <img
-              src={post.coverImage}
-              alt={post.title}
-              className="w-full object-cover"
+          {/* Editorial Body */}
+          <div className="max-w-4xl mx-auto px-6 sm:px-10 py-24">
+            <article
+              className="prose prose-neutral max-w-none"
+              dangerouslySetInnerHTML={{
+                __html: post.contentHtml,
+              }}
             />
           </div>
-        </div>
+          {/* Internal Links */}
+          {(post.case1 || post.case2 || post.service) && (
+            <div className="max-w-6xl mx-auto px-6 sm:px-10 pb-24">
+              <div className="rounded-[2rem] border border-[#dbe4f0] bg-white p-10 shadow-[0_10px_60px_rgba(15,23,42,0.04)]">
+                <p className="text-sm uppercase tracking-[0.24em] text-neutral-500">
+                  Related Insights
+                </p>
 
-        {/* Editorial Body */}
-        <div className="max-w-4xl mx-auto px-6 sm:px-10 py-24">
-          <article
-            className="prose prose-neutral max-w-none"
-            dangerouslySetInnerHTML={{
-              __html: post.contentHtml,
-            }}
-          />
+                <div className="mt-10 grid grid-cols-1 md:grid-cols-2 gap-6">
+                  {[post.case1, post.case2]
+                    .filter(Boolean)
+                    .map((link, index) => {
+                      const slug = link!.split("/").pop() || "";
+
+                      const title = slug
+                        .replace(/-/g, " ")
+                        .replace(/\b\w/g, (char) => char.toUpperCase());
+
+                      return (
+                        <Link
+                          key={link}
+                          href={link!}
+                          className="
+                  group
+                  rounded-[1.75rem]
+                  border border-[#dbe4f0]
+                  bg-[#f8fbff]
+                  p-8
+                  transition-all
+                  hover:bg-white
+                  hover:shadow-[0_10px_40px_rgba(15,23,42,0.06)]
+                "
+                        >
+                          <p className="text-xs uppercase tracking-[0.2em] text-blue-700 font-medium">
+                            CASE STUDY 0{index + 1}
+                          </p>
+
+                          <h3 className="mt-5 heading text-3xl leading-tight text-[#111827]">
+                            {title}
+                          </h3>
+
+                          <p className="mt-4 text-neutral-600 leading-relaxed">
+                            Explore operational trust, behavioral friction, and
+                            product clarity breakdowns.
+                          </p>
+                        </Link>
+                      );
+                    })}
+                </div>
+
+                {post.service && (
+                  <div className="mt-8">
+                    <Link
+                      href={post.service}
+                      className="
+              inline-flex items-center justify-center
+              rounded-full
+              bg-[#111827]
+              px-8 py-4
+              text-sm text-white
+              hover:opacity-90
+              transition-opacity
+            "
+                    >
+                      Explore Related Service
+                    </Link>
+                  </div>
+                )}
+              </div>
+            </div>
+          )}
         </div>
-        {/* Bottom CTA */}
-        <div className="my-32 max-w-6xl mx-auto pt-12 border-t border-[#dbe4f0]">
-          <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-8">
+        {/* Related Blog Posts */}
+        <div className="max-w-6xl mx-auto px-6 sm:px-10 pb-32">
+          <div className="flex items-center justify-between gap-6">
             <div>
               <p className="text-sm uppercase tracking-[0.24em] text-neutral-500">
-                Continue Reading
+                More Insights
               </p>
 
-              <h3 className="mt-4 heading text-3xl text-[#111827]">
-                More insights on operational systems and product trust.
-              </h3>
+              <h2 className="mt-3 heading text-4xl text-[#111827]">
+                Related thinking on operational trust and product behavior
+              </h2>
             </div>
 
             <Link
               href="/blog"
               className="
-                  inline-flex items-center gap-3
-                  rounded-full
-                  border border-[#cfd9e8]
-                  bg-white
-                  px-8 py-4
-                  text-lg
-                  text-[#111827]
-                  hover:bg-[#f3f8ff]
-                  transition-colors
-                "
+        hidden md:inline-flex
+        items-center rounded-full
+        border border-[#dbe4f0]
+        bg-white
+        px-6 py-3
+        text-sm text-[#111827]
+        hover:bg-[#f8fbff]
+        transition-colors
+      "
             >
-              <ArrowLeft className="w-5 h-5" />
-              Back to blog
+              View All Blogs
+            </Link>
+          </div>
+
+          <div className="mt-12 flex flex-col gap-6">
+            {allPosts
+              .filter((relatedPost) => relatedPost.slug !== post.slug)
+              .slice(0, 2)
+              .map((relatedPost) => (
+                <Link
+                  key={relatedPost.slug}
+                  href={`/blog/${relatedPost.slug}`}
+                  className="
+            group
+            flex flex-col md:flex-row
+            overflow-hidden
+            rounded-[2rem]
+            border border-[#dbe4f0]
+            bg-white
+            transition-all
+            hover:shadow-[0_15px_50px_rgba(15,23,42,0.06)]
+          "
+                >
+                  {/* Image */}
+                  <div className="relative h-[260px] md:h-auto md:w-[320px] flex-shrink-0 overflow-hidden">
+                    <Image
+                      src={relatedPost.thumbnail}
+                      alt={relatedPost.title}
+                      fill
+                      className="object-cover transition-transform duration-500 group-hover:scale-[1.03]"
+                    />
+                  </div>
+
+                  {/* Content */}
+                  <div className="flex flex-1 flex-col justify-between p-8">
+                    <div>
+                      <p className="text-xs uppercase tracking-[0.2em] text-blue-700 font-medium">
+                        {relatedPost.category}
+                      </p>
+
+                      <h3 className="mt-5 heading text-3xl leading-tight text-[#111827]">
+                        {relatedPost.title}
+                      </h3>
+
+                      <p className="mt-5 text-lg leading-relaxed text-neutral-600">
+                        {relatedPost.excerpt}
+                      </p>
+                    </div>
+
+                    <div className="mt-8 flex items-center gap-6 text-sm text-neutral-500">
+                      <span>
+                        {new Date(relatedPost.date).toLocaleDateString(
+                          "en-GB",
+                          {
+                            day: "2-digit",
+                            month: "long",
+                            year: "numeric",
+                          },
+                        )}
+                      </span>
+
+                      <span>8 min read</span>
+                    </div>
+                  </div>
+                </Link>
+              ))}
+          </div>
+
+          {/* Mobile CTA */}
+          <div className="mt-8 md:hidden">
+            <Link
+              href="/blog"
+              className="
+        inline-flex items-center justify-center
+        rounded-full
+        border border-[#dbe4f0]
+        bg-white
+        px-6 py-3
+        text-sm text-[#111827]
+        hover:bg-[#f8fbff]
+        transition-colors
+      "
+            >
+              View All Blogs
             </Link>
           </div>
         </div>
-      </div>
-    </section>
+        <FinalCTASection
+          text1="If the problem feels familiar,"
+          text2="a conversation usually helps."
+        />
+      </section>
+    </>
   );
 }
