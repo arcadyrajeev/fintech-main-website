@@ -12,7 +12,7 @@ interface BlogPostPageProps {
   }>;
 }
 
-const SITE_URL = "https://yourdomain.com";
+const SITE_URL = "https://arcadydesign.com";
 
 export async function generateStaticParams() {
   const posts = getAllPostSlugs();
@@ -330,7 +330,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
                 {post.service && (
                   <div className="mt-8">
                     <Link
-                      href={post.service}
+                      href={`/services/${post.service}`}
                       className="
               inline-flex items-center justify-center
               rounded-full
@@ -341,7 +341,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
               transition-opacity
             "
                     >
-                      Explore Related Service
+                      Learn more about {post.service}
                     </Link>
                   </div>
                 )}
@@ -357,22 +357,14 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
                 More Insights
               </p>
 
-              <h2 className="mt-3 heading text-4xl text-[#111827]">
+              <h2 className="mt-3 heading text-4xl text-[#111827] max-w-3xl">
                 Related thinking on operational trust and product behavior
               </h2>
             </div>
 
             <Link
               href="/blog"
-              className="
-        hidden md:inline-flex
-        items-center rounded-full
-        border border-[#dbe4f0]
-        bg-white
-        px-6 py-3
-        text-sm text-[#111827]
-        hover:bg-[#f8fbff]
-        transition-colors
+              className="items-center hidden md:inline-block relative rounded-full border border-[#dbe4f0] bg-white cursor-pointer px-6 py-3 text-sm text-[#111827] hover:bg-[#f8fbff] transition-colors
       "
             >
               View All Blogs
@@ -388,7 +380,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
                   key={relatedPost.slug}
                   href={`/blog/${relatedPost.slug}`}
                   className="
-            group
+            group 
             flex flex-col md:flex-row
             overflow-hidden
             rounded-[2rem]
@@ -432,11 +424,19 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
                             day: "2-digit",
                             month: "long",
                             year: "numeric",
-                          },
+                          }
                         )}
                       </span>
 
                       <span>8 min read</span>
+                      <Link
+                        key={relatedPost.slug}
+                        href={`/blog/${relatedPost.slug}`}
+                        className="items-center relative rounded-full border border-[#dbe4f0] bg-white cursor-pointer px-6 py-3 text-sm text-[#111827] hover:bg-[#f8fbff] transition-colors
+      "
+                      >
+                        Read full Article
+                      </Link>
                     </div>
                   </div>
                 </Link>
@@ -449,7 +449,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
               href="/blog"
               className="
         inline-flex items-center justify-center
-        rounded-full
+        rounded-full relative
         border border-[#dbe4f0]
         bg-white
         px-6 py-3

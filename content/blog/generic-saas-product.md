@@ -7,7 +7,7 @@ thumbnail: "/blog/generic-saas-products-thumb.webp"
 coverImage: "/blog/generic-saas-products-cover.webp"
 case1: "/case-studies/closexpay"
 case2: "/case-studies/copeek"
-service: "/services/brand"
+service: "brand"
 featured: true
 ---
 

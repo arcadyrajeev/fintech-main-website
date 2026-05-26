@@ -7,7 +7,7 @@ thumbnail: "/blog/hidden-cost-ux-confusion-thumb.webp"
 coverImage: "/blog/hidden-cost-ux-confusion-cover.webp"
 case1: "/case-studies/realestify"
 case2: "/case-studies/rupeeflow"
-service: "/services/product"
+service: "product"
 featured: true
 ---
 

@@ -7,7 +7,7 @@ thumbnail: "/blog/fintech-ux-systems-thumb.webp"
 coverImage: "/blog/fintech-ux-systems-cover.webp"
 case1: "/case-studies/closexpay"
 case2: "/case-studies/rupeeflow"
-service: "/services/product"
+service: "product"
 ---
 
 ## Most fintech UX problems are actually trust problems

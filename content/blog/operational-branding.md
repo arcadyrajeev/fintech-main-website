@@ -7,7 +7,7 @@ thumbnail: "/blog/operational-branding-thumb.webp"
 coverImage: "/blog/operational-branding-cover.webp"
 case1: "/case-studies/closexpay"
 case2: "/case-studies/copeek"
-service: "/services/brand"
+service: "brand"
 ---
 
 ## Operational Branding: Why Most Fintech Products Feel Functional but Forgettable

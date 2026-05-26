@@ -7,7 +7,7 @@ thumbnail: "/blog/fintech-onboarding-failure-thumb.webp"
 coverImage: "/blog/fintech-onboarding-failure-cover.webp"
 case1: "/case-studies/rupeeflow"
 case2: "/case-studies/closexpay"
-service: "/services/onboarding"
+service: "onboarding"
 featured: true
 ---
 
