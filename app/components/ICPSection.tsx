@@ -74,7 +74,7 @@ export default function ICPSection() {
               </div>
 
               {/* Content */}
-              <div className="p-2 pb-10">
+              <div className="px-2 py-4 pb-7">
                 <h3 className="mt-3 heading text-3xl font-semibold leading-tight text-slate-800">
                   {card.title}
                 </h3>
