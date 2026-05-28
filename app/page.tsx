@@ -4,7 +4,6 @@ import HomeHero from "./components/HomeHero";
 import ProjectSection from "./components/ProjectSection";
 
 import Bridge from "./components/Bridge";
-import MiddleCta from "./components/MiddleCta";
 import Problem from "./components/Problem";
 import BridgeAccent from "./components/BridgeAccent";
 import ScrollTraceBackground from "./components/ScrollTraceBackground";
@@ -15,11 +14,12 @@ import FAQSection from "./components/FAQSection";
 import WorkflowSection from "./components/WorkFlowSection";
 import ICPSection from "./components/ICPSection";
 import Timeline from "./components/Timeline";
-import TransformationSection from "./components/TransformationSection";
+
 import POVSection from "./components/POVSection";
 import IndustriesSection from "./components/IndustriesSection";
 import TrustedBySection from "./components/TrustedBySection";
 import BlogSection from "./components/BlogSection";
+import CommonProblemsSection from "./components/CommonProblemsSection";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://arcadydesign.com"),
@@ -119,7 +119,7 @@ export default function Home() {
         <Timeline />
 
         <WorkflowSection />
-        <TransformationSection />
+        <CommonProblemsSection />
 
         <POVSection />
 
