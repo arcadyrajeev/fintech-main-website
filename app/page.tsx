@@ -1,4 +1,3 @@
-import FinalCTASection from "./components/FinalCTASection";
 import HomeHero from "./components/HomeHero";
 
 import ProjectSection from "./components/ProjectSection";
@@ -20,6 +19,7 @@ import IndustriesSection from "./components/IndustriesSection";
 import TrustedBySection from "./components/TrustedBySection";
 import BlogSection from "./components/BlogSection";
 import CommonProblemsSection from "./components/CommonProblemsSection";
+import FinalSection from "./components/HomeCTASection";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://arcadydesign.com"),
@@ -123,10 +123,7 @@ export default function Home() {
 
         <POVSection />
 
-        <FinalCTASection
-          text1="If the problem feels familiar,"
-          text2="a conversation usually helps."
-        />
+        <FinalSection />
         <BlogSection />
         <FAQSection />
       </div>
