@@ -5,21 +5,21 @@ import Image from "next/image";
 const cards = [
   {
     title: "Fintech Platforms",
-    image: "/images/fintech-platforms.webp",
+    image: "/images/fintech-cover.webp",
     description:
       "Payments, lending, and financial infrastructure products where trust and activation drive growth.",
   },
 
   {
     title: "Operational SaaS",
-    image: "/images/operational-saas.webp",
+    image: "/images/operational-cover.webp",
     description:
       "Workflow-heavy platforms where clarity, hierarchy, and execution determine adoption.",
   },
 
   {
     title: "Scaling Product Teams",
-    image: "/images/scaling-teams.webp",
+    image: "/images/teams-cover.webp",
     description:
       "Teams navigating growth, repositioning, fundraising, or product expansion.",
   },
@@ -64,21 +64,20 @@ export default function ICPSection() {
               "
             >
               {/* Image */}
-              <div className="relative rounded-lg overflow-hidden aspect-[16/10] overflow-hidden">
+              <div className="relative rounded-lg overflow-hidden aspect-[16/8] overflow-hidden">
                 <Image
                   src={card.image}
                   alt={card.title}
                   fill
                   className="object-cover"
                 />
+                <h3 className="p-6 absolute pr-20 font-light manrope heading text-4xl  leading-[1] text-white">
+                  {card.title}
+                </h3>
               </div>
 
               {/* Content */}
               <div className="px-2 py-4 pb-7">
-                <h3 className="mt-3 heading text-3xl font-semibold leading-tight text-slate-800">
-                  {card.title}
-                </h3>
-
                 <p className="mt-3 text-sm leading-relaxed text-secondary-text">
                   {card.description}
                 </p>
