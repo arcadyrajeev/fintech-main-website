@@ -2,6 +2,7 @@
 
 import { ArrowUpRight } from "lucide-react";
 import Link from "next/link";
+import Image from "next/image";
 
 const topServices = [
   {
@@ -163,9 +164,10 @@ export default function Services() {
                   <div className="overflow-hidden rounded-xl relative">
                     <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(59,130,246,0.18),transparent_60%)]" />
 
-                    <img
+                    <Image
                       src={service.image}
                       alt={service.title}
+                      fill
                       className="relative z-10 w-full aspect-[16/12] object-cover"
                     />
                   </div>
@@ -246,9 +248,10 @@ export default function Services() {
                 {/* Image */}
                 <div className="relative mt-10 md:mt-6">
                   <div className="overflow-hidden rounded-lg relative">
-                    <img
+                    <Image
                       src={service.image}
                       alt={service.title}
+                      fill
                       className="relative z-10 w-full aspect-[16/12] object-cover object-top"
                     />
                   </div>
