@@ -121,8 +121,6 @@ export default function Home() {
         <WorkflowSection />
         <CommonProblemsSection />
 
-        <POVSection />
-
         <FinalSection />
         <BlogSection />
         <FAQSection />
