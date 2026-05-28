@@ -44,7 +44,7 @@ export default function Timeline() {
         <div className="grid lg:grid-cols-2 gap-16 lg:gap-24 items-center ">
           {/* LEFT CONTENT */}
           <div className="pb-2 ">
-            <p className="text-xs uppercase tracking-[0.3em] text-accent font-medium">
+            <p className="text-xs uppercase bodyfont font-bold tracking-[0.18em]  text-accent ">
               SIGNALS
             </p>
 
