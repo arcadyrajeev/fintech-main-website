@@ -5,21 +5,21 @@ import Image from "next/image";
 const cards = [
   {
     title: "Fintech Platforms",
-    image: "/images/fintech-cover.webp",
+    image: "/images/fintech-platforms.webp",
     description:
       "Payments, lending, and financial infrastructure products where trust and activation drive growth.",
   },
 
   {
     title: "Operational SaaS",
-    image: "/images/operational-cover.webp",
+    image: "/images/operational-platforms.webp",
     description:
       "Workflow-heavy platforms where clarity, hierarchy, and execution determine adoption.",
   },
 
   {
     title: "Scaling Product Teams",
-    image: "/images/teams-cover.webp",
+    image: "/images/scaling-teams.webp",
     description:
       "Teams navigating growth, repositioning, fundraising, or product expansion.",
   },

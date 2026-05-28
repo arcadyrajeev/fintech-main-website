@@ -12,10 +12,10 @@ const ScrollTraceBackground = () => {
   */
 
   // TOP TRACE
-  const topTrace = useTransform(scrollYProgress, [0.08, 0.18], [0, 1]);
+  const topTrace = useTransform(scrollYProgress, [0.08, 0.24], [0, 1]);
 
   // BOTTOM TRACE
-  const bottomTrace = useTransform(scrollYProgress, [0.18, 0.28], [0, 1]);
+  const bottomTrace = useTransform(scrollYProgress, [0.24, 0.34], [0, 1]);
 
   /*
     =========================
@@ -23,7 +23,7 @@ const ScrollTraceBackground = () => {
     =========================
   */
 
-  const bottomOpacity = useTransform(scrollYProgress, [0.18, 0.181], [0, 1]);
+  const bottomOpacity = useTransform(scrollYProgress, [0.24, 0.241], [0, 1]);
 
   /*
     =========================
