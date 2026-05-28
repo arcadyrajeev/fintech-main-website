@@ -27,7 +27,7 @@ const cards = [
 
 export default function ICPSection() {
   return (
-    <section className="w-full py-24 md:py-32 bg-[#fafafa]">
+    <section className="w-full py-24 md:py-32 ">
       <div className="max-w-7xl mx-auto px-6 sm:px-10 lg:px-20">
         {/* Heading */}
         <div className="max-w-3xl">
