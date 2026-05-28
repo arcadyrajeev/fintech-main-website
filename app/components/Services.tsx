@@ -162,13 +162,13 @@ export default function Services() {
                 {/* Image */}
                 <div className="relative mt-auto pt-6">
                   <div className="overflow-hidden rounded-xl relative">
-                    <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(59,130,246,0.18),transparent_60%)]" />
+                    <div className="relative aspect-[16/12] inset-0 bg-[radial-gradient(circle_at_top,rgba(59,130,246,0.18),transparent_60%)]" />
 
                     <Image
                       src={service.image}
                       alt={service.title}
                       fill
-                      className="relative z-10 w-full aspect-[16/12] object-cover"
+                      className="relative z-10 w-full object-cover"
                     />
                   </div>
                 </div>
@@ -247,12 +247,12 @@ export default function Services() {
 
                 {/* Image */}
                 <div className="relative mt-10 md:mt-6">
-                  <div className="overflow-hidden rounded-lg relative">
+                  <div className="overflow-hidden rounded-lg relative aspect-[16/12]">
                     <Image
                       src={service.image}
                       alt={service.title}
                       fill
-                      className="relative z-10 w-full aspect-[16/12] object-cover object-top"
+                      className="relative z-10 w-full  object-cover object-top"
                     />
                   </div>
                 </div>

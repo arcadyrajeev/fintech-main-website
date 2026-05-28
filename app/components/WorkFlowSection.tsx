@@ -5,35 +5,27 @@ import Link from "next/link";
 
 const workflowSteps = [
   {
-    title: "Discovery & Product Analysis",
-
-    desc: "Understanding onboarding flows, operational friction, trust gaps, positioning issues, and where product clarity starts breaking down.",
-
-    date: "STEP 01",
+    title: "Diagnose",
+    desc: "Trust, activation, and operational bottlenecks.",
+    date: "01",
   },
 
   {
-    title: "Friction Mapping",
-
-    desc: "Identifying hesitation points across onboarding, workflows, dashboards, hierarchy, and user decision-making systems.",
-
-    date: "STEP 02",
+    title: "Mapping",
+    desc: "Hesitation points, workflow friction, and decision gaps.",
+    date: "02",
   },
 
   {
-    title: "System Restructuring",
-
-    desc: "Restructuring interfaces, onboarding, product hierarchy, workflows, and communication systems to improve clarity and trust.",
-
-    date: "STEP 03",
+    title: "Restructure",
+    desc: "Improve clarity across systems, onboarding, and communication.",
+    date: "03",
   },
 
   {
-    title: "Refinement & Iteration",
-
-    desc: "Refining clarity through stakeholder feedback, usage patterns, operational constraints, and repeated decision flows.",
-
-    date: "STEP 04",
+    title: "Validate",
+    desc: "Refine through feedback, behavior, and operational realities.",
+    date: "04",
   },
 ];
 
@@ -51,19 +43,14 @@ export default function WorkflowSection() {
 
       <div className="relative z-10 max-w-7xl mx-auto px-6 sm:px-10 lg:px-24 py-24 md:py-32">
         {/* Heading */}
-        <div className="max-w-3xl">
-          <p className="text-sm  tracking-[0.25em] uppercase text-neutral-500">
+        <div className="max-w-2xl">
+          <p className="text-xs uppercase bodyfont font-semibold tracking-[0.15em] text-blue-300 mb-5">
             Process
           </p>
 
-          <h2 className="mt-4 heading text-4xl md:text-7xl tracking-tight text-white">
-            Workflow
+          <h2 className="mt-4 heading text-4xl md:text-5xl text-white">
+            Our Workflow
           </h2>
-
-          <p className="mt-6 text-neutral-400 text-sm md:text-lg leading-relaxed max-w-2xl">
-            Structured around onboarding clarity, operational UX, product
-            positioning, trust systems, and decision-oriented product design.
-          </p>
         </div>
 
         {/* Timeline */}
