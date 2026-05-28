@@ -61,7 +61,7 @@ export default function TransformationSection() {
     "
           >
             {/* Header */}
-            <div className="px-6 md:px-10 py-6 border-b border-neutral-200">
+            <div className="px-6 md:px-10 py-4 border-b border-neutral-200">
               <p className="text-sm font-semibold tracking-[0.15em] uppercase text-neutral-400">
                 Before
               </p>
@@ -73,12 +73,12 @@ export default function TransformationSection() {
                 <div
                   key={index}
                   className="
-            px-6 md:px-10 py-7
+            px-6 md:px-10 py-4
             border-b border-neutral-100
             last:border-b-0
           "
                 >
-                  <p className="text-base md:text-lg text-neutral-500 leading-snug">
+                  <p className="text-sm md:text-base text-neutral-500 leading-snug">
                     {item.before}
                   </p>
                 </div>
@@ -97,7 +97,7 @@ export default function TransformationSection() {
     "
           >
             {/* Header */}
-            <div className="px-6 md:px-10 py-6 border-b border-neutral-200 bg-[#f8fbff]">
+            <div className="px-6 md:px-10 py-4 border-b border-neutral-200 bg-[#f8fbff]">
               <p className="text-sm font-semibold tracking-[0.15em] uppercase text-[#1d4ed8]">
                 After
               </p>
@@ -109,12 +109,12 @@ export default function TransformationSection() {
                 <div
                   key={index}
                   className="
-            px-6 md:px-10 py-7
+            px-6 md:px-10 py-4
             border-b border-neutral-100
             last:border-b-0
           "
                 >
-                  <p className="text-base md:text-lg text-primary-text leading-snug">
+                  <p className="text-sm md:text-base text-primary-text leading-snug">
                     {item.after}
                   </p>
                 </div>
