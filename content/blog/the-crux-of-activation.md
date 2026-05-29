@@ -56,7 +56,7 @@ canonical: "https://arcadydesign.com/blog/the-crux-of-activation"
 
 When fintech companies struggle with growth, the first reaction is often to examine acquisition channels.
 
-Teams increase advertising budgets. They launch referral programs. They optimize landing pages. They improve messaging. They redesign marketing funnels.
+Teams increase advertising budgets, launch referral programs, optimize landing pages, improve messaging and redesign marketing funnels.
 
 Yet despite increasing traffic, activation numbers remain stubbornly low.
 
