@@ -1,14 +1,56 @@
 ---
 title: "Designing Trust Into Fintech Onboarding"
+
 excerpt: "Why onboarding friction is usually a trust perception problem disguised as UX."
+
 date: "2025-09-02"
-category: "Onboarding UX"
+
+category: "FINTECH ONBOARDING"
+
 thumbnail: "/blog/onboarding-trust-thumb.webp"
 coverImage: "/blog/onboarding-trust-cover.webp"
+
 case1: "/case-studies/rupeeflow"
 case2: "/case-studies/closexpay"
+
 service: "onboarding"
+
 featured: true
+
+seoTitle: "Designing Trust Into Fintech Onboarding: Reducing Friction & Improving Activation"
+
+seoDescription: "Learn how trust architecture, onboarding UX, KYC workflows, and operational clarity influence fintech activation, onboarding completion rates, and customer confidence."
+
+keywords:
+  - fintech onboarding
+  - onboarding trust
+  - onboarding ux
+  - fintech ux
+  - trust architecture
+  - fintech activation
+  - customer onboarding
+  - onboarding friction
+  - onboarding conversion
+  - kyc onboarding
+  - identity verification
+  - financial services ux
+  - digital onboarding
+  - customer trust
+  - onboarding experience
+
+tags:
+  - fintech
+  - onboarding
+  - trust
+  - fintech ux
+  - activation
+  - compliance
+  - customer experience
+  - product strategy
+  - identity verification
+  - financial services
+
+canonical: "https://arcadydesign.com/blog/fintech-trust"
 ---
 
 ## Most onboarding problems are not actually UX problems

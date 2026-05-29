@@ -22,6 +22,32 @@ export async function generateStaticParams() {
   }));
 }
 
+export interface Post {
+  title: string;
+  excerpt: string;
+  date: string;
+  category: string;
+
+  seoTitle?: string;
+  seoDescription?: string;
+
+  keywords?: string[];
+  tags?: string[];
+
+  canonical?: string;
+
+  thumbnail: string;
+  coverImage: string;
+
+  case1?: string;
+  case2?: string;
+  service?: string;
+
+  featured?: boolean;
+
+  contentHtml: string;
+}
+
 /* -------------------------------- */
 /* SEO METADATA */
 /* -------------------------------- */
@@ -31,7 +57,7 @@ export async function generateMetadata({
 }: BlogPostPageProps): Promise<Metadata> {
   const { slug } = await params;
 
-  const post = await getPostBySlug(slug);
+  const post: Post | null = await getPostBySlug(slug);
 
   if (!post) {
     return {
@@ -39,31 +65,14 @@ export async function generateMetadata({
     };
   }
 
-  const url = `${SITE_URL}/blog/${slug}`;
-
-  const keywords = [
-    post.category,
-    "fintech onboarding UX",
-    "product trust",
-    "financial product design",
-    "UX strategy",
-    "fintech activation",
-    "user onboarding psychology",
-    "operational trust systems",
-    "conversion optimization",
-    "product positioning",
-    "trust architecture",
-    "fintech UX",
-    "behavioral UX",
-    "user retention",
-    "financial onboarding",
-  ];
+  const url = post.canonical || `${SITE_URL}/blog/${slug}`;
 
   return {
-    title: `${post.title} | Arcady`,
-    description: post.excerpt,
+    title: post.seoTitle || `${post.title} | Arcady`,
 
-    keywords,
+    description: post.seoDescription || post.excerpt,
+
+    keywords: post.keywords || [],
 
     authors: [
       {
@@ -81,14 +90,21 @@ export async function generateMetadata({
     },
 
     openGraph: {
-      title: post.title,
-      description: post.excerpt,
+      title: post.seoTitle || post.title,
+
+      description: post.seoDescription || post.excerpt,
+
       url,
+
       siteName: "Arcady",
+
       locale: "en_US",
+
       type: "article",
 
       publishedTime: post.date,
+
+      tags: post.tags || [],
 
       images: [
         {
@@ -102,15 +118,20 @@ export async function generateMetadata({
 
     twitter: {
       card: "summary_large_image",
-      title: post.title,
-      description: post.excerpt,
+
+      title: post.seoTitle || post.title,
+
+      description: post.seoDescription || post.excerpt,
+
       creator: "@yourhandle",
+
       images: [post.coverImage],
     },
 
     robots: {
       index: true,
       follow: true,
+
       googleBot: {
         index: true,
         follow: true,
@@ -376,9 +397,8 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
               .filter((relatedPost) => relatedPost.slug !== post.slug)
               .slice(0, 2)
               .map((relatedPost) => (
-                <Link
+                <div
                   key={relatedPost.slug}
-                  href={`/blog/${relatedPost.slug}`}
                   className="
             group 
             flex flex-col md:flex-row
@@ -391,14 +411,17 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
           "
                 >
                   {/* Image */}
-                  <div className="relative h-[260px] md:h-auto md:w-[320px] flex-shrink-0 overflow-hidden">
+                  <Link
+                    href={`/blog/${relatedPost.slug}`}
+                    className="relative h-[260px] md:h-auto md:w-[320px] flex-shrink-0 overflow-hidden"
+                  >
                     <Image
                       src={relatedPost.thumbnail}
                       alt={relatedPost.title}
                       fill
                       className="object-cover transition-transform duration-500 group-hover:scale-[1.03]"
                     />
-                  </div>
+                  </Link>
 
                   {/* Content */}
                   <div className="flex flex-1 flex-col justify-between p-8">
@@ -439,7 +462,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
                       </Link>
                     </div>
                   </div>
-                </Link>
+                </div>
               ))}
           </div>
 
