@@ -89,7 +89,7 @@ export default function Timeline() {
             {/* BACK CARD */}
 
             <Image
-              src={"/images/signal-cover.png"}
+              src={"/images/signal-cover.webp"}
               fill
               alt="Signal Image"
               className="object-cover"

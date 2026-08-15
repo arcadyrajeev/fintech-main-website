@@ -20,7 +20,7 @@ export default function CommonProblemsSection() {
             {/* BACK CARD */}
 
             <Image
-              src={"/images/diagnosis-cover.png"}
+              src={"/images/diagnosis-cover.webp"}
               fill
               alt="Signal Image"
               className="object-contain"
