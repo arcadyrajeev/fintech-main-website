@@ -29,6 +29,7 @@ const HomeHero = () => {
           alt="hero-line"
           height={20}
           width={1920}
+          unoptimized
         />
 
         {/* Pulsing Node */}

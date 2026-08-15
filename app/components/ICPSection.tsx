@@ -69,6 +69,7 @@ export default function ICPSection() {
                   src={card.image}
                   alt={card.title}
                   fill
+                  unoptimized
                   className="object-cover"
                 />
                 <h3 className="p-6 absolute pr-20 font-light manrope heading text-4xl  leading-[1] text-white">

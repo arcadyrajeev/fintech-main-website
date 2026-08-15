@@ -128,6 +128,7 @@ export default function CopeekCaseStudy() {
                 src="/cases/copeek-cover.png"
                 alt="Copeek Hero"
                 fill
+                unoptimized
                 className="object-cover "
               />
             </div>
@@ -241,6 +242,7 @@ export default function CopeekCaseStudy() {
                 src="/cases/copeek-brand1.png"
                 alt="Copeek Brand System"
                 fill
+                unoptimized
                 className="object-cover object-top"
               />
             </div>
@@ -251,6 +253,7 @@ export default function CopeekCaseStudy() {
                   src="/cases/copeek-brand3.png"
                   alt="Copeek Business Card"
                   fill
+                  unoptimized
                   className="object-cover object-top"
                 />
               </div>
@@ -260,6 +263,7 @@ export default function CopeekCaseStudy() {
                   src="/cases/copeek-brand4.png"
                   alt="Copeek Color System"
                   fill
+                  unoptimized
                   className="object-cover object-top"
                 />
               </div>
@@ -285,6 +289,7 @@ export default function CopeekCaseStudy() {
                 src="/cases/copeek-brand2.png"
                 alt=""
                 fill
+                unoptimized
                 className="object-cover object-top"
               />
             </div>
@@ -311,6 +316,7 @@ export default function CopeekCaseStudy() {
                 src="/cases/copeek-dashboard1.png"
                 alt="Copeek Dashboard"
                 fill
+                unoptimized
                 className="object-cover object-top"
               />
             </div>
@@ -321,6 +327,7 @@ export default function CopeekCaseStudy() {
                   src="/cases/copeek-dashboard2.png"
                   alt="Dashboard Direction"
                   fill
+                  unoptimized
                   className="object-cover object-top"
                 />
               </div>
@@ -330,6 +337,7 @@ export default function CopeekCaseStudy() {
                   src="/cases/copeek-dashboard3.png"
                   alt="Copeek Presentation"
                   fill
+                  unoptimized
                   className="object-cover object-top"
                 />
               </div>

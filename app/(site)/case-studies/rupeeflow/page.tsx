@@ -145,6 +145,7 @@ export default function RupeeFlowCaseStudy() {
                 src="/cases/rf-hero.png"
                 alt="RupeeFlow product system"
                 fill
+                unoptimized
                 className="object-cover"
                 priority
               />
@@ -227,6 +228,7 @@ export default function RupeeFlowCaseStudy() {
                   src="/cases/rf-brand1.png"
                   alt="RupeeFlow branding"
                   fill
+                  unoptimized
                   className="object-cover"
                 />
               </div>
@@ -241,7 +243,7 @@ export default function RupeeFlowCaseStudy() {
                     className="relative rounded-2xl overflow-hidden border border-neutral-200"
                   >
                     <div className="relative aspect-[16/9]">
-                      <Image src={image} alt="" fill className="object-cover" />
+                      <Image src={image} alt="" fill unoptimized className="object-cover" />
                     </div>
                   </div>
                 ),
@@ -255,6 +257,7 @@ export default function RupeeFlowCaseStudy() {
                   src="/cases/rf-brand3.png"
                   alt=""
                   fill
+                  unoptimized
                   className="object-cover"
                 />
               </div>
@@ -304,7 +307,7 @@ export default function RupeeFlowCaseStudy() {
                   "
                 >
                   <div className="relative aspect-[16/10]">
-                    <Image src={image} alt="" fill className="object-cover" />
+                    <Image src={image} alt="" fill unoptimized className="object-cover" />
                   </div>
                 </div>
               ),
@@ -378,6 +381,7 @@ export default function RupeeFlowCaseStudy() {
                   src="/cases/rf-onboarding01.png"
                   alt=""
                   fill
+                  unoptimized
                   className="object-cover object-top"
                 />
               </div>
@@ -433,6 +437,7 @@ export default function RupeeFlowCaseStudy() {
                   src="/cases/home.png"
                   alt=""
                   fill
+                  unoptimized
                   className="object-cover object-top"
                 />
               </div>
@@ -464,6 +469,7 @@ export default function RupeeFlowCaseStudy() {
                   src="/cases/pg.png"
                   alt=""
                   fill
+                  unoptimized
                   className="object-cover object-top"
                 />
               </div>
@@ -499,6 +505,7 @@ export default function RupeeFlowCaseStudy() {
                   src="/cases/rf-product1.png"
                   alt=""
                   fill
+                  unoptimized
                   className="object-contain"
                 />
               </div>

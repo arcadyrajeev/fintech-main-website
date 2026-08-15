@@ -131,6 +131,7 @@ export default function RealestifyCaseStudy() {
                 src="/cases/realestify-cover.png"
                 alt="Realestify Platform"
                 fill
+                unoptimized
                 className="object-contain object-top h-full w-auto "
               />
             </div>
@@ -235,6 +236,7 @@ export default function RealestifyCaseStudy() {
                 alt="Database Architecture"
                 width={2000}
                 height={1200}
+                unoptimized
                 className="w-full h-auto"
               />
             </div>
@@ -245,6 +247,7 @@ export default function RealestifyCaseStudy() {
                 alt="Database Architecture"
                 width={2000}
                 height={1200}
+                unoptimized
                 className="w-full h-auto"
               />
             </div>
@@ -255,6 +258,7 @@ export default function RealestifyCaseStudy() {
                 alt="Operational Relationships"
                 width={2000}
                 height={1200}
+                unoptimized
                 className="w-full h-auto"
               />
             </div>
@@ -340,6 +344,7 @@ export default function RealestifyCaseStudy() {
                 alt="Admin Dashboard"
                 width={2000}
                 height={1200}
+                unoptimized
                 className="w-full h-auto"
               />
             </div>
@@ -350,6 +355,7 @@ export default function RealestifyCaseStudy() {
                 alt="User Governance"
                 width={2000}
                 height={1200}
+                unoptimized
                 className="w-full h-auto"
               />
             </div>
@@ -395,6 +401,7 @@ export default function RealestifyCaseStudy() {
                 alt="Mobile Navigation"
                 width={1200}
                 height={2000}
+                unoptimized
                 className="w-full h-auto"
               />
             </div>
@@ -404,6 +411,7 @@ export default function RealestifyCaseStudy() {
                 alt="Mobile Navigation"
                 width={1200}
                 height={2000}
+                unoptimized
                 className="w-full h-auto"
               />
             </div>
@@ -431,6 +439,7 @@ export default function RealestifyCaseStudy() {
                 alt="Brand System"
                 width={2000}
                 height={1600}
+                unoptimized
                 className="w-auto h-full"
               />
             </div>
@@ -442,6 +451,7 @@ export default function RealestifyCaseStudy() {
                   alt="Color Palette"
                   width={2000}
                   height={1600}
+                  unoptimized
                   className="w-full h-auto"
                 />
               </div>
@@ -452,6 +462,7 @@ export default function RealestifyCaseStudy() {
                   alt="Typography"
                   width={2000}
                   height={1600}
+                  unoptimized
                   className="w-full h-auto"
                 />
               </div>

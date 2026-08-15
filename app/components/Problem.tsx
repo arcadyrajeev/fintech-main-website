@@ -42,6 +42,7 @@ const Problem = () => {
                 src="/images/onboarding1.png"
                 alt="Onboarding hesitation"
                 fill
+                unoptimized
                 className="object-contain"
               />
             </div>
@@ -71,6 +72,7 @@ const Problem = () => {
                   src={item.image}
                   alt={item.title}
                   fill
+                  unoptimized
                   className="object-cover opacity-90"
                 />
               </div>

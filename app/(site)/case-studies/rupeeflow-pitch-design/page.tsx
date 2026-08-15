@@ -110,6 +110,7 @@ export default function PitchCaseStudy() {
                 src="/cases/rf-pitch-cover.png"
                 alt="RupeeFlow Pitch Strategy"
                 fill
+                unoptimized
                 className="object-cover object-top"
               />
             </div>
@@ -252,6 +253,7 @@ export default function PitchCaseStudy() {
                 src="/cases/rf-rupeeflow-pitch-design.png"
                 alt=""
                 fill
+                unoptimized
                 className="object-cover object-top"
               />
             </div>
@@ -262,6 +264,7 @@ export default function PitchCaseStudy() {
                   src="/cases/rf-pitch3.png"
                   alt=""
                   fill
+                  unoptimized
                   className="object-cover object-top"
                 />
               </div>
@@ -271,6 +274,7 @@ export default function PitchCaseStudy() {
                   src="/cases/rf-pitch4.png"
                   alt=""
                   fill
+                  unoptimized
                   className="object-cover object-top"
                 />
               </div>
@@ -327,6 +331,7 @@ export default function PitchCaseStudy() {
                 src="/cases/rf-pitch2.png"
                 alt=""
                 fill
+                unoptimized
                 className="object-cover object-top"
               />
             </div>
@@ -337,6 +342,7 @@ export default function PitchCaseStudy() {
                   src="/cases/rf-pitch5.png"
                   alt=""
                   fill
+                  unoptimized
                   className="object-cover object-top"
                 />
               </div>
@@ -346,6 +352,7 @@ export default function PitchCaseStudy() {
                   src="/cases/rf-pitch6.png"
                   alt=""
                   fill
+                  unoptimized
                   className="object-cover object-top"
                 />
               </div>

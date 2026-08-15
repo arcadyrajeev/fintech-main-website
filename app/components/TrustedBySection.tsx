@@ -61,6 +61,7 @@ export default function TrustedBySection() {
                   alt={`Company logo ${index + 1}`}
                   width={140}
                   height={60}
+                  unoptimized
                   className="h-8 md:h-10 w-auto object-contain grayscale"
                 />
               </div>

@@ -23,6 +23,7 @@ export default function MarketImageSlider({ slides }: ImageSliderProps) {
           src={slides[index].src}
           alt={slides[index].alt}
           fill
+          unoptimized
           className="object-contain"
         />
       </div>

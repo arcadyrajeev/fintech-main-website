@@ -116,6 +116,7 @@ export default function HeroSection({
                 alt={`${heading1} ${headingColor} ${heading2}`}
                 fill
                 priority
+                unoptimized
                 className="
                   object-cover
                   object-center

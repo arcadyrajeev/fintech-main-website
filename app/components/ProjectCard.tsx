@@ -252,6 +252,7 @@ const ProjectCard = ({
             src={imageUrl}
             alt={`${title} case study preview`}
             fill
+            unoptimized
             className="object-contain"
             sizes="(max-width: 1024px) 100vw, 50vw"
             priority={false}

@@ -35,6 +35,7 @@ export default function BlogCard({
           alt={title}
           height={400}
           width={640}
+          unoptimized
           className="w-full aspect-[16/10] object-cover transition-transform duration-700 group-hover:scale-[1.03]"
         />
 

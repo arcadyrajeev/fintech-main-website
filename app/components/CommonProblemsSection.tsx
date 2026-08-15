@@ -23,6 +23,7 @@ export default function CommonProblemsSection() {
               src={"/images/diagnosis-cover.webp"}
               fill
               alt="Signal Image"
+              unoptimized
               className="object-contain"
             />
           </div>

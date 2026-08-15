@@ -63,6 +63,7 @@ export default function FinancialDashboardCaseStudy() {
             alt="Financial dashboard after clarity redesign"
             fill
             priority
+            unoptimized
             className="object-contain"
           />
         </div>
@@ -176,6 +177,7 @@ export default function FinancialDashboardCaseStudy() {
                 src="/cases/clarity1.png"
                 alt="Dashboard before clarity redesign"
                 fill
+                unoptimized
                 className="object-contain"
               />
             </div>
@@ -187,6 +189,7 @@ export default function FinancialDashboardCaseStudy() {
                 src="/cases/clarity2.png"
                 alt="Dashboard after clarity redesign"
                 fill
+                unoptimized
                 className="object-cover"
               />
             </div>

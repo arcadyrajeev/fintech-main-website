@@ -168,6 +168,7 @@ export default function Services() {
                       src={service.image}
                       alt={service.title}
                       fill
+                      unoptimized
                       className="relative z-10 w-full object-cover"
                     />
                   </div>
@@ -252,6 +253,7 @@ export default function Services() {
                       src={service.image}
                       alt={service.title}
                       fill
+                      unoptimized
                       className="relative z-10 w-full  object-cover object-top"
                     />
                   </div>

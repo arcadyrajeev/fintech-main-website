@@ -92,6 +92,7 @@ export default function Timeline() {
               src={"/images/signal-cover.webp"}
               fill
               alt="Signal Image"
+              unoptimized
               className="object-cover"
             />
           </div>

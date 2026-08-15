@@ -118,6 +118,7 @@ export default function BrokerQuantCaseStudy() {
                 src="/cases/bq-product1.png"
                 alt="BrokerQuant Dashboard"
                 fill
+                unoptimized
                 className="object-contain object-top"
               />
             </div>
@@ -241,6 +242,7 @@ export default function BrokerQuantCaseStudy() {
                   src="/cases/bqbefore.webp"
                   alt="Before redesign"
                   fill
+                  unoptimized
                   className="object-contain object-top p-3"
                 />
               </div>
@@ -274,6 +276,7 @@ export default function BrokerQuantCaseStudy() {
                   src="/cases/bq-product2.png"
                   alt="After redesign"
                   fill
+                  unoptimized
                   className="object-contain object-top p-3"
                 />
               </div>
@@ -344,6 +347,7 @@ export default function BrokerQuantCaseStudy() {
                 src="/cases/bq-product2.png"
                 alt="BrokerQuant Dashboard"
                 fill
+                unoptimized
                 className="object-cover object-top "
               />
             </div>
@@ -354,6 +358,7 @@ export default function BrokerQuantCaseStudy() {
                   src="/cases/bq-product1.png"
                   alt=""
                   fill
+                  unoptimized
                   className="object-cover object-top "
                 />
               </div>
@@ -363,6 +368,7 @@ export default function BrokerQuantCaseStudy() {
                   src="/cases/bq-product3.png"
                   alt=""
                   fill
+                  unoptimized
                   className="object-cover object-top"
                 />
               </div>
@@ -406,6 +412,7 @@ export default function BrokerQuantCaseStudy() {
                   src="/cases/bq-product2.png"
                   alt="Dashboard redesign"
                   fill
+                  unoptimized
                   className="object-cover object-top pr-6"
                 />
               </div>

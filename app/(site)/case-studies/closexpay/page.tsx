@@ -122,6 +122,7 @@ export default function CloseXPayCaseStudy() {
                 src="/cases/cp-cover.png"
                 alt="CloseXPay Hero"
                 fill
+                unoptimized
                 className="object-cover object-top"
               />
             </div>
@@ -230,6 +231,7 @@ export default function CloseXPayCaseStudy() {
                 src="/cases/cp-brand1.png"
                 alt="CloseXPay Brand"
                 fill
+                unoptimized
                 className="object-cover object-top"
               />
             </div>
@@ -240,6 +242,7 @@ export default function CloseXPayCaseStudy() {
                   src="/cases/cp-brand4.png"
                   alt="Brand colors"
                   fill
+                  unoptimized
                   className="object-cover object-top"
                 />
               </div>
@@ -249,6 +252,7 @@ export default function CloseXPayCaseStudy() {
                   src="/cases/cp-brand3.png"
                   alt="Typography system"
                   fill
+                  unoptimized
                   className="object-cover object-top"
                 />
               </div>
@@ -300,6 +304,7 @@ export default function CloseXPayCaseStudy() {
                 src="/cases/cp-dashboard.png"
                 alt="Dashboard"
                 fill
+                unoptimized
                 className="object-cover object-top"
               />
             </div>
@@ -310,6 +315,7 @@ export default function CloseXPayCaseStudy() {
                   src="/cases/cp-loan.png"
                   alt=""
                   fill
+                  unoptimized
                   className="object-cover object-top"
                 />
               </div>
@@ -319,6 +325,7 @@ export default function CloseXPayCaseStudy() {
                   src="/cases/closexpay-cover.png"
                   alt=""
                   fill
+                  unoptimized
                   className="object-cover object-top"
                 />
               </div>
@@ -379,6 +386,7 @@ export default function CloseXPayCaseStudy() {
                 src="/cases/cp-home.png"
                 alt="Website"
                 fill
+                unoptimized
                 className="object-cover object-top"
               />
             </div>
@@ -389,6 +397,7 @@ export default function CloseXPayCaseStudy() {
                   src="/cases/closexpay-cover.png"
                   alt=""
                   fill
+                  unoptimized
                   className="object-cover object-top"
                 />
               </div>
@@ -398,6 +407,7 @@ export default function CloseXPayCaseStudy() {
                   src="/cases/cp-pricing.png"
                   alt=""
                   fill
+                  unoptimized
                   className="object-cover object-top"
                 />
               </div>
@@ -460,6 +470,7 @@ export default function CloseXPayCaseStudy() {
                 alt="CloseXPay Homepage Breakdown"
                 width={2000}
                 height={4000}
+                unoptimized
                 className="w-full h-auto"
               />
             </div>
@@ -500,6 +511,7 @@ export default function CloseXPayCaseStudy() {
                 alt="CloseXPay Billers Breakdown"
                 width={2000}
                 height={4000}
+                unoptimized
                 className="w-full h-auto"
               />
             </div>
@@ -540,6 +552,7 @@ export default function CloseXPayCaseStudy() {
                 alt="CloseXPay Pricing Breakdown"
                 width={2000}
                 height={4000}
+                unoptimized
                 className="w-full h-auto"
               />
             </div>

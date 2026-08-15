@@ -320,6 +320,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
                 alt={post.title}
                 fill
                 priority
+                unoptimized
                 className="object-cover"
               />
             </div>
@@ -455,6 +456,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
                       src={relatedPost.thumbnail}
                       alt={relatedPost.title}
                       fill
+                      unoptimized
                       className="object-cover transition-transform duration-500 group-hover:scale-[1.03]"
                     />
                   </Link>
