@@ -113,7 +113,13 @@ const Navbar = () => {
       {/* Logo */}
       <div className="hidden md:flex">
         <Link href="/" aria-label="Home">
-          <Image src="/logo-black.svg" alt="Logo" width={48} height={48} unoptimized />
+          <Image
+            src="/logo-black.svg"
+            alt="Logo"
+            width={48}
+            height={48}
+            unoptimized
+          />
         </Link>
       </div>
 

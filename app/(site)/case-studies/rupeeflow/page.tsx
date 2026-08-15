@@ -243,10 +243,16 @@ export default function RupeeFlowCaseStudy() {
                     className="relative rounded-2xl overflow-hidden border border-neutral-200"
                   >
                     <div className="relative aspect-[16/9]">
-                      <Image src={image} alt="" fill unoptimized className="object-cover" />
+                      <Image
+                        src={image}
+                        alt=""
+                        fill
+                        unoptimized
+                        className="object-cover"
+                      />
                     </div>
                   </div>
-                ),
+                )
               )}
             </div>
 
@@ -307,10 +313,16 @@ export default function RupeeFlowCaseStudy() {
                   "
                 >
                   <div className="relative aspect-[16/10]">
-                    <Image src={image} alt="" fill unoptimized className="object-cover" />
+                    <Image
+                      src={image}
+                      alt=""
+                      fill
+                      unoptimized
+                      className="object-cover"
+                    />
                   </div>
                 </div>
-              ),
+              )
             )}
           </div>
         </div>
@@ -403,7 +415,7 @@ export default function RupeeFlowCaseStudy() {
                       />
                     </div>
                   </div>
-                ),
+                )
               )}
             </div>
           </div>
@@ -459,7 +471,7 @@ export default function RupeeFlowCaseStudy() {
                       />
                     </div>
                   </div>
-                ),
+                )
               )}
             </div>
 
