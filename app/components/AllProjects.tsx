@@ -27,7 +27,7 @@ const AllProjects = () => {
             category="FINTECH • PAYMENTS • PRODUCT SYSTEMS"
             title="Designing trust into a fintech onboarding system | RupeeFlow"
             description="Building a cohesive fintech experience across brand identity, onboarding UX, authentication flows, and product systems to reduce hesitation and improve trust perception."
-            imageUrl="/images/rupeeflow-product.png"
+            imageUrl="/images/rupeeflow-product.webp"
             caseStudyLink="/case-studies/rupeeflow"
             tags={["Brand Identity", "KYC UX", "Authentication Flows"]}
             points={[
@@ -44,7 +44,7 @@ const AllProjects = () => {
             category="REAL ESTATE • PLATFORM SYSTEMS • OPERATIONAL TRUST"
             title="Designing a structured real estate platform with operational clarity | Realestify"
             description="Building a scalable marketplace ecosystem focused on property discovery, verification workflows, admin governance, and platform trust."
-            imageUrl="/cases/realestify-cover.png"
+            imageUrl="/cases/realestify-cover.webp"
             caseStudyLink="/case-studies/realestify"
             tags={["Marketplace UX", "Platform Systems", "Operational Trust"]}
             points={[
@@ -62,7 +62,7 @@ const AllProjects = () => {
             category="AI VISIBILITY • BRAND SYSTEMS • OPERATIONAL DASHBOARDS"
             title="Designing AI visibility infrastructure | Copeek"
             description="Creating an operational monitoring platform that helps brands track AI perception, competitive visibility, and narrative consistency across emerging AI systems."
-            imageUrl="/cases/copeek-cover.png"
+            imageUrl="/cases/copeek-cover.webp"
             caseStudyLink="/case-studies/copeek"
             tags={[
               "AI Visibility",
@@ -84,7 +84,7 @@ const AllProjects = () => {
             category="PAYMENTS • BRAND SYSTEMS • USER TRUST"
             title="Building stronger financial trust through product perception | CloseXpay"
             description="Restructuring product communication, onboarding clarity, and trust signaling for a modern digital payments experience."
-            imageUrl="/cases/closexpay-cover1.png"
+            imageUrl="/cases/closexpay-cover1.webp"
             caseStudyLink="/case-studies/closexpay"
             tags={["Brand Systems", "Financial UX", "User Trust"]}
             points={[

@@ -260,6 +260,18 @@ export default function RupeeFlowCaseStudy() {
             <div className="lg:col-span-12 relative rounded-2xl overflow-hidden border border-neutral-200">
               <div className="relative aspect-[16/8]">
                 <Image
+                  src="/cases/rf-brand2.webp"
+                  alt=""
+                  fill
+                  unoptimized
+                  className="object-cover"
+                />
+              </div>
+            </div>
+            {/* Bottom Wide */}
+            <div className="lg:col-span-12 relative rounded-2xl overflow-hidden border border-neutral-200">
+              <div className="relative aspect-[16/8]">
+                <Image
                   src="/cases/rf-brand3.png"
                   alt=""
                   fill

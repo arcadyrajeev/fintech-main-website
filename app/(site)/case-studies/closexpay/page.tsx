@@ -119,7 +119,7 @@ export default function CloseXPayCaseStudy() {
           <div className="mt-16 rounded-2xl overflow-hidden border border-neutral-200 bg-[#111]">
             <div className="relative aspect-[16/9] w-full">
               <Image
-                src="/cases/cp-cover.png"
+                src="/cases/cp-cover.webp"
                 alt="CloseXPay Hero"
                 fill
                 unoptimized
@@ -312,7 +312,7 @@ export default function CloseXPayCaseStudy() {
             <div className="grid grid-rows-2 gap-6">
               <div className="relative rounded-2xl aspect-[16/8] overflow-hidden border border-neutral-200 bg-black">
                 <Image
-                  src="/cases/cp-loan.png"
+                  src="/cases/cp-loan.webp"
                   alt=""
                   fill
                   unoptimized
@@ -322,7 +322,7 @@ export default function CloseXPayCaseStudy() {
 
               <div className="relative rounded-2xl aspect-[16/8] overflow-hidden border border-neutral-200 bg-black">
                 <Image
-                  src="/cases/closexpay-cover.png"
+                  src="/cases/closexpay-cover.webp"
                   alt=""
                   fill
                   unoptimized

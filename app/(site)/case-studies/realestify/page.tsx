@@ -128,7 +128,7 @@ export default function RealestifyCaseStudy() {
           <div className="mt-16 rounded-2xl overflow-hidden border border-neutral-300 bg-[#eeeeee]">
             <div className="relative aspect-[16/8]  mx-auto">
               <Image
-                src="/cases/realestify-cover.png"
+                src="/cases/realestify-cover.webp"
                 alt="Realestify Platform"
                 fill
                 unoptimized
