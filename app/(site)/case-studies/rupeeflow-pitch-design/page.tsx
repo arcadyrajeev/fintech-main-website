@@ -250,7 +250,7 @@ export default function PitchCaseStudy() {
           <div className="mt-14 grid grid-cols-1 lg:grid-cols-[1.5fr_.8fr] gap-6">
             <div className="relative aspect-[16/10] rounded-2xl overflow-hidden border border-neutral-200 bg-[#f7f7f7]">
               <Image
-                src="/cases/rf-rupeeflow-pitch-design.png"
+                src="/cases/rf-pitch1.png"
                 alt=""
                 fill
                 unoptimized
