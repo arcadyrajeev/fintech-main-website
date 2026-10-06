@@ -5,28 +5,28 @@ const BridgeAccent = () => {
   return (
     <section className="w-full  ">
       <div
-        className=" max-w-6xl mx-auto
+        className=" max-w-7xl mx-auto
           px-6 
           py-8 sm:py-20 lg:py-16
           text-left"
       >
         <p
           className="
-             text-3xl  md:text-4xl lg:text-6xl
+             text-3xl  md:text-4xl lg:text-[56px]
             heading
             font-regular md:font-light
             tracking-tight
             text-primary-text
-            mx-auto lg:mx-0
+            mx-auto  ml-10
             leading-[1]
           "
         >
-          We help align product, brand, and narrative for{" "}
+          We turn complex products into clear, credible experiences for{" "}
           <span className="text-accent italic font-medium">
             fintech and operational platforms
           </span>{" "}
           <br />
-          so users, teams, and investors understand the business instantly.
+          making them easier to understand, use, and scale.
         </p>
       </div>
     </section>

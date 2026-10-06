@@ -13,7 +13,7 @@ export default function page() {
   return (
     <main>
       <HeroSection
-        toptext="Onboarding & KYC"
+        toptext="Onboarding and KYC"
         heading1="Reduce"
         headingColor="hesitation "
         heading2="before users abandon the flow."

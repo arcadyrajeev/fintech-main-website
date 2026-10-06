@@ -8,7 +8,7 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title:
-    "Fintech & Operational Product Case Studies | Fixing Clarity, Trust & Conversion Gaps",
+    "Fintech and Operational Product Case Studies | Fixing Clarity, Trust and Conversion Gaps",
 
   description:
     "Case studies on fintech products where growth slowed due to clarity gaps. See how aligning product, narrative, and trust improves decision-making, conversion, and capital readiness.",
@@ -26,7 +26,7 @@ export const metadata: Metadata = {
 
   openGraph: {
     title:
-      "Fintech & Operational Product Case Studies | Clarity, Trust & Conversion",
+      "Fintech and Operational Product Case Studies | Clarity, Trust and Conversion",
     description:
       "Explore how fintech products fail silently through misinterpretation, and how fixing clarity changes outcomes.",
     url: "https://arcadydesign.com/case-studies",
@@ -45,7 +45,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title:
-      "Fintech & Operational Product Case Studies | Product & Narrative Alignment",
+      "Fintech and Operational Product Case Studies | Product and Narrative Alignment",
     description:
       "Real fintech systems where clarity, trust, and decision-making were improved.",
     images: ["/og-image.png"],

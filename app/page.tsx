@@ -20,12 +20,13 @@ import TrustedBySection from "./components/TrustedBySection";
 import BlogSection from "./components/BlogSection";
 import CommonProblemsSection from "./components/CommonProblemsSection";
 import FinalSection from "./components/HomeCTASection";
+import ComplexitySection from "./components/ComplexitySection";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://arcadydesign.com"),
 
   title: {
-    default: "Product Clarity Systems for Fintech & Operational Platforms",
+    default: "Product Clarity Systems for Fintech and Operational Platforms",
     template: "%s | Arcady Design",
   },
 
@@ -51,7 +52,7 @@ export const metadata: Metadata = {
   ],
 
   openGraph: {
-    title: "Product Clarity Systems for Fintech & Operational Platforms",
+    title: "Product Clarity Systems for Fintech and Operational Platforms",
 
     description:
       "We design trust, onboarding, dashboard, and operational UX systems for fintech and high-complexity platforms.",
@@ -76,7 +77,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
 
-    title: "Product Clarity Systems for Fintech & Operational Platforms",
+    title: "Product Clarity Systems for Fintech and Operational Platforms",
 
     description:
       "UX systems, onboarding clarity, trust architecture, and operational product strategy for fintech and complex software platforms.",
@@ -103,6 +104,7 @@ export default function Home() {
         <HomeHero />
         <BridgeAccent />
         <TrustedBySection />
+        <ComplexitySection />
         <ProjectSection />
         <Problem />
 

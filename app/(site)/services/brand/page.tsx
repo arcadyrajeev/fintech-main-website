@@ -12,7 +12,7 @@ export default function page() {
   return (
     <main>
       <HeroSection
-        toptext="Brand Identity & Trust Perception"
+        toptext="Brand Identity and Trust Perception"
         heading1="Perception shapes "
         headingColor="trust"
         heading2=" before products prove themselves."

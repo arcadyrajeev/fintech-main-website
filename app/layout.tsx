@@ -87,7 +87,7 @@ const professionalServiceSchema = {
 
   "@type": "ProfessionalService",
 
-  name: "Arcady - Product Clarity Systems for Fintech & Operational Platforms",
+  name: "Arcady - Product Clarity Systems for Fintech and Operational Platforms",
 
   url: siteUrl,
 
@@ -121,7 +121,7 @@ export const metadata: Metadata = {
 
   title: {
     default:
-      "Product Clarity Systems for Fintech & Operational Platforms | Arcady",
+      "Product Clarity Systems for Fintech and Operational Platforms | Arcady",
 
     template: "%s | Arcady",
   },
@@ -159,7 +159,7 @@ export const metadata: Metadata = {
 
   applicationName: "Arcady",
 
-  category: "Design & Product Strategy",
+  category: "Design and Product Strategy",
 
   alternates: {
     canonical: siteUrl,
@@ -184,7 +184,7 @@ export const metadata: Metadata = {
   },
 
   openGraph: {
-    title: "Product Clarity Systems for Fintech & Operational Platforms",
+    title: "Product Clarity Systems for Fintech and Operational Platforms",
 
     description:
       "UX systems, onboarding clarity, dashboard UX, and trust-focused product strategy for fintech and operational software.",
@@ -213,7 +213,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
 
-    title: "Product Clarity Systems for Fintech & Operational Platforms",
+    title: "Product Clarity Systems for Fintech and Operational Platforms",
 
     description:
       "Operational UX systems, onboarding clarity, dashboard UX, and trust-focused product strategy for fintech and complex software platforms.",

@@ -3,7 +3,7 @@ import AboutClient from "./AboutClient";
 
 export const metadata: Metadata = {
   title:
-    "About Rajeev | Product Clarity Systems for Fintech & Operational Platforms",
+    "About Rajeev | Product Clarity Systems for Fintech and Operational Platforms",
 
   description:
     "Rajeev works with fintech and operational platforms to improve onboarding, product clarity, trust systems, dashboard UX, and narrative structure through operational UX and product strategy.",

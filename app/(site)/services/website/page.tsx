@@ -13,7 +13,7 @@ export default function page() {
   return (
     <main>
       <HeroSection
-        toptext="Website Design & Positioning"
+        toptext="Website Design and Positioning"
         heading1=""
         headingColor="Websites "
         heading2="fail when users cannot understand the value fast enough."
