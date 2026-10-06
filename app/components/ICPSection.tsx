@@ -7,48 +7,49 @@ const cards = [
     title: "Fintech Platforms",
     image: "/images/fintech-platforms.webp",
     description:
-      "Payments, lending, and financial infrastructure products where trust and activation drive growth.",
+      "Financial products where trust, data, transactions, and complex workflows need to feel simple and predictable.",
   },
 
   {
-    title: "Operational SaaS",
-    image: "/images/operational-platforms.webp",
+    title: "HealthTech Platforms",
+    image: "/images/health-tech.webp",
     description:
-      "Workflow-heavy platforms where clarity, hierarchy, and execution determine adoption.",
+      "Healthcare products that coordinate people, processes, permissions, and operational workflows without adding friction.",
   },
 
   {
-    title: "Scaling Product Teams",
-    image: "/images/scaling-teams.webp",
+    title: "Real Estate Platforms",
+    image: "/images/real-estate.webp",
     description:
-      "Teams navigating growth, repositioning, fundraising, or product expansion.",
+      "Property and real estate systems where multiple roles, large datasets, and complex decision-making need a clear product structure.",
   },
 ];
 
 export default function ICPSection() {
   return (
-    <section className="w-full py-24 md:py-32 ">
-      <div className="max-w-7xl mx-auto px-6 sm:px-10 lg:px-20">
+    <section className="w-full py-24 md:py-32">
+      <div className="mx-auto max-w-7xl px-6 sm:px-10 lg:px-20">
         {/* Heading */}
-        <div className="max-w-3xl">
-          <p className="text-xs uppercase bodyfont font-bold tracking-[0.18em]  text-accent ">
+        <div className="max-w-4xl">
+          <p className="bodyfont text-xs font-bold uppercase tracking-[0.18em] text-accent">
             WHO WE WORK WITH
           </p>
 
-          <h2 className="mt-5 heading text-4xl md:text-5xl leading-[0.95] text-primary-text">
-            Built for teams running
+          <h2 className="mt-5 heading text-4xl leading-[0.95] text-primary-text md:text-5xl">
+            Product teams building
             <br />
-            high-complexity products.
+            complex systems.
           </h2>
 
-          <p className="mt-5 text-base text-secondary-text leading-relaxed max-w-2xl">
-            We help product teams improve trust, activation, clarity, and
-            operational effectiveness across complex digital systems.
+          <p className="mt-6 max-w-2xl text-base leading-relaxed text-secondary-text">
+            We work with founders and product teams building data-heavy,
+            workflow-driven products across fintech, healthtech, and real
+            estate.
           </p>
         </div>
 
         {/* Cards */}
-        <div className="mt-14 grid grid-cols-1 md:grid-cols-3 gap-3">
+        <div className="mt-14 grid grid-cols-1 gap-4 md:grid-cols-3">
           {cards.map((card) => (
             <div
               key={card.title}
@@ -56,30 +57,47 @@ export default function ICPSection() {
                 overflow-hidden
                 rounded-xl
                 bg-zinc-200/60
-                transition-all
                 p-2
+                transition-all
                 duration-300
                 hover:-translate-y-1
                 hover:shadow-[0_20px_50px_rgba(0,0,0,0.05)]
               "
             >
               {/* Image */}
-              <div className="relative rounded-lg overflow-hidden aspect-[16/8] overflow-hidden">
+              <div className="relative aspect-[16/9] overflow-hidden rounded-lg">
                 <Image
                   src={card.image}
                   alt={card.title}
                   fill
                   unoptimized
-                  className="object-cover"
+                  className="object-cover transition-transform duration-500 hover:scale-[1.03]"
                 />
-                <h3 className="p-6 absolute pr-20 font-light manrope heading text-4xl  leading-[1] text-white">
+
+                {/* Overlay */}
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/10 to-transparent" />
+
+                <h3
+                  className="
+                    absolute
+                    bottom-5
+                    left-5
+                    pr-6
+                    font-light
+                    heading
+                    text-3xl
+                    leading-[0.95]
+                    text-white
+                    md:text-[32px]
+                  "
+                >
                   {card.title}
                 </h3>
               </div>
 
               {/* Content */}
-              <div className="px-2 py-4 pb-7">
-                <p className="mt-3 text-sm leading-relaxed text-secondary-text">
+              <div className="px-2 py-5 pb-7">
+                <p className="text-sm leading-relaxed text-secondary-text">
                   {card.description}
                 </p>
               </div>

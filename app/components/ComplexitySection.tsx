@@ -139,8 +139,7 @@ function ComplexityCard({ item }: { item: ComplexityItem }) {
             -translate-y-1/2
             overflow-hidden
             rounded-[16px]
-            border
-            border-black/10
+            
             bg-white
             shadow-[0_30px_80px_rgba(0,0,0,0.35)]
             transition-transform
