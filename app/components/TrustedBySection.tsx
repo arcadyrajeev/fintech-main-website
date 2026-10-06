@@ -17,6 +17,7 @@ const logos = [
   "/logos/logo6.svg",
   "/logos/logo7.svg",
   "/logos/logo8.svg",
+  "/logos/logo9.svg",
 ];
 
 export default function TrustedBySection() {
