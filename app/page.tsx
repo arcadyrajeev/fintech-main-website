@@ -105,23 +105,20 @@ export default function Home() {
         <BridgeAccent />
         <TrustedBySection />
         <ComplexitySection />
+
         <ProjectSection />
+
         <Problem />
 
         <Bridge
           size="med"
           text="Individually they are small. But together, they block capital."
         />
-
-        <Services />
-
-        <ICPSection />
         <IndustriesSection />
 
-        <Timeline />
+        <CommonProblemsSection />
 
         <WorkflowSection />
-        <CommonProblemsSection />
 
         <FinalSection />
         <BlogSection />
