@@ -98,9 +98,7 @@ export const metadata: Metadata = {
 export default function Home() {
   return (
     <div className="relative overflow-hidden  ">
-      <ScrollTraceBackground />
-
-      <div className="relative z-10">
+      <div className="relative ">
         <HomeHero />
         <BridgeAccent />
         <TrustedBySection />
