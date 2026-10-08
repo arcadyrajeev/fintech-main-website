@@ -62,15 +62,6 @@ export async function POST(request: Request) {
       );
     }
 
-    if (!process.env.CONTACT_EMAIL) {
-      console.error("CONTACT_EMAIL is missing");
-
-      return NextResponse.json(
-        { error: "Contact email is not configured." },
-        { status: 500 }
-      );
-    }
-
     const body = await request.json();
 
     const {
