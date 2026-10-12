@@ -386,10 +386,14 @@ const HomeHero = () => {
                 to-transparent
                 blur-md
               "
-                animate={{
-                  x: ["0%", "850%"],
-                  opacity: [0, 0.8, 0],
-                }}
+                animate={
+                  isMobile
+                    ? { x: ["0%", "850%"], opacity: [0, 0.8, 0] }
+                    : {
+                        x: ["0%", "850%"],
+                        opacity: [0, 0.8, 0],
+                      }
+                }
                 transition={{
                   duration: 3,
                   delay: 4,
