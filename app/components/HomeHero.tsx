@@ -4,8 +4,9 @@ import React from "react";
 
 import Image from "next/image";
 
-import { motion } from "framer-motion";
 import { useState } from "react";
+import { motion, useReducedMotion } from "framer-motion";
+
 import ProductMVPSprintModal from "./modals/ProductMVPSprintModal";
 import ProductTransformationModal from "./modals/ProductTransformationModal";
 import Link from "next/link";
@@ -13,6 +14,19 @@ import Link from "next/link";
 const HomeHero = () => {
   const [mvpModalOpen, setMvpModalOpen] = useState(false);
   const [transformationModalOpen, setTransformationModalOpen] = useState(false);
+
+  const [isMobile, setIsMobile] = useState(false);
+
+  React.useEffect(() => {
+    const mediaQuery = window.matchMedia("(max-width: 767px)");
+
+    const updateMobile = () => setIsMobile(mediaQuery.matches);
+
+    updateMobile();
+    mediaQuery.addEventListener("change", updateMobile);
+
+    return () => mediaQuery.removeEventListener("change", updateMobile);
+  }, []);
 
   return (
     <div className="w-full px-4 py-6 portrait:lg:py-16 landscape:lg:py-24 lg:px-24">
@@ -126,12 +140,16 @@ const HomeHero = () => {
         bg-blue-500/20
         blur-[100px]
       "
-                animate={{
-                  x: [0, -30, 20, -10, 0],
-                  y: [0, 25, -20, 15, 0],
-                  scale: [1, 1.12, 0.92, 1.08, 1],
-                  opacity: [0.45, 0.6, 0.4, 0.55, 0.45],
-                }}
+                animate={
+                  isMobile
+                    ? { x: 0, y: 0, scale: 1, opacity: 0.45 }
+                    : {
+                        x: [0, -30, 20, -10, 0],
+                        y: [0, 25, -20, 15, 0],
+                        scale: [1, 1.12, 0.92, 1.08, 1],
+                        opacity: [0.45, 0.6, 0.4, 0.55, 0.45],
+                      }
+                }
                 transition={{
                   duration: 16,
                   repeat: Infinity,
@@ -154,19 +172,23 @@ const HomeHero = () => {
         to-cyan-300/5
         blur-[45px]
       "
-                animate={{
-                  x: [0, -35, 20, -15, 0],
-                  y: [0, -20, 15, -10, 0],
-                  rotate: [0, 5, -4, 3, 0],
-                  scale: [1, 1.08, 0.95, 1.05, 1],
-                  borderRadius: [
-                    "45% 55% 60% 40%",
-                    "55% 45% 45% 55%",
-                    "40% 60% 55% 45%",
-                    "60% 40% 50% 50%",
-                    "45% 55% 60% 40%",
-                  ],
-                }}
+                animate={
+                  isMobile
+                    ? { x: 0, y: 0, scale: 1, opacity: 0.45 }
+                    : {
+                        x: [0, -35, 20, -15, 0],
+                        y: [0, -20, 15, -10, 0],
+                        rotate: [0, 5, -4, 3, 0],
+                        scale: [1, 1.08, 0.95, 1.05, 1],
+                        borderRadius: [
+                          "45% 55% 60% 40%",
+                          "55% 45% 45% 55%",
+                          "40% 60% 55% 45%",
+                          "60% 40% 50% 50%",
+                          "45% 55% 60% 40%",
+                        ],
+                      }
+                }
                 transition={{
                   duration: 18,
                   repeat: Infinity,
@@ -282,20 +304,24 @@ const HomeHero = () => {
                     background:
                       "radial-gradient(circle at 50% 50%, rgba(70,130,255,0.95) 0%, rgba(40,90,255,0.75) 22%, rgba(30,70,255,0.4) 48%, transparent 75%)",
                   }}
-                  animate={{
-                    x: [-20, 35, 70, 20, -35, -20],
-                    y: [10, -20, 25, 55, 20, 10],
-                    scale: [1, 1.12, 0.9, 1.15, 0.94, 1],
-                    rotate: [-8, 12, 22, 5, -15, -8],
-                    borderRadius: [
-                      "45% 55% 60% 40%",
-                      "60% 40% 45% 55%",
-                      "40% 60% 55% 45%",
-                      "55% 45% 40% 60%",
-                      "40% 60% 50% 50%",
-                      "45% 55% 60% 40%",
-                    ],
-                  }}
+                  animate={
+                    isMobile
+                      ? { x: 0, y: 0, scale: 1, opacity: 0.45 }
+                      : {
+                          x: [-20, 35, 70, 20, -35, -20],
+                          y: [10, -20, 25, 55, 20, 10],
+                          scale: [1, 1.12, 0.9, 1.15, 0.94, 1],
+                          rotate: [-8, 12, 22, 5, -15, -8],
+                          borderRadius: [
+                            "45% 55% 60% 40%",
+                            "60% 40% 45% 55%",
+                            "40% 60% 55% 45%",
+                            "55% 45% 40% 60%",
+                            "40% 60% 50% 50%",
+                            "45% 55% 60% 40%",
+                          ],
+                        }
+                  }
                   transition={{
                     duration: 8,
                     ease: "easeInOut",
@@ -319,20 +345,24 @@ const HomeHero = () => {
                     background:
                       "radial-gradient(circle at 50% 50%, rgba(255,140,40,0.95) 0%, rgba(255,100,20,0.75) 22%, rgba(255,70,10,0.4) 48%, transparent 75%)",
                   }}
-                  animate={{
-                    x: [15, -25, -55, -10, 40, 15],
-                    y: [-10, 25, -15, -45, 15, -10],
-                    scale: [0.95, 1.1, 0.88, 1.15, 0.96, 0.95],
-                    rotate: [-5, 15, 25, -5, -18, -5],
-                    borderRadius: [
-                      "50% 50% 45% 55%",
-                      "60% 40% 55% 45%",
-                      "40% 60% 45% 55%",
-                      "55% 45% 60% 40%",
-                      "45% 55% 40% 60%",
-                      "50% 50% 45% 55%",
-                    ],
-                  }}
+                  animate={
+                    isMobile
+                      ? { x: 0, y: 0, scale: 1, opacity: 0.45 }
+                      : {
+                          x: [15, -25, -55, -10, 40, 15],
+                          y: [-10, 25, -15, -45, 15, -10],
+                          scale: [0.95, 1.1, 0.88, 1.15, 0.96, 0.95],
+                          rotate: [-5, 15, 25, -5, -18, -5],
+                          borderRadius: [
+                            "50% 50% 45% 55%",
+                            "60% 40% 55% 45%",
+                            "40% 60% 45% 55%",
+                            "55% 45% 60% 40%",
+                            "45% 55% 40% 60%",
+                            "50% 50% 45% 55%",
+                          ],
+                        }
+                  }
                   transition={{
                     duration: 6,
                     ease: "easeInOut",
@@ -381,10 +411,14 @@ const HomeHero = () => {
         bg-blue-300/20
         blur-[2px]
       "
-                animate={{
-                  width: [96, 150, 80, 130, 96],
-                  opacity: [0.2, 0.5, 0.25, 0.45, 0.2],
-                }}
+                animate={
+                  isMobile
+                    ? { width: 96, opacity: 0.2 }
+                    : {
+                        width: [96, 150, 80, 130, 96],
+                        opacity: [0.2, 0.5, 0.25, 0.45, 0.2],
+                      }
+                }
                 transition={{
                   duration: 9,
                   repeat: Infinity,
@@ -536,11 +570,15 @@ const HomeHero = () => {
                   background:
                     "radial-gradient(circle, rgba(50,130,255,0.28) 0%, rgba(60,140,255,0.12) 42%, transparent 72%)",
                 }}
-                animate={{
-                  x: [0, -20, 12, 0],
-                  y: [0, 18, -12, 0],
-                  scale: [1, 1.08, 0.96, 1],
-                }}
+                animate={
+                  isMobile
+                    ? { x: 0, y: 0, scale: 1 }
+                    : {
+                        x: [0, -20, 12, 0],
+                        y: [0, 18, -12, 0],
+                        scale: [1, 1.08, 0.96, 1],
+                      }
+                }
                 transition={{
                   duration: 7,
                   repeat: Infinity,
@@ -580,13 +618,17 @@ const HomeHero = () => {
                   style={{
                     transformStyle: "preserve-3d",
                   }}
-                  animate={{
-                    rotateY: [-24, -17, -27, -24],
-                    rotateX: [7, 11, 4, 7],
-                    translateZ: [0, 18, -5, 0],
-                    x: [0, 6, -4, 0],
-                    y: [0, -4, 4, 0],
-                  }}
+                  animate={
+                    isMobile
+                      ? { rotateY: -24, rotateX: 7, translateZ: 0, x: 0, y: 0 }
+                      : {
+                          rotateY: [-24, -17, -27, -24],
+                          rotateX: [7, 11, 4, 7],
+                          translateZ: [0, 18, -5, 0],
+                          x: [0, 6, -4, 0],
+                          y: [0, -4, 4, 0],
+                        }
+                  }
                   transition={{
                     duration: 7,
                     repeat: Infinity,
@@ -624,13 +666,17 @@ const HomeHero = () => {
                   style={{
                     transformStyle: "preserve-3d",
                   }}
-                  animate={{
-                    rotateY: [-17, -10, -20, -17],
-                    rotateX: [5, 9, 2, 5],
-                    translateZ: [25, 40, 15, 25],
-                    x: [0, -5, 4, 0],
-                    y: [0, 4, -3, 0],
-                  }}
+                  animate={
+                    isMobile
+                      ? { rotateY: -17, rotateX: 5, translateZ: 25, x: 0, y: 0 }
+                      : {
+                          rotateY: [-17, -10, -20, -17],
+                          rotateX: [5, 9, 2, 5],
+                          translateZ: [25, 40, 15, 25],
+                          x: [0, -5, 4, 0],
+                          y: [0, 4, -3, 0],
+                        }
+                  }
                   transition={{
                     duration: 6,
                     repeat: Infinity,
@@ -688,13 +734,17 @@ const HomeHero = () => {
                   style={{
                     transformStyle: "preserve-3d",
                   }}
-                  animate={{
-                    rotateY: [-10, -3, -13, -10],
-                    rotateX: [3, 7, -1, 3],
-                    translateZ: [50, 70, 40, 50],
-                    x: [0, 4, -3, 0],
-                    y: [0, -3, 3, 0],
-                  }}
+                  animate={
+                    isMobile
+                      ? { rotateY: -10, rotateX: 3, translateZ: 50, x: 0, y: 0 }
+                      : {
+                          rotateY: [-10, -3, -13, -10],
+                          rotateX: [3, 7, -1, 3],
+                          translateZ: [50, 70, 40, 50],
+                          x: [0, 4, -3, 0],
+                          y: [0, -3, 3, 0],
+                        }
+                  }
                   transition={{
                     duration: 5.5,
                     repeat: Infinity,

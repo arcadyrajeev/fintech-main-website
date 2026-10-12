@@ -3,8 +3,9 @@
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { ChevronDown } from "lucide-react";
+
 import { useEffect, useRef, useState } from "react";
+import { ArrowUpRight, ChevronDown } from "lucide-react";
 
 const Navbar = () => {
   const pathname = usePathname();
@@ -167,7 +168,8 @@ const Navbar = () => {
           onMouseEnter={() => setServicesOpen(true)}
           onMouseLeave={() => setServicesOpen(false)}
         >
-          <button
+          <Link
+            href="/services"
             type="button"
             onClick={() => setServicesOpen((prev) => !prev)}
             className={`
@@ -191,7 +193,7 @@ const Navbar = () => {
                 servicesOpen ? "rotate-180" : ""
               }`}
             />
-          </button>
+          </Link>
 
           {/* Services Dropdown */}
           <div
@@ -212,6 +214,168 @@ const Navbar = () => {
             `}
           >
             <div className="flex flex-col">
+              {/* Product Pathways */}
+
+              <Link
+                href="/services/mvp-sprint"
+                onClick={() => setServicesOpen(false)}
+                className="
+    group relative mb-2
+    flex h-[74px] w-full
+    items-center justify-between
+    overflow-hidden
+    rounded-xl
+    border border-white/10
+    bg-gradient-to-br from-[#07152f] via-[#102d69] to-[#23479a]
+    px-5
+    shadow-[0_8px_30px_rgba(11,23,51,0.18)]
+    transition-all duration-300
+    hover:-translate-y-[1px]
+    hover:shadow-[0_12px_35px_rgba(11,23,51,0.28)]
+  "
+              >
+                {/* Ambient glow */}
+                <div
+                  className="
+      pointer-events-none
+      absolute -right-16 -top-20
+      h-40 w-40
+      rounded-full
+      bg-blue-300/20
+      blur-3xl
+      transition-all duration-500
+      group-hover:scale-125
+      group-hover:bg-blue-200/30
+    "
+                />
+
+                {/* Light sweep */}
+                <div
+                  className="
+      pointer-events-none
+      absolute -left-20 top-0
+      h-full w-32
+      rotate-[25deg]
+      bg-white/[0.07]
+      blur-xl
+      transition-transform duration-700
+      group-hover:translate-x-[280px]
+    "
+                />
+
+                <div className="relative z-10">
+                  <div className="mb-1 flex items-center gap-2">
+                    <span className="text-[8px] font-semibold tracking-[0.2em] text-blue-200">
+                      - NEW PRODUCT
+                    </span>
+                  </div>
+
+                  <span className="heading text-[15px] font-semibold tracking-[-0.02em] text-white">
+                    Product MVP Sprint
+                  </span>
+                </div>
+
+                <div
+                  className="
+      relative z-10
+      flex h-9 w-9
+      items-center justify-center
+      rounded-full
+      border border-white/20
+      bg-white/10
+      text-white
+      backdrop-blur-sm
+      transition-all duration-300
+      group-hover:border-white/40
+      group-hover:bg-white/20
+      group-hover:-translate-y-0.5
+      group-hover:translate-x-0.5
+    "
+                >
+                  <ArrowUpRight size={16} strokeWidth={1.8} />
+                </div>
+              </Link>
+
+              <Link
+                href="/services/product-transformation"
+                onClick={() => setServicesOpen(false)}
+                className="
+    group relative mb-2
+    flex h-[74px] w-full
+    items-center justify-between
+    overflow-hidden
+    rounded-xl
+    border border-blue-100
+    bg-gradient-to-br from-white via-[#f2f7ff] to-[#dcecff]
+    px-5
+    shadow-[0_8px_30px_rgba(37,99,235,0.08)]
+    transition-all duration-300
+    hover:-translate-y-[1px]
+    hover:border-blue-200
+    hover:shadow-[0_12px_35px_rgba(37,99,235,0.14)]
+  "
+              >
+                {/* Ambient glow */}
+                <div
+                  className="
+      pointer-events-none
+      absolute -right-16 -top-20
+      h-40 w-40
+      rounded-full
+      bg-blue-400/10
+      blur-3xl
+      transition-all duration-500
+      group-hover:scale-125
+      group-hover:bg-blue-400/20
+    "
+                />
+
+                {/* Glass reflection */}
+                <div
+                  className="
+      pointer-events-none
+      absolute -left-20 top-0
+      h-full w-32
+      rotate-[25deg]
+      bg-white/60
+      blur-xl
+      transition-transform duration-700
+      group-hover:translate-x-[280px]
+    "
+                />
+
+                <div className="relative z-10">
+                  <div className="mb-1 flex items-center gap-2">
+                    <span className="text-[8px] font-semibold tracking-[0.2em] text-blue-600">
+                      - EXISTING PRODUCT
+                    </span>
+                  </div>
+
+                  <span className="heading text-[15px] font-semibold tracking-[-0.02em] text-[#243653]">
+                    Product Transformation
+                  </span>
+                </div>
+
+                <div
+                  className="
+      relative z-10
+      flex h-9 w-9
+      items-center justify-center
+      rounded-full
+      border border-blue-200
+      bg-white/70
+      text-[#18366f]
+      backdrop-blur-sm
+      transition-all duration-300
+      group-hover:border-blue-300
+      group-hover:bg-white
+      group-hover:-translate-y-0.5
+      group-hover:translate-x-0.5
+    "
+                >
+                  <ArrowUpRight size={16} strokeWidth={1.8} />
+                </div>
+              </Link>
               {services.map((service) => (
                 <Link
                   key={service.name}
