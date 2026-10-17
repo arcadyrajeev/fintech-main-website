@@ -130,9 +130,23 @@ const HomeHero = () => {
               /* Static visual for mobile and tablets */
               <div className="pointer-events-none absolute inset-0 overflow-hidden">
                 <div className="absolute -right-16 -top-16 h-64 w-64 rounded-full bg-blue-500/20 blur-3xl" />
-
                 <div className="absolute bottom-0 right-0 h-48 w-72 rounded-full bg-gradient-to-br from-blue-400/20 via-blue-500/10 to-cyan-300/5 blur-3xl" />
-
+                {/* Static blue glow */}
+                <div
+                  className=" absolute top-[35%] -left-10 h-[160px] w-[240px] rounded-full blur-[55px] mix-blend-screen "
+                  style={{
+                    background:
+                      "radial-gradient(circle at 50% 50%, rgba(70,130,255,0.95) 0%, rgba(40,90,255,0.75) 22%, rgba(30,70,255,0.4) 48%, transparent 75%)",
+                  }}
+                />
+                {/* Static orange glow */}
+                <div
+                  className="absolute left-10 top-[45%] h-[230px] w-[310px] rounded-full blur-[60px] mix-blend-screen "
+                  style={{
+                    background:
+                      "radial-gradient(circle at 50% 50%, rgba(255, 185, 167, 0.95) 0%, rgba(255, 103, 56, 0.9) 22%, rgba(255,70,10,0.4) 48%, transparent 75%)",
+                  }}
+                />
                 <div className="absolute inset-y-0 right-[5%] z-10 flex gap-3">
                   {[1, 2, 3, 4].map((panel) => (
                     <div
@@ -141,22 +155,6 @@ const HomeHero = () => {
                     />
                   ))}
                 </div>
-
-                <div
-                  className="absolute left-[20%] top-[40%] h-44 w-56 rounded-full blur-3xl"
-                  style={{
-                    background:
-                      "radial-gradient(circle, rgba(70,130,255,0.65), transparent 75%)",
-                  }}
-                />
-
-                <div
-                  className="absolute left-[35%] top-[55%] h-40 w-48 rounded-full blur-3xl"
-                  style={{
-                    background:
-                      "radial-gradient(circle, rgba(255,140,40,0.45), transparent 75%)",
-                  }}
-                />
               </div>
             ) : (
               <div className="pointer-events-none absolute inset-0 overflow-hidden">

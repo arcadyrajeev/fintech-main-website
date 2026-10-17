@@ -168,8 +168,7 @@ const Navbar = () => {
           onMouseEnter={() => setServicesOpen(true)}
           onMouseLeave={() => setServicesOpen(false)}
         >
-          <Link
-            href="/services"
+          <button
             type="button"
             onClick={() => setServicesOpen((prev) => !prev)}
             className={`
@@ -193,7 +192,7 @@ const Navbar = () => {
                 servicesOpen ? "rotate-180" : ""
               }`}
             />
-          </Link>
+          </button>
 
           {/* Services Dropdown */}
           <div
@@ -235,18 +234,21 @@ const Navbar = () => {
   "
               >
                 {/* Ambient glow */}
+
                 <div
-                  className="
-      pointer-events-none
-      absolute -right-16 -top-20
-      h-40 w-40
-      rounded-full
-      bg-blue-300/20
-      blur-3xl
-      transition-all duration-500
-      group-hover:scale-125
-      group-hover:bg-blue-200/30
-    "
+                  className="absolute left-30 top-0 h-[180px] w-[180px] rounded-full blur-[40px] mix-blend-screen "
+                  style={{
+                    background:
+                      "radial-gradient(circle at 50% 50%, rgba(244, 144, 97, 0.95) 0%, rgba(255, 126, 56, 0.9) 22%, rgba(255,70,10,0.4) 48%, transparent 75%)",
+                  }}
+                />
+
+                <div
+                  className="absolute left-10 top-0 h-[180px] w-[180px] rounded-full blur-[40px] mix-blend-screen "
+                  style={{
+                    background:
+                      "radial-gradient(circle at 50% 50%, rgba(70,130,255,0.95) 0%, rgba(40,90,255,0.75) 22%, rgba(30,70,255,0.4) 48%, transparent 75%)",
+                  }}
                 />
 
                 {/* Light sweep */}
@@ -305,7 +307,7 @@ const Navbar = () => {
     items-center justify-between
     overflow-hidden
     rounded-xl
-    border border-blue-100
+    border border-blue-500
     bg-gradient-to-br from-white via-[#f2f7ff] to-[#dcecff]
     px-5
     shadow-[0_8px_30px_rgba(37,99,235,0.08)]
@@ -317,17 +319,11 @@ const Navbar = () => {
               >
                 {/* Ambient glow */}
                 <div
-                  className="
-      pointer-events-none
-      absolute -right-16 -top-20
-      h-40 w-40
-      rounded-full
-      bg-blue-400/10
-      blur-3xl
-      transition-all duration-500
-      group-hover:scale-125
-      group-hover:bg-blue-400/20
-    "
+                  className="absolute left-30 top-0 h-[180px] w-[180px] rounded-full blur-[40px]  "
+                  style={{
+                    background:
+                      "radial-gradient(circle at 50% 50%, rgba(97, 180, 244, 0.95) 0%, rgba(56, 156, 255, 0.9) 22%, rgba(10, 108, 255, 0.4) 48%, transparent 75%)",
+                  }}
                 />
 
                 {/* Glass reflection */}

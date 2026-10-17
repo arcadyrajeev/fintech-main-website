@@ -911,7 +911,7 @@ export default function RealestifyCaseStudy() {
 
       <section className="w-full pb-24 md:pb-32 pt-24">
         <div className="mx-auto max-w-7xl px-6 sm:px-10 lg:px-24">
-          <div className="grid grid-cols-1 gap-12 lg:grid-cols-[0.65fr_1.35fr] lg:gap-20">
+          <div className="grid grid-cols-1 gap-12 lg:grid-cols-[0.75fr_1.25fr] lg:gap-20">
             <div>
               <p className="bodyfont text-xs font-semibold uppercase tracking-[0.25em] text-orange-600">
                 Discovery
@@ -954,11 +954,11 @@ export default function RealestifyCaseStudy() {
               <div
                 data-lenis-prevent
                 className="
-      h-[420px]
+      h-[60vh]
       overflow-y-auto
       overscroll-contain
       md:h-[500px]
-      lg:h-[560px]
+      lg:h-[650px]
       [&::-webkit-scrollbar]:w-0
       [&::-webkit-scrollbar]:bg-transparent
       [scrollbar-width:none]
