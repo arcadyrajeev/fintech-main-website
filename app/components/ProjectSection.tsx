@@ -1,13 +1,10 @@
 import React from "react";
-import Link from "next/link";
-import { ArrowUpRight } from "lucide-react";
 import ProjectCard from "./ProjectCard";
-import CompactCaseCard from "./CompactCaseCard";
 import CTAButton from "./CTAButton";
 
 const ProjectSection = () => {
   return (
-    <section className="w-full ">
+    <section className="w-full">
       <div
         className="
           max-w-7xl mx-auto
@@ -55,51 +52,73 @@ const ProjectSection = () => {
               mx-auto
             "
           >
-            These projects focused on reducing hesitation, improving product
-            clarity, and restructuring trust across high-complexity platforms.
+            We work across product strategy, workflows, interfaces, and systems
+            to make complex platforms easier to understand, navigate, and trust.
           </p>
         </div>
 
-        {/* Main Layout */}
-        <div className="flex flex-col gap-8">
-          {/* Expanded Featured */}
+        {/* Standard Case Studies */}
+        <div className="flex flex-col gap-10 lg:gap-14">
+          {/* 03 - Realestify */}
+          <ProjectCard
+            category="REAL ESTATE • PLATFORM SYSTEMS • OPERATIONAL TRUST"
+            title="Building operational trust in a real estate platform | Realestify"
+            description="Structuring a luxury real estate marketplace around property discovery, verification, and multi-role workflows, creating a more cohesive experience for buyers, sellers, and administrators."
+            imageUrl="/cases/realestify-cover.png"
+            caseStudyLink="/case-studies/realestify"
+            tags={[
+              "Marketplace UX",
+              "Role-Based Systems",
+              "Platform Architecture",
+            ]}
+            points={[
+              "Structured multi-role user experiences",
+              "Integrated property discovery and verification",
+              "Designed connected marketplace workflows",
+            ]}
+            outcome="Connected Marketplace Experience"
+            focus="Platform and Workflow Systems"
+            accent="#e1481e"
+          />
+          {/* 01 - RupeeFlow */}
           <ProjectCard
             category="FINTECH • PAYMENTS • PRODUCT SYSTEMS"
             title="Designing trust into a fintech onboarding system | RupeeFlow"
-            description="Building a cohesive fintech experience across brand identity, onboarding UX, authentication flows, and product systems to reduce hesitation and improve trust perception."
+            description="Bringing brand identity, onboarding UX, authentication flows, and product systems into one cohesive fintech experience to make financial operations easier to understand and trust."
             imageUrl="/images/rupeeflow-product.png"
             caseStudyLink="/case-studies/rupeeflow"
             tags={["Brand Identity", "KYC UX", "Authentication Flows"]}
             points={[
-              "Reduced onboarding hesitation",
-              "Improved trust perception across touchpoints",
-              "Created clearer product and operational narrative",
+              "Unified brand and product experience",
+              "Structured onboarding and KYC journeys",
+              "Established consistent product interaction patterns",
             ]}
-            outcome="Improved Trust & Onboarding Clarity"
+            outcome="Trust & Onboarding Clarity"
             focus="Brand Systems and Product UX"
             accent="#118479"
           />
 
-          {/* Compact Cases */}
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            <CompactCaseCard
-              category="AI VISIBILITY • OPERATIONAL DASHBOARDS"
-              title="Designing AI visibility infrastructure"
-              imageUrl="/cases/copeek-cover.png"
-              caseStudyLink="/case-studies/copeek"
-              accent="#1eabab"
-            />
-
-            <CompactCaseCard
-              category="REAL ESTATE • PLATFORM SYSTEMS • OPERATIONAL TRUST"
-              title="Building operational trust in a real estate platform"
-              imageUrl="/cases/realestify-cover.png"
-              caseStudyLink="/case-studies/realestify"
-              accent="#e1481e"
-            />
-          </div>
+          {/* 02 - Copeek */}
+          <ProjectCard
+            category="AI VISIBILITY • OPERATIONAL DASHBOARDS"
+            title="Designing AI visibility infrastructure | Copeek"
+            description="Exploring how complex AI visibility data can be structured into clearer operational dashboards, helping users understand performance, identify patterns, and navigate information."
+            imageUrl="/cases/copeek-cover.png"
+            caseStudyLink="/case-studies/copeek"
+            tags={["AI Visibility", "Data Dashboards", "Product UX"]}
+            points={[
+              "Structured information hierarchy",
+              "Clearer presentation of operational data",
+              "Dashboard-focused product experience",
+            ]}
+            outcome="AI Visibility & Data Clarity"
+            focus="Operational Dashboards"
+            accent="#1eabab"
+          />
         </div>
-        <div className="pt-10">
+
+        {/* View All */}
+        <div className="pt-12 flex justify-center">
           <CTAButton href="/case-studies" text="View All Case Studies" />
         </div>
       </div>

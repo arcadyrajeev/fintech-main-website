@@ -22,6 +22,27 @@ const AllProjects = () => {
             gap-16 sm:gap-20 lg:gap-24
           "
         >
+          {/* 03 - Realestify */}
+          <ProjectCard
+            category="REAL ESTATE • PLATFORM SYSTEMS • OPERATIONAL TRUST"
+            title="Building operational trust in a real estate platform | Realestify"
+            description="Structuring a luxury real estate marketplace around property discovery, verification, and multi-role workflows, creating a more cohesive experience for buyers, sellers, and administrators."
+            imageUrl="/cases/realestify-cover.png"
+            caseStudyLink="/case-studies/realestify"
+            tags={[
+              "Marketplace UX",
+              "Role-Based Systems",
+              "Platform Architecture",
+            ]}
+            points={[
+              "Structured multi-role user experiences",
+              "Integrated property discovery and verification",
+              "Designed connected marketplace workflows",
+            ]}
+            outcome="Connected Marketplace Experience"
+            focus="Platform and Workflow Systems"
+            accent="#e1481e"
+          />
           {/* RUPEEFLOW */}
           <ProjectCard
             category="FINTECH • PAYMENTS • PRODUCT SYSTEMS"
@@ -38,23 +59,6 @@ const AllProjects = () => {
             outcome="Improved Trust & Onboarding Clarity"
             focus="Brand Systems and Product UX"
             accent="#0a9f7a"
-          />
-
-          <ProjectCard
-            category="REAL ESTATE • PLATFORM SYSTEMS • OPERATIONAL TRUST"
-            title="Designing a structured real estate platform with operational clarity | Realestify"
-            description="Building a scalable marketplace ecosystem focused on property discovery, verification workflows, admin governance, and platform trust."
-            imageUrl="/cases/realestify-cover.webp"
-            caseStudyLink="/case-studies/realestify"
-            tags={["Marketplace UX", "Platform Systems", "Operational Trust"]}
-            points={[
-              "Structured property discovery flows",
-              "Clearer governance and moderation systems",
-              "Reduced operational friction across workflows",
-            ]}
-            outcome="Stronger Marketplace Trust and Workflow Clarity"
-            focus="Platform Architecture and Trust Systems"
-            accent="#345e8a"
           />
 
           {/* COPEEK */}
