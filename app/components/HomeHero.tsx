@@ -604,7 +604,7 @@ const HomeHero = () => {
                 </div>
               </div>
             ) : (
-              <div className="pointer-events-none absolute inset-0 overflow-hidden">
+              <div className="pointer-events-none absolute inset-0 overflow-hidden opacity-[0.7]">
                 {/* Ambient blue light */}
                 <motion.div
                   className="
@@ -977,7 +977,7 @@ const HomeHero = () => {
                 ].map((item) => (
                   <span
                     key={item}
-                    className="rounded-full border border-slate-200 bg-white/70 px-3 py-1.5 text-[10px] text-slate-500"
+                    className="rounded-full border border-slate-400 bg-white/70 px-3 py-1.5 text-[10px] text-slate-700"
                   >
                     {item}
                   </span>
