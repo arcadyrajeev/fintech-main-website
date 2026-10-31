@@ -236,7 +236,7 @@ const Navbar = () => {
                 {/* Ambient glow */}
 
                 <div
-                  className="absolute left-30 top-0 h-[180px] w-[180px] rounded-full blur-[40px] mix-blend-screen "
+                  className="absolute -right-10 top-0 h-[180px] w-[180px] rounded-full blur-[40px] mix-blend-screen "
                   style={{
                     background:
                       "radial-gradient(circle at 50% 50%, rgba(244, 144, 97, 0.95) 0%, rgba(255, 126, 56, 0.9) 22%, rgba(255,70,10,0.4) 48%, transparent 75%)",
@@ -319,7 +319,7 @@ const Navbar = () => {
               >
                 {/* Ambient glow */}
                 <div
-                  className="absolute left-30 top-0 h-[180px] w-[180px] rounded-full blur-[40px]  "
+                  className="absolute -right-10 top-0 h-[180px] w-[180px] rounded-full blur-[40px]  "
                   style={{
                     background:
                       "radial-gradient(circle at 50% 50%, rgba(97, 180, 244, 0.95) 0%, rgba(56, 156, 255, 0.9) 22%, rgba(10, 108, 255, 0.4) 48%, transparent 75%)",

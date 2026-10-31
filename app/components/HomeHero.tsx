@@ -40,9 +40,9 @@ const HomeHero = () => {
       </p>
 
       {/* Existing Heading */}
-      <h1 className="heading w-full px-3 text-5xl text-primary-text md:text-6xl lg:w-[70%] lg:text-[7vw] portrait:w-[80%] landscape:w-[80%]">
-        Make your business legible to{" "}
-        <span className="italic text-accent">Capital</span>
+      <h1 className="heading w-full tracking-tight px-3 text-5xl text-primary-text md:text-6xl lg:w-[70%] lg:text-[7vw] portrait:w-[80%] landscape:w-[80%]">
+        Stop losing <span className="italic text-accent">Revenue</span> to
+        product complexity
       </h1>
 
       {/* Existing Subheading */}
@@ -76,9 +76,8 @@ const HomeHero = () => {
 
       {/* Existing statement */}
       <div className="flex w-full justify-end">
-        <h1 className="heading p-4 text-right text-2xl font-light tracking-tight text-primary-text/90 portrait:md:-mt-[6vw] landscape:xl:-mt-[7vw] lg:text-4xl lg:leading-[1.2]">
-          Metrics improve, <br />
-          But capital doesn&apos;t follow?
+        <h1 className="heading p-4 text-right text-2xl font-light tracking-tight text-primary-text/90 portrait:md:-mt-[2vw] landscape:xl:-mt-[7vw] lg:text-4xl lg:leading-[1.2]">
+          Make complex products <br /> work like clear systems.
         </h1>
       </div>
 
@@ -960,7 +959,7 @@ const HomeHero = () => {
           max-w-md
           text-sm
           leading-6
-          text-slate-800
+          text-slate-950
         "
                 >
                   Restructure an existing product when complexity, weak

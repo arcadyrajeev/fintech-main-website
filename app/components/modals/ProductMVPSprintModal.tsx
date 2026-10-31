@@ -17,7 +17,7 @@ export default function ProductMVPSprintModal({
   const [success, setSuccess] = useState(false);
   const [error, setError] = useState("");
 
-  // Prevent background scrolling while modal is open
+  // Prevent background scrolling
   useEffect(() => {
     if (!open) return;
 
@@ -33,8 +33,8 @@ export default function ProductMVPSprintModal({
     if (!open) return;
 
     const handleKeyDown = (event: KeyboardEvent) => {
-      if (event.key === "Escape") {
-        onClose();
+      if (event.key === "Escape" && !loading) {
+        handleClose();
       }
     };
 
@@ -43,32 +43,23 @@ export default function ProductMVPSprintModal({
     return () => {
       window.removeEventListener("keydown", handleKeyDown);
     };
-  }, [open, onClose]);
+  }, [open, loading]);
 
   async function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
 
+    const formElement = event.currentTarget;
+    const form = new FormData(formElement);
+
     setLoading(true);
     setError("");
 
-    const form = new FormData(event.currentTarget);
-
     const payload = {
       pathway: "Product MVP Sprint",
-
-      name: String(form.get("name") || ""),
-      email: String(form.get("email") || ""),
-      company: String(form.get("company") || ""),
-      website: String(form.get("website") || ""),
-
-      product: String(form.get("product") || ""),
+      name: String(form.get("name") || "").trim(),
+      email: String(form.get("email") || "").trim(),
+      product: String(form.get("product") || "").trim(),
       stage: String(form.get("stage") || ""),
-      help: String(form.get("help") || ""),
-
-      budget: String(form.get("budget") || ""),
-      timeline: String(form.get("timeline") || ""),
-
-      message: String(form.get("message") || ""),
     };
 
     try {
@@ -86,9 +77,8 @@ export default function ProductMVPSprintModal({
         throw new Error(data?.error || "Something went wrong.");
       }
 
+      formElement.reset();
       setSuccess(true);
-
-      event.currentTarget.reset();
     } catch (err) {
       setError(
         err instanceof Error
@@ -134,35 +124,14 @@ export default function ProductMVPSprintModal({
             aria-modal="true"
             aria-labelledby="mvp-modal-title"
             className="
-              relative
-              z-10
-              flex
-              max-h-[92vh]
-              w-full
-              max-w-[760px]
-              flex-col
-              overflow-hidden
-              rounded-[28px]
-              border
-              border-white/70
-              bg-[#f5f7fa]
+              relative z-10 flex max-h-[92vh] w-full max-w-[760px]
+              flex-col overflow-hidden rounded-[28px]
+              border border-white/70 bg-[#f5f7fa]
               shadow-[0_30px_100px_rgba(0,0,0,0.25)]
             "
-            initial={{
-              opacity: 0,
-              y: 30,
-              scale: 0.97,
-            }}
-            animate={{
-              opacity: 1,
-              y: 0,
-              scale: 1,
-            }}
-            exit={{
-              opacity: 0,
-              y: 20,
-              scale: 0.98,
-            }}
+            initial={{ opacity: 0, y: 30, scale: 0.97 }}
+            animate={{ opacity: 1, y: 0, scale: 1 }}
+            exit={{ opacity: 0, y: 20, scale: 0.98 }}
             transition={{
               duration: 0.35,
               ease: [0.22, 1, 0.36, 1],
@@ -172,15 +141,9 @@ export default function ProductMVPSprintModal({
             {/* Top gradient */}
             <div
               className="
-                pointer-events-none
-                absolute
-                right-[-100px]
-                top-[-120px]
-                h-[300px]
-                w-[300px]
-                rounded-full
-                bg-blue-400/20
-                blur-[80px]
+                pointer-events-none absolute right-[-100px] top-[-120px]
+                h-[300px] w-[300px] rounded-full
+                bg-blue-400/20 blur-[80px]
               "
             />
 
@@ -192,27 +155,12 @@ export default function ProductMVPSprintModal({
                 disabled={loading}
                 aria-label="Close"
                 className="
-                  absolute
-                  right-5
-                  top-5
-                  flex
-                  h-9
-                  w-9
-                  items-center
-                  justify-center
-                  rounded-full
-                  border
-                  border-slate-200
-                  bg-white/80
-                  text-slate-500
-                  transition
-                  hover:bg-white
-                  hover:text-slate-900
-                  disabled:cursor-not-allowed
-                  disabled:opacity-50
-                  sm:right-7
-                  cursor-pointer
-                  sm:top-7
+                  absolute right-5 top-5 flex h-9 w-9
+                  cursor-pointer items-center justify-center
+                  rounded-full border border-slate-200
+                  bg-white/80 text-slate-500 transition
+                  hover:bg-white hover:text-slate-900
+                  disabled:opacity-50 sm:right-7 sm:top-7
                 "
               >
                 <X size={17} strokeWidth={1.8} />
@@ -221,13 +169,9 @@ export default function ProductMVPSprintModal({
               <div className="pr-12">
                 <p
                   className="
-                    mb-3
-                    text-[11px]
-                    font-semibold
-                    uppercase
-                    tracking-[0.22em]
-                    text-blue-600
-                  "
+                  mb-3 text-[11px] font-semibold uppercase
+                  tracking-[0.22em] text-blue-600
+                "
                 >
                   Product MVP Sprint
                 </p>
@@ -235,19 +179,20 @@ export default function ProductMVPSprintModal({
                 <h2
                   id="mvp-modal-title"
                   className="
-                    max-w-[560px]
-                    text-[30px]
-                    font-medium
-                    leading-[1.08]
-                    tracking-[-0.04em]
-                    text-[#101828]
-                    sm:text-[38px]
+                    max-w-[560px] text-[30px] font-medium
+                    leading-[1.08] tracking-[-0.04em]
+                    text-[#101828] sm:text-[38px]
                   "
                 >
                   Turn your product idea into a ready-to-launch MVP
                 </h2>
 
-                <p className="mt-4 max-w-[580px] text-[14px] leading-6 text-slate-500 sm:text-[15px]">
+                <p
+                  className="
+                  mt-4 max-w-[580px] text-[14px]
+                  leading-6 text-slate-500 sm:text-[15px]
+                "
+                >
                   Strategy, product design, and development to turn your idea
                   into a launch-ready product.
                 </p>
@@ -263,7 +208,7 @@ export default function ProductMVPSprintModal({
                 <SuccessState onClose={handleClose} />
               ) : (
                 <form onSubmit={handleSubmit} className="space-y-7">
-                  {/* Contact */}
+                  {/* Contact details */}
                   <FormSection number="01" title="Tell us about you">
                     <div className="grid gap-5 sm:grid-cols-2">
                       <Field
@@ -280,29 +225,15 @@ export default function ProductMVPSprintModal({
                         placeholder="you@company.com"
                         required
                       />
-
-                      <Field
-                        label="Company"
-                        name="company"
-                        placeholder="Company name"
-                        required
-                      />
-
-                      <Field
-                        label="Product / company website"
-                        name="website"
-                        type="url"
-                        placeholder="https://"
-                      />
                     </div>
                   </FormSection>
 
-                  {/* Product */}
-                  <FormSection number="02" title="Tell us about the product">
+                  {/* Product details */}
+                  <FormSection number="02" title="Tell us about your idea">
                     <Field
                       label="What are you building?"
                       name="product"
-                      placeholder="Briefly describe the product, who it's for, and what you're trying to achieve."
+                      placeholder="Briefly describe your idea, who it's for, and what you're looking to achieve."
                       textarea
                       required
                     />
@@ -313,168 +244,75 @@ export default function ProductMVPSprintModal({
                         name="stage"
                         required
                         options={[
-                          "Idea",
-                          "Validated concept",
-                          "Prototype",
+                          "Idea / Concept",
+                          "Validating the idea",
+                          "Have a prototype",
                           "Ready to build",
-                          "Already building",
+                          "Existing business, launching a new product",
                         ]}
-                      />
-                    </div>
-
-                    <div className="mt-5">
-                      <label
-                        htmlFor="help"
-                        className="mb-2 block text-[12px] font-medium text-slate-700"
-                      >
-                        What do you need help with?
-                      </label>
-
-                      <div className="grid gap-2 sm:grid-cols-2">
-                        {[
-                          "Product strategy",
-                          "UX / UI design",
-                          "Prototype",
-                          "Development",
-                          "Design + development",
-                          "Not sure yet",
-                        ].map((option) => (
-                          <label
-                            key={option}
-                            className="
-                              flex
-                              cursor-pointer
-                              items-center
-                              gap-3
-                              rounded-xl
-                              border
-                              border-slate-200
-                              bg-white
-                              px-4
-                              py-3
-                              text-[13px]
-                              text-slate-600
-                              transition
-                              hover:border-blue-300
-                              hover:bg-blue-50/40
-                            "
-                          >
-                            <input
-                              type="radio"
-                              name="help"
-                              value={option}
-                              className="h-3.5 w-3.5 accent-blue-600"
-                              required
-                            />
-
-                            <span>{option}</span>
-                          </label>
-                        ))}
-                      </div>
-                    </div>
-                  </FormSection>
-
-                  {/* Project */}
-                  <FormSection number="03" title="Project details">
-                    <div className="grid gap-5 sm:grid-cols-2">
-                      <SelectField
-                        label="Estimated budget"
-                        name="budget"
-                        required
-                        options={[
-                          "$3k – $10k",
-                          "$10k – $20k",
-                          "$20k – $40k",
-                          "$40k+",
-                          "Not sure yet",
-                        ]}
-                      />
-
-                      <SelectField
-                        label="Timeline"
-                        name="timeline"
-                        required
-                        options={[
-                          "ASAP",
-                          "Within 1 month",
-                          "1 – 3 months",
-                          "3+ months",
-                          "Not sure yet",
-                        ]}
-                      />
-                    </div>
-
-                    <div className="mt-5">
-                      <Field
-                        label="Anything else we should know?"
-                        name="message"
-                        placeholder="Anything useful about the project, goals, challenges, or expectations."
-                        textarea
                       />
                     </div>
                   </FormSection>
 
                   {/* Error */}
                   {error && (
-                    <div className="rounded-xl border border-red-200 bg-red-50 px-4 py-3 text-[13px] leading-5 text-red-600">
+                    <div
+                      className="
+                      rounded-xl border border-red-200
+                      bg-red-50 px-4 py-3 text-[13px]
+                      leading-5 text-red-600
+                    "
+                    >
                       {error}
                     </div>
                   )}
 
                   {/* Submit */}
-                  <div className="flex flex-col gap-4 border-t border-slate-200 pt-6 sm:flex-row sm:items-center sm:justify-between">
-                    <p className="max-w-[360px] text-[11px] leading-5 text-slate-400">
-                      By submitting this form, you&apos;re starting a
-                      conversation with Arcady Design. No commitment required.
+                  <div
+                    className="
+                    flex flex-col gap-4 border-t
+                    border-slate-200 pt-6 sm:flex-row
+                    sm:items-center sm:justify-between
+                  "
+                  >
+                    <p
+                      className="
+                      max-w-[360px] text-[11px]
+                      leading-5 text-slate-400
+                    "
+                    >
+                      A few details to get started. No commitment required.
                     </p>
 
                     <button
                       type="submit"
                       disabled={loading}
                       className="
-                        group
-                        cursor-pointer
-                        inline-flex
-                        shrink-0
-                        items-center
-                        justify-center
-                        gap-2
-                        rounded-full
-                        bg-[#0b1733]
-                        px-6
-                        py-3.5
-                        text-[13px]
-                        font-medium
-                        text-white
-                        transition
-                        hover:bg-[#132650]
-                        disabled:cursor-not-allowed
-                        disabled:opacity-60
+                        group inline-flex shrink-0 cursor-pointer
+                        items-center justify-center gap-2
+                        rounded-full bg-[#0b1733] px-6 py-3.5
+                        text-[13px] font-medium text-white
+                        transition hover:bg-[#132650]
+                        disabled:cursor-not-allowed disabled:opacity-60
                       "
                     >
                       {loading ? (
                         <>
                           <span
                             className="
-                              h-4
-                              w-4
-                              animate-spin
-                              rounded-full
-                              border-2
-                              border-white/30
-                              border-t-white
-                            "
+                            h-4 w-4 animate-spin rounded-full
+                            border-2 border-white/30 border-t-white
+                          "
                           />
                           Sending...
                         </>
                       ) : (
                         <>
-                          Start MVP conversation
+                          Discuss your MVP
                           <ArrowUpRight
                             size={16}
                             className="
-                              transition-transform
-                              duration-300
+                              transition-transform duration-300
                               group-hover:-translate-y-0.5
                               group-hover:translate-x-0.5
                             "
@@ -511,11 +349,9 @@ function FormSection({
       <div className="mb-4 flex items-center gap-3">
         <span
           className="
-            text-[10px]
-            font-semibold
-            tracking-[0.18em]
-            text-blue-600
-          "
+          text-[10px] font-semibold
+          tracking-[0.18em] text-blue-600
+        "
         >
           {number}
         </span>
@@ -548,20 +384,10 @@ function Field({
   textarea?: boolean;
 }) {
   const sharedClassName = `
-    w-full
-    rounded-xl
-    border
-    border-slate-200
-    bg-white
-    px-4
-    text-[13px]
-    text-slate-900
-    outline-none
-    transition
-    placeholder:text-slate-400
-    focus:border-blue-400
-    focus:ring-4
-    focus:ring-blue-500/10
+    w-full rounded-xl border border-slate-200
+    bg-white px-4 text-[13px] text-slate-900
+    outline-none transition placeholder:text-slate-400
+    focus:border-blue-400 focus:ring-4 focus:ring-blue-500/10
   `;
 
   return (
@@ -571,7 +397,6 @@ function Field({
         className="mb-2 block text-[12px] font-medium text-slate-700"
       >
         {label}
-
         {required && <span className="ml-1 text-blue-500">*</span>}
       </label>
 
@@ -581,8 +406,11 @@ function Field({
           name={name}
           placeholder={placeholder}
           required={required}
-          rows={4}
-          className={`${sharedClassName} min-h-[110px] py-3.5 leading-5`}
+          rows={3}
+          className={`
+            ${sharedClassName}
+            min-h-[100px] py-3.5 leading-5
+          `}
         />
       ) : (
         <input
@@ -620,7 +448,6 @@ function SelectField({
         className="mb-2 block text-[12px] font-medium text-slate-700"
       >
         {label}
-
         {required && <span className="ml-1 text-blue-500">*</span>}
       </label>
 
@@ -630,21 +457,11 @@ function SelectField({
         required={required}
         defaultValue=""
         className="
-          h-12
-          w-full
-          appearance-none
-          rounded-xl
-          border
-          border-slate-200
-          bg-white
-          px-4
-          text-[13px]
-          text-slate-700
-          outline-none
-          transition
-          focus:border-blue-400
-          focus:ring-4
-          focus:ring-blue-500/10
+          h-12 w-full appearance-none rounded-xl
+          border border-slate-200 bg-white px-4
+          text-[13px] text-slate-700 outline-none
+          transition focus:border-blue-400
+          focus:ring-4 focus:ring-blue-500/10
         "
       >
         <option value="" disabled>
@@ -667,60 +484,57 @@ function SelectField({
 
 function SuccessState({ onClose }: { onClose: () => void }) {
   return (
-    <div className="flex min-h-[420px] flex-col items-center justify-center py-12 text-center">
+    <div
+      className="
+      flex min-h-[360px] flex-col items-center
+      justify-center py-12 text-center
+    "
+    >
       <div
         className="
-          mb-6
-          flex
-          h-14
-          w-14
-          items-center
-          justify-center
-          rounded-full
-          bg-blue-600
-          text-white
-          shadow-[0_10px_30px_rgba(37,99,235,0.25)]
-        "
+        mb-6 flex h-14 w-14 items-center justify-center
+        rounded-full bg-blue-600 text-white
+        shadow-[0_10px_30px_rgba(37,99,235,0.25)]
+      "
       >
         <Check size={25} strokeWidth={2} />
       </div>
 
       <p
         className="
-          mb-3
-          text-[11px]
-          font-semibold
-          uppercase
-          tracking-[0.2em]
-          text-blue-600
-        "
+        mb-3 text-[11px] font-semibold uppercase
+        tracking-[0.2em] text-blue-600
+      "
       >
         Inquiry received
       </p>
 
-      <h3 className="text-[30px] font-medium tracking-[-0.04em] text-[#101828]">
-        Let&apos;s build something worth building.
+      <h3
+        className="
+        text-[30px] font-medium tracking-[-0.04em]
+        text-[#101828]
+      "
+      >
+        Let's build something worth building.
       </h3>
 
-      <p className="mt-4 max-w-[440px] text-[14px] leading-6 text-slate-500">
-        Thanks for reaching out. We&apos;ve received your project details and
-        will get back to you shortly.
+      <p
+        className="
+        mt-4 max-w-[440px] text-[14px]
+        leading-6 text-slate-500
+      "
+      >
+        Thanks for reaching out. We've received your inquiry and will get back
+        to you shortly.
       </p>
 
       <button
         type="button"
         onClick={onClose}
         className="
-          mt-7
-          rounded-full
-          bg-[#0b1733]
-          px-6
-          py-3
-          text-[13px]
-          font-medium
-          text-white
-          transition
-          hover:bg-[#132650]
+          mt-7 rounded-full bg-[#0b1733]
+          px-6 py-3 text-[13px] font-medium
+          text-white transition hover:bg-[#132650]
         "
       >
         Close

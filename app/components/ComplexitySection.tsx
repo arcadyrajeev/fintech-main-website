@@ -153,7 +153,7 @@ function ComplexityCard({ item }: { item: ComplexityItem }) {
                 src={item.image}
                 alt={item.imageAlt}
                 fill
-                className="h-full w-full object-cover object-left"
+                className="h-full w-full object-cover  object-top-left"
                 sizes="
           (max-width: 640px) 100vw,
           (max-width: 1024px) 80vw,
@@ -225,7 +225,7 @@ export default function ComplexitySection() {
         <div className="h-16 sm:h-20 lg:h-28" />
 
         {/* Complexity grid */}
-        <div className="grid grid-cols-1 gap-5 lg:grid-cols-2 lg:gap-6">
+        <div className="grid grid-cols-1 gap-5 xl:grid-cols-2 lg:gap-6">
           {complexityItems.map((item) => (
             <ComplexityCard key={item.number} item={item} />
           ))}

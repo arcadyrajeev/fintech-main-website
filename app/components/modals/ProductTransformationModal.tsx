@@ -9,6 +9,16 @@ type ProductTransformationModalProps = {
   onClose: () => void;
 };
 
+const challenges = [
+  "Complex workflows",
+  "Poor UX / usability",
+  "Low user adoption",
+  "Fragmented experience",
+  "Scaling issues",
+  "Inconsistent product systems",
+  "Not sure yet",
+];
+
 export default function ProductTransformationModal({
   open,
   onClose,
@@ -33,8 +43,8 @@ export default function ProductTransformationModal({
     if (!open) return;
 
     const handleKeyDown = (event: KeyboardEvent) => {
-      if (event.key === "Escape") {
-        onClose();
+      if (event.key === "Escape" && !loading) {
+        handleClose();
       }
     };
 
@@ -43,33 +53,34 @@ export default function ProductTransformationModal({
     return () => {
       window.removeEventListener("keydown", handleKeyDown);
     };
-  }, [open, onClose]);
+  }, [open, loading]);
 
   async function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
 
+    const formElement = event.currentTarget;
+    const form = new FormData(formElement);
+
+    const selectedChallenges = form.getAll("challenge").map(String);
+
+    // Require at least one selected challenge
+    if (selectedChallenges.length === 0) {
+      setError("Please select at least one product challenge.");
+      return;
+    }
+
     setLoading(true);
     setError("");
 
-    const form = new FormData(event.currentTarget);
-
     const payload = {
       pathway: "Product Transformation",
+      name: String(form.get("name") || "").trim(),
+      email: String(form.get("email") || "").trim(),
+      website: String(form.get("website") || "").trim(),
 
-      name: String(form.get("name") || ""),
-      email: String(form.get("email") || ""),
-      company: String(form.get("company") || ""),
-      website: String(form.get("website") || ""),
-
-      product: String(form.get("product") || ""),
-      improvement: String(form.get("improvement") || ""),
-      challenge: String(form.get("challenge") || ""),
-
-      stage: String(form.get("stage") || ""),
-      budget: String(form.get("budget") || ""),
-      timeline: String(form.get("timeline") || ""),
-
-      message: String(form.get("message") || ""),
+      // Keep as a string for compatibility with existing
+      // contact APIs that expect a single challenge field.
+      challenge: selectedChallenges.join(", "),
     };
 
     try {
@@ -87,9 +98,8 @@ export default function ProductTransformationModal({
         throw new Error(data?.error || "Something went wrong.");
       }
 
+      formElement.reset();
       setSuccess(true);
-
-      event.currentTarget.reset();
     } catch (err) {
       setError(
         err instanceof Error
@@ -135,17 +145,9 @@ export default function ProductTransformationModal({
             aria-modal="true"
             aria-labelledby="transformation-modal-title"
             className="
-              relative
-              z-10
-              flex
-              max-h-[92vh]
-              w-full
-              max-w-[760px]
-              flex-col
-              overflow-hidden
-              rounded-[28px]
-              border
-              border-white/70
+              relative z-10 flex max-h-[92vh] w-full
+              max-w-[760px] flex-col overflow-hidden
+              rounded-[28px] border border-white/70
               bg-[#f5f7fa]
               shadow-[0_30px_100px_rgba(0,0,0,0.25)]
             "
@@ -173,47 +175,32 @@ export default function ProductTransformationModal({
             {/* Ambient glow */}
             <div
               className="
-                pointer-events-none
-                absolute
-                right-[-100px]
-                top-[-120px]
-                h-[300px]
-                w-[300px]
-                rounded-full
-                bg-cyan-400/15
-                blur-[80px]
+                pointer-events-none absolute right-[-100px]
+                top-[-120px] h-[300px] w-[300px]
+                rounded-full bg-cyan-400/15 blur-[80px]
               "
             />
 
             {/* Header */}
-            <div className="relative shrink-0 border-b border-slate-200/80 px-6 pb-6 pt-6 sm:px-8 sm:pt-7">
+            <div
+              className="
+              relative shrink-0 border-b border-slate-200/80
+              px-6 pb-6 pt-6 sm:px-8 sm:pt-7
+            "
+            >
               <button
                 type="button"
                 onClick={handleClose}
                 disabled={loading}
                 aria-label="Close"
                 className="
-                  absolute
-                  right-5
-                  top-5
-                  flex
-                  h-9
-                  w-9
-                  items-center
-                  justify-center
-                  rounded-full
-                  border
-                  border-slate-200
-                  bg-white/80
-                  text-slate-500
-                  transition
-                  hover:bg-white
-                  hover:text-slate-900
-                  disabled:cursor-not-allowed
-                  disabled:opacity-50
-                  sm:right-7
-                  cursor-pointer
-                  sm:top-7
+                  absolute right-5 top-5 flex h-9 w-9
+                  cursor-pointer items-center justify-center
+                  rounded-full border border-slate-200
+                  bg-white/80 text-slate-500 transition
+                  hover:bg-white hover:text-slate-900
+                  disabled:cursor-not-allowed disabled:opacity-50
+                  sm:right-7 sm:top-7
                 "
               >
                 <X size={17} strokeWidth={1.8} />
@@ -222,13 +209,9 @@ export default function ProductTransformationModal({
               <div className="pr-12">
                 <p
                   className="
-                    mb-3
-                    text-[11px]
-                    font-semibold
-                    uppercase
-                    tracking-[0.22em]
-                    text-blue-600
-                  "
+                  mb-3 text-[11px] font-semibold uppercase
+                  tracking-[0.22em] text-blue-600
+                "
                 >
                   Product Transformation
                 </p>
@@ -236,19 +219,20 @@ export default function ProductTransformationModal({
                 <h2
                   id="transformation-modal-title"
                   className="
-                    max-w-[600px]
-                    text-[30px]
-                    font-medium
-                    leading-[1.08]
-                    tracking-[-0.04em]
-                    text-[#101828]
-                    sm:text-[38px]
+                    max-w-[600px] text-[30px] font-medium
+                    leading-[1.08] tracking-[-0.04em]
+                    text-[#101828] sm:text-[38px]
                   "
                 >
                   Your product works. Let&apos;s make it work better.
                 </h2>
 
-                <p className="mt-4 max-w-[590px] text-[14px] leading-6 text-slate-500 sm:text-[15px]">
+                <p
+                  className="
+                  mt-4 max-w-[590px] text-[14px]
+                  leading-6 text-slate-500 sm:text-[15px]
+                "
+                >
                   Tell us what&apos;s becoming difficult, fragmented, or
                   expensive as your product grows.
                 </p>
@@ -258,7 +242,10 @@ export default function ProductTransformationModal({
             {/* Form content */}
             <div
               onWheel={(e) => e.stopPropagation()}
-              className="relative overflow-y-auto px-6 py-6 sm:px-8 sm:py-7"
+              className="
+                relative overflow-y-auto
+                px-6 py-6 sm:px-8 sm:py-7
+              "
             >
               {success ? (
                 <SuccessState onClose={handleClose} />
@@ -282,209 +269,122 @@ export default function ProductTransformationModal({
                         required
                       />
 
-                      <Field
-                        label="Company"
-                        name="company"
-                        placeholder="Company name"
-                        required
-                      />
-
-                      <Field
-                        label="Product / company website"
-                        name="website"
-                        type="url"
-                        placeholder="https://"
-                      />
-                    </div>
-                  </FormSection>
-
-                  {/* Product */}
-                  <FormSection number="02" title="Tell us about the product">
-                    <Field
-                      label="What does your product do?"
-                      name="product"
-                      placeholder="Briefly describe the product, who uses it, and what it helps them accomplish."
-                      textarea
-                      required
-                    />
-
-                    <div className="mt-5">
-                      <Field
-                        label="What are you trying to improve?"
-                        name="improvement"
-                        placeholder="For example, onboarding, workflows, navigation, adoption, product clarity, or overall UX."
-                        textarea
-                        required
-                      />
-                    </div>
-
-                    <div className="mt-5">
-                      <label
-                        htmlFor="challenge"
-                        className="mb-2 block text-[12px] font-medium text-slate-700"
-                      >
-                        What is currently holding the product back?
-                      </label>
-
-                      <div className="grid gap-2 sm:grid-cols-2">
-                        {[
-                          "Complex workflows",
-                          "Poor UX",
-                          "Fragmented experience",
-                          "Scaling issues",
-                          "Low adoption",
-                          "Product feels difficult to use",
-                          "Inconsistent systems",
-                          "Not sure yet",
-                        ].map((option) => (
-                          <label
-                            key={option}
-                            className="
-                              flex
-                              cursor-pointer
-                              items-center
-                              gap-3
-                              rounded-xl
-                              border
-                              border-slate-200
-                              bg-white
-                              px-4
-                              py-3
-                              text-[13px]
-                              text-slate-600
-                              transition
-                              hover:border-blue-300
-                              hover:bg-blue-50/40
-                            "
-                          >
-                            <input
-                              type="radio"
-                              name="challenge"
-                              value={option}
-                              className="h-3.5 w-3.5 accent-blue-600"
-                              required
-                            />
-
-                            <span>{option}</span>
-                          </label>
-                        ))}
+                      <div className="sm:col-span-2">
+                        <Field
+                          label="Product / company website"
+                          name="website"
+                          type="url"
+                          placeholder="https://"
+                        />
                       </div>
                     </div>
                   </FormSection>
 
-                  {/* Project */}
-                  <FormSection number="03" title="Project details">
-                    <div className="grid gap-5 sm:grid-cols-2">
-                      <SelectField
-                        label="Product stage"
-                        name="stage"
-                        required
-                        options={[
-                          "Early product",
-                          "Growing product",
-                          "Established product",
-                          "Enterprise",
-                        ]}
-                      />
+                  {/* Product challenges */}
+                  <FormSection
+                    number="02"
+                    title="Where does your product need attention?"
+                  >
+                    <p
+                      className="
+                      mb-4 text-[12px] leading-5 text-slate-500
+                    "
+                    >
+                      Select all that apply.
+                    </p>
 
-                      <SelectField
-                        label="Estimated budget"
-                        name="budget"
-                        required
-                        options={[
-                          "$3k – $10k",
-                          "$10k – $20k",
-                          "$20k – $40k",
-                          "$40k+",
-                          "Not sure yet",
-                        ]}
-                      />
+                    <div className="grid gap-2 sm:grid-cols-2">
+                      {challenges.map((option) => (
+                        <label
+                          key={option}
+                          className="
+                            flex cursor-pointer items-center gap-3
+                            rounded-xl border border-slate-200
+                            bg-white px-4 py-3.5
+                            text-[13px] text-slate-600
+                            transition hover:border-blue-300
+                            hover:bg-blue-50/40
+                            has-[:checked]:border-blue-400
+                            has-[:checked]:bg-blue-50/60
+                            has-[:checked]:text-slate-900
+                          "
+                        >
+                          <input
+                            type="checkbox"
+                            name="challenge"
+                            value={option}
+                            className="
+                              h-4 w-4 shrink-0
+                              rounded accent-blue-600
+                            "
+                          />
 
-                      <SelectField
-                        label="Timeline"
-                        name="timeline"
-                        required
-                        options={[
-                          "ASAP",
-                          "Within 1 month",
-                          "1 – 3 months",
-                          "3+ months",
-                          "Not sure yet",
-                        ]}
-                      />
-                    </div>
-
-                    <div className="mt-5">
-                      <Field
-                        label="Anything else we should know?"
-                        name="message"
-                        placeholder="Tell us anything useful about the product, goals, challenges, users, or expectations."
-                        textarea
-                      />
+                          <span>{option}</span>
+                        </label>
+                      ))}
                     </div>
                   </FormSection>
 
                   {/* Error */}
                   {error && (
-                    <div className="rounded-xl border border-red-200 bg-red-50 px-4 py-3 text-[13px] leading-5 text-red-600">
+                    <div
+                      className="
+                      rounded-xl border border-red-200
+                      bg-red-50 px-4 py-3
+                      text-[13px] leading-5 text-red-600
+                    "
+                    >
                       {error}
                     </div>
                   )}
 
                   {/* Submit */}
-                  <div className="flex flex-col gap-4 border-t border-slate-200 pt-6 sm:flex-row sm:items-center sm:justify-between">
-                    <p className="max-w-[360px] text-[11px] leading-5 text-slate-400">
-                      By submitting this form, you&apos;re starting a
-                      conversation with Arcady Design. No commitment required.
+                  <div
+                    className="
+                    flex flex-col gap-4 border-t
+                    border-slate-200 pt-6 sm:flex-row
+                    sm:items-center sm:justify-between
+                  "
+                  >
+                    <p
+                      className="
+                      max-w-[360px] text-[11px]
+                      leading-5 text-slate-400
+                    "
+                    >
+                      A few details to get started. No commitment required.
                     </p>
 
                     <button
                       type="submit"
                       disabled={loading}
                       className="
-                        group
-                        inline-flex
-                        shrink-0
-                        items-center
-                        justify-center
-                        gap-2
-                        cursor-pointer
-                        rounded-full
-                        bg-[#0b1733]
-                        px-6
-                        py-3.5
-                        text-[13px]
-                        font-medium
-                        text-white
-                        transition
+                        group inline-flex shrink-0 cursor-pointer
+                        items-center justify-center gap-2
+                        rounded-full bg-[#0b1733]
+                        px-6 py-3.5 text-[13px]
+                        font-medium text-white transition
                         hover:bg-[#132650]
-                        disabled:cursor-not-allowed
-                        disabled:opacity-60
+                        disabled:cursor-not-allowed disabled:opacity-60
                       "
                     >
                       {loading ? (
                         <>
                           <span
                             className="
-                              h-4
-                              w-4
-                              animate-spin
-                              rounded-full
-                              border-2
-                              border-white/30
-                              border-t-white
-                            "
+                            h-4 w-4 animate-spin rounded-full
+                            border-2 border-white/30 border-t-white
+                          "
                           />
                           Sending...
                         </>
                       ) : (
                         <>
-                          Start transformation conversation
+                          Discuss your product
                           <ArrowUpRight
                             size={16}
                             className="
-                              transition-transform
-                              duration-300
+                              transition-transform duration-300
                               group-hover:-translate-y-0.5
                               group-hover:translate-x-0.5
                             "
@@ -521,11 +421,9 @@ function FormSection({
       <div className="mb-4 flex items-center gap-3">
         <span
           className="
-            text-[10px]
-            font-semibold
-            tracking-[0.18em]
-            text-blue-600
-          "
+          text-[10px] font-semibold
+          tracking-[0.18em] text-blue-600
+        "
         >
           {number}
         </span>
@@ -548,30 +446,18 @@ function Field({
   type = "text",
   placeholder,
   required = false,
-  textarea = false,
 }: {
   label: string;
   name: string;
   type?: string;
   placeholder?: string;
   required?: boolean;
-  textarea?: boolean;
 }) {
   const sharedClassName = `
-    w-full
-    rounded-xl
-    border
-    border-slate-200
-    bg-white
-    px-4
-    text-[13px]
-    text-slate-900
-    outline-none
-    transition
-    placeholder:text-slate-400
-    focus:border-blue-400
-    focus:ring-4
-    focus:ring-blue-500/10
+    w-full rounded-xl border border-slate-200
+    bg-white px-4 text-[13px] text-slate-900
+    outline-none transition placeholder:text-slate-400
+    focus:border-blue-400 focus:ring-4 focus:ring-blue-500/10
   `;
 
   return (
@@ -585,88 +471,14 @@ function Field({
         {required && <span className="ml-1 text-blue-500">*</span>}
       </label>
 
-      {textarea ? (
-        <textarea
-          id={name}
-          name={name}
-          placeholder={placeholder}
-          required={required}
-          rows={4}
-          className={`${sharedClassName} min-h-[110px] py-3.5 leading-5`}
-        />
-      ) : (
-        <input
-          id={name}
-          name={name}
-          type={type}
-          placeholder={placeholder}
-          required={required}
-          className={`${sharedClassName} h-12`}
-        />
-      )}
-    </div>
-  );
-}
-
-/* -------------------------------------------------------------------------- */
-/* Select                                                                     */
-/* -------------------------------------------------------------------------- */
-
-function SelectField({
-  label,
-  name,
-  options,
-  required = false,
-}: {
-  label: string;
-  name: string;
-  options: string[];
-  required?: boolean;
-}) {
-  return (
-    <div>
-      <label
-        htmlFor={name}
-        className="mb-2 block text-[12px] font-medium text-slate-700"
-      >
-        {label}
-
-        {required && <span className="ml-1 text-blue-500">*</span>}
-      </label>
-
-      <select
+      <input
         id={name}
         name={name}
+        type={type}
+        placeholder={placeholder}
         required={required}
-        defaultValue=""
-        className="
-          h-12
-          w-full
-          appearance-none
-          rounded-xl
-          border
-          border-slate-200
-          bg-white
-          px-4
-          text-[13px]
-          text-slate-700
-          outline-none
-          transition
-          focus:border-blue-400
-          focus:ring-4
-          focus:ring-blue-500/10
-        "
-      >
-        <option value="" disabled>
-          Select an option
-        </option>
-
-        {options.map((option) => (
-          <option key={option} value={option}>
-            {option}
-          </option>
-        ))}
-      </select>
+        className={`${sharedClassName} h-12`}
+      />
     </div>
   );
 }
@@ -677,60 +489,57 @@ function SelectField({
 
 function SuccessState({ onClose }: { onClose: () => void }) {
   return (
-    <div className="flex min-h-[420px] flex-col items-center justify-center py-12 text-center">
+    <div
+      className="
+      flex min-h-[360px] flex-col items-center
+      justify-center py-12 text-center
+    "
+    >
       <div
         className="
-          mb-6
-          flex
-          h-14
-          w-14
-          items-center
-          justify-center
-          rounded-full
-          bg-blue-600
-          text-white
-          shadow-[0_10px_30px_rgba(37,99,235,0.25)]
-        "
+        mb-6 flex h-14 w-14 items-center justify-center
+        rounded-full bg-blue-600 text-white
+        shadow-[0_10px_30px_rgba(37,99,235,0.25)]
+      "
       >
         <Check size={25} strokeWidth={2} />
       </div>
 
       <p
         className="
-          mb-3
-          text-[11px]
-          font-semibold
-          uppercase
-          tracking-[0.2em]
-          text-blue-600
-        "
+        mb-3 text-[11px] font-semibold uppercase
+        tracking-[0.2em] text-blue-600
+      "
       >
         Inquiry received
       </p>
 
-      <h3 className="text-[30px] font-medium tracking-[-0.04em] text-[#101828]">
+      <h3
+        className="
+        text-[30px] font-medium tracking-[-0.04em]
+        text-[#101828]
+      "
+      >
         Let&apos;s make the product work better.
       </h3>
 
-      <p className="mt-4 max-w-[440px] text-[14px] leading-6 text-slate-500">
-        Thanks for reaching out. We&apos;ve received your product details and
-        will get back to you shortly.
+      <p
+        className="
+        mt-4 max-w-[440px] text-[14px]
+        leading-6 text-slate-500
+      "
+      >
+        Thanks for reaching out. We&apos;ve received your inquiry and will get
+        back to you shortly.
       </p>
 
       <button
         type="button"
         onClick={onClose}
         className="
-          mt-7
-          rounded-full
-          bg-[#0b1733]
-          px-6
-          py-3
-          text-[13px]
-          font-medium
-          text-white
-          transition
-          hover:bg-[#132650]
+          mt-7 rounded-full bg-[#0b1733]
+          px-6 py-3 text-[13px] font-medium
+          text-white transition hover:bg-[#132650]
         "
       >
         Close
