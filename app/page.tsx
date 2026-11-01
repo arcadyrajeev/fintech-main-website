@@ -21,6 +21,7 @@ import BlogSection from "./components/BlogSection";
 import CommonProblemsSection from "./components/CommonProblemsSection";
 import FinalSection from "./components/HomeCTASection";
 import ComplexitySection from "./components/ComplexitySection";
+import UnivCTASection from "./components/UnivCTASection";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://arcadydesign.com"),
@@ -106,19 +107,18 @@ export default function Home() {
 
         <ProjectSection />
 
+        <IndustriesSection />
         <Problem />
 
         <Bridge
           size="med"
           text="Individually they are small. But together, they block capital."
         />
-        <IndustriesSection />
-
-        <CommonProblemsSection />
 
         <WorkflowSection />
+        <CommonProblemsSection />
 
-        <FinalSection />
+        <UnivCTASection />
         <BlogSection />
         <FAQSection />
       </div>

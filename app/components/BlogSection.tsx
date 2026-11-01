@@ -24,7 +24,7 @@ export default async function BlogSection() {
       {/* Glow */}
       <div className="pointer-events-none absolute top-0 right-0 w-[40vw] h-[40vw] bg-blue-200/20 blur-[120px] rounded-full" />
 
-      <div className="relative z-10 max-w-7xl mx-auto px-6 sm:px-10 lg:px-20 py-24 md:py-32">
+      <div className="relative z-10 max-w-7xl mx-auto px-6 sm:px-10 lg:px-20 py-24 md:py-24">
         {/* Heading */}
         <div className="max-w-4xl">
           <p className="text-sm bodyfont font-semibold uppercase text-neutral-500 mb-3">

@@ -63,7 +63,7 @@ export default function FAQSection() {
   };
 
   return (
-    <section className="w-full px-6 md:px-12 py-20 md:py-28">
+    <section className="w-full px-6 md:px-12 py-20 md:py-24">
       {/* SEO FAQ Schema */}
       <script
         type="application/ld+json"

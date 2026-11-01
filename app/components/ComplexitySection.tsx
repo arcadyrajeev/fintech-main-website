@@ -186,6 +186,51 @@ export default function ComplexitySection() {
         <div className="absolute inset-x-0 top-0 h-px bg-white/[0.06]" />
       </div>
 
+      {/* BACKGROUND ATMOSPHERE */}
+      <div className="pointer-events-none absolute inset-0 overflow-hidden">
+        {/* Light blue blob */}
+        <div
+          className="
+      absolute
+      -right-20
+      -top-24
+      h-[520px]
+      w-[520px]
+      rounded-full
+      bg-blue-400/30
+      blur-[120px]
+    "
+        />
+
+        {/* Orange blob */}
+        <div
+          className="
+      absolute
+      -left-[8%]
+      top-[15%]
+      h-[420px]
+      w-[420px]
+      rounded-full
+      bg-orange-400/20
+      blur-[110px]
+    "
+        />
+
+        {/* Secondary blue glow */}
+        <div
+          className="
+      absolute
+      -bottom-64
+      left-[5%]
+      h-[480px]
+      w-[480px]
+      rounded-full
+      bg-blue-500/20
+      blur-[130px]
+    "
+        />
+      </div>
+
       <div className="relative mx-auto max-w-[1440px] px-5 sm:px-8 lg:px-12 xl:px-16">
         {/* Header */}
         <header className="grid grid-cols-1 gap-10 lg:grid-cols-[1.15fr_0.85fr] lg:gap-20 xl:gap-28">

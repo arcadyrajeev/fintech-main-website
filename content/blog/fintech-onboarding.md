@@ -50,8 +50,6 @@ tags:
 canonical: "https://arcadydesign.com/blog/fintech-onboarding"
 ---
 
-## Article content...
-
 ## Most fintech onboarding problems begin before usability is even evaluated
 
 Most fintech teams assume onboarding fails because users encounter friction inside the flow. The diagnosis usually sounds familiar: too many forms, too many steps, too much complexity, poor UX. Sometimes that assessment is correct. But in operational products, especially fintech, onboarding failures often begin much earlier than usability itself.
